@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>984ABF39-CD91-4754-81ED-2727BF75CDF7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TojoMobile</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5FE8FD75008E0ABC355A7140BB7F025F8647126E</key>
+		<string>https://github.com/WMlab/tojoMobile</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TojoMobile.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5FE8FD75008E0ABC355A7140BB7F025F8647126E</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/WMlab/tojoMobile</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5FE8FD75008E0ABC355A7140BB7F025F8647126E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5FE8FD75008E0ABC355A7140BB7F025F8647126E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TojoMobile</string>
+		</dict>
+	</array>
+</dict>
+</plist>
