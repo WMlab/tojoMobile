@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "TJUserSender.h"
+
 @interface FirstViewController ()
 
 @end
@@ -29,6 +30,7 @@
             UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
             [av show];
         }
+        
     }];
 }
 
