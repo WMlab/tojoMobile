@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "TJUserSender.h"
+#import <ALToastView.h>
 @interface FirstViewController ()
 
 @end
@@ -28,6 +29,9 @@
         if (!success) {
             UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
             [av show];
+        }
+        else {
+            [ALToastView toastInView:self.view withText:@"登录成功"];
         }
     }];
 }
