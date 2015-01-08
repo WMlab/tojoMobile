@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32959EC51A5EBEE600C2B9D6 /* TJProjectTitleInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EC31A5EBEE600C2B9D6 /* TJProjectTitleInfoCell.m */; };
-		32959EC61A5EBEE600C2B9D6 /* TJProjectTitleInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32959EC41A5EBEE600C2B9D6 /* TJProjectTitleInfoCell.xib */; };
-		32959ECA1A5EBF1300C2B9D6 /* TJProjectDetailInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EC81A5EBF1300C2B9D6 /* TJProjectDetailInfoCell.m */; };
-		32959ECB1A5EBF1300C2B9D6 /* TJProjectDetailInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32959EC91A5EBF1300C2B9D6 /* TJProjectDetailInfoCell.xib */; };
-		32959ECF1A5EBF5D00C2B9D6 /* TJProjectCommentAreaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959ECD1A5EBF5D00C2B9D6 /* TJProjectCommentAreaCell.m */; };
-		32959ED01A5EBF5D00C2B9D6 /* TJProjectCommentAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32959ECE1A5EBF5D00C2B9D6 /* TJProjectCommentAreaCell.xib */; };
-		32959ED41A5EBF8700C2B9D6 /* TJProjectTeamAreaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959ED21A5EBF8700C2B9D6 /* TJProjectTeamAreaCell.m */; };
-		32959ED51A5EBF8700C2B9D6 /* TJProjectTeamAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32959ED31A5EBF8700C2B9D6 /* TJProjectTeamAreaCell.xib */; };
-		32959ED81A5EBFEB00C2B9D6 /* TJProjectDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959ED71A5EBFEB00C2B9D6 /* TJProjectDetailViewModel.m */; };
-		32959EDC1A5EC01900C2B9D6 /* TJProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EDA1A5EC01900C2B9D6 /* TJProjectDetailViewController.m */; };
-		32959EDD1A5EC01900C2B9D6 /* TJProjectDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32959EDB1A5EC01900C2B9D6 /* TJProjectDetailViewController.xib */; };
-		32959EE01A5EC06A00C2B9D6 /* TJProjectDetailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EDF1A5EC06A00C2B9D6 /* TJProjectDetailSender.m */; };
-		32959EE31A5EC75800C2B9D6 /* TJProjectDetailResultBusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EE21A5EC75800C2B9D6 /* TJProjectDetailResultBusinessModel.m */; };
-		32959EE61A5EC78400C2B9D6 /* TJProjectDetailBusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EE51A5EC78400C2B9D6 /* TJProjectDetailBusinessModel.m */; };
+		32959EEA1A5ECF8200C2B9D6 /* TJProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EE81A5ECF8200C2B9D6 /* TJProjectDetailViewController.m */; };
+		32959EEB1A5ECF8200C2B9D6 /* TJProjectDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32959EE91A5ECF8200C2B9D6 /* TJProjectDetailViewController.xib */; };
+		32959EF81A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EED1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.m */; };
+		32959EF91A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32959EEE1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib */; };
+		32959EFA1A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EF01A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.m */; };
+		32959EFB1A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32959EF11A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.xib */; };
+		32959EFC1A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EF31A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.m */; };
+		32959EFD1A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32959EF41A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.xib */; };
+		32959EFE1A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EF61A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.m */; };
+		32959EFF1A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32959EF71A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.xib */; };
+		32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F011A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m */; };
+		32959F071A5ECFBE00C2B9D6 /* TJProjectDetailBusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F041A5ECFBE00C2B9D6 /* TJProjectDetailBusinessModel.m */; };
+		32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResultBusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResultBusinessModel.m */; };
+		32959F0B1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F0A1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m */; };
 		E42770C64AD3214DC5895880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F87660748CC2C0B4B82EF26 /* libPods.a */; };
 		EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E51B1A5A2FB300CA2CCD /* main.m */; };
 		EA68E51F1A5A2FB300CA2CCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E51E1A5A2FB300CA2CCD /* AppDelegate.m */; };
@@ -46,29 +46,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		32959EC21A5EBEE600C2B9D6 /* TJProjectTitleInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectTitleInfoCell.h; path = projects/TJProjectTitleInfoCell.h; sourceTree = "<group>"; };
-		32959EC31A5EBEE600C2B9D6 /* TJProjectTitleInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectTitleInfoCell.m; path = projects/TJProjectTitleInfoCell.m; sourceTree = "<group>"; };
-		32959EC41A5EBEE600C2B9D6 /* TJProjectTitleInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectTitleInfoCell.xib; path = projects/TJProjectTitleInfoCell.xib; sourceTree = "<group>"; };
-		32959EC71A5EBF1300C2B9D6 /* TJProjectDetailInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJProjectDetailInfoCell.h; sourceTree = "<group>"; };
-		32959EC81A5EBF1300C2B9D6 /* TJProjectDetailInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJProjectDetailInfoCell.m; sourceTree = "<group>"; };
-		32959EC91A5EBF1300C2B9D6 /* TJProjectDetailInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJProjectDetailInfoCell.xib; sourceTree = "<group>"; };
-		32959ECC1A5EBF5D00C2B9D6 /* TJProjectCommentAreaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectCommentAreaCell.h; path = projects/TJProjectCommentAreaCell.h; sourceTree = "<group>"; };
-		32959ECD1A5EBF5D00C2B9D6 /* TJProjectCommentAreaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectCommentAreaCell.m; path = projects/TJProjectCommentAreaCell.m; sourceTree = "<group>"; };
-		32959ECE1A5EBF5D00C2B9D6 /* TJProjectCommentAreaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectCommentAreaCell.xib; path = projects/TJProjectCommentAreaCell.xib; sourceTree = "<group>"; };
-		32959ED11A5EBF8700C2B9D6 /* TJProjectTeamAreaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectTeamAreaCell.h; path = projects/TJProjectTeamAreaCell.h; sourceTree = "<group>"; };
-		32959ED21A5EBF8700C2B9D6 /* TJProjectTeamAreaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectTeamAreaCell.m; path = projects/TJProjectTeamAreaCell.m; sourceTree = "<group>"; };
-		32959ED31A5EBF8700C2B9D6 /* TJProjectTeamAreaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectTeamAreaCell.xib; path = projects/TJProjectTeamAreaCell.xib; sourceTree = "<group>"; };
-		32959ED61A5EBFEB00C2B9D6 /* TJProjectDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailViewModel.h; path = projects/TJProjectDetailViewModel.h; sourceTree = "<group>"; };
-		32959ED71A5EBFEB00C2B9D6 /* TJProjectDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailViewModel.m; path = projects/TJProjectDetailViewModel.m; sourceTree = "<group>"; };
-		32959ED91A5EC01900C2B9D6 /* TJProjectDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailViewController.h; path = projects/TJProjectDetailViewController.h; sourceTree = "<group>"; };
-		32959EDA1A5EC01900C2B9D6 /* TJProjectDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailViewController.m; path = projects/TJProjectDetailViewController.m; sourceTree = "<group>"; };
-		32959EDB1A5EC01900C2B9D6 /* TJProjectDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectDetailViewController.xib; path = projects/TJProjectDetailViewController.xib; sourceTree = "<group>"; };
-		32959EDE1A5EC06A00C2B9D6 /* TJProjectDetailSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailSender.h; path = projects/TJProjectDetailSender.h; sourceTree = "<group>"; };
-		32959EDF1A5EC06A00C2B9D6 /* TJProjectDetailSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailSender.m; path = projects/TJProjectDetailSender.m; sourceTree = "<group>"; };
-		32959EE11A5EC75800C2B9D6 /* TJProjectDetailResultBusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailResultBusinessModel.h; path = projects/TJProjectDetailResultBusinessModel.h; sourceTree = "<group>"; };
-		32959EE21A5EC75800C2B9D6 /* TJProjectDetailResultBusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailResultBusinessModel.m; path = projects/TJProjectDetailResultBusinessModel.m; sourceTree = "<group>"; };
-		32959EE41A5EC78400C2B9D6 /* TJProjectDetailBusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailBusinessModel.h; path = projects/TJProjectDetailBusinessModel.h; sourceTree = "<group>"; };
-		32959EE51A5EC78400C2B9D6 /* TJProjectDetailBusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailBusinessModel.m; path = projects/TJProjectDetailBusinessModel.m; sourceTree = "<group>"; };
+		32959EE71A5ECF8200C2B9D6 /* TJProjectDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailViewController.h; path = projects/view/TJProjectDetailViewController.h; sourceTree = "<group>"; };
+		32959EE81A5ECF8200C2B9D6 /* TJProjectDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailViewController.m; path = projects/view/TJProjectDetailViewController.m; sourceTree = "<group>"; };
+		32959EE91A5ECF8200C2B9D6 /* TJProjectDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectDetailViewController.xib; path = projects/view/TJProjectDetailViewController.xib; sourceTree = "<group>"; };
+		32959EEC1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectCommentAreaCell.h; path = projects/cell/TJProjectCommentAreaCell.h; sourceTree = "<group>"; };
+		32959EED1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectCommentAreaCell.m; path = projects/cell/TJProjectCommentAreaCell.m; sourceTree = "<group>"; };
+		32959EEE1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectCommentAreaCell.xib; path = projects/cell/TJProjectCommentAreaCell.xib; sourceTree = "<group>"; };
+		32959EEF1A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailInfoCell.h; path = projects/cell/TJProjectDetailInfoCell.h; sourceTree = "<group>"; };
+		32959EF01A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailInfoCell.m; path = projects/cell/TJProjectDetailInfoCell.m; sourceTree = "<group>"; };
+		32959EF11A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectDetailInfoCell.xib; path = projects/cell/TJProjectDetailInfoCell.xib; sourceTree = "<group>"; };
+		32959EF21A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectTeamAreaCell.h; path = projects/cell/TJProjectTeamAreaCell.h; sourceTree = "<group>"; };
+		32959EF31A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectTeamAreaCell.m; path = projects/cell/TJProjectTeamAreaCell.m; sourceTree = "<group>"; };
+		32959EF41A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectTeamAreaCell.xib; path = projects/cell/TJProjectTeamAreaCell.xib; sourceTree = "<group>"; };
+		32959EF51A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectTitleInfoCell.h; path = projects/cell/TJProjectTitleInfoCell.h; sourceTree = "<group>"; };
+		32959EF61A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectTitleInfoCell.m; path = projects/cell/TJProjectTitleInfoCell.m; sourceTree = "<group>"; };
+		32959EF71A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectTitleInfoCell.xib; path = projects/cell/TJProjectTitleInfoCell.xib; sourceTree = "<group>"; };
+		32959F001A5ECFB300C2B9D6 /* TJProjectDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailViewModel.h; path = projects/viewmodel/TJProjectDetailViewModel.h; sourceTree = "<group>"; };
+		32959F011A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailViewModel.m; path = projects/viewmodel/TJProjectDetailViewModel.m; sourceTree = "<group>"; };
+		32959F031A5ECFBE00C2B9D6 /* TJProjectDetailBusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailBusinessModel.h; path = projects/businessmodel/TJProjectDetailBusinessModel.h; sourceTree = "<group>"; };
+		32959F041A5ECFBE00C2B9D6 /* TJProjectDetailBusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailBusinessModel.m; path = projects/businessmodel/TJProjectDetailBusinessModel.m; sourceTree = "<group>"; };
+		32959F051A5ECFBE00C2B9D6 /* TJProjectDetailResultBusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailResultBusinessModel.h; path = projects/businessmodel/TJProjectDetailResultBusinessModel.h; sourceTree = "<group>"; };
+		32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResultBusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailResultBusinessModel.m; path = projects/businessmodel/TJProjectDetailResultBusinessModel.m; sourceTree = "<group>"; };
+		32959F091A5ECFCC00C2B9D6 /* TJProjectDetailSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailSender.h; path = projects/service/TJProjectDetailSender.h; sourceTree = "<group>"; };
+		32959F0A1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailSender.m; path = projects/service/TJProjectDetailSender.m; sourceTree = "<group>"; };
 		85A33652F3F2C3B494D43C51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F87660748CC2C0B4B82EF26 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C29C277CF0BF4887084072 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,9 +139,9 @@
 		32959EB81A5EBD1C00C2B9D6 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				32959ED91A5EC01900C2B9D6 /* TJProjectDetailViewController.h */,
-				32959EDA1A5EC01900C2B9D6 /* TJProjectDetailViewController.m */,
-				32959EDB1A5EC01900C2B9D6 /* TJProjectDetailViewController.xib */,
+				32959EE71A5ECF8200C2B9D6 /* TJProjectDetailViewController.h */,
+				32959EE81A5ECF8200C2B9D6 /* TJProjectDetailViewController.m */,
+				32959EE91A5ECF8200C2B9D6 /* TJProjectDetailViewController.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -149,8 +149,8 @@
 		32959EB91A5EBD2B00C2B9D6 /* service */ = {
 			isa = PBXGroup;
 			children = (
-				32959EDE1A5EC06A00C2B9D6 /* TJProjectDetailSender.h */,
-				32959EDF1A5EC06A00C2B9D6 /* TJProjectDetailSender.m */,
+				32959F091A5ECFCC00C2B9D6 /* TJProjectDetailSender.h */,
+				32959F0A1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -158,10 +158,10 @@
 		32959EBA1A5EBD3A00C2B9D6 /* businessmodel */ = {
 			isa = PBXGroup;
 			children = (
-				32959EE11A5EC75800C2B9D6 /* TJProjectDetailResultBusinessModel.h */,
-				32959EE21A5EC75800C2B9D6 /* TJProjectDetailResultBusinessModel.m */,
-				32959EE41A5EC78400C2B9D6 /* TJProjectDetailBusinessModel.h */,
-				32959EE51A5EC78400C2B9D6 /* TJProjectDetailBusinessModel.m */,
+				32959F031A5ECFBE00C2B9D6 /* TJProjectDetailBusinessModel.h */,
+				32959F041A5ECFBE00C2B9D6 /* TJProjectDetailBusinessModel.m */,
+				32959F051A5ECFBE00C2B9D6 /* TJProjectDetailResultBusinessModel.h */,
+				32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResultBusinessModel.m */,
 			);
 			name = businessmodel;
 			sourceTree = "<group>";
@@ -169,8 +169,8 @@
 		32959EBB1A5EBD4B00C2B9D6 /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
-				32959ED61A5EBFEB00C2B9D6 /* TJProjectDetailViewModel.h */,
-				32959ED71A5EBFEB00C2B9D6 /* TJProjectDetailViewModel.m */,
+				32959F001A5ECFB300C2B9D6 /* TJProjectDetailViewModel.h */,
+				32959F011A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m */,
 			);
 			name = viewmodel;
 			sourceTree = "<group>";
@@ -178,18 +178,18 @@
 		32959EBC1A5EBD6900C2B9D6 /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				32959EC21A5EBEE600C2B9D6 /* TJProjectTitleInfoCell.h */,
-				32959EC31A5EBEE600C2B9D6 /* TJProjectTitleInfoCell.m */,
-				32959EC41A5EBEE600C2B9D6 /* TJProjectTitleInfoCell.xib */,
-				32959EC71A5EBF1300C2B9D6 /* TJProjectDetailInfoCell.h */,
-				32959EC81A5EBF1300C2B9D6 /* TJProjectDetailInfoCell.m */,
-				32959EC91A5EBF1300C2B9D6 /* TJProjectDetailInfoCell.xib */,
-				32959ECC1A5EBF5D00C2B9D6 /* TJProjectCommentAreaCell.h */,
-				32959ECD1A5EBF5D00C2B9D6 /* TJProjectCommentAreaCell.m */,
-				32959ECE1A5EBF5D00C2B9D6 /* TJProjectCommentAreaCell.xib */,
-				32959ED11A5EBF8700C2B9D6 /* TJProjectTeamAreaCell.h */,
-				32959ED21A5EBF8700C2B9D6 /* TJProjectTeamAreaCell.m */,
-				32959ED31A5EBF8700C2B9D6 /* TJProjectTeamAreaCell.xib */,
+				32959EEC1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.h */,
+				32959EED1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.m */,
+				32959EEE1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib */,
+				32959EEF1A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.h */,
+				32959EF01A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.m */,
+				32959EF11A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.xib */,
+				32959EF21A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.h */,
+				32959EF31A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.m */,
+				32959EF41A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.xib */,
+				32959EF51A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.h */,
+				32959EF61A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.m */,
+				32959EF71A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -395,14 +395,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32959EC61A5EBEE600C2B9D6 /* TJProjectTitleInfoCell.xib in Resources */,
-				32959ED01A5EBF5D00C2B9D6 /* TJProjectCommentAreaCell.xib in Resources */,
+				32959EFD1A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.xib in Resources */,
 				EA68E5281A5A2FB300CA2CCD /* Main.storyboard in Resources */,
-				32959EDD1A5EC01900C2B9D6 /* TJProjectDetailViewController.xib in Resources */,
+				32959EEB1A5ECF8200C2B9D6 /* TJProjectDetailViewController.xib in Resources */,
 				EA68E52D1A5A2FB300CA2CCD /* LaunchScreen.xib in Resources */,
-				32959ECB1A5EBF1300C2B9D6 /* TJProjectDetailInfoCell.xib in Resources */,
+				32959EF91A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib in Resources */,
+				32959EFB1A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.xib in Resources */,
+				32959EFF1A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.xib in Resources */,
 				EA68E52A1A5A2FB300CA2CCD /* Images.xcassets in Resources */,
-				32959ED51A5EBF8700C2B9D6 /* TJProjectTeamAreaCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,22 +453,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32959EE31A5EC75800C2B9D6 /* TJProjectDetailResultBusinessModel.m in Sources */,
+				32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResultBusinessModel.m in Sources */,
+				32959EFC1A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.m in Sources */,
+				32959EEA1A5ECF8200C2B9D6 /* TJProjectDetailViewController.m in Sources */,
+				32959EFE1A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.m in Sources */,
 				EA68E5251A5A2FB300CA2CCD /* SecondViewController.m in Sources */,
+				32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */,
 				EAEE9B361A5C012900FF3DA9 /* TJUserSender.m in Sources */,
-				32959EDC1A5EC01900C2B9D6 /* TJProjectDetailViewController.m in Sources */,
-				32959ED41A5EBF8700C2B9D6 /* TJProjectTeamAreaCell.m in Sources */,
-				32959ED81A5EBFEB00C2B9D6 /* TJProjectDetailViewModel.m in Sources */,
+				32959EF81A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.m in Sources */,
+				32959EFA1A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.m in Sources */,
 				EAEE9B3C1A5C04A500FF3DA9 /* TJUserLoginResponseModel.m in Sources */,
-				32959ECA1A5EBF1300C2B9D6 /* TJProjectDetailInfoCell.m in Sources */,
-				32959EE01A5EC06A00C2B9D6 /* TJProjectDetailSender.m in Sources */,
 				EA68E51F1A5A2FB300CA2CCD /* AppDelegate.m in Sources */,
-				32959ECF1A5EBF5D00C2B9D6 /* TJProjectCommentAreaCell.m in Sources */,
+				32959F0B1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m in Sources */,
+				32959F071A5ECFBE00C2B9D6 /* TJProjectDetailBusinessModel.m in Sources */,
 				EA68E5221A5A2FB300CA2CCD /* FirstViewController.m in Sources */,
 				EAEE9B391A5C041700FF3DA9 /* TJUserLoginRequestModel.m in Sources */,
 				EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */,
-				32959EE61A5EC78400C2B9D6 /* TJProjectDetailBusinessModel.m in Sources */,
-				32959EC51A5EBEE600C2B9D6 /* TJProjectTitleInfoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
