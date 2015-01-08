@@ -7,7 +7,6 @@
 //
 
 #import "TJUserSender.h"
-#import "TJSystemParam.h"
 #import <AFNetworking.h>
 #import "TJUserLoginRequestModel.h"
 #import "TJUserLoginResponseModel.h"
@@ -29,7 +28,8 @@ static TJUserSender* _sender = nil;
     TJUserLoginRequestModel *requestModel = [[TJUserLoginRequestModel alloc] init];
     requestModel.email = email;
     requestModel.password = password;
-    NSMutableURLRequest *urlRequest = [self createRequestWithDataModel:requestModel url:REQUEST_URL_LOGIN];
+//    NSMutableURLRequest *urlRequest = [self createRequestWithDataModel:requestModel url:REQUEST_URL_LOGIN];
+    NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_LOGIN];
     AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
     reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
     [reqOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
@@ -55,20 +55,19 @@ static TJUserSender* _sender = nil;
     [reqOperation start];
 }
 
-- (NSMutableURLRequest *) createRequestWithDataModel:(JSONModel *)model url:(NSString *) url
-{
-    NSString *postJson = [model toJSONString];
-    NSData *data = [postJson dataUsingEncoding:NSUTF8StringEncoding];
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setHTTPMethod:@"POST"];
-    [request setTimeoutInterval:REQUEST_TIMEOUT_INTERVAL];
-    NSString *urlString = [NSString stringWithFormat:@"%@%@", BASE_URL, url];
-//    NSString *urlString = @"http://www.raywenderlich.com/demos/weather_sample/weather.php?format=json";
-    [request setURL:[NSURL URLWithString:urlString]];
-    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[data length]] forHTTPHeaderField:@"Content-Length"];
-    [request setHTTPBody:data];
-    return request;
-}
+//- (NSMutableURLRequest *) createRequestWithDataModel:(JSONModel *)model url:(NSString *) url
+//{
+//    NSString *postJson = [model toJSONString];
+//    NSData *data = [postJson dataUsingEncoding:NSUTF8StringEncoding];
+//    
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+//    [request setHTTPMethod:@"POST"];
+//    [request setTimeoutInterval:REQUEST_TIMEOUT_INTERVAL];
+//    NSString *urlString = [NSString stringWithFormat:@"%@%@", BASE_URL, url];
+//    [request setURL:[NSURL URLWithString:urlString]];
+//    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[data length]] forHTTPHeaderField:@"Content-Length"];
+//    [request setHTTPBody:data];
+//    return request;
+//}
 
 @end

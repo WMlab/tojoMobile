@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TJSender.h"
 
 typedef void (^UserCommonCallBack)(BOOL success, NSString *message);
 
-@interface TJUserSender : NSObject
+@interface TJUserSender : TJSender
 
 +(instancetype) getInstance;
 /**

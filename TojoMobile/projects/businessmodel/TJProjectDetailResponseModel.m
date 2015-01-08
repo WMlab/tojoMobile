@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 Tongjo. All rights reserved.
 //
 
-#import "TJProjectDetailResultBusinessModel.h"
+#import "TJProjectDetailResponseModel.h"
 
-@implementation TJProjectDetailResultBusinessModel
+@implementation TJProjectDetailResponseModel
 
 @end

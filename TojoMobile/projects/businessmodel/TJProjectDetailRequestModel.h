@@ -1,5 +1,5 @@
 //
-//  TJProjectDetailResultBusinessModel.h
+//  TJProjectDetailBusinessModel.h
 //  TojoMobile
 //
 //  Created by sdq on 15/1/8.
@@ -8,6 +8,6 @@
 
 #import "JSONModel.h"
 
-@interface TJProjectDetailResultBusinessModel : JSONModel
+@interface TJProjectDetailRequestModel : JSONModel
 
 @end
