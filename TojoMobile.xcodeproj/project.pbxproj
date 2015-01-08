@@ -19,6 +19,8 @@
 		32959EDC1A5EC01900C2B9D6 /* TJProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EDA1A5EC01900C2B9D6 /* TJProjectDetailViewController.m */; };
 		32959EDD1A5EC01900C2B9D6 /* TJProjectDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32959EDB1A5EC01900C2B9D6 /* TJProjectDetailViewController.xib */; };
 		32959EE01A5EC06A00C2B9D6 /* TJProjectDetailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EDF1A5EC06A00C2B9D6 /* TJProjectDetailSender.m */; };
+		32959EE31A5EC75800C2B9D6 /* TJProjectDetailResultBusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EE21A5EC75800C2B9D6 /* TJProjectDetailResultBusinessModel.m */; };
+		32959EE61A5EC78400C2B9D6 /* TJProjectDetailBusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EE51A5EC78400C2B9D6 /* TJProjectDetailBusinessModel.m */; };
 		E42770C64AD3214DC5895880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F87660748CC2C0B4B82EF26 /* libPods.a */; };
 		EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E51B1A5A2FB300CA2CCD /* main.m */; };
 		EA68E51F1A5A2FB300CA2CCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E51E1A5A2FB300CA2CCD /* AppDelegate.m */; };
@@ -63,6 +65,10 @@
 		32959EDB1A5EC01900C2B9D6 /* TJProjectDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectDetailViewController.xib; path = projects/TJProjectDetailViewController.xib; sourceTree = "<group>"; };
 		32959EDE1A5EC06A00C2B9D6 /* TJProjectDetailSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailSender.h; path = projects/TJProjectDetailSender.h; sourceTree = "<group>"; };
 		32959EDF1A5EC06A00C2B9D6 /* TJProjectDetailSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailSender.m; path = projects/TJProjectDetailSender.m; sourceTree = "<group>"; };
+		32959EE11A5EC75800C2B9D6 /* TJProjectDetailResultBusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailResultBusinessModel.h; path = projects/TJProjectDetailResultBusinessModel.h; sourceTree = "<group>"; };
+		32959EE21A5EC75800C2B9D6 /* TJProjectDetailResultBusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailResultBusinessModel.m; path = projects/TJProjectDetailResultBusinessModel.m; sourceTree = "<group>"; };
+		32959EE41A5EC78400C2B9D6 /* TJProjectDetailBusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailBusinessModel.h; path = projects/TJProjectDetailBusinessModel.h; sourceTree = "<group>"; };
+		32959EE51A5EC78400C2B9D6 /* TJProjectDetailBusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailBusinessModel.m; path = projects/TJProjectDetailBusinessModel.m; sourceTree = "<group>"; };
 		85A33652F3F2C3B494D43C51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F87660748CC2C0B4B82EF26 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C29C277CF0BF4887084072 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +158,10 @@
 		32959EBA1A5EBD3A00C2B9D6 /* businessmodel */ = {
 			isa = PBXGroup;
 			children = (
+				32959EE11A5EC75800C2B9D6 /* TJProjectDetailResultBusinessModel.h */,
+				32959EE21A5EC75800C2B9D6 /* TJProjectDetailResultBusinessModel.m */,
+				32959EE41A5EC78400C2B9D6 /* TJProjectDetailBusinessModel.h */,
+				32959EE51A5EC78400C2B9D6 /* TJProjectDetailBusinessModel.m */,
 			);
 			name = businessmodel;
 			sourceTree = "<group>";
@@ -443,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32959EE31A5EC75800C2B9D6 /* TJProjectDetailResultBusinessModel.m in Sources */,
 				EA68E5251A5A2FB300CA2CCD /* SecondViewController.m in Sources */,
 				EAEE9B361A5C012900FF3DA9 /* TJUserSender.m in Sources */,
 				32959EDC1A5EC01900C2B9D6 /* TJProjectDetailViewController.m in Sources */,
@@ -456,6 +467,7 @@
 				EA68E5221A5A2FB300CA2CCD /* FirstViewController.m in Sources */,
 				EAEE9B391A5C041700FF3DA9 /* TJUserLoginRequestModel.m in Sources */,
 				EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */,
+				32959EE61A5EC78400C2B9D6 /* TJProjectDetailBusinessModel.m in Sources */,
 				32959EC51A5EBEE600C2B9D6 /* TJProjectTitleInfoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
