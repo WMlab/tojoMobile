@@ -20,18 +20,19 @@
     switch (method) {
         case REQUEST_METHOD_GET: {
             [request setHTTPMethod:@"GET"];
-            NSString *className = [NSString stringWithUTF8String:object_getClassName(model)];
-            id modelClass = object_getClass(className);
             unsigned int outCount;
-            objc_property_t *properties = class_copyPropertyList(modelClass, &outCount);
+            objc_property_t *properties = class_copyPropertyList(model.class, &outCount);
             NSMutableString *requsetParamStr = [[NSMutableString alloc] init];
             for (int i = 0; i < outCount; i++) {
                 objc_property_t property = properties[i];
                 NSString *propName = [NSString stringWithUTF8String:property_getName(property)];
-                NSString *value = [[model valueForKey:propName] stringValue];
+                id value = [model valueForKey:propName];
+                if (![value isKindOfClass:[NSString class]]) {
+                    value = [value stringValue];
+                }
                 [requsetParamStr appendFormat:@"%@=%@&", propName, value];
             }
-            urlString = [NSString stringWithFormat:@"%@/%@", urlString, requsetParamStr];
+            urlString = [NSString stringWithFormat:@"%@?%@", urlString, requsetParamStr];
             break;
         }
         case REQUEST_METHOD_POST: {
@@ -64,6 +65,7 @@
         default:
             break;
     }
+    [request setValue:@"text" forHTTPHeaderField:@"content-type"];
     [request setURL:[NSURL URLWithString:urlString]];
     return request;
 }

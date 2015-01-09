@@ -25,7 +25,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)loginAction:(id)sender {
-    [[TJUserSender getInstance] sendUserLoginWithEmail:@"123@123.com" password:@"123" completeBlock:^(BOOL success, NSString *message) {
+    [[TJUserSender getInstance] sendUserLoginWithEmail:@"yy@tongjo.com" password:@"123" completeBlock:^(BOOL success, NSString *message) {
         if (!success) {
             UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
             [av show];
