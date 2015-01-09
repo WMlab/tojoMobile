@@ -7,7 +7,10 @@
 //
 
 #import "JSONModel.h"
+#import "TJProjectDetailResponseModel.h"
 
 @interface TJProjectDetailRequestModel : JSONModel
+
+@property (nonatomic,strong) TJProjectDetailResponseModel *result;
 
 @end
