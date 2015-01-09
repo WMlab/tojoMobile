@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TJSender.h"
 
-@interface TJProjectDetailSender : NSObject
+@interface TJProjectDetailSender : TJSender
 
 @end
