@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TojoMobile/user/service/TJUserSender.m"
-            timestampString = "442475260.957524"
+            timestampString = "442588117.444064"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "-sendUserLoginWithEmail:password:completeBlock:"
             landmarkType = "5">
          </BreakpointContent>

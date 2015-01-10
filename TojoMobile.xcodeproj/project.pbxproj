@@ -33,6 +33,7 @@
 		EA99FC711A5ED72A0069ADBD /* TJSender.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99FC701A5ED72A0069ADBD /* TJSender.m */; };
 		EA99FC771A5EE9C70069ADBD /* TJUserLoginRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99FC741A5EE9C70069ADBD /* TJUserLoginRequestModel.m */; };
 		EA99FC781A5EE9C70069ADBD /* TJUserLoginResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99FC761A5EE9C70069ADBD /* TJUserLoginResponseModel.m */; };
+		EAC116BC1A615AD200F620DE /* TJResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116BB1A615AD200F620DE /* TJResultModel.m */; };
 		EAEE9B361A5C012900FF3DA9 /* TJUserSender.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE9B351A5C012900FF3DA9 /* TJUserSender.m */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,8 @@
 		EA99FC741A5EE9C70069ADBD /* TJUserLoginRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserLoginRequestModel.m; sourceTree = "<group>"; };
 		EA99FC751A5EE9C70069ADBD /* TJUserLoginResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserLoginResponseModel.h; sourceTree = "<group>"; };
 		EA99FC761A5EE9C70069ADBD /* TJUserLoginResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserLoginResponseModel.m; sourceTree = "<group>"; };
+		EAC116BA1A615AD200F620DE /* TJResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJResultModel.h; sourceTree = "<group>"; };
+		EAC116BB1A615AD200F620DE /* TJResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJResultModel.m; sourceTree = "<group>"; };
 		EAEE9B341A5C012900FF3DA9 /* TJUserSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserSender.h; sourceTree = "<group>"; };
 		EAEE9B351A5C012900FF3DA9 /* TJUserSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserSender.m; sourceTree = "<group>"; };
 		EAEE9B3E1A5C120200FF3DA9 /* TJSystemParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJSystemParam.h; sourceTree = "<group>"; };
@@ -314,6 +317,8 @@
 				EAEE9B3E1A5C120200FF3DA9 /* TJSystemParam.h */,
 				EA99FC6F1A5ED72A0069ADBD /* TJSender.h */,
 				EA99FC701A5ED72A0069ADBD /* TJSender.m */,
+				EAC116BA1A615AD200F620DE /* TJResultModel.h */,
+				EAC116BB1A615AD200F620DE /* TJResultModel.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -474,6 +479,7 @@
 				32959F0B1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m in Sources */,
 				32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */,
 				EA68E5221A5A2FB300CA2CCD /* FirstViewController.m in Sources */,
+				EAC116BC1A615AD200F620DE /* TJResultModel.m in Sources */,
 				EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

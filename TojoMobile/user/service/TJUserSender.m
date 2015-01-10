@@ -10,6 +10,7 @@
 #import <AFNetworking.h>
 #import "TJUserLoginRequestModel.h"
 #import "TJUserLoginResponseModel.h"
+#import "TJResultModel.h"
 
 static TJUserSender* _sender = nil;
 @implementation TJUserSender
@@ -34,21 +35,24 @@ static TJUserSender* _sender = nil;
     reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
     [reqOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
         NSDictionary *responseDic = (NSDictionary *)responseObject;
-        BOOL result = [[responseDic objectForKey:@"result"] boolValue];
-        NSString *msg = [responseDic objectForKey:@"message"];
-        if (1 == result) {
+        NSDictionary *resultDic = [responseDic objectForKey:@"result"];
+        TJResultModel *resultModel = [[TJResultModel alloc] initWithDictionary:resultDic error:nil];
+        NSString *msg = resultModel.message;
+        if (0 == resultModel.code) {
             NSDictionary *infoModel = [responseDic objectForKey:@"user"];
             TJUserLoginResponseModel *responseModel = [[TJUserLoginResponseModel alloc] initWithDictionary:infoModel error:nil];
             NSLog(@"user:%@", responseModel.realName);
             if (callBack) {
-                callBack(result, msg);
+                callBack(true, msg);
             }
         }
         else {
-            callBack(result, msg);
+            callBack(false, msg);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (callBack) {
+            NSLog(@"%@", operation.responseString);
+            NSLog(@"%@",operation.responseData);
             callBack(NO, @"登录失败");
         }
     }];
