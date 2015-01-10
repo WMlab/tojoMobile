@@ -22,6 +22,7 @@ PODS:
     - AFNetworking/NSURLSession
   - ALToastView (0.0.1)
   - JSONModel (1.0.1)
+  - MJRefresh (1.0)
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
   - SDWebImage/Core (3.7.1)
@@ -30,12 +31,23 @@ DEPENDENCIES:
   - AFNetworking (~> 2.5.0)
   - ALToastView (~> 0.0.1)
   - JSONModel (~> 1.0.1)
+  - MJRefresh (from `https://github.com/CoderMJLee/MJRefresh.git`)
   - SDWebImage (~> 3.7.1)
+
+EXTERNAL SOURCES:
+  MJRefresh:
+    :git: https://github.com/CoderMJLee/MJRefresh.git
+
+CHECKOUT OPTIONS:
+  MJRefresh:
+    :commit: a3c833453d311e3ae3dc76ba61672c407f1326e8
+    :git: https://github.com/CoderMJLee/MJRefresh.git
 
 SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
   ALToastView: 26f4f8c33ddbebd3aa4ab3fae09b878527da1f92
   JSONModel: 634100aaacbd89811bc8a03da209356e5989c569
+  MJRefresh: ca01d7bd473c950f26bd26fef93965f8cf4a7488
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
 
 COCOAPODS: 0.35.0
