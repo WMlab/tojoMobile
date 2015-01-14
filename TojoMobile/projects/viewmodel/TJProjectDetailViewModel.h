@@ -7,7 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TJProjectInfoModel.h"
+#import "TJCommentModel.h"
+#import "TJTeamModel.h"
 
 @interface TJProjectDetailViewModel : NSObject
+
+/**项目详情**/
+@property (nonatomic,copy) TJProjectInfoModel *projectInfoModel;
+
+/**评论**/
+@property (nonatomic,assign)int commentCount;
+@property (nonatomic,copy)TJCommentModel *commentModel;
+
+
+/**团队**/
+@property (nonatomic,assign)int teamCount;
+@property (nonatomic,copy)TJTeamModel *teamModel;
 
 @end
