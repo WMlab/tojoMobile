@@ -7,6 +7,7 @@
 //
 
 #import "TJProjectDetailViewController.h"
+#import "StrechyParallaxScrollView.h"
 
 @interface TJProjectDetailViewController ()
 
