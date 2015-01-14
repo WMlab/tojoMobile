@@ -20,6 +20,7 @@
 		32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */; };
 		32959F0B1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F0A1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m */; };
 		E42770C64AD3214DC5895880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F87660748CC2C0B4B82EF26 /* libPods.a */; };
+		EA1864591A66310500117C8A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1864581A66310500117C8A /* libsqlite3.dylib */; };
 		EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E51B1A5A2FB300CA2CCD /* main.m */; };
 		EA68E51F1A5A2FB300CA2CCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E51E1A5A2FB300CA2CCD /* AppDelegate.m */; };
 		EA68E5221A5A2FB300CA2CCD /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E5211A5A2FB300CA2CCD /* FirstViewController.m */; };
@@ -34,14 +35,6 @@
 		EAC116BC1A615AD200F620DE /* TJResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116BB1A615AD200F620DE /* TJResultModel.m */; };
 		EAC116BF1A618ADC00F620DE /* TJDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116BE1A618ADC00F620DE /* TJDataBase.m */; };
 		EAC116C21A618C1C00F620DE /* TJFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116C11A618C1C00F620DE /* TJFilePath.m */; };
-		EAC116D51A6195DA00F620DE /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EAC116C51A6195DA00F620DE /* MJRefresh.bundle */; };
-		EAC116D61A6195DA00F620DE /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116C81A6195DA00F620DE /* MJRefreshBaseView.m */; };
-		EAC116D71A6195DA00F620DE /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116CA1A6195DA00F620DE /* MJRefreshConst.m */; };
-		EAC116D81A6195DA00F620DE /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116CC1A6195DA00F620DE /* MJRefreshFooterView.m */; };
-		EAC116D91A6195DA00F620DE /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116CE1A6195DA00F620DE /* MJRefreshHeaderView.m */; };
-		EAC116DA1A6195DA00F620DE /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116D01A6195DA00F620DE /* UIScrollView+MJExtension.m */; };
-		EAC116DB1A6195DA00F620DE /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116D21A6195DA00F620DE /* UIScrollView+MJRefresh.m */; };
-		EAC116DC1A6195DA00F620DE /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116D41A6195DA00F620DE /* UIView+MJExtension.m */; };
 		EAC116E41A61967700F620DE /* TJProjectListSender.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116E31A61967700F620DE /* TJProjectListSender.m */; };
 		EAC116EC1A61983000F620DE /* TJProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116E71A61983000F620DE /* TJProjectDetailViewController.m */; };
 		EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC116E81A61983000F620DE /* TJProjectDetailViewController.xib */; };
@@ -84,6 +77,7 @@
 		85A33652F3F2C3B494D43C51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F87660748CC2C0B4B82EF26 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C29C277CF0BF4887084072 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EA1864581A66310500117C8A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		EA68E5161A5A2FB300CA2CCD /* TojoMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TojoMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA68E51A1A5A2FB300CA2CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA68E51B1A5A2FB300CA2CCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -111,22 +105,6 @@
 		EAC116BE1A618ADC00F620DE /* TJDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJDataBase.m; sourceTree = "<group>"; };
 		EAC116C01A618C1C00F620DE /* TJFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJFilePath.h; sourceTree = "<group>"; };
 		EAC116C11A618C1C00F620DE /* TJFilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJFilePath.m; sourceTree = "<group>"; };
-		EAC116C51A6195DA00F620DE /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
-		EAC116C61A6195DA00F620DE /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
-		EAC116C71A6195DA00F620DE /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
-		EAC116C81A6195DA00F620DE /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
-		EAC116C91A6195DA00F620DE /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
-		EAC116CA1A6195DA00F620DE /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
-		EAC116CB1A6195DA00F620DE /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
-		EAC116CC1A6195DA00F620DE /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
-		EAC116CD1A6195DA00F620DE /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
-		EAC116CE1A6195DA00F620DE /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
-		EAC116CF1A6195DA00F620DE /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
-		EAC116D01A6195DA00F620DE /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
-		EAC116D11A6195DA00F620DE /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
-		EAC116D21A6195DA00F620DE /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
-		EAC116D31A6195DA00F620DE /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
-		EAC116D41A6195DA00F620DE /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		EAC116E21A61967700F620DE /* TJProjectListSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListSender.h; path = projects/service/TJProjectListSender.h; sourceTree = "<group>"; };
 		EAC116E31A61967700F620DE /* TJProjectListSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListSender.m; path = projects/service/TJProjectListSender.m; sourceTree = "<group>"; };
 		EAC116E61A61983000F620DE /* TJProjectDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailViewController.h; path = projects/TJProjectDetailViewController.h; sourceTree = "<group>"; };
@@ -145,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA1864591A66310500117C8A /* libsqlite3.dylib in Frameworks */,
 				E42770C64AD3214DC5895880 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +225,7 @@
 		3548326D607B0EA4ECF529D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA1864581A66310500117C8A /* libsqlite3.dylib */,
 				9F87660748CC2C0B4B82EF26 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -274,7 +254,6 @@
 		EA68E5181A5A2FB300CA2CCD /* TojoMobile */ = {
 			isa = PBXGroup;
 			children = (
-				EAC116C31A6195DA00F620DE /* thirdExtension */,
 				32959EB71A5EBD0300C2B9D6 /* projects */,
 				EAEE9B3D1A5C11E500FF3DA9 /* common */,
 				EAEE9B301A5BFFFB00FF3DA9 /* user */,
@@ -327,37 +306,6 @@
 				EA99FC761A5EE9C70069ADBD /* TJUserLoginResponseModel.m */,
 			);
 			path = businessModel;
-			sourceTree = "<group>";
-		};
-		EAC116C31A6195DA00F620DE /* thirdExtension */ = {
-			isa = PBXGroup;
-			children = (
-				EAC116C41A6195DA00F620DE /* MJRefresh */,
-			);
-			path = thirdExtension;
-			sourceTree = "<group>";
-		};
-		EAC116C41A6195DA00F620DE /* MJRefresh */ = {
-			isa = PBXGroup;
-			children = (
-				EAC116C51A6195DA00F620DE /* MJRefresh.bundle */,
-				EAC116C61A6195DA00F620DE /* MJRefresh.h */,
-				EAC116C71A6195DA00F620DE /* MJRefreshBaseView.h */,
-				EAC116C81A6195DA00F620DE /* MJRefreshBaseView.m */,
-				EAC116C91A6195DA00F620DE /* MJRefreshConst.h */,
-				EAC116CA1A6195DA00F620DE /* MJRefreshConst.m */,
-				EAC116CB1A6195DA00F620DE /* MJRefreshFooterView.h */,
-				EAC116CC1A6195DA00F620DE /* MJRefreshFooterView.m */,
-				EAC116CD1A6195DA00F620DE /* MJRefreshHeaderView.h */,
-				EAC116CE1A6195DA00F620DE /* MJRefreshHeaderView.m */,
-				EAC116CF1A6195DA00F620DE /* UIScrollView+MJExtension.h */,
-				EAC116D01A6195DA00F620DE /* UIScrollView+MJExtension.m */,
-				EAC116D11A6195DA00F620DE /* UIScrollView+MJRefresh.h */,
-				EAC116D21A6195DA00F620DE /* UIScrollView+MJRefresh.m */,
-				EAC116D31A6195DA00F620DE /* UIView+MJExtension.h */,
-				EAC116D41A6195DA00F620DE /* UIView+MJExtension.m */,
-			);
-			path = MJRefresh;
 			sourceTree = "<group>";
 		};
 		EAEE9B301A5BFFFB00FF3DA9 /* user */ = {
@@ -493,7 +441,6 @@
 				32959EFF1A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.xib in Resources */,
 				EA68E52A1A5A2FB300CA2CCD /* Images.xcassets in Resources */,
 				EAC116EF1A61983000F620DE /* TJProjectListViewController.xib in Resources */,
-				EAC116D51A6195DA00F620DE /* MJRefresh.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,14 +495,9 @@
 				32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */,
 				32959EFC1A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.m in Sources */,
 				EA99FC781A5EE9C70069ADBD /* TJUserLoginResponseModel.m in Sources */,
-				EAC116D61A6195DA00F620DE /* MJRefreshBaseView.m in Sources */,
-				EAC116DA1A6195DA00F620DE /* UIScrollView+MJExtension.m in Sources */,
 				32959EFE1A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.m in Sources */,
 				EA99FC771A5EE9C70069ADBD /* TJUserLoginRequestModel.m in Sources */,
-				EAC116DB1A6195DA00F620DE /* UIScrollView+MJRefresh.m in Sources */,
 				EA68E5251A5A2FB300CA2CCD /* SecondViewController.m in Sources */,
-				EAC116D71A6195DA00F620DE /* MJRefreshConst.m in Sources */,
-				EAC116D81A6195DA00F620DE /* MJRefreshFooterView.m in Sources */,
 				32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */,
 				EA99FC711A5ED72A0069ADBD /* TJSender.m in Sources */,
 				EAEE9B361A5C012900FF3DA9 /* TJUserSender.m in Sources */,
@@ -565,10 +507,8 @@
 				32959EFA1A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.m in Sources */,
 				EA68E51F1A5A2FB300CA2CCD /* AppDelegate.m in Sources */,
 				32959F0B1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m in Sources */,
-				EAC116D91A6195DA00F620DE /* MJRefreshHeaderView.m in Sources */,
 				EAC116EC1A61983000F620DE /* TJProjectDetailViewController.m in Sources */,
 				32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */,
-				EAC116DC1A6195DA00F620DE /* UIView+MJExtension.m in Sources */,
 				EA68E5221A5A2FB300CA2CCD /* FirstViewController.m in Sources */,
 				EAC116BC1A615AD200F620DE /* TJResultModel.m in Sources */,
 				EAC116C21A618C1C00F620DE /* TJFilePath.m in Sources */,
