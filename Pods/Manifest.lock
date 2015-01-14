@@ -22,6 +22,7 @@ PODS:
     - AFNetworking/NSURLSession
   - ALToastView (0.0.1)
   - JSONModel (1.0.1)
+  - Masonry (0.6.0)
   - MJRefresh (1.0)
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - AFNetworking (~> 2.5.0)
   - ALToastView (~> 0.0.1)
   - JSONModel (~> 1.0.1)
+  - Masonry
   - MJRefresh (from `https://github.com/CoderMJLee/MJRefresh.git`)
   - SDWebImage (~> 3.7.1)
 
@@ -47,6 +49,7 @@ SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
   ALToastView: 26f4f8c33ddbebd3aa4ab3fae09b878527da1f92
   JSONModel: 634100aaacbd89811bc8a03da209356e5989c569
+  Masonry: 0bc111d6902e3a55ff8423bcbdf7155261806547
   MJRefresh: ca01d7bd473c950f26bd26fef93965f8cf4a7488
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
 

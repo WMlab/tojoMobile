@@ -35,24 +35,24 @@ static TJUserSender* _sender = nil;
     reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
     [reqOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
         NSDictionary *responseDic = (NSDictionary *)responseObject;
-        NSDictionary *resultDic = [responseDic objectForKey:@"result"];
-        TJResultModel *resultModel = [[TJResultModel alloc] initWithDictionary:resultDic error:nil];
-        NSString *msg = resultModel.message;
-        if (0 == resultModel.code) {
-            NSDictionary *infoModel = [responseDic objectForKey:@"user"];
-            TJUserLoginResponseModel *responseModel = [[TJUserLoginResponseModel alloc] initWithDictionary:infoModel error:nil];
-            NSLog(@"user:%@", responseModel.realName);
+        NSError *err;
+        TJUserLoginResponseModel *responseModel = [[TJUserLoginResponseModel alloc] initWithDictionary:responseDic error:&err];
+//        NSDictionary *resultDic = [responseDic objectForKey:@"result"];
+//        TJResultModel *resultModel = [[TJResultModel alloc] initWithDictionary:resultDic error:nil];
+//        NSString *msg = resultModel.message;
+        if (0 == responseModel.result.code && !err) {
+//            NSDictionary *infoModel = [responseDic objectForKey:@"user"];
+//            TJUserLoginResponseModel *responseModel = [[TJUserLoginResponseModel alloc] initWithDictionary:infoModel error:nil];
+//            NSLog(@"user:%@", responseModel.realName);
             if (callBack) {
-                callBack(true, msg);
+                callBack(true, responseModel.result.message);
             }
         }
         else {
-            callBack(false, msg);
+            callBack(false, responseModel.result.message);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (callBack) {
-            NSLog(@"%@", operation.responseString);
-            NSLog(@"%@",operation.responseData);
             callBack(NO, @"登录失败");
         }
     }];

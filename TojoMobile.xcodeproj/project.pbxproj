@@ -23,7 +23,11 @@
 		32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */; };
 		32959F0B1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F0A1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m */; };
 		E42770C64AD3214DC5895880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F87660748CC2C0B4B82EF26 /* libPods.a */; };
+		EA0A0BB71A66A9B300E37BFD /* TJProjectListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0A0BB51A66A9B300E37BFD /* TJProjectListCell.m */; };
+		EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0A0BB61A66A9B300E37BFD /* TJProjectListCell.xib */; };
 		EA1864591A66310500117C8A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1864581A66310500117C8A /* libsqlite3.dylib */; };
+		EA3248481A668D6400D45E30 /* TJProjectListRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3248471A668D6400D45E30 /* TJProjectListRequestModel.m */; };
+		EA32484B1A668D9300D45E30 /* TJProjectListResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32484A1A668D9300D45E30 /* TJProjectListResponseModel.m */; };
 		EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E51B1A5A2FB300CA2CCD /* main.m */; };
 		EA68E51F1A5A2FB300CA2CCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E51E1A5A2FB300CA2CCD /* AppDelegate.m */; };
 		EA68E5221A5A2FB300CA2CCD /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E5211A5A2FB300CA2CCD /* FirstViewController.m */; };
@@ -86,7 +90,15 @@
 		85A33652F3F2C3B494D43C51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F87660748CC2C0B4B82EF26 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C29C277CF0BF4887084072 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EA0A0BB41A66A9B300E37BFD /* TJProjectListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListCell.h; path = projects/cell/TJProjectListCell.h; sourceTree = "<group>"; };
+		EA0A0BB51A66A9B300E37BFD /* TJProjectListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListCell.m; path = projects/cell/TJProjectListCell.m; sourceTree = "<group>"; };
+		EA0A0BB61A66A9B300E37BFD /* TJProjectListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectListCell.xib; path = projects/cell/TJProjectListCell.xib; sourceTree = "<group>"; };
+		EA0A0BBD1A66ACA800E37BFD /* TJDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJDefine.h; sourceTree = "<group>"; };
 		EA1864581A66310500117C8A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		EA3248461A668D6400D45E30 /* TJProjectListRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListRequestModel.h; path = projects/businessmodel/TJProjectListRequestModel.h; sourceTree = "<group>"; };
+		EA3248471A668D6400D45E30 /* TJProjectListRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListRequestModel.m; path = projects/businessmodel/TJProjectListRequestModel.m; sourceTree = "<group>"; };
+		EA3248491A668D9300D45E30 /* TJProjectListResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListResponseModel.h; path = projects/businessmodel/TJProjectListResponseModel.h; sourceTree = "<group>"; };
+		EA32484A1A668D9300D45E30 /* TJProjectListResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListResponseModel.m; path = projects/businessmodel/TJProjectListResponseModel.m; sourceTree = "<group>"; };
 		EA68E5161A5A2FB300CA2CCD /* TojoMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TojoMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA68E51A1A5A2FB300CA2CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA68E51B1A5A2FB300CA2CCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -205,6 +217,10 @@
 				3211463B1A669A7A00F89494 /* TJCommentModel.m */,
 				3211463D1A669AD600F89494 /* TJTeamModel.h */,
 				3211463E1A669AD600F89494 /* TJTeamModel.m */,
+				EA3248461A668D6400D45E30 /* TJProjectListRequestModel.h */,
+				EA3248471A668D6400D45E30 /* TJProjectListRequestModel.m */,
+				EA3248491A668D9300D45E30 /* TJProjectListResponseModel.h */,
+				EA32484A1A668D9300D45E30 /* TJProjectListResponseModel.m */,
 			);
 			name = businessmodel;
 			sourceTree = "<group>";
@@ -233,6 +249,9 @@
 				32959EF51A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.h */,
 				32959EF61A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.m */,
 				32959EF71A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.xib */,
+				EA0A0BB41A66A9B300E37BFD /* TJProjectListCell.h */,
+				EA0A0BB51A66A9B300E37BFD /* TJProjectListCell.m */,
+				EA0A0BB61A66A9B300E37BFD /* TJProjectListCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -361,6 +380,7 @@
 				EAC116BE1A618ADC00F620DE /* TJDataBase.m */,
 				EAC116C01A618C1C00F620DE /* TJFilePath.h */,
 				EAC116C11A618C1C00F620DE /* TJFilePath.m */,
+				EA0A0BBD1A66ACA800E37BFD /* TJDefine.h */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -416,6 +436,7 @@
 				TargetAttributes = {
 					EA68E5151A5A2FB300CA2CCD = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = B84MT5PP8Y;
 					};
 					EA68E5311A5A2FB300CA2CCD = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -450,6 +471,7 @@
 				32959EFD1A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.xib in Resources */,
 				EA68E5281A5A2FB300CA2CCD /* Main.storyboard in Resources */,
 				EA68E52D1A5A2FB300CA2CCD /* LaunchScreen.xib in Resources */,
+				EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */,
 				32959EF91A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib in Resources */,
 				32959EFB1A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.xib in Resources */,
 				EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */,
@@ -509,6 +531,7 @@
 				EAC116E41A61967700F620DE /* TJProjectListSender.m in Sources */,
 				32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */,
 				32959EFC1A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.m in Sources */,
+				EA0A0BB71A66A9B300E37BFD /* TJProjectListCell.m in Sources */,
 				EA99FC781A5EE9C70069ADBD /* TJUserLoginResponseModel.m in Sources */,
 				32959EFE1A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.m in Sources */,
 				3211463C1A669A7A00F89494 /* TJCommentModel.m in Sources */,
@@ -525,10 +548,12 @@
 				EA68E51F1A5A2FB300CA2CCD /* AppDelegate.m in Sources */,
 				321146391A66997900F89494 /* TJProjectInfoModel.m in Sources */,
 				32959F0B1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m in Sources */,
+				EA32484B1A668D9300D45E30 /* TJProjectListResponseModel.m in Sources */,
 				EAC116EC1A61983000F620DE /* TJProjectDetailViewController.m in Sources */,
 				32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */,
 				EA68E5221A5A2FB300CA2CCD /* FirstViewController.m in Sources */,
 				EAC116BC1A615AD200F620DE /* TJResultModel.m in Sources */,
+				EA3248481A668D6400D45E30 /* TJProjectListRequestModel.m in Sources */,
 				EAC116C21A618C1C00F620DE /* TJFilePath.m in Sources */,
 				EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */,
 			);
@@ -655,6 +680,7 @@
 			baseConfigurationReference = B2C29C277CF0BF4887084072 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TojoMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -666,6 +692,7 @@
 			baseConfigurationReference = 85A33652F3F2C3B494D43C51 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TojoMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
