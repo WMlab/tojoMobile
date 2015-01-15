@@ -30,6 +30,11 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>Pods-Masonry.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>Pods-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,12 +67,42 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>22835240CE679157703A8D9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>24BA59F78174DA4C8B0C2865</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>302F4B366E9E022D89EB9846</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4656E5C3BF1622732DE110BF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>5563AF070C4180147993ED42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>56C29234EE9DFD56BC33BE39</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5E71248E30C8E6FE67043D9D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>61B322C1D3298D09756FBABB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -98,6 +133,11 @@
 			<true/>
 		</dict>
 		<key>D8265A13E247A9C9BDD77743</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F337208D518CE59A824CBD36</key>
 		<dict>
 			<key>primary</key>
 			<true/>

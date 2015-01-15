@@ -23,6 +23,7 @@
 		32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F041A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m */; };
 		32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */; };
 		32959F0B1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F0A1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m */; };
+		32A502AB1A67932200FCB908 /* titleImageTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 32A502AA1A67932200FCB908 /* titleImageTest.png */; };
 		E42770C64AD3214DC5895880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F87660748CC2C0B4B82EF26 /* libPods.a */; };
 		EA0A0BB71A66A9B300E37BFD /* TJProjectListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0A0BB51A66A9B300E37BFD /* TJProjectListCell.m */; };
 		EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0A0BB61A66A9B300E37BFD /* TJProjectListCell.xib */; };
@@ -90,6 +91,7 @@
 		32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailResponseModel.m; path = projects/businessmodel/TJProjectDetailResponseModel.m; sourceTree = "<group>"; };
 		32959F091A5ECFCC00C2B9D6 /* TJProjectDetailSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailSender.h; path = projects/service/TJProjectDetailSender.h; sourceTree = "<group>"; };
 		32959F0A1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailSender.m; path = projects/service/TJProjectDetailSender.m; sourceTree = "<group>"; };
+		32A502AA1A67932200FCB908 /* titleImageTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleImageTest.png; sourceTree = "<group>"; };
 		85A33652F3F2C3B494D43C51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F87660748CC2C0B4B82EF26 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C29C277CF0BF4887084072 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -261,6 +263,14 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		32A502661A6770E700FCB908 /* testImage */ = {
+			isa = PBXGroup;
+			children = (
+				32A502AA1A67932200FCB908 /* titleImageTest.png */,
+			);
+			name = testImage;
+			sourceTree = "<group>";
+		};
 		3548326D607B0EA4ECF529D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +303,7 @@
 		EA68E5181A5A2FB300CA2CCD /* TojoMobile */ = {
 			isa = PBXGroup;
 			children = (
+				32A502661A6770E700FCB908 /* testImage */,
 				32959EB71A5EBD0300C2B9D6 /* projects */,
 				EAEE9B3D1A5C11E500FF3DA9 /* common */,
 				EAEE9B301A5BFFFB00FF3DA9 /* user */,
@@ -480,6 +491,7 @@
 				32959EF91A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib in Resources */,
 				32959EFB1A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.xib in Resources */,
 				EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */,
+				32A502AB1A67932200FCB908 /* titleImageTest.png in Resources */,
 				32959EFF1A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.xib in Resources */,
 				EA68E52A1A5A2FB300CA2CCD /* Images.xcassets in Resources */,
 				EAC116EF1A61983000F620DE /* TJProjectListViewController.xib in Resources */,

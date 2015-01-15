@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TJProjectDetailViewController : UIViewController<UIGestureRecognizerDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface TJProjectDetailViewController : UIViewController<UIGestureRecognizerDelegate>
 
 
 @end
