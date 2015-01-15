@@ -10,12 +10,13 @@
 #define TojoMobile_TJSystemParam_h
 
 //#define BASE_URL @"http://api.tongjo.com/"
-#define BASE_URL @"http://192.168.31.218/tongjoMobileTest/"
-
+#define BASE_URL @"http://api.tongjo.com/"
+#define IMAGE_URL @"http://api.tongjo.com/files/"
 
 #define REQUEST_TIMEOUT_INTERVAL 30
 
 
-#define REQUEST_URL_LOGIN @"login.php"
+#define REQUEST_URL_LOGIN           @"login"
+#define REQUEST_URL_PROJECT_LIST    @"projectlist"
 
 #endif

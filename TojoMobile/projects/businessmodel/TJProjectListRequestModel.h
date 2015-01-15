@@ -10,4 +10,6 @@
 
 @interface TJProjectListRequestModel : JSONModel
 
+@property(nonatomic, assign) int categoryId;
+
 @end

@@ -29,7 +29,6 @@ static TJUserSender* _sender = nil;
     TJUserLoginRequestModel *requestModel = [[TJUserLoginRequestModel alloc] init];
     requestModel.email = email;
     requestModel.password = password;
-//    NSMutableURLRequest *urlRequest = [self createRequestWithDataModel:requestModel url:REQUEST_URL_LOGIN];
     NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_LOGIN];
     AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
     reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];

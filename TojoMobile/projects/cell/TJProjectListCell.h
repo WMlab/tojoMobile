@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TJProjectInfoModel.h"
 @interface TJProjectListCell : UITableViewCell
+
+
+-(void)setCellWithProjectItem:(TJProjectInfoModel *)infoModel;
 
 @end

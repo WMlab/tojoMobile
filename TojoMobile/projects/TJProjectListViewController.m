@@ -7,22 +7,24 @@
 //
 
 #import "TJProjectListViewController.h"
+#import "TJProjectListViewModel.h"
+#import "TJProjectSender.h"
+#import "TJProjectListCell.h"
 #import <MJRefresh.h>
 
 @interface TJProjectListViewController ()
-
+@property (nonatomic, strong) TJProjectListViewModel *viewModel;
 @end
 
 @implementation TJProjectListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _viewModel = [[TJProjectListViewModel alloc] init];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self loadProjectList];
+    //定义上拉、下拉加载数据
+    [self updateDataSource];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,15 +35,13 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [_viewModel.projectList count];
 }
 
 /*
@@ -113,5 +113,36 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//定义上拉下拉刷新数据的方法。
+- (void)updateDataSource
+{
+    __block TJProjectListViewController *projectListVc = self;
+    
+    //下拉刷新
+    [self.tableView addHeaderWithCallback:^{
+        [projectListVc loadProjectList];
+    }];
+    
+    //上拉加载更多
+    [self.tableView addFooterWithCallback:^{
+//        [projectListVc upRefreshMoreData];
+    }];
+}
+
+
+#pragma mark --------- 发服务 -----------
+-(void) loadProjectList
+{
+    [[TJProjectSender getInstance] sendGetProjectListWithViewModel:_viewModel completeBlock:^(BOOL success, NSString *message) {
+        if (success) {
+            NSLog(@"success");
+            
+        }
+        else {
+            NSLog(@"falied");
+        }
+    }];
+}
 
 @end

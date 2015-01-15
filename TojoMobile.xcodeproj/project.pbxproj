@@ -21,10 +21,12 @@
 		32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F011A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m */; };
 		32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F041A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m */; };
 		32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */; };
-		32959F0B1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F0A1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m */; };
+		32959F0B1A5ECFCC00C2B9D6 /* TJProjectSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F0A1A5ECFCC00C2B9D6 /* TJProjectSender.m */; };
 		E42770C64AD3214DC5895880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F87660748CC2C0B4B82EF26 /* libPods.a */; };
 		EA0A0BB71A66A9B300E37BFD /* TJProjectListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0A0BB51A66A9B300E37BFD /* TJProjectListCell.m */; };
 		EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0A0BB61A66A9B300E37BFD /* TJProjectListCell.xib */; };
+		EA0A0BC01A67CC3C00E37BFD /* TJSession.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0A0BBF1A67CC3C00E37BFD /* TJSession.m */; };
+		EA0A0BC71A67E05300E37BFD /* TJProjectListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0A0BC61A67E05300E37BFD /* TJProjectListViewModel.m */; };
 		EA1864591A66310500117C8A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1864581A66310500117C8A /* libsqlite3.dylib */; };
 		EA3248481A668D6400D45E30 /* TJProjectListRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3248471A668D6400D45E30 /* TJProjectListRequestModel.m */; };
 		EA32484B1A668D9300D45E30 /* TJProjectListResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32484A1A668D9300D45E30 /* TJProjectListResponseModel.m */; };
@@ -42,11 +44,9 @@
 		EAC116BC1A615AD200F620DE /* TJResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116BB1A615AD200F620DE /* TJResultModel.m */; };
 		EAC116BF1A618ADC00F620DE /* TJDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116BE1A618ADC00F620DE /* TJDataBase.m */; };
 		EAC116C21A618C1C00F620DE /* TJFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116C11A618C1C00F620DE /* TJFilePath.m */; };
-		EAC116E41A61967700F620DE /* TJProjectListSender.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116E31A61967700F620DE /* TJProjectListSender.m */; };
 		EAC116EC1A61983000F620DE /* TJProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116E71A61983000F620DE /* TJProjectDetailViewController.m */; };
 		EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC116E81A61983000F620DE /* TJProjectDetailViewController.xib */; };
 		EAC116EE1A61983000F620DE /* TJProjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116EA1A61983000F620DE /* TJProjectListViewController.m */; };
-		EAC116EF1A61983000F620DE /* TJProjectListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC116EB1A61983000F620DE /* TJProjectListViewController.xib */; };
 		EAEE9B361A5C012900FF3DA9 /* TJUserSender.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE9B351A5C012900FF3DA9 /* TJUserSender.m */; };
 /* End PBXBuildFile section */
 
@@ -85,8 +85,8 @@
 		32959F041A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailRequestModel.m; path = projects/businessmodel/TJProjectDetailRequestModel.m; sourceTree = "<group>"; };
 		32959F051A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailResponseModel.h; path = projects/businessmodel/TJProjectDetailResponseModel.h; sourceTree = "<group>"; };
 		32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailResponseModel.m; path = projects/businessmodel/TJProjectDetailResponseModel.m; sourceTree = "<group>"; };
-		32959F091A5ECFCC00C2B9D6 /* TJProjectDetailSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailSender.h; path = projects/service/TJProjectDetailSender.h; sourceTree = "<group>"; };
-		32959F0A1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailSender.m; path = projects/service/TJProjectDetailSender.m; sourceTree = "<group>"; };
+		32959F091A5ECFCC00C2B9D6 /* TJProjectSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectSender.h; path = projects/service/TJProjectSender.h; sourceTree = "<group>"; };
+		32959F0A1A5ECFCC00C2B9D6 /* TJProjectSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectSender.m; path = projects/service/TJProjectSender.m; sourceTree = "<group>"; };
 		85A33652F3F2C3B494D43C51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F87660748CC2C0B4B82EF26 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C29C277CF0BF4887084072 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +94,10 @@
 		EA0A0BB51A66A9B300E37BFD /* TJProjectListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListCell.m; path = projects/cell/TJProjectListCell.m; sourceTree = "<group>"; };
 		EA0A0BB61A66A9B300E37BFD /* TJProjectListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectListCell.xib; path = projects/cell/TJProjectListCell.xib; sourceTree = "<group>"; };
 		EA0A0BBD1A66ACA800E37BFD /* TJDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJDefine.h; sourceTree = "<group>"; };
+		EA0A0BBE1A67CC3C00E37BFD /* TJSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJSession.h; sourceTree = "<group>"; };
+		EA0A0BBF1A67CC3C00E37BFD /* TJSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJSession.m; sourceTree = "<group>"; };
+		EA0A0BC51A67E05300E37BFD /* TJProjectListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListViewModel.h; path = projects/viewmodel/TJProjectListViewModel.h; sourceTree = "<group>"; };
+		EA0A0BC61A67E05300E37BFD /* TJProjectListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListViewModel.m; path = projects/viewmodel/TJProjectListViewModel.m; sourceTree = "<group>"; };
 		EA1864581A66310500117C8A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		EA3248461A668D6400D45E30 /* TJProjectListRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListRequestModel.h; path = projects/businessmodel/TJProjectListRequestModel.h; sourceTree = "<group>"; };
 		EA3248471A668D6400D45E30 /* TJProjectListRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListRequestModel.m; path = projects/businessmodel/TJProjectListRequestModel.m; sourceTree = "<group>"; };
@@ -126,14 +130,11 @@
 		EAC116BE1A618ADC00F620DE /* TJDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJDataBase.m; sourceTree = "<group>"; };
 		EAC116C01A618C1C00F620DE /* TJFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJFilePath.h; sourceTree = "<group>"; };
 		EAC116C11A618C1C00F620DE /* TJFilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJFilePath.m; sourceTree = "<group>"; };
-		EAC116E21A61967700F620DE /* TJProjectListSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListSender.h; path = projects/service/TJProjectListSender.h; sourceTree = "<group>"; };
-		EAC116E31A61967700F620DE /* TJProjectListSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListSender.m; path = projects/service/TJProjectListSender.m; sourceTree = "<group>"; };
 		EAC116E61A61983000F620DE /* TJProjectDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailViewController.h; path = projects/TJProjectDetailViewController.h; sourceTree = "<group>"; };
 		EAC116E71A61983000F620DE /* TJProjectDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailViewController.m; path = projects/TJProjectDetailViewController.m; sourceTree = "<group>"; };
 		EAC116E81A61983000F620DE /* TJProjectDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectDetailViewController.xib; path = projects/TJProjectDetailViewController.xib; sourceTree = "<group>"; };
 		EAC116E91A61983000F620DE /* TJProjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListViewController.h; path = projects/TJProjectListViewController.h; sourceTree = "<group>"; };
 		EAC116EA1A61983000F620DE /* TJProjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListViewController.m; path = projects/TJProjectListViewController.m; sourceTree = "<group>"; };
-		EAC116EB1A61983000F620DE /* TJProjectListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectListViewController.xib; path = projects/TJProjectListViewController.xib; sourceTree = "<group>"; };
 		EAEE9B341A5C012900FF3DA9 /* TJUserSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserSender.h; sourceTree = "<group>"; };
 		EAEE9B351A5C012900FF3DA9 /* TJUserSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserSender.m; sourceTree = "<group>"; };
 		EAEE9B3E1A5C120200FF3DA9 /* TJSystemParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJSystemParam.h; sourceTree = "<group>"; };
@@ -181,7 +182,6 @@
 				EAC116E81A61983000F620DE /* TJProjectDetailViewController.xib */,
 				EAC116E91A61983000F620DE /* TJProjectListViewController.h */,
 				EAC116EA1A61983000F620DE /* TJProjectListViewController.m */,
-				EAC116EB1A61983000F620DE /* TJProjectListViewController.xib */,
 			);
 			name = projects;
 			sourceTree = "<group>";
@@ -196,10 +196,8 @@
 		32959EB91A5EBD2B00C2B9D6 /* service */ = {
 			isa = PBXGroup;
 			children = (
-				32959F091A5ECFCC00C2B9D6 /* TJProjectDetailSender.h */,
-				32959F0A1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m */,
-				EAC116E21A61967700F620DE /* TJProjectListSender.h */,
-				EAC116E31A61967700F620DE /* TJProjectListSender.m */,
+				32959F091A5ECFCC00C2B9D6 /* TJProjectSender.h */,
+				32959F0A1A5ECFCC00C2B9D6 /* TJProjectSender.m */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -230,6 +228,8 @@
 			children = (
 				32959F001A5ECFB300C2B9D6 /* TJProjectDetailViewModel.h */,
 				32959F011A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m */,
+				EA0A0BC51A67E05300E37BFD /* TJProjectListViewModel.h */,
+				EA0A0BC61A67E05300E37BFD /* TJProjectListViewModel.m */,
 			);
 			name = viewmodel;
 			sourceTree = "<group>";
@@ -288,16 +288,16 @@
 		EA68E5181A5A2FB300CA2CCD /* TojoMobile */ = {
 			isa = PBXGroup;
 			children = (
+				EA68E51D1A5A2FB300CA2CCD /* AppDelegate.h */,
+				EA68E51E1A5A2FB300CA2CCD /* AppDelegate.m */,
+				EA68E5261A5A2FB300CA2CCD /* Main.storyboard */,
 				32959EB71A5EBD0300C2B9D6 /* projects */,
 				EAEE9B3D1A5C11E500FF3DA9 /* common */,
 				EAEE9B301A5BFFFB00FF3DA9 /* user */,
-				EA68E51D1A5A2FB300CA2CCD /* AppDelegate.h */,
-				EA68E51E1A5A2FB300CA2CCD /* AppDelegate.m */,
 				EA68E5201A5A2FB300CA2CCD /* FirstViewController.h */,
 				EA68E5211A5A2FB300CA2CCD /* FirstViewController.m */,
 				EA68E5231A5A2FB300CA2CCD /* SecondViewController.h */,
 				EA68E5241A5A2FB300CA2CCD /* SecondViewController.m */,
-				EA68E5261A5A2FB300CA2CCD /* Main.storyboard */,
 				EA68E5291A5A2FB300CA2CCD /* Images.xcassets */,
 				EA68E52B1A5A2FB300CA2CCD /* LaunchScreen.xib */,
 				EA68E5191A5A2FB300CA2CCD /* Supporting Files */,
@@ -381,6 +381,8 @@
 				EAC116C01A618C1C00F620DE /* TJFilePath.h */,
 				EAC116C11A618C1C00F620DE /* TJFilePath.m */,
 				EA0A0BBD1A66ACA800E37BFD /* TJDefine.h */,
+				EA0A0BBE1A67CC3C00E37BFD /* TJSession.h */,
+				EA0A0BBF1A67CC3C00E37BFD /* TJSession.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -477,7 +479,6 @@
 				EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */,
 				32959EFF1A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.xib in Resources */,
 				EA68E52A1A5A2FB300CA2CCD /* Images.xcassets in Resources */,
-				EAC116EF1A61983000F620DE /* TJProjectListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,13 +529,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAC116E41A61967700F620DE /* TJProjectListSender.m in Sources */,
 				32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */,
 				32959EFC1A5ECFA300C2B9D6 /* TJProjectTeamAreaCell.m in Sources */,
+				EA0A0BC01A67CC3C00E37BFD /* TJSession.m in Sources */,
 				EA0A0BB71A66A9B300E37BFD /* TJProjectListCell.m in Sources */,
 				EA99FC781A5EE9C70069ADBD /* TJUserLoginResponseModel.m in Sources */,
 				32959EFE1A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.m in Sources */,
 				3211463C1A669A7A00F89494 /* TJCommentModel.m in Sources */,
+				EA0A0BC71A67E05300E37BFD /* TJProjectListViewModel.m in Sources */,
 				EA99FC771A5EE9C70069ADBD /* TJUserLoginRequestModel.m in Sources */,
 				EA68E5251A5A2FB300CA2CCD /* SecondViewController.m in Sources */,
 				32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */,
@@ -547,7 +549,7 @@
 				3211463F1A669AD600F89494 /* TJTeamModel.m in Sources */,
 				EA68E51F1A5A2FB300CA2CCD /* AppDelegate.m in Sources */,
 				321146391A66997900F89494 /* TJProjectInfoModel.m in Sources */,
-				32959F0B1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m in Sources */,
+				32959F0B1A5ECFCC00C2B9D6 /* TJProjectSender.m in Sources */,
 				EA32484B1A668D9300D45E30 /* TJProjectListResponseModel.m in Sources */,
 				EAC116EC1A61983000F620DE /* TJProjectDetailViewController.m in Sources */,
 				32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */,

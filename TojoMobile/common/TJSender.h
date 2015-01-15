@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TJSystemParam.h"
+#import <AFNetworking.h>
 #import <JSONModel.h>
 
 typedef enum {
