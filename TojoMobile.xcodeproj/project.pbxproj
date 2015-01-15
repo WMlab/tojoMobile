@@ -10,6 +10,7 @@
 		321146391A66997900F89494 /* TJProjectInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 321146381A66997900F89494 /* TJProjectInfoModel.m */; };
 		3211463C1A669A7A00F89494 /* TJCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3211463B1A669A7A00F89494 /* TJCommentModel.m */; };
 		3211463F1A669AD600F89494 /* TJTeamModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3211463E1A669AD600F89494 /* TJTeamModel.m */; };
+		321146451A66ACC600F89494 /* StrechyParallaxScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 321146441A66ACC600F89494 /* StrechyParallaxScrollView.m */; };
 		32959EF81A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EED1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.m */; };
 		32959EF91A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32959EEE1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib */; };
 		32959EFA1A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EF01A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.m */; };
@@ -21,7 +22,12 @@
 		32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F011A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m */; };
 		32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F041A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m */; };
 		32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */; };
+<<<<<<< HEAD
 		32959F0B1A5ECFCC00C2B9D6 /* TJProjectSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F0A1A5ECFCC00C2B9D6 /* TJProjectSender.m */; };
+=======
+		32959F0B1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F0A1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m */; };
+		32A502AB1A67932200FCB908 /* titleImageTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 32A502AA1A67932200FCB908 /* titleImageTest.png */; };
+>>>>>>> FETCH_HEAD
 		E42770C64AD3214DC5895880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F87660748CC2C0B4B82EF26 /* libPods.a */; };
 		EA0A0BB71A66A9B300E37BFD /* TJProjectListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0A0BB51A66A9B300E37BFD /* TJProjectListCell.m */; };
 		EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0A0BB61A66A9B300E37BFD /* TJProjectListCell.xib */; };
@@ -67,6 +73,8 @@
 		3211463B1A669A7A00F89494 /* TJCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCommentModel.m; path = projects/businessmodel/TJCommentModel.m; sourceTree = "<group>"; };
 		3211463D1A669AD600F89494 /* TJTeamModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTeamModel.h; path = projects/businessmodel/TJTeamModel.h; sourceTree = "<group>"; };
 		3211463E1A669AD600F89494 /* TJTeamModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJTeamModel.m; path = projects/businessmodel/TJTeamModel.m; sourceTree = "<group>"; };
+		321146431A66ACC600F89494 /* StrechyParallaxScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StrechyParallaxScrollView.h; path = projects/view/StrechyParallaxScrollView.h; sourceTree = "<group>"; };
+		321146441A66ACC600F89494 /* StrechyParallaxScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StrechyParallaxScrollView.m; path = projects/view/StrechyParallaxScrollView.m; sourceTree = "<group>"; };
 		32959EEC1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectCommentAreaCell.h; path = projects/cell/TJProjectCommentAreaCell.h; sourceTree = "<group>"; };
 		32959EED1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectCommentAreaCell.m; path = projects/cell/TJProjectCommentAreaCell.m; sourceTree = "<group>"; };
 		32959EEE1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectCommentAreaCell.xib; path = projects/cell/TJProjectCommentAreaCell.xib; sourceTree = "<group>"; };
@@ -85,8 +93,14 @@
 		32959F041A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailRequestModel.m; path = projects/businessmodel/TJProjectDetailRequestModel.m; sourceTree = "<group>"; };
 		32959F051A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailResponseModel.h; path = projects/businessmodel/TJProjectDetailResponseModel.h; sourceTree = "<group>"; };
 		32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailResponseModel.m; path = projects/businessmodel/TJProjectDetailResponseModel.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		32959F091A5ECFCC00C2B9D6 /* TJProjectSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectSender.h; path = projects/service/TJProjectSender.h; sourceTree = "<group>"; };
 		32959F0A1A5ECFCC00C2B9D6 /* TJProjectSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectSender.m; path = projects/service/TJProjectSender.m; sourceTree = "<group>"; };
+=======
+		32959F091A5ECFCC00C2B9D6 /* TJProjectDetailSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailSender.h; path = projects/service/TJProjectDetailSender.h; sourceTree = "<group>"; };
+		32959F0A1A5ECFCC00C2B9D6 /* TJProjectDetailSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailSender.m; path = projects/service/TJProjectDetailSender.m; sourceTree = "<group>"; };
+		32A502AA1A67932200FCB908 /* titleImageTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleImageTest.png; sourceTree = "<group>"; };
+>>>>>>> FETCH_HEAD
 		85A33652F3F2C3B494D43C51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F87660748CC2C0B4B82EF26 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C29C277CF0BF4887084072 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +203,8 @@
 		32959EB81A5EBD1C00C2B9D6 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				321146431A66ACC600F89494 /* StrechyParallaxScrollView.h */,
+				321146441A66ACC600F89494 /* StrechyParallaxScrollView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -256,6 +272,14 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		32A502661A6770E700FCB908 /* testImage */ = {
+			isa = PBXGroup;
+			children = (
+				32A502AA1A67932200FCB908 /* titleImageTest.png */,
+			);
+			name = testImage;
+			sourceTree = "<group>";
+		};
 		3548326D607B0EA4ECF529D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,9 +312,13 @@
 		EA68E5181A5A2FB300CA2CCD /* TojoMobile */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				EA68E51D1A5A2FB300CA2CCD /* AppDelegate.h */,
 				EA68E51E1A5A2FB300CA2CCD /* AppDelegate.m */,
 				EA68E5261A5A2FB300CA2CCD /* Main.storyboard */,
+=======
+				32A502661A6770E700FCB908 /* testImage */,
+>>>>>>> FETCH_HEAD
 				32959EB71A5EBD0300C2B9D6 /* projects */,
 				EAEE9B3D1A5C11E500FF3DA9 /* common */,
 				EAEE9B301A5BFFFB00FF3DA9 /* user */,
@@ -477,6 +505,7 @@
 				32959EF91A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib in Resources */,
 				32959EFB1A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.xib in Resources */,
 				EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */,
+				32A502AB1A67932200FCB908 /* titleImageTest.png in Resources */,
 				32959EFF1A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.xib in Resources */,
 				EA68E52A1A5A2FB300CA2CCD /* Images.xcassets in Resources */,
 			);
@@ -542,6 +571,7 @@
 				32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */,
 				EA99FC711A5ED72A0069ADBD /* TJSender.m in Sources */,
 				EAEE9B361A5C012900FF3DA9 /* TJUserSender.m in Sources */,
+				321146451A66ACC600F89494 /* StrechyParallaxScrollView.m in Sources */,
 				32959EF81A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.m in Sources */,
 				EAC116BF1A618ADC00F620DE /* TJDataBase.m in Sources */,
 				EAC116EE1A61983000F620DE /* TJProjectListViewController.m in Sources */,
