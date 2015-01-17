@@ -11,6 +11,11 @@
 		3211463C1A669A7A00F89494 /* TJCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3211463B1A669A7A00F89494 /* TJCommentModel.m */; };
 		3211463F1A669AD600F89494 /* TJTeamModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3211463E1A669AD600F89494 /* TJTeamModel.m */; };
 		321146451A66ACC600F89494 /* StrechyParallaxScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 321146441A66ACC600F89494 /* StrechyParallaxScrollView.m */; };
+		324187891A68A39B0088A3BB /* EndDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324187881A68A39B0088A3BB /* EndDateView.m */; };
+		3241878C1A68AD160088A3BB /* ProjectBasicInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3241878B1A68AD160088A3BB /* ProjectBasicInfoView.m */; };
+		3241878F1A68AD350088A3BB /* ProjectDetailInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3241878E1A68AD350088A3BB /* ProjectDetailInfoView.m */; };
+		324187921A68AD630088A3BB /* ProjectCommentPartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324187911A68AD630088A3BB /* ProjectCommentPartView.m */; };
+		324187951A68AD900088A3BB /* ProjectTeamPartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324187941A68AD900088A3BB /* ProjectTeamPartView.m */; };
 		32959EF81A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EED1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.m */; };
 		32959EF91A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32959EEE1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib */; };
 		32959EFA1A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959EF01A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.m */; };
@@ -23,7 +28,6 @@
 		32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F041A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m */; };
 		32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */; };
 		32959F0B1A5ECFCC00C2B9D6 /* TJProjectSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F0A1A5ECFCC00C2B9D6 /* TJProjectSender.m */; };
-
 		E42770C64AD3214DC5895880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F87660748CC2C0B4B82EF26 /* libPods.a */; };
 		EA0A0BB71A66A9B300E37BFD /* TJProjectListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0A0BB51A66A9B300E37BFD /* TJProjectListCell.m */; };
 		EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0A0BB61A66A9B300E37BFD /* TJProjectListCell.xib */; };
@@ -71,6 +75,16 @@
 		3211463E1A669AD600F89494 /* TJTeamModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJTeamModel.m; path = projects/businessmodel/TJTeamModel.m; sourceTree = "<group>"; };
 		321146431A66ACC600F89494 /* StrechyParallaxScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StrechyParallaxScrollView.h; path = projects/view/StrechyParallaxScrollView.h; sourceTree = "<group>"; };
 		321146441A66ACC600F89494 /* StrechyParallaxScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StrechyParallaxScrollView.m; path = projects/view/StrechyParallaxScrollView.m; sourceTree = "<group>"; };
+		324187871A68A39B0088A3BB /* EndDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EndDateView.h; path = projects/view/EndDateView.h; sourceTree = "<group>"; };
+		324187881A68A39B0088A3BB /* EndDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EndDateView.m; path = projects/view/EndDateView.m; sourceTree = "<group>"; };
+		3241878A1A68AD160088A3BB /* ProjectBasicInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectBasicInfoView.h; path = projects/view/ProjectBasicInfoView.h; sourceTree = "<group>"; };
+		3241878B1A68AD160088A3BB /* ProjectBasicInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectBasicInfoView.m; path = projects/view/ProjectBasicInfoView.m; sourceTree = "<group>"; };
+		3241878D1A68AD350088A3BB /* ProjectDetailInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectDetailInfoView.h; path = projects/view/ProjectDetailInfoView.h; sourceTree = "<group>"; };
+		3241878E1A68AD350088A3BB /* ProjectDetailInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectDetailInfoView.m; path = projects/view/ProjectDetailInfoView.m; sourceTree = "<group>"; };
+		324187901A68AD630088A3BB /* ProjectCommentPartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectCommentPartView.h; path = projects/view/ProjectCommentPartView.h; sourceTree = "<group>"; };
+		324187911A68AD630088A3BB /* ProjectCommentPartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectCommentPartView.m; path = projects/view/ProjectCommentPartView.m; sourceTree = "<group>"; };
+		324187931A68AD900088A3BB /* ProjectTeamPartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectTeamPartView.h; path = projects/view/ProjectTeamPartView.h; sourceTree = "<group>"; };
+		324187941A68AD900088A3BB /* ProjectTeamPartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectTeamPartView.m; path = projects/view/ProjectTeamPartView.m; sourceTree = "<group>"; };
 		32959EEC1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectCommentAreaCell.h; path = projects/cell/TJProjectCommentAreaCell.h; sourceTree = "<group>"; };
 		32959EED1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectCommentAreaCell.m; path = projects/cell/TJProjectCommentAreaCell.m; sourceTree = "<group>"; };
 		32959EEE1A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectCommentAreaCell.xib; path = projects/cell/TJProjectCommentAreaCell.xib; sourceTree = "<group>"; };
@@ -195,6 +209,16 @@
 			children = (
 				321146431A66ACC600F89494 /* StrechyParallaxScrollView.h */,
 				321146441A66ACC600F89494 /* StrechyParallaxScrollView.m */,
+				324187871A68A39B0088A3BB /* EndDateView.h */,
+				324187881A68A39B0088A3BB /* EndDateView.m */,
+				3241878A1A68AD160088A3BB /* ProjectBasicInfoView.h */,
+				3241878B1A68AD160088A3BB /* ProjectBasicInfoView.m */,
+				3241878D1A68AD350088A3BB /* ProjectDetailInfoView.h */,
+				3241878E1A68AD350088A3BB /* ProjectDetailInfoView.m */,
+				324187901A68AD630088A3BB /* ProjectCommentPartView.h */,
+				324187911A68AD630088A3BB /* ProjectCommentPartView.m */,
+				324187931A68AD900088A3BB /* ProjectTeamPartView.h */,
+				324187941A68AD900088A3BB /* ProjectTeamPartView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -260,14 +284,6 @@
 				EA0A0BB61A66A9B300E37BFD /* TJProjectListCell.xib */,
 			);
 			name = cell;
-			sourceTree = "<group>";
-		};
-		32A502661A6770E700FCB908 /* testImage */ = {
-			isa = PBXGroup;
-			children = (
-				32A502AA1A67932200FCB908 /* titleImageTest.png */,
-			);
-			name = testImage;
 			sourceTree = "<group>";
 		};
 		3548326D607B0EA4ECF529D9 /* Frameworks */ = {
@@ -491,7 +507,6 @@
 				32959EF91A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.xib in Resources */,
 				32959EFB1A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.xib in Resources */,
 				EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */,
-				32A502AB1A67932200FCB908 /* titleImageTest.png in Resources */,
 				32959EFF1A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.xib in Resources */,
 				EA68E52A1A5A2FB300CA2CCD /* Images.xcassets in Resources */,
 			);
@@ -552,6 +567,7 @@
 				32959EFE1A5ECFA300C2B9D6 /* TJProjectTitleInfoCell.m in Sources */,
 				3211463C1A669A7A00F89494 /* TJCommentModel.m in Sources */,
 				EA0A0BC71A67E05300E37BFD /* TJProjectListViewModel.m in Sources */,
+				3241878F1A68AD350088A3BB /* ProjectDetailInfoView.m in Sources */,
 				EA99FC771A5EE9C70069ADBD /* TJUserLoginRequestModel.m in Sources */,
 				EA68E5251A5A2FB300CA2CCD /* SecondViewController.m in Sources */,
 				32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */,
@@ -561,15 +577,19 @@
 				32959EF81A5ECFA300C2B9D6 /* TJProjectCommentAreaCell.m in Sources */,
 				EAC116BF1A618ADC00F620DE /* TJDataBase.m in Sources */,
 				EAC116EE1A61983000F620DE /* TJProjectListViewController.m in Sources */,
+				3241878C1A68AD160088A3BB /* ProjectBasicInfoView.m in Sources */,
 				32959EFA1A5ECFA300C2B9D6 /* TJProjectDetailInfoCell.m in Sources */,
 				3211463F1A669AD600F89494 /* TJTeamModel.m in Sources */,
 				EA68E51F1A5A2FB300CA2CCD /* AppDelegate.m in Sources */,
 				321146391A66997900F89494 /* TJProjectInfoModel.m in Sources */,
 				32959F0B1A5ECFCC00C2B9D6 /* TJProjectSender.m in Sources */,
+				324187891A68A39B0088A3BB /* EndDateView.m in Sources */,
+				324187921A68AD630088A3BB /* ProjectCommentPartView.m in Sources */,
 				EA32484B1A668D9300D45E30 /* TJProjectListResponseModel.m in Sources */,
 				EAC116EC1A61983000F620DE /* TJProjectDetailViewController.m in Sources */,
 				32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */,
 				EA68E5221A5A2FB300CA2CCD /* FirstViewController.m in Sources */,
+				324187951A68AD900088A3BB /* ProjectTeamPartView.m in Sources */,
 				EAC116BC1A615AD200F620DE /* TJResultModel.m in Sources */,
 				EA3248481A668D6400D45E30 /* TJProjectListRequestModel.m in Sources */,
 				EAC116C21A618C1C00F620DE /* TJFilePath.m in Sources */,

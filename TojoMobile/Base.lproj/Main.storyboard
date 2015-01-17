@@ -46,6 +46,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="wZc-pm-3HZ" kind="relationship" relationship="viewControllers" id="9fW-O5-enP"/>
+                        <segue destination="SIe-tV-0lT" kind="relationship" relationship="viewControllers" id="biJ-IJ-8wm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -70,6 +71,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2u-V5-azI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200" y="-89"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="GvE-YC-2xN">
+            <objects>
+                <viewController id="SIe-tV-0lT" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JEX-Sq-jhS"/>
+                        <viewControllerLayoutGuide type="bottom" id="dAd-Uj-9ce"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s3x-C2-2SK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="cDq-mn-aVI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qAq-BV-JN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="709"/>
         </scene>
         <!--项目-->
         <scene sceneID="evX-jX-HdO">
