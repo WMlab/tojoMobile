@@ -9,6 +9,11 @@
 #import "TJProjectDetailViewController.h"
 #import "StrechyParallaxScrollView.h"
 #import <Masonry/Masonry.h>
+#import "EndDateView.h"
+#import "ProjectBasicInfoView.h"
+#import "ProjectDetailInfoView.h"
+#import "ProjectCommentPartView.h"
+#import "ProjectTeamPartView.h"
 
 @interface TJProjectDetailViewController ()
 
@@ -24,30 +29,42 @@
     UIImageView *topView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, 180)];
     [topView setImage:[UIImage imageNamed:@"titleImageTest.png"]];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 120, width, 20)];
-    [label setText:@"Demo"];
-    [label setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:20]];
-    [label setTextAlignment:NSTextAlignmentCenter];
-    [label setTextColor:[UIColor whiteColor]];
-    [topView addSubview:label];
-    
+    EndDateView *endDateView = [[EndDateView alloc] initWithFrame:CGRectMake(0, 0, 80, 33)];
+    [endDateView.endDateLabel setText:@"2015/1/2"];//set end date
+    [topView addSubview:endDateView];
     //masonary constraints for parallax view subviews (optional)
-    [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.equalTo ([NSValue valueWithCGSize:CGSizeMake(80, 80)]);
-        make.centerX.equalTo (topView);
+    UIEdgeInsets padding = UIEdgeInsetsMake(10, 0, -40, 320);
+    [endDateView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.equalTo ([NSValue valueWithCGSize:CGSizeMake(80, 33)]);
+        //make.centerY.equalTo (topView);
+        make.left.equalTo(topView).with.offset(padding.left);
+        make.bottom.equalTo(topView).with.offset(padding.bottom);
     }];
     
     //create strechy parallax scroll view
-    
     StrechyParallaxScrollView *strechy = [[StrechyParallaxScrollView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-49) andTopView:topView];
     [self.view addSubview:strechy];
     
-    //add dummy scroll view items
+    //basic info
     float itemStartY = topView.frame.size.height;
-    for (int i = 1; i <= 4; i++) {
-        [strechy addSubview:[self scrollViewItemWithY:itemStartY andNumber:i]];
-        itemStartY += 200;
-    }
+    ProjectBasicInfoView *basicInfoView = [[ProjectBasicInfoView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+240)];
+    [basicInfoView.projectTitleLabel setText:@"第一个项目"];
+    [strechy addSubview:basicInfoView];
+    
+    //detial info
+    itemStartY += 240;
+    ProjectDetailInfoView *detailInfoView = [[ProjectDetailInfoView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+240)];
+    [strechy addSubview:detailInfoView];
+    
+    //comment part
+    itemStartY += 240;
+    ProjectCommentPartView *commentPartView = [[ProjectCommentPartView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+240)];
+    [strechy addSubview:commentPartView];
+    
+    //team part
+    itemStartY += 240;
+    ProjectTeamPartView *teamPartView = [[ProjectTeamPartView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+240)];
+    [strechy addSubview:teamPartView];
     
     //set scrollable area (classic uiscrollview stuff)
     [strechy setContentSize:CGSizeMake(width, itemStartY)];

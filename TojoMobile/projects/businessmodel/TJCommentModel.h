@@ -10,10 +10,10 @@
 
 @interface TJCommentModel : NSObject
 
-@property (nonatomic,assign)int CommentUserId;
-@property (nonatomic,copy)NSString *CommentUserName;
-@property (nonatomic,copy)NSString *ommentUserImage;
-@property (nonatomic,copy)NSString *CommentText;
-@property (nonatomic,copy)NSString *CommentDate;
+@property (nonatomic,assign)int commentUserId;
+@property (nonatomic,copy)NSString *commentUserName;
+@property (nonatomic,copy)NSString *commentUserImage;
+@property (nonatomic,copy)NSString *commentText;
+@property (nonatomic,copy)NSString *commentDate;
 
 @end

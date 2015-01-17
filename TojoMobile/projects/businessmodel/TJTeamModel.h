@@ -10,13 +10,13 @@
 
 @interface TJTeamModel : NSObject
 
-@property (nonatomic,assign)int TeamFounderId;
-@property (nonatomic,copy)NSString *TeamName;
-@property (nonatomic,copy)NSString *TeamFounderName;
-@property (nonatomic,copy)NSString *TeamFounderImage;
-@property (nonatomic,copy)NSString *TeamFounderSchool;
-@property (nonatomic,copy)NSString *TeamCreatedDate;
-@property (nonatomic,assign)int TeamMemberAll;
-@property (nonatomic,assign)int TeamMemberNow;
+@property (nonatomic,assign)int teamFounderId;
+@property (nonatomic,copy)NSString *teamName;
+@property (nonatomic,copy)NSString *teamFounderName;
+@property (nonatomic,copy)NSString *teamFounderImage;
+@property (nonatomic,copy)NSString *teamFounderSchool;
+@property (nonatomic,copy)NSString *teamCreatedDate;
+@property (nonatomic,assign)int teamMemberAll;
+@property (nonatomic,assign)int teamMemberNow;
 
 @end
