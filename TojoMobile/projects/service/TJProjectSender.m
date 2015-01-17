@@ -43,7 +43,8 @@ static TJProjectSender * _sender = nil;
                     [itemArr addObject:item];
                 }
             }
-            viewModel.projectList = [itemArr copy];
+            viewModel.projectList = itemArr;
+            viewModel.categoryId = responseModel.categoryId;
             if (callback) {
                 callback(true, responseModel.result.message);
             }

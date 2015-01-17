@@ -11,7 +11,7 @@
 
 //#define BASE_URL @"http://api.tongjo.com/"
 #define BASE_URL @"http://api.tongjo.com/"
-#define IMAGE_URL @"http://api.tongjo.com/files/"
+#define IMAGE_BASE_URL @"http://api.tongjo.com/files/"
 
 #define REQUEST_TIMEOUT_INTERVAL 30
 

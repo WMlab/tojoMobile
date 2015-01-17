@@ -16,7 +16,9 @@
 @property (nonatomic, strong) TJProjectListViewModel *viewModel;
 @end
 
-@implementation TJProjectListViewController
+@implementation TJProjectListViewController {
+    dispatch_once_t onceToken;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,18 +43,29 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [_viewModel.projectList count];
+    NSUInteger count = [_viewModel.projectList count];
+    return count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    dispatch_once(&onceToken, ^{
+        [tableView registerNib:[UINib nibWithNibName:@"TJProjectListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJProjectListCell"];
+    });
+    static NSString *cellId = @"TJProjectListCell";
+    TJProjectListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    TJProjectInfoModel *infoModel = (TJProjectInfoModel *)[_viewModel.projectList objectAtIndex:indexPath.row];
+    [cell setCellWithProjectItem:infoModel];
+//    cell.projectNameLabel.text = [infoModel valueForKey:@"projectName"];
+//    cell.projectEndDateLabel.text = [[infoModel valueForKey:@"projectEndDate"] substringWithRange:NSMakeRange(0, 10)];
+//    cell.founderNameAndUniLabel.text = [NSString stringWithFormat:@"%@ %@",[infoModel valueForKey:@"projectFounderUniversityName"] , [infoModel valueForKey:@"projectFounderName"]];
+//    cell.projectLabel.text = [NSString stringWithFormat:@"%@",[infoModel valueForKey:@"projectLabel"]];
+//    NSString *imageUrlStr = [NSString stringWithFormat:@"%@%@", IMAGE_BASE_URL, [infoModel valueForKey:@"projectFounderImage"]];
+//    cell.founderImageView.layer.cornerRadius = cell.founderImageView.frame.size.height/2;
+//    cell.founderImageView.layer.masksToBounds = YES;
+//    [cell.founderImageView sd_setImageWithURL:[NSURL URLWithString:imageUrlStr]];
+
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -135,9 +148,10 @@
 -(void) loadProjectList
 {
     [[TJProjectSender getInstance] sendGetProjectListWithViewModel:_viewModel completeBlock:^(BOOL success, NSString *message) {
+        [self.tableView headerEndRefreshing];
         if (success) {
             NSLog(@"success");
-            
+            [self.tableView reloadData];
         }
         else {
             NSLog(@"falied");

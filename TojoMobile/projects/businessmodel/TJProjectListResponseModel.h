@@ -16,6 +16,6 @@
 
 @property(nonatomic, assign) int categoryId;        //项目类别
 @property(nonatomic, assign) int count;
-@property(nonatomic, strong) NSArray *projectList;  // model - TJProjectInfoModel
+@property(nonatomic, strong) NSArray<TJProjectInfoModel> *projectList;  // model - TJProjectInfoModel
 
 @end
