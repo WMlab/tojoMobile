@@ -1,5 +1,5 @@
 //
-//  ProjectTeamPartView.h
+//  EndDateView.h
 //  TojoMobile
 //
 //  Created by sdq on 15/1/16.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProjectTeamPartView : UIView
+@interface TJEndDateView : UIView
+
+@property (strong, nonatomic) UILabel *endDateLabel;
 
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProjectDetailInfoView : UIView
+@interface TJProjectDetailInfoView : UIView
 
 @property (strong, nonatomic) UILabel *projectDetailLabel;
 @property (strong, nonatomic) UIButton *allInfoButton;

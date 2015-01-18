@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProjectCommentPartView : UIView
+@interface TJProjectCommentPartView : UIView
 
 @end

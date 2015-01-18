@@ -6,17 +6,16 @@
 //  Copyright (c) 2015年 Tongjo. All rights reserved.
 //
 
-#import "ProjectBasicInfoView.h"
+#import "TJProjectBasicInfoView.h"
 #import <Masonry/Masonry.h>
 
-@implementation ProjectBasicInfoView
+@implementation TJProjectBasicInfoView
 
 @synthesize projectTitleLabel;
 @synthesize projectReleasedDateLabel;
 @synthesize projectFounderImg;
 @synthesize projectFounderLabel;
 @synthesize projectFounderUniversityLabel;
-@synthesize contactFounderButton;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -35,16 +34,10 @@
             make.centerX.equalTo (self);
         }];
         
-        //click
-        [contactFounderButton addTarget:self action:@selector(contactFounderButtonClicked)forControlEvents:UIControlEventTouchUpInside];
         
         
     }
     return self;
-}
-
-- (void)contactFounderButtonClicked{
-    
 }
 
 

@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 Tongjo. All rights reserved.
 //
 
-#import "ProjectCommentPartView.h"
+#import "TJProjectCommentPartView.h"
 
-@implementation ProjectCommentPartView
+@implementation TJProjectCommentPartView
 
 - (id)initWithFrame:(CGRect)frame
 {

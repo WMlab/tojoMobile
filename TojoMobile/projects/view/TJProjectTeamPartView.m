@@ -1,17 +1,14 @@
 //
-//  ProjectDetailInfoView.m
+//  ProjectTeamPartView.m
 //  TojoMobile
 //
 //  Created by sdq on 15/1/16.
 //  Copyright (c) 2015年 Tongjo. All rights reserved.
 //
 
-#import "ProjectDetailInfoView.h"
+#import "TJProjectTeamPartView.h"
 
-@implementation ProjectDetailInfoView
-
-@synthesize projectDetailLabel;
-@synthesize allInfoButton;
+@implementation TJProjectTeamPartView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -23,7 +20,6 @@
     }
     return self;
 }
-
 
 /*
 // Only override drawRect: if you perform custom drawing.

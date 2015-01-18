@@ -25,7 +25,9 @@
                                 <constraint firstAttribute="height" constant="49" id="63q-Iu-wEj"/>
                                 <constraint firstAttribute="width" constant="130" id="vfs-27-Upo"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <state key="normal" title="收藏">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <variation key="default">
@@ -43,7 +45,9 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSX-WA-YSM">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <state key="normal" title="评论">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
@@ -53,7 +57,9 @@
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="IRG-Ym-uYM"/>
                                 <constraint firstAttribute="height" constant="49" id="Ol7-aM-QiG"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <state key="normal" title="参加">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <variation key="default">
@@ -70,14 +76,17 @@
                             </variation>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.11764705882352941" green="0.76470588235294112" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="psH-t3-n47" secondAttribute="trailing" id="08g-dA-1tn"/>
                         <constraint firstItem="WB8-vK-W6e" firstAttribute="top" secondItem="FSX-WA-YSM" secondAttribute="top" id="75E-Vy-JHu"/>
                         <constraint firstItem="WB8-vK-W6e" firstAttribute="top" secondItem="88L-jz-1qB" secondAttribute="top" id="Bl3-a2-SjV"/>
                         <constraint firstItem="FSX-WA-YSM" firstAttribute="leading" secondItem="WB8-vK-W6e" secondAttribute="trailing" id="BxX-Fh-WjN"/>
-                        <constraint firstItem="psH-t3-n47" firstAttribute="leading" secondItem="FSX-WA-YSM" secondAttribute="trailing" constant="8" symbolic="YES" id="F9q-Rk-X4K"/>
+                        <constraint firstItem="psH-t3-n47" firstAttribute="leading" secondItem="FSX-WA-YSM" secondAttribute="trailing" constant="8" symbolic="YES" id="F9q-Rk-X4K">
+                            <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                        </constraint>
                         <constraint firstAttribute="centerX" secondItem="FSX-WA-YSM" secondAttribute="centerX" id="HSQ-6f-aVz"/>
+                        <constraint firstItem="psH-t3-n47" firstAttribute="leading" secondItem="FSX-WA-YSM" secondAttribute="trailing" id="MHK-xm-Mpk"/>
                         <constraint firstItem="WB8-vK-W6e" firstAttribute="leading" secondItem="88L-jz-1qB" secondAttribute="leading" id="Vlr-tC-Fk2"/>
                         <constraint firstItem="FSX-WA-YSM" firstAttribute="leading" secondItem="WB8-vK-W6e" secondAttribute="trailing" id="gMC-qP-Cvv"/>
                         <constraint firstItem="psH-t3-n47" firstAttribute="baseline" secondItem="FSX-WA-YSM" secondAttribute="baseline" id="kxN-Ph-iPN"/>
@@ -95,18 +104,19 @@
                         </mask>
                         <mask key="constraints">
                             <exclude reference="ujM-vG-AyE"/>
-                            <exclude reference="BxX-Fh-WjN"/>
-                            <exclude reference="HSQ-6f-aVz"/>
-                            <exclude reference="gMC-qP-Cvv"/>
-                            <exclude reference="oP1-Mk-Drz"/>
-                            <exclude reference="uEr-1c-TPT"/>
                             <exclude reference="75E-Vy-JHu"/>
                             <exclude reference="Bl3-a2-SjV"/>
                             <exclude reference="Vlr-tC-Fk2"/>
                             <exclude reference="lul-vb-4ff"/>
                             <exclude reference="yZu-sO-Yrg"/>
+                            <exclude reference="BxX-Fh-WjN"/>
+                            <exclude reference="HSQ-6f-aVz"/>
+                            <exclude reference="gMC-qP-Cvv"/>
+                            <exclude reference="oP1-Mk-Drz"/>
+                            <exclude reference="uEr-1c-TPT"/>
                             <exclude reference="08g-dA-1tn"/>
                             <exclude reference="F9q-Rk-X4K"/>
+                            <exclude reference="MHK-xm-Mpk"/>
                             <exclude reference="kxN-Ph-iPN"/>
                         </mask>
                     </variation>
@@ -118,18 +128,19 @@
                         </mask>
                         <mask key="constraints">
                             <include reference="ujM-vG-AyE"/>
-                            <include reference="BxX-Fh-WjN"/>
-                            <include reference="HSQ-6f-aVz"/>
-                            <include reference="gMC-qP-Cvv"/>
-                            <include reference="oP1-Mk-Drz"/>
-                            <include reference="uEr-1c-TPT"/>
                             <include reference="75E-Vy-JHu"/>
                             <include reference="Bl3-a2-SjV"/>
                             <include reference="Vlr-tC-Fk2"/>
                             <include reference="lul-vb-4ff"/>
                             <include reference="yZu-sO-Yrg"/>
+                            <include reference="BxX-Fh-WjN"/>
+                            <include reference="HSQ-6f-aVz"/>
+                            <include reference="gMC-qP-Cvv"/>
+                            <include reference="oP1-Mk-Drz"/>
+                            <include reference="uEr-1c-TPT"/>
                             <include reference="08g-dA-1tn"/>
                             <include reference="F9q-Rk-X4K"/>
+                            <exclude reference="MHK-xm-Mpk"/>
                             <include reference="kxN-Ph-iPN"/>
                         </mask>
                     </variation>
