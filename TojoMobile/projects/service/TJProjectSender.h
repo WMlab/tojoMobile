@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "TJSender.h"
 #import "TJProjectListViewModel.h"
+#import "TJProjectDetailViewModel.h"
 
 typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
 
@@ -18,5 +19,7 @@ typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
 +(instancetype) getInstance;
 
 -(void) sendGetProjectListWithViewModel:(TJProjectListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
+
+-(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
 
 @end

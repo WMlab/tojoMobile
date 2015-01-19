@@ -11,6 +11,6 @@
 
 @interface TJProjectDetailRequestModel : JSONModel
 
-@property (nonatomic,strong) TJProjectDetailResponseModel *result;
+@property(nonatomic, assign) int projectId;
 
 @end

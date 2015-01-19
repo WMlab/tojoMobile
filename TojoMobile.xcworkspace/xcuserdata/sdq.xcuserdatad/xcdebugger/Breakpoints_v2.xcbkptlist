@@ -6,16 +6,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TojoMobile/projects/service/TJProjectSender.m"
+            timestampString = "443364311.098445"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-sendGetProjectDetailWithViewModel:completeBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TojoMobile/projects/TJProjectDetailViewController.m"
-            timestampString = "443345702.50997"
+            filePath = "TojoMobile/projects/service/TJProjectSender.m"
+            timestampString = "443364371.299142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-sendGetProjectDetailWithViewModel:completeBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

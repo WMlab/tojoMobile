@@ -16,15 +16,21 @@
 #import "TJProjectTeamPartView.h"
 #import "TJProjectInfoViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "TJProjectSender.h"
 
 @interface TJProjectDetailViewController ()
-
+@property (nonatomic, strong) TJProjectDetailViewModel *viewModel;
 @end
 
 @implementation TJProjectDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _viewModel = [[TJProjectDetailViewModel alloc] init];
+    [self loadProjectDetail];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
     
     //top view
     CGFloat width = [[UIScreen mainScreen] bounds].size.width;
@@ -90,14 +96,23 @@
     //set scrollable area (classic uiscrollview stuff)
     itemStartY = itemStartY+270;
     [strechy setContentSize:CGSizeMake(width, itemStartY)];
-    
-    
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    
+#pragma mark --------- 发服务 -----------
+-(void) loadProjectDetail
+{
+    [[TJProjectSender getInstance] sendGetProjectDetailWithViewModel:_viewModel completeBlock:^(BOOL success, NSString *message) {
+        if (success) {
+            NSLog(@"success");
+            //页面进行赋值
+        }
+        else {
+            NSLog(@"falied");
+        }
+    }];
 }
 
+#pragma mark --------- 按钮跳转 -----------
 - (void) allInfoButtonClicked{
 //    TJProjectInfoViewController *projectInfoVC = [[TJProjectInfoViewController alloc] init];
 //    [self presentViewController:projectInfoVC animated:YES completion:Nil];

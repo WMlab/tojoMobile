@@ -26,8 +26,6 @@
 @property (nonatomic,assign)int projectFounderUniversityId;
 @property (nonatomic,copy)NSString *projectFounderUniversityName;
 @property (nonatomic,copy)NSString *projectLabel;
-//@property (nonatomic,assign)int projectLabel;
-
 @property (nonatomic,copy)NSString *projectText;
 
 @end
