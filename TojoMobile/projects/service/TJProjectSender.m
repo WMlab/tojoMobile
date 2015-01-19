@@ -9,7 +9,11 @@
 #import "TJProjectSender.h"
 #import "TJProjectListResponseModel.h"
 #import "TJProjectListRequestModel.h"
+#import "TJProjectDetailResponseModel.h"
+#import "TJProjectDetailRequestModel.h"
 #import "TJProjectInfoModel.h"
+#import "TJCommentModel.h"
+#import "TJTeamModel.h"
 #import <AFNetworking.h>
 
 static TJProjectSender * _sender = nil;
@@ -24,6 +28,7 @@ static TJProjectSender * _sender = nil;
     return _sender;
 }
 
+#pragma mark --------- 项目列表请求 -----------—
 -(void) sendGetProjectListWithViewModel:(TJProjectListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback {
     TJProjectListRequestModel *requestModel = [[TJProjectListRequestModel alloc] init];
 //    requestModel.categoryId = viewModel.categoryId;
@@ -61,5 +66,41 @@ static TJProjectSender * _sender = nil;
     }];
     [reqOperation start];
 }
+
+#pragma mark --------- 项目列表请求 -----------——
+-(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback{
+    TJProjectDetailRequestModel *requestModel = [[TJProjectDetailRequestModel alloc] init];
+    requestModel.projectId = 1;
+    NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_PROJECT_DETAIL];
+    AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
+    reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [reqOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *responseDic = (NSDictionary *)responseObject;
+        NSError *err;
+        TJProjectDetailResponseModel *responseModel = [[TJProjectDetailResponseModel alloc] initWithDictionary:responseDic error:&err];
+        if (0 == responseModel.result.code && !err) {
+            //处理
+            viewModel.commentCount = responseModel.commentCount;
+        }
+        else {
+            if (callback) {
+                callback(false, responseModel.result.message);
+            }
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (callback) {
+            callback(false, @"网络错误");
+        }
+    }];
+    [reqOperation start];
+}
+
+
+
+
+
+
+
+
 
 @end

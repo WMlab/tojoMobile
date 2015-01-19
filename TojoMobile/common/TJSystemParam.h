@@ -18,5 +18,6 @@
 
 #define REQUEST_URL_LOGIN           @"login"
 #define REQUEST_URL_PROJECT_LIST    @"projectlist"
+#define REQUEST_URL_PROJECT_DETAIL    @"projectdetail"
 
 #endif
