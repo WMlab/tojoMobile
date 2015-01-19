@@ -73,9 +73,9 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp5-YM-PZ1">
-                        <rect key="frame" x="199" y="63" width="20" height="15"/>
+                        <rect key="frame" x="199" y="63" width="30" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="20" id="EdE-7U-My3"/>
+                            <constraint firstAttribute="width" constant="30" id="EdE-7U-My3"/>
                             <constraint firstAttribute="height" constant="21" id="kLf-2k-QdB"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -140,12 +140,14 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="constrainWidthFounderNameLabel" destination="D6T-iT-epZ" id="H05-qD-wxc"/>
                 <outlet property="founderImageView" destination="l6D-dY-ca0" id="EJd-QR-w1D"/>
                 <outlet property="founderNameAndUniLabel" destination="LPB-Ud-f4B" id="c00-ww-jQF"/>
                 <outlet property="projectEndDateLabel" destination="wrR-eg-v2X" id="JIU-Oo-BpQ"/>
                 <outlet property="projectImageView" destination="GSm-TE-9pv" id="TPR-Nh-avl"/>
                 <outlet property="projectLabel" destination="K1o-5l-BJF" id="Y1t-lo-t7J"/>
                 <outlet property="projectNameLabel" destination="7bz-OW-i5G" id="m7G-lK-YYc"/>
+                <outlet property="teamNumberLabel" destination="Bp5-YM-PZ1" id="pb0-h5-glT"/>
             </connections>
             <point key="canvasLocation" x="389" y="402"/>
         </tableViewCell>

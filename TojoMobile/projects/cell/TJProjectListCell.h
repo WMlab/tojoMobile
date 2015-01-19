@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *projectEndDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *projectLabel;
 @property (weak, nonatomic) IBOutlet UILabel *founderNameAndUniLabel;
+@property (weak, nonatomic) IBOutlet UILabel *teamNumberLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *projectImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *founderImageView;
