@@ -15,19 +15,17 @@
 
 @interface TJProjectInfoModel : JSONModel
 
-@property (nonatomic,assign)int projectID;
-@property (nonatomic,copy)NSString *projectName;
-@property (nonatomic,copy)NSString *projectImage;
-@property (nonatomic,copy)NSString *projectCreatDate;
-@property (nonatomic,copy)NSString *projectEndDate;
-@property (nonatomic,assign)int projectFounderId;
-@property (nonatomic,copy)NSString *projectFounderName;
-@property (nonatomic,copy)NSString *projectFounderImage;
-@property (nonatomic,assign)int projectFounderUniversityId;
-@property (nonatomic,copy)NSString *projectFounderUniversityName;
-@property (nonatomic,copy)NSString *projectLabel;
-//@property (nonatomic,assign)int projectLabel;
-
-@property (nonatomic,copy)NSString *projectText;
-
+@property (nonatomic,assign) int projectID;
+@property (nonatomic,copy) NSString *projectName;
+@property (nonatomic,copy) NSString *projectImage;
+@property (nonatomic,copy) NSString *projectCreatDate;
+@property (nonatomic,copy) NSString *projectEndDate;
+@property (nonatomic,assign) int projectFounderId;
+@property (nonatomic,copy) NSString *projectFounderName;
+@property (nonatomic,copy) NSString *projectFounderImage;
+@property (nonatomic,assign) int projectFounderUniversityId;
+@property (nonatomic,copy) NSString *projectFounderUniversityName;
+@property (nonatomic,copy) NSString *projectLabel;
+@property (nonatomic,copy) NSString *projectText;
+@property (nonatomic,assign) int teamNumber;
 @end

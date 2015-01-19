@@ -10,6 +10,7 @@
 #import "TJProjectListViewModel.h"
 #import "TJProjectSender.h"
 #import "TJProjectListCell.h"
+#import "TJProjectDetailViewController.h"
 #import <MJRefresh.h>
 
 @interface TJProjectListViewController ()
@@ -59,6 +60,11 @@
     return cell;
 }
 
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 130.0;
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -93,21 +99,16 @@
 }
 */
 
-/*
 #pragma mark - Table view delegate
 
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    TJProjectDetailViewController *detailViewController = [[TJProjectDetailViewController alloc] init];
+    detailViewController.hidesBottomBarWhenPushed = YES;
     
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
-*/
 
 /*
 #pragma mark - Navigation

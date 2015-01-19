@@ -9,6 +9,8 @@
 #ifndef TojoMobile_TJDefine_h
 #define TojoMobile_TJDefine_h
 
+#define MAXFLOAT    0x1.fffffep+127f
+
 /** RGB颜色 */
 #define TJColorRGB(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1.0f]
 #define TJColorRGBA(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]

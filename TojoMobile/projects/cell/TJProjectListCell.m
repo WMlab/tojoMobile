@@ -9,6 +9,11 @@
 #import "TJProjectListCell.h"
 #import "TJSystemParam.h"
 
+@interface TJProjectListCell ()
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constrainWidthFounderNameLabel;
+@end
+
 @implementation TJProjectListCell
 
 - (void)awakeFromNib {
@@ -26,8 +31,13 @@
 {
     self.projectNameLabel.text = infoModel.projectName;
     self.projectEndDateLabel.text = [infoModel.projectEndDate substringWithRange:NSMakeRange(0, 10)];
-    self.founderNameAndUniLabel.text = [NSString stringWithFormat:@"%@ %@",infoModel.projectFounderUniversityName, infoModel.projectFounderName];
+    NSString *founderNameAndUni = [NSString stringWithFormat:@"%@ %@",infoModel.projectFounderUniversityName, infoModel.projectFounderName];
+    self.founderNameAndUniLabel.text = founderNameAndUni;
+    CGRect rect = [founderNameAndUni boundingRectWithSize:CGSizeMake(MAXFLOAT, self.founderNameAndUniLabel.bounds.size.height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.founderNameAndUniLabel.font} context:nil];
+    self.constrainWidthFounderNameLabel.constant = rect.size.width;
+    
     self.projectLabel.text = infoModel.projectLabel;
+    self.teamNumberLabel.text = [NSString stringWithFormat:@"%d", infoModel.teamNumber];
     
     [self.projectImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, infoModel.projectImage]]];
     

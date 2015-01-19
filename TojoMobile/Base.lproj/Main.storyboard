@@ -38,27 +38,26 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController hidesBottomBarWhenPushed="YES" id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="wZc-pm-3HZ" kind="relationship" relationship="viewControllers" id="9fW-O5-enP"/>
                         <segue destination="SIe-tV-0lT" kind="relationship" relationship="viewControllers" id="biJ-IJ-8wm"/>
+                        <segue destination="wZc-pm-3HZ" kind="relationship" relationship="viewControllers" id="9fW-O5-enP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-309" y="95"/>
+            <point key="canvasLocation" x="-449" y="359"/>
         </scene>
         <!--浏览项目-->
         <scene sceneID="ouG-Eq-4de">
             <objects>
                 <tableViewController id="vul-2J-K2F" customClass="TJProjectListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Q3o-FA-2Hg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -72,7 +71,7 @@
             </objects>
             <point key="canvasLocation" x="1200" y="-89"/>
         </scene>
-        <!--Item-->
+        <!--主页-->
         <scene sceneID="GvE-YC-2xN">
             <objects>
                 <viewController id="SIe-tV-0lT" customClass="SecondViewController" sceneMemberID="viewController">
@@ -81,21 +80,21 @@
                         <viewControllerLayoutGuide type="bottom" id="dAd-Uj-9ce"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="s3x-C2-2SK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="cDq-mn-aVI"/>
+                    <tabBarItem key="tabBarItem" title="主页" image="home" id="cDq-mn-aVI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qAq-BV-JN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="955" y="709"/>
+            <point key="canvasLocation" x="388" y="647"/>
         </scene>
         <!--项目-->
         <scene sceneID="evX-jX-HdO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wZc-pm-3HZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="项目" id="MOe-P7-2aB"/>
+                    <tabBarItem key="tabBarItem" title="项目" image="project" id="MOe-P7-2aB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rxy-br-yjn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -113,5 +112,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="home" width="25" height="25"/>
+        <image name="project" width="25" height="25"/>
     </resources>
 </document>
