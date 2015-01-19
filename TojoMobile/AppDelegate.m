@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TJDefine.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.    
     
-    
+    [[UITabBar appearance] setTintColor:TJColorHex(0x1ec399)];
     return YES;
 }
 
