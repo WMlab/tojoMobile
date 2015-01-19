@@ -10,4 +10,11 @@
 
 @interface TJProjectCommentPartView : UIView
 
+@property (strong, nonatomic) UILabel *commentCount;
+@property (strong, nonatomic) UIImageView *latestCommentUserImg;
+@property (strong, nonatomic) UILabel *latestCommentUserName;
+@property (strong, nonatomic) UILabel *latestCommentDate;
+@property (strong, nonatomic) UILabel *latestCommentText;
+@property (strong, nonatomic) UIButton *allCommentButton;
+
 @end

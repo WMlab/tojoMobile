@@ -21,11 +21,13 @@
         // Initialization code
         [self setBackgroundColor:[UIColor colorWithRed:246/255.0f green:246/255.0f blue:246/255.0f alpha:1.0]];
         
+        
+        
         //Introduce project
         UILabel *xiangMuJieShao;
         CGRect xiangMuJieShaoRect = CGRectMake(0, 0, 100, 30);
         xiangMuJieShao = [[UILabel alloc] initWithFrame:xiangMuJieShaoRect];
-        xiangMuJieShao.textColor = [UIColor blackColor];
+        xiangMuJieShao.textColor = [UIColor colorWithRed:58/255.0f green:58/255.0f blue:58/255.0f alpha:1.0];
         [xiangMuJieShao setText:@"项目介绍"];
         [xiangMuJieShao setFont:[UIFont boldSystemFontOfSize:17]];
         [self addSubview:xiangMuJieShao];
@@ -37,7 +39,7 @@
         //detail
         CGRect projectDetailLabelRect = CGRectMake(0, 0, 100, 30);
         projectDetailLabel = [[UILabel alloc] initWithFrame:projectDetailLabelRect];
-        projectDetailLabel.textColor = [UIColor blackColor];
+        projectDetailLabel.textColor = [UIColor colorWithRed:58/255.0f green:58/255.0f blue:58/255.0f alpha:1.0];
         [projectDetailLabel setText:@""];
         [projectDetailLabel setFont:[UIFont fontWithName:@"Helvetica" size:14]];
         [self addSubview:projectDetailLabel];

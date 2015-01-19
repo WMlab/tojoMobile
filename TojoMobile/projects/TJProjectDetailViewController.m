@@ -15,6 +15,7 @@
 #import "TJProjectCommentPartView.h"
 #import "TJProjectTeamPartView.h"
 #import "TJProjectInfoViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface TJProjectDetailViewController ()
 
@@ -27,7 +28,7 @@
     
     //top view
     CGFloat width = [[UIScreen mainScreen] bounds].size.width;
-    UIImageView *topView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, 180)];
+    UIImageView *topView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, 3*width/5)];
     [topView setImage:[UIImage imageNamed:@"titleImageTest.png"]];
     
     TJEndDateView *endDateView = [[TJEndDateView alloc] initWithFrame:CGRectMake(0, 0, 80, 33)];
@@ -50,6 +51,10 @@
     float itemStartY = topView.frame.size.height;
     TJProjectBasicInfoView *basicInfoView = [[TJProjectBasicInfoView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+200)];
     [basicInfoView.projectTitleLabel setText:@"第一个项目"];
+    [basicInfoView.projectReleasedDateLabel setText:@"发布日期 2015/1/1"];
+    [basicInfoView.projectFounderImg setImage:[UIImage imageNamed:@"testHead.png"]];
+    [basicInfoView.projectFounderLabel setText:@"史丹青"];
+    [basicInfoView.projectFounderUniversityLabel setText:@"同济大学"];
     [strechy addSubview:basicInfoView];
     
     //detial info
@@ -61,23 +66,49 @@
     
     //comment part
     itemStartY += 200;
-    TJProjectCommentPartView *commentPartView = [[TJProjectCommentPartView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+320)];
+    TJProjectCommentPartView *commentPartView = [[TJProjectCommentPartView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+290)];
+    [commentPartView.commentCount setText:@"36条评论"];
+    [commentPartView.latestCommentUserImg setImage:[UIImage imageNamed:@"testHead.png"]];
+    [commentPartView.latestCommentUserName setText:@"彭涛"];
+    [commentPartView.latestCommentDate setText:@"2015/1/2"];
+    [commentPartView.latestCommentText setText:@"互联网拉开了一扇大门，当我们拉开这扇门的时候就看到了新蓝海一样，觉得机会巨大，大家在互联网行业里的竞争红海被蹂躏了很多年，所以好不容易可以有一个透气的地方，“哗”一下都可以进去。"];
+    [commentPartView.allCommentButton addTarget:self action:@selector(allCommentButtonClicked)forControlEvents:UIControlEventTouchUpInside];
     [strechy addSubview:commentPartView];
     
     //team part
-    itemStartY += 320;
+    itemStartY += 290;
     TJProjectTeamPartView *teamPartView = [[TJProjectTeamPartView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+270)];
+    [teamPartView.teamCount setText:@"6个团队"];
+    [teamPartView.latestTeamFounderImg setImage:[UIImage imageNamed:@"testHead.png"]];
+    [teamPartView.latestTeamName setText:@"同舟团队"];
+    [teamPartView.latestTeamFounderName setText:@"彭涛"];
+    [teamPartView.latestTeamFounderUniversity setText:@"同济大学"];
+    [teamPartView.latestTeamMemberNow setText:@"3/6"];
+    [teamPartView.allTeamButton addTarget:self action:@selector(allTeamButtonClicked)forControlEvents:UIControlEventTouchUpInside];
     [strechy addSubview:teamPartView];
     
     //set scrollable area (classic uiscrollview stuff)
+    itemStartY = itemStartY+270;
     [strechy setContentSize:CGSizeMake(width, itemStartY)];
     
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
     
 }
 
 - (void) allInfoButtonClicked{
 //    TJProjectInfoViewController *projectInfoVC = [[TJProjectInfoViewController alloc] init];
 //    [self presentViewController:projectInfoVC animated:YES completion:Nil];
+}
+
+- (void) allCommentButtonClicked{
+    
+}
+
+- (void) allTeamButtonClicked{
+    
 }
 
 

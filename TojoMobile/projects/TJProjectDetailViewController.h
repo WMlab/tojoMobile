@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TJProjectDetailViewModel.h"
 
 @interface TJProjectDetailViewController : UIViewController<UIGestureRecognizerDelegate>
 
+@property (weak, nonatomic) TJProjectDetailViewModel *projectDetailViewModel;
 
 @end

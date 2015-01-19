@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) UILabel *projectTitleLabel;
 @property (strong, nonatomic) UILabel *projectReleasedDateLabel;
-@property (strong, nonatomic) UIImage *projectFounderImg;
+@property (strong, nonatomic) UIImageView *projectFounderImg;
 @property (strong, nonatomic) UILabel *projectFounderLabel;
 @property (strong, nonatomic) UILabel *projectFounderUniversityLabel;
 

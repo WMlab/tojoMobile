@@ -10,4 +10,12 @@
 
 @interface TJProjectTeamPartView : UIView
 
+@property (strong, nonatomic) UILabel *teamCount;
+@property (strong, nonatomic) UIImageView *latestTeamFounderImg;
+@property (strong, nonatomic) UILabel *latestTeamName;
+@property (strong, nonatomic) UILabel *latestTeamFounderName;
+@property (strong, nonatomic) UILabel *latestTeamFounderUniversity;
+@property (strong, nonatomic) UILabel *latestTeamMemberNow;
+@property (strong, nonatomic) UIButton *allTeamButton;
+
 @end
