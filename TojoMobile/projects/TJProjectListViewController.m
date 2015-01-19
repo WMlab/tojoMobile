@@ -55,14 +55,6 @@
     TJProjectListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     TJProjectInfoModel *infoModel = (TJProjectInfoModel *)[_viewModel.projectList objectAtIndex:indexPath.row];
     [cell setCellWithProjectItem:infoModel];
-//    cell.projectNameLabel.text = [infoModel valueForKey:@"projectName"];
-//    cell.projectEndDateLabel.text = [[infoModel valueForKey:@"projectEndDate"] substringWithRange:NSMakeRange(0, 10)];
-//    cell.founderNameAndUniLabel.text = [NSString stringWithFormat:@"%@ %@",[infoModel valueForKey:@"projectFounderUniversityName"] , [infoModel valueForKey:@"projectFounderName"]];
-//    cell.projectLabel.text = [NSString stringWithFormat:@"%@",[infoModel valueForKey:@"projectLabel"]];
-//    NSString *imageUrlStr = [NSString stringWithFormat:@"%@%@", IMAGE_BASE_URL, [infoModel valueForKey:@"projectFounderImage"]];
-//    cell.founderImageView.layer.cornerRadius = cell.founderImageView.frame.size.height/2;
-//    cell.founderImageView.layer.masksToBounds = YES;
-//    [cell.founderImageView sd_setImageWithURL:[NSURL URLWithString:imageUrlStr]];
 
     return cell;
 }

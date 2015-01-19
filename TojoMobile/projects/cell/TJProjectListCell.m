@@ -27,12 +27,14 @@
     self.projectNameLabel.text = infoModel.projectName;
     self.projectEndDateLabel.text = [infoModel.projectEndDate substringWithRange:NSMakeRange(0, 10)];
     self.founderNameAndUniLabel.text = [NSString stringWithFormat:@"%@ %@",infoModel.projectFounderUniversityName, infoModel.projectFounderName];
-    self.projectLabel.text = [NSString stringWithFormat:@"%d",infoModel.projectLabel];
+    self.projectLabel.text = infoModel.projectLabel;
+    
+    [self.projectImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, infoModel.projectImage]]];
+    
     NSString *imageUrlStr = [NSString stringWithFormat:@"%@%@", IMAGE_BASE_URL, infoModel.projectFounderImage];
     [self.founderImageView sd_setImageWithURL:[NSURL URLWithString:imageUrlStr]];
     self.founderImageView.layer.cornerRadius = self.founderImageView.frame.size.height/2;
     self.founderImageView.layer.masksToBounds = YES;
-
 }
 
 @end

@@ -27,7 +27,7 @@ static TJProjectSender * _sender = nil;
 -(void) sendGetProjectListWithViewModel:(TJProjectListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback {
     TJProjectListRequestModel *requestModel = [[TJProjectListRequestModel alloc] init];
 //    requestModel.categoryId = viewModel.categoryId;
-    requestModel.categoryId = 2;
+    requestModel.categoryId = 0;
     NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_PROJECT_LIST];
     AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
     reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
