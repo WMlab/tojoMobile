@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 Tongjo. All rights reserved.
 //
 
-#import "EndDateView.h"
+#import "TJEndDateView.h"
 
-@implementation EndDateView
+@implementation TJEndDateView
 
 @synthesize endDateLabel;
 
