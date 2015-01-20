@@ -1,25 +1,23 @@
 //
-//  TJProjectInfoViewController.m
+//  TestViewController.m
 //  TojoMobile
 //
-//  Created by sdq on 15/1/18.
+//  Created by sdq on 15/1/20.
 //  Copyright (c) 2015年 Tongjo. All rights reserved.
 //
 
-#import "TJProjectInfoViewController.h"
+#import "TestViewController.h"
+#import "TJProjectDetailViewController.h"
 
-@interface TJProjectInfoViewController ()
+@interface TestViewController ()
 
 @end
 
-@implementation TJProjectInfoViewController
+@implementation TestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-    self.navigationController.interactivePopGestureRecognizer.delegate = self;
-    self.navigationItem.title = @"介绍";
-    
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,4 +35,10 @@
 }
 */
 
+- (IBAction)projectDetailButton:(UIButton *)sender {
+    TJProjectDetailViewController *detailViewController = [[TJProjectDetailViewController alloc] init];
+    detailViewController.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:detailViewController animated:YES];
+}
 @end

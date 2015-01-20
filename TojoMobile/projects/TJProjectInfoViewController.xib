@@ -13,7 +13,57 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OII-UJ-3vv">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="OII-UJ-3vv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="0vJ-0I-sfZ">
+                    <variation key="heightClass=regular-widthClass=compact" constant="24"/>
+                </constraint>
+                <constraint firstItem="OII-UJ-3vv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="FOp-LA-Dd5">
+                    <variation key="heightClass=regular-widthClass=compact" constant="24"/>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="OII-UJ-3vv" secondAttribute="bottom" id="J1F-Is-mPS"/>
+                <constraint firstAttribute="trailing" secondItem="OII-UJ-3vv" secondAttribute="trailing" id="bQ5-SD-bmc"/>
+                <constraint firstItem="OII-UJ-3vv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="fwW-Mb-Gw4"/>
+                <constraint firstItem="OII-UJ-3vv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lEy-Nh-UGP"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="OII-UJ-3vv"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="0vJ-0I-sfZ"/>
+                    <exclude reference="FOp-LA-Dd5"/>
+                    <exclude reference="J1F-Is-mPS"/>
+                    <exclude reference="bQ5-SD-bmc"/>
+                    <exclude reference="fwW-Mb-Gw4"/>
+                    <exclude reference="lEy-Nh-UGP"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="OII-UJ-3vv"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="0vJ-0I-sfZ"/>
+                    <include reference="FOp-LA-Dd5"/>
+                    <include reference="J1F-Is-mPS"/>
+                    <include reference="bQ5-SD-bmc"/>
+                    <include reference="fwW-Mb-Gw4"/>
+                    <include reference="lEy-Nh-UGP"/>
+                </mask>
+            </variation>
+        </view>
+        <view contentMode="scaleToFill" id="Scj-hX-qqc">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="265" y="1105"/>
         </view>
     </objects>
 </document>

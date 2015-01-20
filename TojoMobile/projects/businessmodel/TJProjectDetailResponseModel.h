@@ -19,13 +19,10 @@
 /**项目详情**/
 @property (nonatomic,copy) TJProjectInfoModel *info;
 
-/**评论**/
-@property (nonatomic,assign)int commentCount;
-@property (nonatomic,copy)TJCommentModel *commentModel;
+/**最近评论**/
+@property (nonatomic,copy)TJCommentModel *comment;
 
-
-/**团队**/
-@property (nonatomic,assign)int teamCount;
-@property (nonatomic,copy)TJTeamModel *teamModel;
+/**最近团队**/
+@property (nonatomic,copy)TJTeamModel *team;
 
 @end

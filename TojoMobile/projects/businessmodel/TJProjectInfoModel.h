@@ -18,7 +18,7 @@
 @property (nonatomic,assign) int projectID;
 @property (nonatomic,copy) NSString *projectName;
 @property (nonatomic,copy) NSString *projectImage;
-@property (nonatomic,copy) NSString *projectCreatDate;
+@property (nonatomic,copy) NSString *projectCreatedDate;
 @property (nonatomic,copy) NSString *projectEndDate;
 @property (nonatomic,assign) int projectFounderId;
 @property (nonatomic,copy) NSString *projectFounderName;
@@ -28,4 +28,6 @@
 @property (nonatomic,copy) NSString *projectLabel;
 @property (nonatomic,copy) NSString *projectText;
 @property (nonatomic,assign) int teamNumber;
+@property (nonatomic,assign) int commentNumber;
+
 @end

@@ -7,8 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <JSONModel.h>
 
-@interface TJTeamModel : NSObject
+@protocol  TJTeamModel
+
+@end
+
+@interface TJTeamModel : JSONModel
 
 @property (nonatomic,assign)int teamFounderId;
 @property (nonatomic,copy)NSString *teamName;

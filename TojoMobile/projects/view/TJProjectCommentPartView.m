@@ -87,8 +87,7 @@
         }];
         
         //button
-        CGRect buttonRect = CGRectMake(0, 0, 120, 50);
-        allCommentButton = [[UIButton alloc] initWithFrame:buttonRect];
+        allCommentButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [allCommentButton.layer setMasksToBounds:YES];
         //[allInfoButton.layer setCornerRadius:10.0];//圆角
         [allCommentButton.layer setBorderWidth:1.0];

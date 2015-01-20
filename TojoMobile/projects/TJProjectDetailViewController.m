@@ -15,6 +15,8 @@
 #import "TJProjectCommentPartView.h"
 #import "TJProjectTeamPartView.h"
 #import "TJProjectInfoViewController.h"
+#import "TJCommentListViewController.h"
+#import "TJTeamListViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "TJProjectSender.h"
 
@@ -26,11 +28,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     _viewModel = [[TJProjectDetailViewModel alloc] init];
     [self loadProjectDetail];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    self.navigationItem.title = @"项目详情";
     
     //top view
     CGFloat width = [[UIScreen mainScreen] bounds].size.width;
@@ -114,16 +120,21 @@
 
 #pragma mark --------- 按钮跳转 -----------
 - (void) allInfoButtonClicked{
-//    TJProjectInfoViewController *projectInfoVC = [[TJProjectInfoViewController alloc] init];
-//    [self presentViewController:projectInfoVC animated:YES completion:Nil];
+    TJProjectInfoViewController *infoViewController = [[TJProjectInfoViewController alloc] init];
+    
+    [self.navigationController pushViewController:infoViewController animated:YES];
 }
 
 - (void) allCommentButtonClicked{
+    TJCommentListViewController *commentListViewController = [[TJCommentListViewController alloc] init];
     
+    [self.navigationController pushViewController:commentListViewController animated:YES];
 }
 
 - (void) allTeamButtonClicked{
+    TJTeamListViewController *teamListViewController = [[TJTeamListViewController alloc] init];
     
+    [self.navigationController pushViewController:teamListViewController animated:YES];
 }
 
 
