@@ -16,6 +16,6 @@
 @property(nonatomic, strong) TJResultModel *result;
 
 @property(nonatomic, assign) int count;
-@property(nonatomic, strong) NSArray<TJCommentModel> *projectList;  // model - TJProjectInfoModel
+@property(nonatomic, strong) NSArray<TJCommentModel> *commentList;  // model - TJCommentModel
 
 @end
