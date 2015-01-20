@@ -28,6 +28,6 @@
 @property (nonatomic,copy) NSString *projectLabel;
 @property (nonatomic,copy) NSString *projectText;
 @property (nonatomic,assign) int teamNumber;
-@property (nonatomic,assign)int commentNumber;
+@property (nonatomic,assign) int commentNumber;
 
 @end
