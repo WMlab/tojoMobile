@@ -53,8 +53,7 @@
         }];
         
         //button
-        CGRect buttonRect = CGRectMake(0, 0, 120, 50);
-        allInfoButton = [[UIButton alloc] initWithFrame:buttonRect];
+        allInfoButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [allInfoButton.layer setMasksToBounds:YES];
         //[allInfoButton.layer setCornerRadius:10.0];//圆角
         [allInfoButton.layer setBorderWidth:1.0];

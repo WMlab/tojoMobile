@@ -7,8 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <JSONModel.h>
+@protocol  TJCommentModel
 
-@interface TJCommentModel : NSObject
+
+@end
+
+@interface TJCommentModel : JSONModel
 
 @property (nonatomic,assign)int commentUserId;
 @property (nonatomic,copy)NSString *commentUserName;

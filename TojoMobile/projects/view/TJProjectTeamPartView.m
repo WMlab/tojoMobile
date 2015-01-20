@@ -95,8 +95,7 @@
         }];
         
         //button
-        CGRect buttonRect = CGRectMake(0, 0, 120, 50);
-        allTeamButton = [[UIButton alloc] initWithFrame:buttonRect];
+        allTeamButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [allTeamButton.layer setMasksToBounds:YES];
         //[allInfoButton.layer setCornerRadius:10.0];//圆角
         [allTeamButton.layer setBorderWidth:1.0];
