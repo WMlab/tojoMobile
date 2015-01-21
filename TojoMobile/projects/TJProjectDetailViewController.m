@@ -29,7 +29,9 @@
 @property (nonatomic, strong) TJProjectDetailViewModel *viewModel;
 @end
 
-@implementation TJProjectDetailViewController
+@implementation TJProjectDetailViewController{
+    dispatch_once_t serviceOnce;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,11 +44,31 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     self.navigationItem.title = @"项目详情";
+    [self loadProjectDetail];
     
     
+}
+
+#pragma mark --------- 发服务 -----------
+-(void) loadProjectDetail
+{
+    [[TJProjectSender getInstance] sendGetProjectDetailWithViewModel:_viewModel completeBlock:^(BOOL success, NSString *    message) {
+        if (success) {
+            NSLog(@"success");
+            //页面进行赋值
+            [self loadProjectDetail:_viewModel];
+        }
+        else {
+            NSLog(@"falied");
+        }
+    }];
+}
+
+#pragma mark --------- 部署详情页面 -----------
+- (void) loadProjectDetail:(TJProjectDetailViewModel*) viewModel{
     //top view
     UIImageView *topView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, TJScreenWidth, 3*TJScreenWidth/5)];
-    [topView setImage:[UIImage imageNamed:@"titleImageTest.png"]];
+    [topView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, viewModel.projectInfoModel.projectImage]]];
     
     TJEndDateView *endDateView = [[TJEndDateView alloc] initWithFrame:CGRectMake(0, 0, 80, 33)];
     [endDateView.endDateLabel setText:@"2015/1/2"];//set end date
@@ -67,60 +89,46 @@
     //basic info
     float itemStartY = topView.frame.size.height;
     TJProjectBasicInfoView *basicInfoView = [[TJProjectBasicInfoView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+200)];
-    [basicInfoView.projectTitleLabel setText:@"第一个项目"];
-    [basicInfoView.projectReleasedDateLabel setText:@"发布日期 2015/1/1"];
-    [basicInfoView.projectFounderImg setImage:[UIImage imageNamed:@"testHead.png"]];
-    [basicInfoView.projectFounderLabel setText:@"史丹青"];
-    [basicInfoView.projectFounderUniversityLabel setText:@"同济大学"];
+    [basicInfoView.projectTitleLabel setText:viewModel.projectInfoModel.projectName];
+    [basicInfoView.projectReleasedDateLabel setText:[NSString stringWithFormat:@"发布日期 %@", viewModel.projectInfoModel.projectCreatedDate]];
+    [basicInfoView.projectFounderImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, viewModel.projectInfoModel.projectFounderImage]]];
+    [basicInfoView.projectFounderLabel setText:viewModel.projectInfoModel.projectFounderName];
+    [basicInfoView.projectFounderUniversityLabel setText:viewModel.projectInfoModel.projectFounderUniversityName];
     [strechy addSubview:basicInfoView];
     
     //detial info
     itemStartY += 200;
     TJProjectDetailInfoView *detailInfoView = [[TJProjectDetailInfoView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+200)];
-    detailInfoView.projectDetailLabel.text = @"我自己理解，「互联网本身是思维」，再延伸一句话，「互联网也是肉体」，要想跑得快你必须具备互联网的思维、互联网的肉体，但是你要想跑得久你需要灵魂，这个灵魂其实是对于传统业务的专业能力的把握和理解，这在电商，在比如互联网金融、互联网汽车等很多领域都是这样，一句话概括就是「别让肉体跑丢了灵魂，请保持对互联网的敬畏」当我们进入这些产业的时候，他们对这些产业的掌握、理解、能力、执行都是需要我们学习的。";
+    detailInfoView.projectDetailLabel.text = viewModel.projectInfoModel.projectText;
     [detailInfoView.allInfoButton addTarget:self action:@selector(allInfoButtonClicked)forControlEvents:UIControlEventTouchUpInside];
     [strechy addSubview:detailInfoView];
     
     //comment part
     itemStartY += 200;
     TJProjectCommentPartView *commentPartView = [[TJProjectCommentPartView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+290)];
-    [commentPartView.commentCount setText:@"36条评论"];
-    [commentPartView.latestCommentUserImg setImage:[UIImage imageNamed:@"testHead.png"]];
-    [commentPartView.latestCommentUserName setText:@"彭涛"];
-    [commentPartView.latestCommentDate setText:@"2015/1/2"];
-    [commentPartView.latestCommentText setText:@"互联网拉开了一扇大门，当我们拉开这扇门的时候就看到了新蓝海一样，觉得机会巨大，大家在互联网行业里的竞争红海被蹂躏了很多年，所以好不容易可以有一个透气的地方，“哗”一下都可以进去。"];
+    [commentPartView.commentCount setText:[NSString stringWithFormat:@"%d条评论", viewModel.projectInfoModel.commentNumber]];
+    [commentPartView.latestCommentUserImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, viewModel.commentModel.commentUserImage]]];
+    [commentPartView.latestCommentUserName setText:viewModel.commentModel.commentUserName];
+    [commentPartView.latestCommentDate setText:viewModel.commentModel.commentDate];
+    [commentPartView.latestCommentText setText:viewModel.commentModel.commentText];
     [commentPartView.allCommentButton addTarget:self action:@selector(allCommentButtonClicked)forControlEvents:UIControlEventTouchUpInside];
     [strechy addSubview:commentPartView];
     
     //team part
     itemStartY += 290;
     TJProjectTeamPartView *teamPartView = [[TJProjectTeamPartView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+270)];
-    [teamPartView.teamCount setText:@"6个团队"];
-    [teamPartView.latestTeamFounderImg setImage:[UIImage imageNamed:@"testHead.png"]];
-    [teamPartView.latestTeamName setText:@"同舟团队"];
-    [teamPartView.latestTeamFounderName setText:@"彭涛"];
-    [teamPartView.latestTeamFounderUniversity setText:@"同济大学"];
-    [teamPartView.latestTeamMemberNow setText:@"3/6"];
+    [teamPartView.teamCount setText:[NSString stringWithFormat:@"%d个团队", viewModel.projectInfoModel.teamNumber]];
+    [teamPartView.latestTeamFounderImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, viewModel.teamModel.teamFounderImage]]];
+    [teamPartView.latestTeamName setText:viewModel.teamModel.teamName];
+    [teamPartView.latestTeamFounderName setText:viewModel.teamModel.teamFounderName];
+    [teamPartView.latestTeamFounderUniversity setText:viewModel.teamModel.teamFounderSchool];
+    [teamPartView.latestTeamMemberNow setText:[NSString stringWithFormat:@"%d/%d", viewModel.teamModel.teamMemberNow,viewModel.teamModel.teamMemberAll]];
     [teamPartView.allTeamButton addTarget:self action:@selector(allTeamButtonClicked)forControlEvents:UIControlEventTouchUpInside];
     [strechy addSubview:teamPartView];
     
     //set scrollable area (classic uiscrollview stuff)
     itemStartY = itemStartY+270;
     [strechy setContentSize:CGSizeMake(TJScreenWidth, itemStartY)];
-}
-
-#pragma mark --------- 发服务 -----------
--(void) loadProjectDetail
-{
-    [[TJProjectSender getInstance] sendGetProjectDetailWithViewModel:_viewModel completeBlock:^(BOOL success, NSString *message) {
-        if (success) {
-            NSLog(@"success");
-            //页面进行赋值
-        }
-        else {
-            NSLog(@"falied");
-        }
-    }];
 }
 
 #pragma mark --------- 详情页面按钮跳转 -----------

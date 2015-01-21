@@ -80,7 +80,12 @@ static TJProjectSender * _sender = nil;
         TJProjectDetailResponseModel *responseModel = [[TJProjectDetailResponseModel alloc] initWithDictionary:responseDic error:&err];
         if (0 == responseModel.result.code && !err) {
             //处理
-            //viewModel.commentCount = responseModel.commentCount;
+            viewModel.projectInfoModel = responseModel.info;
+            viewModel.commentModel = responseModel.comment;
+            viewModel.teamModel = responseModel.team;
+            if (callback) {
+                callback(true, responseModel.result.message);
+            }
         }
         else {
             if (callback) {

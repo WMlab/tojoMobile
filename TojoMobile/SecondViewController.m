@@ -18,11 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    /** Test for Project Detail **/
-    TJProjectDetailViewController *TJProjectDetailVC = [[TJProjectDetailViewController alloc] init];
-    [self presentViewController:TJProjectDetailVC animated:FALSE completion:Nil];
-    /*****************************/
 }
 
 - (void)didReceiveMemoryWarning {

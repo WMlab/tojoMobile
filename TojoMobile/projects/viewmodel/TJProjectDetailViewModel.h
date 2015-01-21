@@ -17,12 +17,10 @@
 @property (nonatomic,copy) TJProjectInfoModel *projectInfoModel;
 
 /**评论**/
-@property (nonatomic,assign)int commentCount;
 @property (nonatomic,copy)TJCommentModel *commentModel;
 
 
 /**团队**/
-@property (nonatomic,assign)int teamCount;
 @property (nonatomic,copy)TJTeamModel *teamModel;
 
 @end
