@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TJDefine.h"
-
+#import "TJDataBase.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +20,12 @@
     // Override point for customization after application launch.    
     
     [[UITabBar appearance] setTintColor:TJColorHex(0x1ec399)];
+    
+    //初始化缓存数据库
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        [self initDatabase];
+    });
+
     return YES;
 }
 
@@ -43,6 +49,10 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)initDatabase{
+    [[TJDataBase getInstance] initDatabase];
 }
 
 @end
