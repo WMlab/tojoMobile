@@ -19,8 +19,13 @@
 #import "TJTeamListViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "TJProjectSender.h"
+#import <Masonry/Masonry.h>
 
 @interface TJProjectDetailViewController ()
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (weak, nonatomic) IBOutlet UIButton *collectButtom;
+@property (weak, nonatomic) IBOutlet UIButton *commentButton;
+@property (weak, nonatomic) IBOutlet UIButton *attendButton;
 @property (nonatomic, strong) TJProjectDetailViewModel *viewModel;
 @end
 
@@ -38,9 +43,9 @@
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     self.navigationItem.title = @"项目详情";
     
+    
     //top view
-    CGFloat width = [[UIScreen mainScreen] bounds].size.width;
-    UIImageView *topView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, 3*width/5)];
+    UIImageView *topView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, TJScreenWidth, 3*TJScreenWidth/5)];
     [topView setImage:[UIImage imageNamed:@"titleImageTest.png"]];
     
     TJEndDateView *endDateView = [[TJEndDateView alloc] initWithFrame:CGRectMake(0, 0, 80, 33)];
@@ -101,7 +106,7 @@
     
     //set scrollable area (classic uiscrollview stuff)
     itemStartY = itemStartY+270;
-    [strechy setContentSize:CGSizeMake(width, itemStartY)];
+    [strechy setContentSize:CGSizeMake(TJScreenWidth, itemStartY)];
 }
 
 #pragma mark --------- 发服务 -----------
@@ -118,7 +123,7 @@
     }];
 }
 
-#pragma mark --------- 按钮跳转 -----------
+#pragma mark --------- 详情页面按钮跳转 -----------
 - (void) allInfoButtonClicked{
     TJProjectInfoViewController *infoViewController = [[TJProjectInfoViewController alloc] init];
     
@@ -144,14 +149,17 @@
     
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark --------- 下方Tab按钮跳转 -----------
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)collectButtonClicked:(UIButton *)sender {
 }
-*/
 
+- (IBAction)commentButtonClicked:(UIButton *)sender {
+}
+
+- (IBAction)attendButtonClicked:(UIButton *)sender {
+    TJTeamListViewController *teamListViewController = [[TJTeamListViewController alloc] init];
+    
+    [self.navigationController pushViewController:teamListViewController animated:YES];
+}
 @end

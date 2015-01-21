@@ -67,7 +67,7 @@ static TJProjectSender * _sender = nil;
     [reqOperation start];
 }
 
-#pragma mark --------- 项目列表请求 -----------——
+#pragma mark --------- 项目详情请求 -----------——
 -(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback{
     TJProjectDetailRequestModel *requestModel = [[TJProjectDetailRequestModel alloc] init];
     requestModel.projectId = 1;

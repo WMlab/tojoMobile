@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TJProjectInfoViewController : UIViewController
+@interface TJProjectInfoViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end

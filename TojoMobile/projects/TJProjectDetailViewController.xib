@@ -8,6 +8,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TJProjectDetailViewController">
             <connections>
+                <outlet property="attendButton" destination="psH-t3-n47" id="LjF-Qk-Ug8"/>
+                <outlet property="bottomView" destination="88L-jz-1qB" id="ncm-RJ-n2s"/>
+                <outlet property="collectButtom" destination="WB8-vK-W6e" id="O8z-vC-etb"/>
+                <outlet property="commentButton" destination="FSX-WA-YSM" id="cAy-Ut-8be"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,6 +23,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88L-jz-1qB" userLabel="BottomView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
+                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="points.png" translatesAutoresizingMaskIntoConstraints="NO" id="RGP-io-vEx">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        </imageView>
+                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="points.png" translatesAutoresizingMaskIntoConstraints="NO" id="k2Q-GN-v2Q">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WB8-vK-W6e">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <constraints>
@@ -42,6 +52,9 @@
                                     <include reference="vfs-27-Upo"/>
                                 </mask>
                             </variation>
+                            <connections>
+                                <action selector="collectButtonClicked:" destination="-1" eventType="touchUpInside" id="Bx8-mP-LnF"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSX-WA-YSM">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -50,6 +63,9 @@
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="commentButtonClicked:" destination="-1" eventType="touchUpInside" id="LZU-lJ-Mvr"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psH-t3-n47">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -74,47 +90,72 @@
                                     <include reference="Ol7-aM-QiG"/>
                                 </mask>
                             </variation>
+                            <connections>
+                                <action selector="attendButtonClicked:" destination="-1" eventType="touchUpInside" id="VNG-jG-kQo"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.11764705882352941" green="0.76470588235294112" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="psH-t3-n47" secondAttribute="trailing" id="08g-dA-1tn"/>
+                        <constraint firstItem="psH-t3-n47" firstAttribute="leading" secondItem="RGP-io-vEx" secondAttribute="trailing" id="2QS-sy-weB"/>
+                        <constraint firstAttribute="bottom" secondItem="k2Q-GN-v2Q" secondAttribute="bottom" constant="10" id="3BK-hi-vGq"/>
                         <constraint firstItem="WB8-vK-W6e" firstAttribute="top" secondItem="FSX-WA-YSM" secondAttribute="top" id="75E-Vy-JHu"/>
                         <constraint firstItem="WB8-vK-W6e" firstAttribute="top" secondItem="88L-jz-1qB" secondAttribute="top" id="Bl3-a2-SjV"/>
-                        <constraint firstItem="FSX-WA-YSM" firstAttribute="leading" secondItem="WB8-vK-W6e" secondAttribute="trailing" id="BxX-Fh-WjN"/>
+                        <constraint firstItem="FSX-WA-YSM" firstAttribute="leading" secondItem="WB8-vK-W6e" secondAttribute="trailing" id="BxX-Fh-WjN">
+                            <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                        </constraint>
+                        <constraint firstItem="FSX-WA-YSM" firstAttribute="leading" secondItem="k2Q-GN-v2Q" secondAttribute="trailing" constant="3" id="Ery-hQ-JgR"/>
                         <constraint firstItem="psH-t3-n47" firstAttribute="leading" secondItem="FSX-WA-YSM" secondAttribute="trailing" constant="8" symbolic="YES" id="F9q-Rk-X4K">
-                            <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            <variation key="heightClass=regular-widthClass=compact" constant="8"/>
                         </constraint>
                         <constraint firstAttribute="centerX" secondItem="FSX-WA-YSM" secondAttribute="centerX" id="HSQ-6f-aVz"/>
                         <constraint firstItem="psH-t3-n47" firstAttribute="leading" secondItem="FSX-WA-YSM" secondAttribute="trailing" id="MHK-xm-Mpk"/>
                         <constraint firstItem="WB8-vK-W6e" firstAttribute="leading" secondItem="88L-jz-1qB" secondAttribute="leading" id="Vlr-tC-Fk2"/>
-                        <constraint firstItem="FSX-WA-YSM" firstAttribute="leading" secondItem="WB8-vK-W6e" secondAttribute="trailing" id="gMC-qP-Cvv"/>
+                        <constraint firstItem="k2Q-GN-v2Q" firstAttribute="leading" secondItem="WB8-vK-W6e" secondAttribute="trailing" id="YDb-RF-T6m"/>
+                        <constraint firstItem="RGP-io-vEx" firstAttribute="leading" secondItem="FSX-WA-YSM" secondAttribute="trailing" constant="3" id="Ygw-Pb-eFH"/>
+                        <constraint firstItem="FSX-WA-YSM" firstAttribute="leading" secondItem="WB8-vK-W6e" secondAttribute="trailing" id="gMC-qP-Cvv">
+                            <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                        </constraint>
                         <constraint firstItem="psH-t3-n47" firstAttribute="baseline" secondItem="FSX-WA-YSM" secondAttribute="baseline" id="kxN-Ph-iPN"/>
                         <constraint firstItem="WB8-vK-W6e" firstAttribute="firstBaseline" secondItem="FSX-WA-YSM" secondAttribute="baseline" id="lul-vb-4ff"/>
                         <constraint firstAttribute="centerX" secondItem="FSX-WA-YSM" secondAttribute="centerX" id="oP1-Mk-Drz"/>
+                        <constraint firstItem="k2Q-GN-v2Q" firstAttribute="top" secondItem="88L-jz-1qB" secondAttribute="top" constant="11" id="pis-0W-vY6"/>
+                        <constraint firstItem="k2Q-GN-v2Q" firstAttribute="top" secondItem="RGP-io-vEx" secondAttribute="top" id="qwr-An-IgW"/>
+                        <constraint firstItem="k2Q-GN-v2Q" firstAttribute="bottom" secondItem="RGP-io-vEx" secondAttribute="bottom" id="sG0-gH-zHd"/>
                         <constraint firstAttribute="centerX" secondItem="FSX-WA-YSM" secondAttribute="centerX" id="uEr-1c-TPT"/>
                         <constraint firstAttribute="height" constant="49" id="ujM-vG-AyE"/>
                         <constraint firstItem="WB8-vK-W6e" firstAttribute="baseline" secondItem="FSX-WA-YSM" secondAttribute="firstBaseline" id="yZu-sO-Yrg"/>
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
+                            <exclude reference="RGP-io-vEx"/>
+                            <exclude reference="k2Q-GN-v2Q"/>
                             <exclude reference="WB8-vK-W6e"/>
                             <exclude reference="FSX-WA-YSM"/>
                             <exclude reference="psH-t3-n47"/>
                         </mask>
                         <mask key="constraints">
                             <exclude reference="ujM-vG-AyE"/>
-                            <exclude reference="BxX-Fh-WjN"/>
-                            <exclude reference="HSQ-6f-aVz"/>
-                            <exclude reference="gMC-qP-Cvv"/>
-                            <exclude reference="oP1-Mk-Drz"/>
-                            <exclude reference="uEr-1c-TPT"/>
                             <exclude reference="75E-Vy-JHu"/>
                             <exclude reference="Bl3-a2-SjV"/>
                             <exclude reference="Vlr-tC-Fk2"/>
                             <exclude reference="lul-vb-4ff"/>
                             <exclude reference="yZu-sO-Yrg"/>
+                            <exclude reference="3BK-hi-vGq"/>
+                            <exclude reference="YDb-RF-T6m"/>
+                            <exclude reference="pis-0W-vY6"/>
+                            <exclude reference="qwr-An-IgW"/>
+                            <exclude reference="sG0-gH-zHd"/>
+                            <exclude reference="BxX-Fh-WjN"/>
+                            <exclude reference="Ery-hQ-JgR"/>
+                            <exclude reference="HSQ-6f-aVz"/>
+                            <exclude reference="gMC-qP-Cvv"/>
+                            <exclude reference="oP1-Mk-Drz"/>
+                            <exclude reference="uEr-1c-TPT"/>
+                            <exclude reference="Ygw-Pb-eFH"/>
                             <exclude reference="08g-dA-1tn"/>
+                            <exclude reference="2QS-sy-weB"/>
                             <exclude reference="F9q-Rk-X4K"/>
                             <exclude reference="MHK-xm-Mpk"/>
                             <exclude reference="kxN-Ph-iPN"/>
@@ -122,23 +163,33 @@
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="subviews">
+                            <include reference="RGP-io-vEx"/>
+                            <include reference="k2Q-GN-v2Q"/>
                             <include reference="WB8-vK-W6e"/>
                             <include reference="FSX-WA-YSM"/>
                             <include reference="psH-t3-n47"/>
                         </mask>
                         <mask key="constraints">
                             <include reference="ujM-vG-AyE"/>
-                            <include reference="BxX-Fh-WjN"/>
-                            <include reference="HSQ-6f-aVz"/>
-                            <include reference="gMC-qP-Cvv"/>
-                            <include reference="oP1-Mk-Drz"/>
-                            <include reference="uEr-1c-TPT"/>
                             <include reference="75E-Vy-JHu"/>
                             <include reference="Bl3-a2-SjV"/>
                             <include reference="Vlr-tC-Fk2"/>
                             <include reference="lul-vb-4ff"/>
                             <include reference="yZu-sO-Yrg"/>
+                            <include reference="3BK-hi-vGq"/>
+                            <include reference="YDb-RF-T6m"/>
+                            <include reference="pis-0W-vY6"/>
+                            <include reference="qwr-An-IgW"/>
+                            <include reference="sG0-gH-zHd"/>
+                            <include reference="BxX-Fh-WjN"/>
+                            <include reference="Ery-hQ-JgR"/>
+                            <include reference="HSQ-6f-aVz"/>
+                            <include reference="gMC-qP-Cvv"/>
+                            <include reference="oP1-Mk-Drz"/>
+                            <include reference="uEr-1c-TPT"/>
+                            <include reference="Ygw-Pb-eFH"/>
                             <include reference="08g-dA-1tn"/>
+                            <include reference="2QS-sy-weB"/>
                             <include reference="F9q-Rk-X4K"/>
                             <exclude reference="MHK-xm-Mpk"/>
                             <include reference="kxN-Ph-iPN"/>
@@ -174,4 +225,7 @@
             </variation>
         </view>
     </objects>
+    <resources>
+        <image name="points.png" width="16" height="104"/>
+    </resources>
 </document>

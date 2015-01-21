@@ -16,7 +16,7 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testHead.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Rz-OJ-vqV">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                            <rect key="frame" x="12" y="11" width="44" height="44.5"/>
+                            <rect key="frame" x="14" y="13" width="39" height="39.5"/>
                         </variation>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time.png" translatesAutoresizingMaskIntoConstraints="NO" id="A9A-wt-W9f">
