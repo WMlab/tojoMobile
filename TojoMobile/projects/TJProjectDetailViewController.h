@@ -12,5 +12,8 @@
 @interface TJProjectDetailViewController : UIViewController<UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) TJProjectDetailViewModel *projectDetailViewModel;
+- (IBAction)collectButtonClicked:(UIButton *)sender;
+- (IBAction)commentButtonClicked:(UIButton *)sender;
+- (IBAction)attendButtonClicked:(UIButton *)sender;
 
 @end

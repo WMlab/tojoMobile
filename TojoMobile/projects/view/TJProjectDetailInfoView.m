@@ -21,8 +21,6 @@
         // Initialization code
         [self setBackgroundColor:[UIColor colorWithRed:246/255.0f green:246/255.0f blue:246/255.0f alpha:1.0]];
         
-        
-        
         //Introduce project
         UILabel *xiangMuJieShao;
         CGRect xiangMuJieShaoRect = CGRectMake(0, 0, 100, 30);

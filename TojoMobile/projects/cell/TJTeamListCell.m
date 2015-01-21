@@ -15,7 +15,7 @@
 - (void)awakeFromNib {
     // Initialization code
     [teamFounderImage.layer setMasksToBounds:YES];
-    [teamFounderImage.layer setCornerRadius:30];
+    [teamFounderImage.layer setCornerRadius:25];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

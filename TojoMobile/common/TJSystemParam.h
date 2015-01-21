@@ -9,6 +9,8 @@
 #ifndef TojoMobile_TJSystemParam_h
 #define TojoMobile_TJSystemParam_h
 
+#define TJScreenWidth ([[UIScreen mainScreen]bounds].size.width)
+
 //#define BASE_URL @"http://api.tongjo.com/"
 #define BASE_URL @"http://api.tongjo.com/"
 #define IMAGE_BASE_URL @"http://api.tongjo.com/files/"

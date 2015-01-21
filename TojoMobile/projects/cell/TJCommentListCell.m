@@ -15,7 +15,7 @@
 - (void)awakeFromNib {
     // Initialization code
     [commentUserImg.layer setMasksToBounds:YES];
-    [commentUserImg.layer setCornerRadius:25];
+    [commentUserImg.layer setCornerRadius:20];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
