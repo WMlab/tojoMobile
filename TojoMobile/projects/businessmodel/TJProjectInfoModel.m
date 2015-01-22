@@ -10,4 +10,13 @@
 
 @implementation TJProjectInfoModel
 
+-(instancetype) init {
+    self = [super init];
+    if (self) {
+        _teamNumber = 0;
+        _commentNumber = 0;
+    }
+    return self;
+}
+
 @end
