@@ -10,7 +10,6 @@
 #import <JSONModel.h>
 @protocol  TJCommentModel
 
-
 @end
 
 @interface TJCommentModel : JSONModel

@@ -1,16 +1,16 @@
 //
-//  TJTeamListViewModel.h
+//  TJCommentListViewModel.h
 //  TojoMobile
 //
-//  Created by sdq on 15/1/20.
+//  Created by sdq on 15/1/22.
 //  Copyright (c) 2015年 Tongjo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface TJTeamListViewModel : NSObject
+@interface TJCommentListViewModel : NSObject
 
 @property(nonatomic, assign) int projectId;        //项目编号
-@property(nonatomic, strong) NSArray *teamList;  //model - TJTeamModel
+@property(nonatomic, strong) NSArray *commentList;  //model - TJCommentModel
 
 @end

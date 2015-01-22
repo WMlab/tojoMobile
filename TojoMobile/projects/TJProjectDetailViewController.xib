@@ -137,28 +137,28 @@
                         </mask>
                         <mask key="constraints">
                             <exclude reference="ujM-vG-AyE"/>
-                            <exclude reference="75E-Vy-JHu"/>
-                            <exclude reference="Bl3-a2-SjV"/>
-                            <exclude reference="Vlr-tC-Fk2"/>
-                            <exclude reference="lul-vb-4ff"/>
-                            <exclude reference="yZu-sO-Yrg"/>
-                            <exclude reference="3BK-hi-vGq"/>
-                            <exclude reference="YDb-RF-T6m"/>
-                            <exclude reference="pis-0W-vY6"/>
-                            <exclude reference="qwr-An-IgW"/>
-                            <exclude reference="sG0-gH-zHd"/>
                             <exclude reference="BxX-Fh-WjN"/>
                             <exclude reference="Ery-hQ-JgR"/>
                             <exclude reference="HSQ-6f-aVz"/>
                             <exclude reference="gMC-qP-Cvv"/>
                             <exclude reference="oP1-Mk-Drz"/>
                             <exclude reference="uEr-1c-TPT"/>
-                            <exclude reference="Ygw-Pb-eFH"/>
+                            <exclude reference="75E-Vy-JHu"/>
+                            <exclude reference="Bl3-a2-SjV"/>
+                            <exclude reference="Vlr-tC-Fk2"/>
+                            <exclude reference="lul-vb-4ff"/>
+                            <exclude reference="yZu-sO-Yrg"/>
                             <exclude reference="08g-dA-1tn"/>
                             <exclude reference="2QS-sy-weB"/>
                             <exclude reference="F9q-Rk-X4K"/>
                             <exclude reference="MHK-xm-Mpk"/>
                             <exclude reference="kxN-Ph-iPN"/>
+                            <exclude reference="Ygw-Pb-eFH"/>
+                            <exclude reference="3BK-hi-vGq"/>
+                            <exclude reference="YDb-RF-T6m"/>
+                            <exclude reference="pis-0W-vY6"/>
+                            <exclude reference="qwr-An-IgW"/>
+                            <exclude reference="sG0-gH-zHd"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
@@ -171,28 +171,28 @@
                         </mask>
                         <mask key="constraints">
                             <include reference="ujM-vG-AyE"/>
-                            <include reference="75E-Vy-JHu"/>
-                            <include reference="Bl3-a2-SjV"/>
-                            <include reference="Vlr-tC-Fk2"/>
-                            <include reference="lul-vb-4ff"/>
-                            <include reference="yZu-sO-Yrg"/>
-                            <include reference="3BK-hi-vGq"/>
-                            <include reference="YDb-RF-T6m"/>
-                            <include reference="pis-0W-vY6"/>
-                            <include reference="qwr-An-IgW"/>
-                            <include reference="sG0-gH-zHd"/>
                             <include reference="BxX-Fh-WjN"/>
                             <include reference="Ery-hQ-JgR"/>
                             <include reference="HSQ-6f-aVz"/>
                             <include reference="gMC-qP-Cvv"/>
                             <include reference="oP1-Mk-Drz"/>
                             <include reference="uEr-1c-TPT"/>
-                            <include reference="Ygw-Pb-eFH"/>
+                            <include reference="75E-Vy-JHu"/>
+                            <include reference="Bl3-a2-SjV"/>
+                            <include reference="Vlr-tC-Fk2"/>
+                            <include reference="lul-vb-4ff"/>
+                            <include reference="yZu-sO-Yrg"/>
                             <include reference="08g-dA-1tn"/>
                             <include reference="2QS-sy-weB"/>
                             <include reference="F9q-Rk-X4K"/>
                             <exclude reference="MHK-xm-Mpk"/>
                             <include reference="kxN-Ph-iPN"/>
+                            <include reference="Ygw-Pb-eFH"/>
+                            <include reference="3BK-hi-vGq"/>
+                            <include reference="YDb-RF-T6m"/>
+                            <include reference="pis-0W-vY6"/>
+                            <include reference="qwr-An-IgW"/>
+                            <include reference="sG0-gH-zHd"/>
                         </mask>
                     </variation>
                 </view>

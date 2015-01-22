@@ -128,10 +128,6 @@
                             <exclude reference="YxB-cm-Lxd"/>
                             <exclude reference="k3M-Dv-Vi9"/>
                             <exclude reference="tlT-Wy-mrz"/>
-                            <exclude reference="T3j-Jq-tYR"/>
-                            <exclude reference="aOA-5v-uCh"/>
-                            <exclude reference="bSX-Me-Cpf"/>
-                            <exclude reference="geL-pu-f9s"/>
                             <exclude reference="15Q-ZE-veS"/>
                             <exclude reference="5Le-6q-DrO"/>
                             <exclude reference="7pm-dg-R6e"/>
@@ -143,6 +139,10 @@
                             <exclude reference="SW4-jS-fOs"/>
                             <exclude reference="YaQ-NI-5vF"/>
                             <exclude reference="uJu-lB-ZKn"/>
+                            <exclude reference="T3j-Jq-tYR"/>
+                            <exclude reference="aOA-5v-uCh"/>
+                            <exclude reference="bSX-Me-Cpf"/>
+                            <exclude reference="geL-pu-f9s"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
@@ -159,10 +159,6 @@
                             <include reference="YxB-cm-Lxd"/>
                             <include reference="k3M-Dv-Vi9"/>
                             <exclude reference="tlT-Wy-mrz"/>
-                            <include reference="T3j-Jq-tYR"/>
-                            <include reference="aOA-5v-uCh"/>
-                            <include reference="bSX-Me-Cpf"/>
-                            <include reference="geL-pu-f9s"/>
                             <exclude reference="15Q-ZE-veS"/>
                             <include reference="5Le-6q-DrO"/>
                             <include reference="7pm-dg-R6e"/>
@@ -174,6 +170,10 @@
                             <include reference="SW4-jS-fOs"/>
                             <include reference="YaQ-NI-5vF"/>
                             <include reference="uJu-lB-ZKn"/>
+                            <include reference="T3j-Jq-tYR"/>
+                            <include reference="aOA-5v-uCh"/>
+                            <include reference="bSX-Me-Cpf"/>
+                            <include reference="geL-pu-f9s"/>
                         </mask>
                     </variation>
                 </view>
