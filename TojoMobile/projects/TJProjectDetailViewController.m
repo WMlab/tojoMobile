@@ -15,6 +15,7 @@
 #import "TJProjectCommentPartView.h"
 #import "TJProjectTeamPartView.h"
 #import "TJProjectInfoViewController.h"
+#import "TJCommentViewController.h"
 #import "TJCommentListViewController.h"
 #import "TJTeamListViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -44,9 +45,6 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     self.navigationItem.title = @"项目详情";
-    [self loadProjectDetail];
-    
-    
 }
 
 #pragma mark --------- 发服务 -----------
@@ -163,6 +161,9 @@
 }
 
 - (IBAction)commentButtonClicked:(UIButton *)sender {
+    TJCommentViewController *commentViewController = [[TJCommentViewController alloc] init];
+    
+    [self.navigationController pushViewController:commentViewController animated:YES];
 }
 
 - (IBAction)attendButtonClicked:(UIButton *)sender {

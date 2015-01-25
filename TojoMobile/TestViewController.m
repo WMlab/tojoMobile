@@ -8,6 +8,8 @@
 
 #import "TestViewController.h"
 #import "TJProjectDetailViewController.h"
+#import "TJCommentListViewController.h"
+#import "TJTeamListViewController.h"
 
 @interface TestViewController ()
 
@@ -40,5 +42,19 @@
     detailViewController.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:detailViewController animated:YES];
+}
+
+- (IBAction)commentListButton:(UIButton *)sender {
+    TJCommentListViewController *commentViewController = [[TJCommentListViewController alloc] init];
+    commentViewController.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:commentViewController animated:YES];
+}
+
+- (IBAction)teamListButton:(UIButton *)sender {
+    TJTeamListViewController *teamViewController = [[TJTeamListViewController alloc] init];
+    teamViewController.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:teamViewController animated:YES];
 }
 @end

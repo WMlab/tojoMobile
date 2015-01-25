@@ -10,7 +10,6 @@
 #import <JSONModel.h>
 @protocol  TJProjectInfoModel
 
-
 @end
 
 @interface TJProjectInfoModel : JSONModel

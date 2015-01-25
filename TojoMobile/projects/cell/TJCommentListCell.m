@@ -7,6 +7,8 @@
 //
 
 #import "TJCommentListCell.h"
+#import "TJSystemParam.h"
+#import <UIImageView+WebCache.h>
 
 @implementation TJCommentListCell
 
@@ -24,8 +26,12 @@
     // Configure the view for the selected state
 }
 
--(void)setCellWithTeamItem:(TJCommentModel *)commentModel{
-    
+-(void)setCellWithCommentItem:(TJCommentModel *)commentModel{
+    [self.commentUserName setText:commentModel.commentUserName];
+    [self.commentDate setText:commentModel.commentDate];
+    [self.commentText setText:commentModel.commentText];
+    NSString *imageUrlStr = [NSString stringWithFormat:@"%@%@", IMAGE_BASE_URL, commentModel.commentUserImage];
+    [self.commentUserImg sd_setImageWithURL:[NSURL URLWithString:imageUrlStr]];
 }
 
 @end

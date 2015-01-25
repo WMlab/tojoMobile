@@ -9,9 +9,13 @@
 #import "TJCommentListViewController.h"
 #import "MJRefresh.h"
 #import "TJCommentListCell.h"
+#import "TJProjectSender.h"
+#import "TJCommentListViewModel.h"
+#import "TJCommentViewController.h"
 
 @interface TJCommentListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *commentTableView;
+@property (nonatomic, strong) TJCommentListViewModel *viewModel;
 
 @end
 
@@ -21,10 +25,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
+    [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.navigationItem.title = @"评论";
     [self.commentTableView setDelegate:self];
     [self.commentTableView setDataSource:self];
+    
+    _viewModel = [[TJCommentListViewModel alloc] init];
+    [self loadCommentList];
+    
     //定义上拉、下拉加载数据
     [self updateDataSource];
 }
@@ -45,6 +55,22 @@
 //    }];
 }
 
+#pragma mark --------- 发服务 -----------
+-(void) loadCommentList
+{
+    [[TJProjectSender getInstance] sendGetCommentListWithViewModel:_viewModel completeBlock:^(BOOL success, NSString *    message) {
+        if (success) {
+            NSLog(@"success");
+            //页面进行赋值
+            [self.commentTableView reloadData];
+        }
+        else {
+            NSLog(@"falied");
+        }
+    }];
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -54,9 +80,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    //NSUInteger count = [_viewModel.projectList count];
-    //return count;
-    return 6;
+    NSUInteger count = [_viewModel.commentList count];
+    return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,8 +90,8 @@
     });
     static NSString *cellId = @"TJCommentListCell";
     TJCommentListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    //TJProjectInfoModel *infoModel = (TJProjectInfoModel *)[_viewModel.projectList objectAtIndex:indexPath.row];
-    //[cell setCellWithProjectItem:infoModel];
+    TJCommentModel *commentModel = (TJCommentModel *)[_viewModel.commentList objectAtIndex:indexPath.row];
+    [cell setCellWithCommentItem:commentModel];
     
     return cell;
 }
@@ -82,6 +107,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     //点击评论
+    TJCommentViewController *commentViewController = [[TJCommentViewController alloc] init];
+    
+    [self.navigationController pushViewController:commentViewController animated:YES];
 }
 
 

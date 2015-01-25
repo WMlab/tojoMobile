@@ -24,6 +24,20 @@
 		32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F041A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m */; };
 		32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */; };
 		32959F0B1A5ECFCC00C2B9D6 /* TJProjectSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F0A1A5ECFCC00C2B9D6 /* TJProjectSender.m */; };
+		32C4B3FC1A711C7600B8D401 /* TJCommentListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B3FB1A711C7600B8D401 /* TJCommentListViewModel.m */; };
+		32C4B3FE1A714BA800B8D401 /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C4B3FD1A714BA800B8D401 /* time.png */; };
+		32C4B4011A71D73F00B8D401 /* TJUserBasicInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4001A71D73F00B8D401 /* TJUserBasicInfoModel.m */; };
+		32C4B4041A71D8CD00B8D401 /* TJUserHomepageRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4031A71D8CD00B8D401 /* TJUserHomepageRequestModel.m */; };
+		32C4B4071A71D92900B8D401 /* TJUserHomepageResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4061A71D92900B8D401 /* TJUserHomepageResponseModel.m */; };
+		32C4B40A1A71DC0D00B8D401 /* TJUserHomepageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4091A71DC0D00B8D401 /* TJUserHomepageViewModel.m */; };
+		32C4B40D1A71DDCB00B8D401 /* TJTeamDetailRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B40C1A71DDCB00B8D401 /* TJTeamDetailRequestModel.m */; };
+		32C4B4101A71DDEA00B8D401 /* TJTeamDetailResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B40F1A71DDEA00B8D401 /* TJTeamDetailResponseModel.m */; };
+		32C4B4141A71EB2500B8D401 /* TJCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4121A71EB2500B8D401 /* TJCommentViewController.m */; };
+		32C4B4151A71EB2500B8D401 /* TJCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C4B4131A71EB2500B8D401 /* TJCommentViewController.xib */; };
+		32C4B4181A71F1E700B8D401 /* TJCommentRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4171A71F1E700B8D401 /* TJCommentRequestModel.m */; };
+		32C4B41B1A71F20200B8D401 /* TJCommentResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B41A1A71F20200B8D401 /* TJCommentResponseModel.m */; };
+		32D8BD8E1A752325002750A0 /* TJCreateTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D8BD8C1A752325002750A0 /* TJCreateTeamViewController.m */; };
+		32D8BD8F1A752325002750A0 /* TJCreateTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D8BD8D1A752325002750A0 /* TJCreateTeamViewController.xib */; };
 		32F513871A6DEC6200224E74 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F513861A6DEC6200224E74 /* TestViewController.m */; };
 		32F513901A6E03CA00224E74 /* TJTeamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F5138E1A6E03CA00224E74 /* TJTeamListViewController.m */; };
 		32F513911A6E03CA00224E74 /* TJTeamListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F5138F1A6E03CA00224E74 /* TJTeamListViewController.xib */; };
@@ -36,7 +50,6 @@
 		32F513A91A6E26C900224E74 /* TJCommentListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F513A71A6E26C900224E74 /* TJCommentListCell.xib */; };
 		32F513AD1A6E26F700224E74 /* TJTeamListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F513AB1A6E26F700224E74 /* TJTeamListCell.m */; };
 		32F513AE1A6E26F700224E74 /* TJTeamListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F513AC1A6E26F700224E74 /* TJTeamListCell.xib */; };
-		32F513B01A6E3FDE00224E74 /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 32F513AF1A6E3FDE00224E74 /* time.png */; };
 		32F513B21A6E462700224E74 /* points.png in Resources */ = {isa = PBXBuildFile; fileRef = 32F513B11A6E462700224E74 /* points.png */; };
 		32F513B51A6E68A400224E74 /* TJTeamListRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F513B41A6E68A400224E74 /* TJTeamListRequestModel.m */; };
 		32F513B81A6E68C900224E74 /* TJTeamListResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F513B71A6E68C900224E74 /* TJTeamListResponseModel.m */; };
@@ -112,6 +125,31 @@
 		32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailResponseModel.m; path = projects/businessmodel/TJProjectDetailResponseModel.m; sourceTree = "<group>"; };
 		32959F091A5ECFCC00C2B9D6 /* TJProjectSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectSender.h; path = projects/service/TJProjectSender.h; sourceTree = "<group>"; };
 		32959F0A1A5ECFCC00C2B9D6 /* TJProjectSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectSender.m; path = projects/service/TJProjectSender.m; sourceTree = "<group>"; };
+		32C4B3FA1A711C7600B8D401 /* TJCommentListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCommentListViewModel.h; path = projects/viewmodel/TJCommentListViewModel.h; sourceTree = "<group>"; };
+		32C4B3FB1A711C7600B8D401 /* TJCommentListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCommentListViewModel.m; path = projects/viewmodel/TJCommentListViewModel.m; sourceTree = "<group>"; };
+		32C4B3FD1A714BA800B8D401 /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
+		32C4B3FF1A71D73F00B8D401 /* TJUserBasicInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserBasicInfoModel.h; sourceTree = "<group>"; };
+		32C4B4001A71D73F00B8D401 /* TJUserBasicInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserBasicInfoModel.m; sourceTree = "<group>"; };
+		32C4B4021A71D8CD00B8D401 /* TJUserHomepageRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserHomepageRequestModel.h; sourceTree = "<group>"; };
+		32C4B4031A71D8CD00B8D401 /* TJUserHomepageRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserHomepageRequestModel.m; sourceTree = "<group>"; };
+		32C4B4051A71D92900B8D401 /* TJUserHomepageResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserHomepageResponseModel.h; sourceTree = "<group>"; };
+		32C4B4061A71D92900B8D401 /* TJUserHomepageResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserHomepageResponseModel.m; sourceTree = "<group>"; };
+		32C4B4081A71DC0D00B8D401 /* TJUserHomepageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserHomepageViewModel.h; sourceTree = "<group>"; };
+		32C4B4091A71DC0D00B8D401 /* TJUserHomepageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserHomepageViewModel.m; sourceTree = "<group>"; };
+		32C4B40B1A71DDCB00B8D401 /* TJTeamDetailRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTeamDetailRequestModel.h; path = projects/businessmodel/TJTeamDetailRequestModel.h; sourceTree = "<group>"; };
+		32C4B40C1A71DDCB00B8D401 /* TJTeamDetailRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJTeamDetailRequestModel.m; path = projects/businessmodel/TJTeamDetailRequestModel.m; sourceTree = "<group>"; };
+		32C4B40E1A71DDEA00B8D401 /* TJTeamDetailResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTeamDetailResponseModel.h; path = projects/businessmodel/TJTeamDetailResponseModel.h; sourceTree = "<group>"; };
+		32C4B40F1A71DDEA00B8D401 /* TJTeamDetailResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJTeamDetailResponseModel.m; path = projects/businessmodel/TJTeamDetailResponseModel.m; sourceTree = "<group>"; };
+		32C4B4111A71EB2500B8D401 /* TJCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCommentViewController.h; path = projects/TJCommentViewController.h; sourceTree = "<group>"; };
+		32C4B4121A71EB2500B8D401 /* TJCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCommentViewController.m; path = projects/TJCommentViewController.m; sourceTree = "<group>"; };
+		32C4B4131A71EB2500B8D401 /* TJCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJCommentViewController.xib; path = projects/TJCommentViewController.xib; sourceTree = "<group>"; };
+		32C4B4161A71F1E700B8D401 /* TJCommentRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCommentRequestModel.h; path = projects/businessmodel/TJCommentRequestModel.h; sourceTree = "<group>"; };
+		32C4B4171A71F1E700B8D401 /* TJCommentRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCommentRequestModel.m; path = projects/businessmodel/TJCommentRequestModel.m; sourceTree = "<group>"; };
+		32C4B4191A71F20200B8D401 /* TJCommentResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCommentResponseModel.h; path = projects/businessmodel/TJCommentResponseModel.h; sourceTree = "<group>"; };
+		32C4B41A1A71F20200B8D401 /* TJCommentResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCommentResponseModel.m; path = projects/businessmodel/TJCommentResponseModel.m; sourceTree = "<group>"; };
+		32D8BD8B1A752325002750A0 /* TJCreateTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCreateTeamViewController.h; path = projects/TJCreateTeamViewController.h; sourceTree = "<group>"; };
+		32D8BD8C1A752325002750A0 /* TJCreateTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCreateTeamViewController.m; path = projects/TJCreateTeamViewController.m; sourceTree = "<group>"; };
+		32D8BD8D1A752325002750A0 /* TJCreateTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJCreateTeamViewController.xib; path = projects/TJCreateTeamViewController.xib; sourceTree = "<group>"; };
 		32F513851A6DEC6200224E74 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		32F513861A6DEC6200224E74 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		32F5138D1A6E03CA00224E74 /* TJTeamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTeamListViewController.h; path = projects/TJTeamListViewController.h; sourceTree = "<group>"; };
@@ -132,7 +170,6 @@
 		32F513AA1A6E26F700224E74 /* TJTeamListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTeamListCell.h; path = projects/cell/TJTeamListCell.h; sourceTree = "<group>"; };
 		32F513AB1A6E26F700224E74 /* TJTeamListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJTeamListCell.m; path = projects/cell/TJTeamListCell.m; sourceTree = "<group>"; };
 		32F513AC1A6E26F700224E74 /* TJTeamListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJTeamListCell.xib; path = projects/cell/TJTeamListCell.xib; sourceTree = "<group>"; };
-		32F513AF1A6E3FDE00224E74 /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
 		32F513B11A6E462700224E74 /* points.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = points.png; sourceTree = "<group>"; };
 		32F513B31A6E68A400224E74 /* TJTeamListRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTeamListRequestModel.h; path = projects/businessmodel/TJTeamListRequestModel.h; sourceTree = "<group>"; };
 		32F513B41A6E68A400224E74 /* TJTeamListRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJTeamListRequestModel.m; path = projects/businessmodel/TJTeamListRequestModel.m; sourceTree = "<group>"; };
@@ -228,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				32F513B11A6E462700224E74 /* points.png */,
-				32F513AF1A6E3FDE00224E74 /* time.png */,
+				32C4B3FD1A714BA800B8D401 /* time.png */,
 				324187A81A6BF5D70088A3BB /* testHead.png */,
 				324187A61A6BE57C0088A3BB /* titleImageTest.png */,
 			);
@@ -258,6 +295,12 @@
 				32F513971A6E171500224E74 /* TJCommentListViewController.h */,
 				32F513981A6E171500224E74 /* TJCommentListViewController.m */,
 				32F513991A6E171500224E74 /* TJCommentListViewController.xib */,
+				32C4B4111A71EB2500B8D401 /* TJCommentViewController.h */,
+				32C4B4121A71EB2500B8D401 /* TJCommentViewController.m */,
+				32C4B4131A71EB2500B8D401 /* TJCommentViewController.xib */,
+				32D8BD8B1A752325002750A0 /* TJCreateTeamViewController.h */,
+				32D8BD8C1A752325002750A0 /* TJCreateTeamViewController.m */,
+				32D8BD8D1A752325002750A0 /* TJCreateTeamViewController.xib */,
 			);
 			name = projects;
 			sourceTree = "<group>";
@@ -315,6 +358,14 @@
 				32F513B41A6E68A400224E74 /* TJTeamListRequestModel.m */,
 				32F513B61A6E68C900224E74 /* TJTeamListResponseModel.h */,
 				32F513B71A6E68C900224E74 /* TJTeamListResponseModel.m */,
+				32C4B40B1A71DDCB00B8D401 /* TJTeamDetailRequestModel.h */,
+				32C4B40C1A71DDCB00B8D401 /* TJTeamDetailRequestModel.m */,
+				32C4B40E1A71DDEA00B8D401 /* TJTeamDetailResponseModel.h */,
+				32C4B40F1A71DDEA00B8D401 /* TJTeamDetailResponseModel.m */,
+				32C4B4161A71F1E700B8D401 /* TJCommentRequestModel.h */,
+				32C4B4171A71F1E700B8D401 /* TJCommentRequestModel.m */,
+				32C4B4191A71F20200B8D401 /* TJCommentResponseModel.h */,
+				32C4B41A1A71F20200B8D401 /* TJCommentResponseModel.m */,
 			);
 			name = businessmodel;
 			sourceTree = "<group>";
@@ -328,6 +379,8 @@
 				EA0A0BC61A67E05300E37BFD /* TJProjectListViewModel.m */,
 				32F5139C1A6E230000224E74 /* TJTeamListViewModel.h */,
 				32F5139D1A6E230000224E74 /* TJTeamListViewModel.m */,
+				32C4B3FA1A711C7600B8D401 /* TJCommentListViewModel.h */,
+				32C4B3FB1A711C7600B8D401 /* TJCommentListViewModel.m */,
 			);
 			name = viewmodel;
 			sourceTree = "<group>";
@@ -436,6 +489,12 @@
 				EA1AD4321A752C06004EADCA /* TJUserRegisterRequestModel.m */,
 				EA1AD4341A752C24004EADCA /* TJUserRegisterResponseModel.h */,
 				EA1AD4351A752C24004EADCA /* TJUserRegisterResponseModel.m */,
+				32C4B3FF1A71D73F00B8D401 /* TJUserBasicInfoModel.h */,
+				32C4B4001A71D73F00B8D401 /* TJUserBasicInfoModel.m */,
+				32C4B4021A71D8CD00B8D401 /* TJUserHomepageRequestModel.h */,
+				32C4B4031A71D8CD00B8D401 /* TJUserHomepageRequestModel.m */,
+				32C4B4051A71D92900B8D401 /* TJUserHomepageResponseModel.h */,
+				32C4B4061A71D92900B8D401 /* TJUserHomepageResponseModel.m */,
 			);
 			path = businessModel;
 			sourceTree = "<group>";
@@ -462,6 +521,8 @@
 		EAEE9B331A5C006400FF3DA9 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				32C4B4081A71DC0D00B8D401 /* TJUserHomepageViewModel.h */,
+				32C4B4091A71DC0D00B8D401 /* TJUserHomepageViewModel.m */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -569,18 +630,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				32F513AE1A6E26F700224E74 /* TJTeamListCell.xib in Resources */,
+				32C4B4151A71EB2500B8D401 /* TJCommentViewController.xib in Resources */,
 				EA68E5281A5A2FB300CA2CCD /* Main.storyboard in Resources */,
 				32F513B21A6E462700224E74 /* points.png in Resources */,
 				EA68E52D1A5A2FB300CA2CCD /* LaunchScreen.xib in Resources */,
 				EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */,
 				EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */,
-				32F513B01A6E3FDE00224E74 /* time.png in Resources */,
+				32D8BD8F1A752325002750A0 /* TJCreateTeamViewController.xib in Resources */,
 				324187A71A6BE57C0088A3BB /* titleImageTest.png in Resources */,
 				324187A91A6BF5D70088A3BB /* testHead.png in Resources */,
 				32F5139B1A6E171500224E74 /* TJCommentListViewController.xib in Resources */,
 				32F513911A6E03CA00224E74 /* TJTeamListViewController.xib in Resources */,
 				3241879A1A6B5B9E0088A3BB /* TJProjectInfoViewController.xib in Resources */,
 				EA68E52A1A5A2FB300CA2CCD /* Images.xcassets in Resources */,
+				32C4B3FE1A714BA800B8D401 /* time.png in Resources */,
 				32F513A91A6E26C900224E74 /* TJCommentListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,11 +702,14 @@
 				EA99FC781A5EE9C70069ADBD /* TJUserLoginResponseModel.m in Sources */,
 				3211463C1A669A7A00F89494 /* TJCommentModel.m in Sources */,
 				EA1AD4331A752C06004EADCA /* TJUserRegisterRequestModel.m in Sources */,
+				32C4B4181A71F1E700B8D401 /* TJCommentRequestModel.m in Sources */,
 				EA0A0BC71A67E05300E37BFD /* TJProjectListViewModel.m in Sources */,
 				3241878F1A68AD350088A3BB /* TJProjectDetailInfoView.m in Sources */,
 				EA99FC771A5EE9C70069ADBD /* TJUserLoginRequestModel.m in Sources */,
 				EA68E5251A5A2FB300CA2CCD /* SecondViewController.m in Sources */,
 				32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */,
+				32C4B4141A71EB2500B8D401 /* TJCommentViewController.m in Sources */,
+				32C4B41B1A71F20200B8D401 /* TJCommentResponseModel.m in Sources */,
 				EA99FC711A5ED72A0069ADBD /* TJSender.m in Sources */,
 				32F513A81A6E26C900224E74 /* TJCommentListCell.m in Sources */,
 				EAEE9B361A5C012900FF3DA9 /* TJUserSender.m in Sources */,
@@ -660,22 +726,30 @@
 				32F513B51A6E68A400224E74 /* TJTeamListRequestModel.m in Sources */,
 				32F5139E1A6E230000224E74 /* TJTeamListViewModel.m in Sources */,
 				32959F0B1A5ECFCC00C2B9D6 /* TJProjectSender.m in Sources */,
+				32C4B4041A71D8CD00B8D401 /* TJUserHomepageRequestModel.m in Sources */,
+				32C4B4071A71D92900B8D401 /* TJUserHomepageResponseModel.m in Sources */,
 				324187891A68A39B0088A3BB /* TJEndDateView.m in Sources */,
 				32F513871A6DEC6200224E74 /* TestViewController.m in Sources */,
 				324187921A68AD630088A3BB /* TJProjectCommentPartView.m in Sources */,
 				EA32484B1A668D9300D45E30 /* TJProjectListResponseModel.m in Sources */,
 				32F513AD1A6E26F700224E74 /* TJTeamListCell.m in Sources */,
+				32C4B3FC1A711C7600B8D401 /* TJCommentListViewModel.m in Sources */,
 				EAC116EC1A61983000F620DE /* TJProjectDetailViewController.m in Sources */,
 				32F513A41A6E24D900224E74 /* TJCommentListResponseModel.m in Sources */,
 				32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */,
 				EA68E5221A5A2FB300CA2CCD /* FirstViewController.m in Sources */,
 				324187951A68AD900088A3BB /* TJProjectTeamPartView.m in Sources */,
+				32C4B40D1A71DDCB00B8D401 /* TJTeamDetailRequestModel.m in Sources */,
+				32D8BD8E1A752325002750A0 /* TJCreateTeamViewController.m in Sources */,
+				32C4B4011A71D73F00B8D401 /* TJUserBasicInfoModel.m in Sources */,
 				32F5139A1A6E171500224E74 /* TJCommentListViewController.m in Sources */,
 				EAC116BC1A615AD200F620DE /* TJResultModel.m in Sources */,
+				32C4B4101A71DDEA00B8D401 /* TJTeamDetailResponseModel.m in Sources */,
 				EA3248481A668D6400D45E30 /* TJProjectListRequestModel.m in Sources */,
 				32F513A11A6E24B100224E74 /* TJCommentListRequestModel.m in Sources */,
 				EAC116C21A618C1C00F620DE /* TJFilePath.m in Sources */,
 				EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */,
+				32C4B40A1A71DC0D00B8D401 /* TJUserHomepageViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,6 +877,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TojoMobile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -817,6 +892,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TojoMobile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
