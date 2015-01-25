@@ -75,16 +75,44 @@
                                     <action selector="projectDetailButton:" destination="qpU-Z0-FUl" eventType="touchUpInside" id="OnL-Y0-1aO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Yo-pn-ave">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="评论列表">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="104" y="182" width="60" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="commentListButton:" destination="qpU-Z0-FUl" eventType="touchUpInside" id="NZN-FY-XgA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpJ-QY-sPW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="团队列表">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="111" y="248" width="60" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="teamListButton:" destination="qpU-Z0-FUl" eventType="touchUpInside" id="mRY-qn-PEs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Azs-Qs-UGa"/>
+                                <exclude reference="0Yo-pn-ave"/>
+                                <exclude reference="VpJ-QY-sPW"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Azs-Qs-UGa"/>
+                                <include reference="0Yo-pn-ave"/>
+                                <include reference="VpJ-QY-sPW"/>
                             </mask>
                         </variation>
                     </view>

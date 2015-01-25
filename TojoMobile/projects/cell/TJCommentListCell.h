@@ -15,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *commentText;
 @property (weak, nonatomic) IBOutlet UILabel *commentDate;
 
--(void)setCellWithTeamItem:(TJCommentModel *)commentModel;
+-(void)setCellWithCommentItem:(TJCommentModel *)commentModel;
 
 @end

@@ -8,9 +8,12 @@
 
 #import "TJTeamListViewController.h"
 #import "TJTeamListCell.h"
+#import "TJTeamListViewModel.h"
+#import "TJProjectSender.h"
 
 @interface TJTeamListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *teamTableView;
+@property (nonatomic, strong) TJTeamListViewModel *viewModel;
 
 @end
 
@@ -25,7 +28,25 @@
     [self.teamTableView setDelegate:self];
     [self.teamTableView setDataSource:self];
     
+    _viewModel = [[TJTeamListViewModel alloc] init];
+    [self loadTeamList];
     
+    
+}
+
+#pragma mark --------- 发服务 -----------
+-(void) loadTeamList
+{
+    [[TJProjectSender getInstance] sendGetTeamListWithViewModel:_viewModel completeBlock:^(BOOL success, NSString *    message) {
+        if (success) {
+            NSLog(@"success");
+            //页面进行赋值
+            [self.teamTableView reloadData];
+        }
+        else {
+            NSLog(@"falied");
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,9 +64,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    //NSUInteger count = [_viewModel.projectList count];
-    //return count;
-    return 3;
+    NSUInteger count = [_viewModel.teamList count];
+    return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -54,8 +74,8 @@
     });
     static NSString *cellId = @"TJTeamListCell";
     TJTeamListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    //TJProjectInfoModel *infoModel = (TJProjectInfoModel *)[_viewModel.projectList objectAtIndex:indexPath.row];
-    //[cell setCellWithProjectItem:infoModel];
+    TJTeamModel *teamModel = (TJTeamModel *)[_viewModel.teamList objectAtIndex:indexPath.row];
+    [cell setCellWithTeamItem:teamModel];
     
     return cell;
 }

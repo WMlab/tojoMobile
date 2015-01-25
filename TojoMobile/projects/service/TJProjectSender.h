@@ -10,6 +10,8 @@
 #import "TJSender.h"
 #import "TJProjectListViewModel.h"
 #import "TJProjectDetailViewModel.h"
+#import "TJCommentListViewModel.h"
+#import "TJTeamListViewModel.h"
 
 typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
 
@@ -21,5 +23,9 @@ typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
 -(void) sendGetProjectListWithViewModel:(TJProjectListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
 
 -(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
+
+-(void) sendGetCommentListWithViewModel:(TJCommentListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
+
+-(void) sendGetTeamListWithViewModel:(TJTeamListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
 
 @end

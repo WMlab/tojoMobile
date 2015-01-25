@@ -10,5 +10,7 @@
 
 @interface TestViewController : UIViewController
 - (IBAction)projectDetailButton:(UIButton *)sender;
+- (IBAction)commentListButton:(UIButton *)sender;
+- (IBAction)teamListButton:(UIButton *)sender;
 
 @end
