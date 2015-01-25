@@ -12,27 +12,54 @@
 #import "TJProjectListCell.h"
 #import "TJProjectDetailViewController.h"
 #import <MJRefresh.h>
+#import "TJDataBase.h"
 
 @interface TJProjectListViewController ()
 @property (nonatomic, strong) TJProjectListViewModel *viewModel;
 @end
 
 @implementation TJProjectListViewController {
-    dispatch_once_t onceToken;
+    dispatch_once_t onceToken, refreshAfterLaunch;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _viewModel = [[TJProjectListViewModel alloc] init];
-    
-    [self loadProjectList];
+    [self initData];
+    [self initView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    dispatch_once(&refreshAfterLaunch, ^{
+        [self performSelector:@selector(refreshAfterAppear) withObject:nil afterDelay:1.0f];
+    });
+}
+
+- (void)initView {
     //定义上拉、下拉加载数据
     [self updateDataSource];
+}
+
+- (void)initData {
+    if (!_viewModel) {
+        _viewModel = [[TJProjectListViewModel alloc] init];
+    }
+    [self loadLastRecordData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)refreshAfterAppear {
+    //打开程序自动下拉刷新页面
+    [self.tableView headerBeginRefreshing];
 }
 
 #pragma mark - Table view data source
@@ -144,12 +171,25 @@
         [self.tableView headerEndRefreshing];
         if (success) {
             NSLog(@"success");
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [self saveRecordToDataBase];
+            });
             [self.tableView reloadData];
         }
         else {
             NSLog(@"falied");
         }
     }];
+}
+
+#pragma mark --------- 缓存 -----------
+-(void)saveRecordToDataBase {
+    [[TJDataBase getInstance] clearNewsWithCategoryId:_viewModel.categoryId];
+    [[TJDataBase getInstance] insertProjectWithMutableArray:_viewModel.projectList andCategoryId:_viewModel.categoryId];
+}
+
+-(void)loadLastRecordData {
+    _viewModel.projectList = [[TJDataBase getInstance] getProjectsWithCategoryId:_viewModel.categoryId];
 }
 
 @end

@@ -50,10 +50,10 @@ static TJDataBase *_database = nil;
     }
 }
 
--(NSMutableArray *)getProjectsWithCategoryId:(int)categoryId
+-(NSArray *)getProjectsWithCategoryId:(int)categoryId
 {
-    NSMutableArray * result = [[NSMutableArray alloc]init];
-    NSString * sql = @"SELECT projectID, projectName, projectImage, projectCreatedDate, projectEndDate, projectFounderId, projectFounderName, projectFounderImage, projectFounderUniversityId, projectFounderUniversityName, teamNumber, commentNumber FROM projectlist WHERE categoryId = ?";
+    NSMutableArray * result = [[NSMutableArray alloc] init];
+    NSString * sql = @"SELECT projectID, projectName, projectImage, projectCreatedDate, projectEndDate, projectFounderId, projectFounderName, projectFounderImage, projectFounderUniversityId, projectFounderUniversityName, teamNumber, commentNumber, projectLabel FROM projectlist WHERE categoryId = ?";
     NSString * databasePath = TJPathForDocumentsResource(@"database.db");
     NSFileManager * fileMgr = [NSFileManager defaultManager];
     if (![fileMgr isExecutableFileAtPath:databasePath]) {
@@ -83,7 +83,9 @@ static TJDataBase *_database = nil;
                 NSString *projectFounderUniversityNameStr = [[NSString alloc] initWithUTF8String:projectFounderUniversityName];
                 int teamNumber = sqlite3_column_int(stmt, 10);
                 int commentNumber = sqlite3_column_int(stmt, 11);
-                
+                char *projectLabel = (char *)sqlite3_column_text(stmt, 12);
+                NSString *projectLabelStr = [[NSString alloc] initWithUTF8String:projectLabel];
+
                 TJProjectInfoModel *model = [[TJProjectInfoModel alloc] init];
                 model.projectID = projectID;
                 model.projectName = projectNameStr;
@@ -97,6 +99,7 @@ static TJDataBase *_database = nil;
                 model.projectFounderUniversityName = projectFounderUniversityNameStr;
                 model.teamNumber = teamNumber;
                 model.commentNumber = commentNumber;
+                model.projectLabel = projectLabelStr;
                 [result addObject:model];
             }
             sqlite3_finalize(stmt);
@@ -107,8 +110,8 @@ static TJDataBase *_database = nil;
     return result;
 }
 
--(BOOL)insertProjectWithMutableArray:(NSMutableArray *)array andCategoryId:(int)categoryId {
-    NSString * sql = @"insert into projectlist (categoryId, projectID, projectName, projectImage, projectCreatedDate, projectEndDate, projectFounderId, projectFounderName, projectFounderImage, projectFounderUniversityId, projectFounderUniversityName, teamNumber, commentNumber) values (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+-(BOOL)insertProjectWithMutableArray:(NSArray *)array andCategoryId:(int)categoryId {
+    NSString * sql = @"insert into projectlist (categoryId, projectID, projectName, projectImage, projectCreatedDate, projectEndDate, projectFounderId, projectFounderName, projectFounderImage, projectFounderUniversityId, projectFounderUniversityName, teamNumber, commentNumber, projectLabel) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     NSString * databasePath = TJPathForDocumentsResource(@"database.db");
     
     NSFileManager * fileMgr = [NSFileManager defaultManager];
@@ -132,6 +135,7 @@ static TJDataBase *_database = nil;
                     sqlite3_bind_text(stmt, 11, [cell.projectFounderUniversityName UTF8String], -1, NULL);
                     sqlite3_bind_int(stmt, 12, cell.teamNumber);
                     sqlite3_bind_int(stmt, 13, cell.commentNumber);
+                    sqlite3_bind_text(stmt, 14, [cell.projectLabel UTF8String], -1, NULL);
                 }
                 if (sqlite3_step(stmt) == SQLITE_DONE) {
                 }else{

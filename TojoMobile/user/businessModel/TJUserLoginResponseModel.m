@@ -10,4 +10,5 @@
 
 @implementation TJUserLoginResponseModel
 
+
 @end

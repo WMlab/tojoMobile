@@ -14,4 +14,12 @@
 
 -(void)initDatabase;
 
+/*** 获取缓存 ***/
+-(NSArray *)getProjectsWithCategoryId:(int)categoryId;
+
+/*** 添加缓存 ***/
+-(BOOL)insertProjectWithMutableArray:(NSArray *)array andCategoryId:(int)categoryId;
+
+/*** 删除原有缓存 ***/
+-(BOOL)clearNewsWithCategoryId:(int)categoryId;
 @end
