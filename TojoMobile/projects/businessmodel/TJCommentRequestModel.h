@@ -10,8 +10,8 @@
 
 @interface TJCommentRequestModel : JSONModel
 
-@property (nonatomic,assign)int userId;  //评论用户ID
-@property (nonatomic,assign)int projectId;  //评论项目ID
-@property (nonatomic,copy)NSString *commentText;  //评论内容
+@property (nonatomic,assign)int userId;  //评论用户ID  user_id
+@property (nonatomic,assign)int projectId;  //评论项目ID  project_id
+@property (nonatomic,copy)NSString *commentText;  //评论内容  content
 
 @end

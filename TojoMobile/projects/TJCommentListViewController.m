@@ -25,6 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
+    [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.navigationItem.title = @"评论";
     [self.commentTableView setDelegate:self];

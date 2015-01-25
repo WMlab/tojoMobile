@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TJCommentViewController : UIViewController
+@interface TJCommentViewController : UIViewController<UITextViewDelegate>
 
 @end

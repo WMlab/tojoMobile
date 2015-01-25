@@ -36,6 +36,8 @@
 		32C4B4151A71EB2500B8D401 /* TJCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C4B4131A71EB2500B8D401 /* TJCommentViewController.xib */; };
 		32C4B4181A71F1E700B8D401 /* TJCommentRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4171A71F1E700B8D401 /* TJCommentRequestModel.m */; };
 		32C4B41B1A71F20200B8D401 /* TJCommentResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B41A1A71F20200B8D401 /* TJCommentResponseModel.m */; };
+		32D8BD8E1A752325002750A0 /* TJCreateTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D8BD8C1A752325002750A0 /* TJCreateTeamViewController.m */; };
+		32D8BD8F1A752325002750A0 /* TJCreateTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D8BD8D1A752325002750A0 /* TJCreateTeamViewController.xib */; };
 		32F513871A6DEC6200224E74 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F513861A6DEC6200224E74 /* TestViewController.m */; };
 		32F513901A6E03CA00224E74 /* TJTeamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F5138E1A6E03CA00224E74 /* TJTeamListViewController.m */; };
 		32F513911A6E03CA00224E74 /* TJTeamListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F5138F1A6E03CA00224E74 /* TJTeamListViewController.xib */; };
@@ -143,6 +145,9 @@
 		32C4B4171A71F1E700B8D401 /* TJCommentRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCommentRequestModel.m; path = projects/businessmodel/TJCommentRequestModel.m; sourceTree = "<group>"; };
 		32C4B4191A71F20200B8D401 /* TJCommentResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCommentResponseModel.h; path = projects/businessmodel/TJCommentResponseModel.h; sourceTree = "<group>"; };
 		32C4B41A1A71F20200B8D401 /* TJCommentResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCommentResponseModel.m; path = projects/businessmodel/TJCommentResponseModel.m; sourceTree = "<group>"; };
+		32D8BD8B1A752325002750A0 /* TJCreateTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCreateTeamViewController.h; path = projects/TJCreateTeamViewController.h; sourceTree = "<group>"; };
+		32D8BD8C1A752325002750A0 /* TJCreateTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCreateTeamViewController.m; path = projects/TJCreateTeamViewController.m; sourceTree = "<group>"; };
+		32D8BD8D1A752325002750A0 /* TJCreateTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJCreateTeamViewController.xib; path = projects/TJCreateTeamViewController.xib; sourceTree = "<group>"; };
 		32F513851A6DEC6200224E74 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		32F513861A6DEC6200224E74 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		32F5138D1A6E03CA00224E74 /* TJTeamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTeamListViewController.h; path = projects/TJTeamListViewController.h; sourceTree = "<group>"; };
@@ -287,6 +292,9 @@
 				32C4B4111A71EB2500B8D401 /* TJCommentViewController.h */,
 				32C4B4121A71EB2500B8D401 /* TJCommentViewController.m */,
 				32C4B4131A71EB2500B8D401 /* TJCommentViewController.xib */,
+				32D8BD8B1A752325002750A0 /* TJCreateTeamViewController.h */,
+				32D8BD8C1A752325002750A0 /* TJCreateTeamViewController.m */,
+				32D8BD8D1A752325002750A0 /* TJCreateTeamViewController.xib */,
 			);
 			name = projects;
 			sourceTree = "<group>";
@@ -618,6 +626,7 @@
 				EA68E52D1A5A2FB300CA2CCD /* LaunchScreen.xib in Resources */,
 				EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */,
 				EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */,
+				32D8BD8F1A752325002750A0 /* TJCreateTeamViewController.xib in Resources */,
 				324187A71A6BE57C0088A3BB /* titleImageTest.png in Resources */,
 				324187A91A6BF5D70088A3BB /* testHead.png in Resources */,
 				32F5139B1A6E171500224E74 /* TJCommentListViewController.xib in Resources */,
@@ -719,6 +728,7 @@
 				EA68E5221A5A2FB300CA2CCD /* FirstViewController.m in Sources */,
 				324187951A68AD900088A3BB /* TJProjectTeamPartView.m in Sources */,
 				32C4B40D1A71DDCB00B8D401 /* TJTeamDetailRequestModel.m in Sources */,
+				32D8BD8E1A752325002750A0 /* TJCreateTeamViewController.m in Sources */,
 				32C4B4011A71D73F00B8D401 /* TJUserBasicInfoModel.m in Sources */,
 				32F5139A1A6E171500224E74 /* TJCommentListViewController.m in Sources */,
 				EAC116BC1A615AD200F620DE /* TJResultModel.m in Sources */,
@@ -855,6 +865,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TojoMobile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -869,6 +880,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TojoMobile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

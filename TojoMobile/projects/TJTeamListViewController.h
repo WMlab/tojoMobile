@@ -10,5 +10,7 @@
 
 @interface TJTeamListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
+- (IBAction)createTeam:(UIButton *)sender;
+- (IBAction)attendByOneself:(UIButton *)sender;
 
 @end
