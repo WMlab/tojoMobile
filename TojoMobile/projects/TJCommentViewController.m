@@ -7,6 +7,7 @@
 //
 
 #import "TJCommentViewController.h"
+#import "TJProjectSender.h"
 
 @interface TJCommentViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *commentTextView;
@@ -39,7 +40,22 @@
 }
 
 - (void)postCommentMethod{
-    
+    if(self.commentTextView.text.length == 0){
+        
+    }else{
+        [[TJProjectSender getInstance] postComment:^(BOOL success, NSString *message) {
+            if (success) {
+                NSLog(@"success");
+                //评论成功
+                
+            }
+            else {
+                NSLog(@"falied");
+                //评论失败
+                
+            }
+        }];
+    }
 }
 
 #pragma mark -----UITextView delegate------

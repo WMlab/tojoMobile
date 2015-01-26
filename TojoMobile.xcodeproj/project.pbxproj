@@ -38,6 +38,8 @@
 		32C4B41B1A71F20200B8D401 /* TJCommentResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B41A1A71F20200B8D401 /* TJCommentResponseModel.m */; };
 		32D8BD8E1A752325002750A0 /* TJCreateTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D8BD8C1A752325002750A0 /* TJCreateTeamViewController.m */; };
 		32D8BD8F1A752325002750A0 /* TJCreateTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D8BD8D1A752325002750A0 /* TJCreateTeamViewController.xib */; };
+		32D8BD921A7605BF002750A0 /* TJCreateTeamRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D8BD911A7605BF002750A0 /* TJCreateTeamRequestModel.m */; };
+		32D8BD951A7605F4002750A0 /* TJCreateTeamResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D8BD941A7605F4002750A0 /* TJCreateTeamResponseModel.m */; };
 		32F513871A6DEC6200224E74 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F513861A6DEC6200224E74 /* TestViewController.m */; };
 		32F513901A6E03CA00224E74 /* TJTeamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F5138E1A6E03CA00224E74 /* TJTeamListViewController.m */; };
 		32F513911A6E03CA00224E74 /* TJTeamListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F5138F1A6E03CA00224E74 /* TJTeamListViewController.xib */; };
@@ -148,6 +150,10 @@
 		32D8BD8B1A752325002750A0 /* TJCreateTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCreateTeamViewController.h; path = projects/TJCreateTeamViewController.h; sourceTree = "<group>"; };
 		32D8BD8C1A752325002750A0 /* TJCreateTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCreateTeamViewController.m; path = projects/TJCreateTeamViewController.m; sourceTree = "<group>"; };
 		32D8BD8D1A752325002750A0 /* TJCreateTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJCreateTeamViewController.xib; path = projects/TJCreateTeamViewController.xib; sourceTree = "<group>"; };
+		32D8BD901A7605BF002750A0 /* TJCreateTeamRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCreateTeamRequestModel.h; path = projects/businessmodel/TJCreateTeamRequestModel.h; sourceTree = "<group>"; };
+		32D8BD911A7605BF002750A0 /* TJCreateTeamRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCreateTeamRequestModel.m; path = projects/businessmodel/TJCreateTeamRequestModel.m; sourceTree = "<group>"; };
+		32D8BD931A7605F4002750A0 /* TJCreateTeamResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCreateTeamResponseModel.h; path = projects/businessmodel/TJCreateTeamResponseModel.h; sourceTree = "<group>"; };
+		32D8BD941A7605F4002750A0 /* TJCreateTeamResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCreateTeamResponseModel.m; path = projects/businessmodel/TJCreateTeamResponseModel.m; sourceTree = "<group>"; };
 		32F513851A6DEC6200224E74 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		32F513861A6DEC6200224E74 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		32F5138D1A6E03CA00224E74 /* TJTeamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTeamListViewController.h; path = projects/TJTeamListViewController.h; sourceTree = "<group>"; };
@@ -360,6 +366,10 @@
 				32C4B4171A71F1E700B8D401 /* TJCommentRequestModel.m */,
 				32C4B4191A71F20200B8D401 /* TJCommentResponseModel.h */,
 				32C4B41A1A71F20200B8D401 /* TJCommentResponseModel.m */,
+				32D8BD901A7605BF002750A0 /* TJCreateTeamRequestModel.h */,
+				32D8BD911A7605BF002750A0 /* TJCreateTeamRequestModel.m */,
+				32D8BD931A7605F4002750A0 /* TJCreateTeamResponseModel.h */,
+				32D8BD941A7605F4002750A0 /* TJCreateTeamResponseModel.m */,
 			);
 			name = businessmodel;
 			sourceTree = "<group>";
@@ -687,6 +697,7 @@
 			files = (
 				32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */,
 				EA0A0BC01A67CC3C00E37BFD /* TJSession.m in Sources */,
+				32D8BD921A7605BF002750A0 /* TJCreateTeamRequestModel.m in Sources */,
 				EA0A0BB71A66A9B300E37BFD /* TJProjectListCell.m in Sources */,
 				EA99FC781A5EE9C70069ADBD /* TJUserLoginResponseModel.m in Sources */,
 				3211463C1A669A7A00F89494 /* TJCommentModel.m in Sources */,
@@ -723,6 +734,7 @@
 				32F513AD1A6E26F700224E74 /* TJTeamListCell.m in Sources */,
 				32C4B3FC1A711C7600B8D401 /* TJCommentListViewModel.m in Sources */,
 				EAC116EC1A61983000F620DE /* TJProjectDetailViewController.m in Sources */,
+				32D8BD951A7605F4002750A0 /* TJCreateTeamResponseModel.m in Sources */,
 				32F513A41A6E24D900224E74 /* TJCommentListResponseModel.m in Sources */,
 				32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */,
 				EA68E5221A5A2FB300CA2CCD /* FirstViewController.m in Sources */,

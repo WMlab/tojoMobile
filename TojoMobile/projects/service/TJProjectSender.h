@@ -28,4 +28,6 @@ typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
 
 -(void) sendGetTeamListWithViewModel:(TJTeamListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
 
+-(void) postComment:(ProjectCommonCallBack)callback;
+
 @end
