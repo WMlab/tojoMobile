@@ -11,6 +11,9 @@
 #import "TJUserLoginRequestModel.h"
 #import "TJUserLoginResponseModel.h"
 #import "TJResultModel.h"
+#import "TJUserRegisterRequestModel.h"
+#import "TJRegisterResponseModel.h"
+#import "TJSession.h"
 
 static TJUserSender* _sender = nil;
 @implementation TJUserSender
@@ -37,9 +40,6 @@ static TJUserSender* _sender = nil;
         NSError *err;
         TJUserLoginResponseModel *responseModel = [[TJUserLoginResponseModel alloc] initWithDictionary:responseDic error:&err];
         if (0 == responseModel.result.code && !err) {
-//            NSDictionary *infoModel = [responseDic objectForKey:@"user"];
-//            TJUserLoginResponseModel *responseModel = [[TJUserLoginResponseModel alloc] initWithDictionary:infoModel error:nil];
-//            NSLog(@"user:%@", responseModel.realName);
             if (callBack) {
                 callBack(true, responseModel.result.message);
             }
@@ -55,16 +55,30 @@ static TJUserSender* _sender = nil;
     [reqOperation start];
 }
 
--(void) sendRegisterPostWithModel:(TJUserRegisterRequestModel *)model completeBlock:(UserCommonCallBack) callBack {
-    model.email = @"email";
-    model.password = @"pwd";
+-(void) sendRegisterPostWithEmail:(NSString *)email password:(NSString *) password completeBlock:(UserCommonCallBack) callBack {
+    TJUserRegisterRequestModel *model = [[TJUserRegisterRequestModel alloc] init];
+    model.email = email;
+    model.password = password;
     NSDictionary *postDic = [self convertToDictionryFromModel:model];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     [manager POST:[NSString stringWithFormat:@"%@%@",BASE_URL,REQUEST_URL_REGISTRATION] parameters:postDic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *responseDic = (NSDictionary *)responseObject;
+        NSError *err;
+        TJRegisterResponseModel *responseModel = [[TJRegisterResponseModel alloc] initWithDictionary:responseDic error:&err];
+        if (0 == responseModel.result.code && !err) {
+            [[TJSession getInstance] setupUserId:responseModel.userId];
+        }
+        else {
+            if (callBack) {
+                callBack(false, responseModel.result.message);
+            }
+        }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+        if (callBack) {
+            callBack(false, @"注册失败");
+        }
     }];
 }
 

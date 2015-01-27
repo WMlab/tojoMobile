@@ -31,12 +31,12 @@
 /**
  *设置用户ID
  */
--(void)setupUserID:(int)userID;
+-(void)setupUserId:(int)userId;
 
 /**
  *获得用户ID
  */
--(int)getUserID;
+-(int)getUserId;
 
 
 @end

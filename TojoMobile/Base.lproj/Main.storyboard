@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
@@ -19,12 +20,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Bu-47-QSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399" y="1455.75"/>
+            <point key="canvasLocation" x="1317" y="1455.75"/>
         </scene>
         <!--登陆-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="TJLoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="9pv-A4-QxB" customClass="TJLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -346,12 +347,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200" y="593.25"/>
+            <point key="canvasLocation" x="-466.5" y="1595.25"/>
         </scene>
         <!--注册-->
         <scene sceneID="n0W-bh-ZuW">
             <objects>
-                <viewController id="JRj-wg-3uu" sceneMemberID="viewController">
+                <viewController id="JRj-wg-3uu" customClass="TJRegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K88-Ho-KHs"/>
                         <viewControllerLayoutGuide type="bottom" id="eu1-lx-hpJ"/>
@@ -360,6 +361,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="请输入密码，不少于6位" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myl-eb-lss" customClass="TJTextFIeld">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DFY-an-SWp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DFY-an-SWp"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="DFY-an-SWp"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="passwordEditingChanged:" destination="JRj-wg-3uu" eventType="editingChanged" id="3VO-sT-fKa"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fm9-Kq-m0m">
+                                <rect key="frame" x="170" y="285" width="49" height="30"/>
+                                <color key="backgroundColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="X5y-AD-W4D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="注册"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="X5y-AD-W4D"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="X5y-AD-W4D"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="registerAction:" destination="JRj-wg-3uu" eventType="touchUpInside" id="aad-NE-Ap0"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="请输入您的邮箱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3O-gJ-u9T" customClass="TJTextFIeld">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
@@ -383,62 +427,29 @@
                                         <include reference="tjR-7k-Lof"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="usernameEditingChanged:" destination="JRj-wg-3uu" eventType="editingChanged" id="pnp-jE-4p6"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="请输入密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myl-eb-lss" customClass="TJTextFIeld">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="DFY-an-SWp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="DFY-an-SWp"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="DFY-an-SWp"/>
-                                    </mask>
-                                </variation>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fm9-Kq-m0m">
-                                <rect key="frame" x="170" y="285" width="49" height="30"/>
-                                <color key="backgroundColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="X5y-AD-W4D"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="注册"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="X5y-AD-W4D"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="44" y="207" width="312" height="44"/>
-                                    <mask key="constraints">
-                                        <include reference="X5y-AD-W4D"/>
-                                    </mask>
-                                </variation>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Fm9-Kq-m0m" secondAttribute="trailing" constant="44" id="2co-1I-fdb"/>
                             <constraint firstItem="g3O-gJ-u9T" firstAttribute="top" secondItem="K88-Ho-KHs" secondAttribute="bottom" constant="57" id="37v-aO-Boq"/>
                             <constraint firstItem="Fm9-Kq-m0m" firstAttribute="top" secondItem="Myl-eb-lss" secondAttribute="bottom" constant="40" id="5bi-id-GVT"/>
                             <constraint firstItem="g3O-gJ-u9T" firstAttribute="leading" secondItem="FYN-BD-BK8" secondAttribute="leading" constant="39" id="DVL-vz-v4P"/>
                             <constraint firstItem="Myl-eb-lss" firstAttribute="top" secondItem="g3O-gJ-u9T" secondAttribute="bottom" constant="22" id="IGt-at-OcB"/>
                             <constraint firstItem="Myl-eb-lss" firstAttribute="trailing" secondItem="g3O-gJ-u9T" secondAttribute="trailing" id="S0O-Iq-nfW"/>
+                            <constraint firstItem="Fm9-Kq-m0m" firstAttribute="leading" secondItem="FYN-BD-BK8" secondAttribute="leading" constant="44" id="mle-4h-7L7"/>
                             <constraint firstItem="Myl-eb-lss" firstAttribute="top" secondItem="g3O-gJ-u9T" secondAttribute="bottom" constant="22" id="nIR-Pq-tsy"/>
                             <constraint firstAttribute="trailing" secondItem="g3O-gJ-u9T" secondAttribute="trailing" constant="39" id="r5R-O5-HgG"/>
                             <constraint firstItem="Myl-eb-lss" firstAttribute="leading" secondItem="g3O-gJ-u9T" secondAttribute="leading" id="wtx-7Y-Z3g"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="g3O-gJ-u9T"/>
                                 <exclude reference="Myl-eb-lss"/>
                                 <exclude reference="Fm9-Kq-m0m"/>
+                                <exclude reference="g3O-gJ-u9T"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="37v-aO-Boq"/>
@@ -448,14 +459,16 @@
                                 <exclude reference="S0O-Iq-nfW"/>
                                 <exclude reference="nIR-Pq-tsy"/>
                                 <exclude reference="wtx-7Y-Z3g"/>
+                                <exclude reference="2co-1I-fdb"/>
                                 <exclude reference="5bi-id-GVT"/>
+                                <exclude reference="mle-4h-7L7"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="g3O-gJ-u9T"/>
                                 <include reference="Myl-eb-lss"/>
                                 <include reference="Fm9-Kq-m0m"/>
+                                <include reference="g3O-gJ-u9T"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="37v-aO-Boq"/>
@@ -465,16 +478,23 @@
                                 <include reference="S0O-Iq-nfW"/>
                                 <include reference="nIR-Pq-tsy"/>
                                 <include reference="wtx-7Y-Z3g"/>
+                                <include reference="2co-1I-fdb"/>
                                 <include reference="5bi-id-GVT"/>
+                                <include reference="mle-4h-7L7"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="注册" id="NUb-s3-T5G"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Myl-eb-lss" id="oUf-Zt-1VW"/>
+                        <outlet property="registerBtn" destination="Fm9-Kq-m0m" id="e1P-ib-KGt"/>
+                        <outlet property="usernameTextField" destination="g3O-gJ-u9T" id="peq-BL-P31"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ex-c7-0Kp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2019" y="593.25"/>
+            <point key="canvasLocation" x="352.5" y="1595.25"/>
         </scene>
         <!--测试页-->
         <scene sceneID="Rbc-4c-RaV">
@@ -545,7 +565,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mys-6U-sZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1152" y="1455.75"/>
+            <point key="canvasLocation" x="2070" y="1455.75"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -559,8 +579,8 @@
                     <connections>
                         <segue destination="SIe-tV-0lT" kind="relationship" relationship="viewControllers" id="biJ-IJ-8wm"/>
                         <segue destination="wZc-pm-3HZ" kind="relationship" relationship="viewControllers" id="9fW-O5-enP"/>
-                        <segue destination="HbF-xS-U76" kind="relationship" relationship="viewControllers" id="LQE-Ec-5kv"/>
                         <segue destination="xUL-3w-tCK" kind="relationship" relationship="viewControllers" id="plb-XI-vfN"/>
+                        <segue destination="DY2-J6-8iR" kind="relationship" relationship="viewControllers" id="Hn7-Rb-hqn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -585,6 +605,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2u-V5-azI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200" y="-89"/>
+        </scene>
+        <!--我-->
+        <scene sceneID="HQm-nv-nBY">
+            <objects>
+                <navigationController id="DY2-J6-8iR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我" image="mine" id="DB9-et-dTP"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WSJ-Th-9hJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oUz-V5-t7l" kind="relationship" relationship="rootViewController" id="vQI-HD-MF7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zb-ql-Mid" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="641.25"/>
+        </scene>
+        <!--User View Controller-->
+        <scene sceneID="fwK-Pl-ALU">
+            <objects>
+                <viewController id="oUz-V5-t7l" customClass="TJUserViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D47-bI-YqT"/>
+                        <viewControllerLayoutGuide type="bottom" id="E31-HL-LHV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yxt-Bo-XFa">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4X-dj-mga">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="弹出登陆界面">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="155" y="424" width="90" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="showLogin:" destination="oUz-V5-t7l" eventType="touchUpInside" id="X0e-k3-LYm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="c4X-dj-mga"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="c4X-dj-mga"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="wUA-0B-t2D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="llr-zX-Iys" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="646.5"/>
         </scene>
         <!--主页-->
         <scene sceneID="GvE-YC-2xN">
@@ -624,25 +703,23 @@
             </objects>
             <point key="canvasLocation" x="388" y="-89"/>
         </scene>
-        <!--我-->
-        <scene sceneID="6L6-EA-p3O">
+        <!--Navigation Controller-->
+        <scene sceneID="UZy-3Z-uAl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HbF-xS-U76" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我" image="mine" id="acW-dT-cKf"/>
+                <navigationController storyboardIdentifier="loginNav" automaticallyAdjustsScrollViewInsets="NO" id="32m-k0-8OA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="nUX-cA-hBc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="dbo-od-aSR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="R5R-YL-A8H"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="haX-A8-4PW"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uUN-pp-2dT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l9Y-8M-l7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="387" y="593.25"/>
+            <point key="canvasLocation" x="-1276.5" y="1595.25"/>
         </scene>
     </scenes>
     <resources>
