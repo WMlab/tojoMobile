@@ -36,9 +36,6 @@ static TJUserSender* _sender = nil;
         NSDictionary *responseDic = (NSDictionary *)responseObject;
         NSError *err;
         TJUserLoginResponseModel *responseModel = [[TJUserLoginResponseModel alloc] initWithDictionary:responseDic error:&err];
-//        NSDictionary *resultDic = [responseDic objectForKey:@"result"];
-//        TJResultModel *resultModel = [[TJResultModel alloc] initWithDictionary:resultDic error:nil];
-//        NSString *msg = resultModel.message;
         if (0 == responseModel.result.code && !err) {
 //            NSDictionary *infoModel = [responseDic objectForKey:@"user"];
 //            TJUserLoginResponseModel *responseModel = [[TJUserLoginResponseModel alloc] initWithDictionary:infoModel error:nil];

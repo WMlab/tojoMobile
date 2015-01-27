@@ -63,11 +63,13 @@
 		EA1864591A66310500117C8A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1864581A66310500117C8A /* libsqlite3.dylib */; };
 		EA1AD4331A752C06004EADCA /* TJUserRegisterRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1AD4321A752C06004EADCA /* TJUserRegisterRequestModel.m */; };
 		EA1AD4361A752C24004EADCA /* TJUserRegisterResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1AD4351A752C24004EADCA /* TJUserRegisterResponseModel.m */; };
+		EA1CC7951A761BC500E96FBE /* TJTextFIeld.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1CC7941A761BC500E96FBE /* TJTextFIeld.m */; };
+		EA1CC79C1A7630A000E96FBE /* TJRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1CC79B1A7630A000E96FBE /* TJRegisterViewController.m */; };
 		EA3248481A668D6400D45E30 /* TJProjectListRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3248471A668D6400D45E30 /* TJProjectListRequestModel.m */; };
 		EA32484B1A668D9300D45E30 /* TJProjectListResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32484A1A668D9300D45E30 /* TJProjectListResponseModel.m */; };
 		EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E51B1A5A2FB300CA2CCD /* main.m */; };
 		EA68E51F1A5A2FB300CA2CCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E51E1A5A2FB300CA2CCD /* AppDelegate.m */; };
-		EA68E5221A5A2FB300CA2CCD /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E5211A5A2FB300CA2CCD /* FirstViewController.m */; };
+		EA68E5221A5A2FB300CA2CCD /* TJLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E5211A5A2FB300CA2CCD /* TJLoginViewController.m */; };
 		EA68E5251A5A2FB300CA2CCD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E5241A5A2FB300CA2CCD /* SecondViewController.m */; };
 		EA68E5281A5A2FB300CA2CCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA68E5261A5A2FB300CA2CCD /* Main.storyboard */; };
 		EA68E52A1A5A2FB300CA2CCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA68E5291A5A2FB300CA2CCD /* Images.xcassets */; };
@@ -197,6 +199,10 @@
 		EA1AD4321A752C06004EADCA /* TJUserRegisterRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserRegisterRequestModel.m; sourceTree = "<group>"; };
 		EA1AD4341A752C24004EADCA /* TJUserRegisterResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserRegisterResponseModel.h; sourceTree = "<group>"; };
 		EA1AD4351A752C24004EADCA /* TJUserRegisterResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserRegisterResponseModel.m; sourceTree = "<group>"; };
+		EA1CC7931A761BC500E96FBE /* TJTextFIeld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJTextFIeld.h; sourceTree = "<group>"; };
+		EA1CC7941A761BC500E96FBE /* TJTextFIeld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJTextFIeld.m; sourceTree = "<group>"; };
+		EA1CC79A1A7630A000E96FBE /* TJRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRegisterViewController.h; sourceTree = "<group>"; };
+		EA1CC79B1A7630A000E96FBE /* TJRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRegisterViewController.m; sourceTree = "<group>"; };
 		EA3248461A668D6400D45E30 /* TJProjectListRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListRequestModel.h; path = projects/businessmodel/TJProjectListRequestModel.h; sourceTree = "<group>"; };
 		EA3248471A668D6400D45E30 /* TJProjectListRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListRequestModel.m; path = projects/businessmodel/TJProjectListRequestModel.m; sourceTree = "<group>"; };
 		EA3248491A668D9300D45E30 /* TJProjectListResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListResponseModel.h; path = projects/businessmodel/TJProjectListResponseModel.h; sourceTree = "<group>"; };
@@ -206,8 +212,8 @@
 		EA68E51B1A5A2FB300CA2CCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA68E51D1A5A2FB300CA2CCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA68E51E1A5A2FB300CA2CCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EA68E5201A5A2FB300CA2CCD /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		EA68E5211A5A2FB300CA2CCD /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		EA68E5201A5A2FB300CA2CCD /* TJLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TJLoginViewController.h; path = ../TJLoginViewController.h; sourceTree = "<group>"; };
+		EA68E5211A5A2FB300CA2CCD /* TJLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TJLoginViewController.m; path = ../TJLoginViewController.m; sourceTree = "<group>"; };
 		EA68E5231A5A2FB300CA2CCD /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		EA68E5241A5A2FB300CA2CCD /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		EA68E5271A5A2FB300CA2CCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -449,8 +455,6 @@
 				32959EB71A5EBD0300C2B9D6 /* projects */,
 				EAEE9B3D1A5C11E500FF3DA9 /* common */,
 				EAEE9B301A5BFFFB00FF3DA9 /* user */,
-				EA68E5201A5A2FB300CA2CCD /* FirstViewController.h */,
-				EA68E5211A5A2FB300CA2CCD /* FirstViewController.m */,
 				EA68E5231A5A2FB300CA2CCD /* SecondViewController.h */,
 				EA68E5241A5A2FB300CA2CCD /* SecondViewController.m */,
 				EA68E5291A5A2FB300CA2CCD /* Images.xcassets */,
@@ -515,6 +519,10 @@
 				EA99FC721A5EE9C70069ADBD /* businessModel */,
 				EAEE9B321A5C006400FF3DA9 /* service */,
 				EAEE9B331A5C006400FF3DA9 /* viewModel */,
+				EA68E5201A5A2FB300CA2CCD /* TJLoginViewController.h */,
+				EA68E5211A5A2FB300CA2CCD /* TJLoginViewController.m */,
+				EA1CC79A1A7630A000E96FBE /* TJRegisterViewController.h */,
+				EA1CC79B1A7630A000E96FBE /* TJRegisterViewController.m */,
 			);
 			path = user;
 			sourceTree = "<group>";
@@ -552,6 +560,8 @@
 				EA0A0BBD1A66ACA800E37BFD /* TJDefine.h */,
 				EA0A0BBE1A67CC3C00E37BFD /* TJSession.h */,
 				EA0A0BBF1A67CC3C00E37BFD /* TJSession.m */,
+				EA1CC7931A761BC500E96FBE /* TJTextFIeld.h */,
+				EA1CC7941A761BC500E96FBE /* TJTextFIeld.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -748,7 +758,7 @@
 				32D8BD951A7605F4002750A0 /* TJCreateTeamResponseModel.m in Sources */,
 				32F513A41A6E24D900224E74 /* TJCommentListResponseModel.m in Sources */,
 				32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */,
-				EA68E5221A5A2FB300CA2CCD /* FirstViewController.m in Sources */,
+				EA68E5221A5A2FB300CA2CCD /* TJLoginViewController.m in Sources */,
 				324187951A68AD900088A3BB /* TJProjectTeamPartView.m in Sources */,
 				32C4B40D1A71DDCB00B8D401 /* TJTeamDetailRequestModel.m in Sources */,
 				32D8BD8E1A752325002750A0 /* TJCreateTeamViewController.m in Sources */,
@@ -761,6 +771,8 @@
 				EAC116C21A618C1C00F620DE /* TJFilePath.m in Sources */,
 				EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */,
 				32C4B40A1A71DC0D00B8D401 /* TJUserHomepageViewModel.m in Sources */,
+				EA1CC7951A761BC500E96FBE /* TJTextFIeld.m in Sources */,
+				EA1CC79C1A7630A000E96FBE /* TJRegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
