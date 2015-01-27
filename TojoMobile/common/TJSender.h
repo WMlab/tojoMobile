@@ -31,4 +31,6 @@ typedef enum {
 
 - (NSMutableURLRequest *) createRequestWithMethod:(REQUEST_METHOD)method DataModel:(JSONModel *)model url:(NSString *) url;
 
+- (NSDictionary *) convertToDictionryFromModel:(JSONModel *)model;
+
 @end
