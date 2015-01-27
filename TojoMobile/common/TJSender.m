@@ -15,6 +15,7 @@
 - (NSMutableURLRequest *) createRequestWithMethod:(REQUEST_METHOD)method DataModel:(JSONModel *)model url:(NSString *) url
 {
     NSString *urlString = [NSString stringWithFormat:@"%@%@", BASE_URL, url];
+    //NSString *urlString = [NSString stringWithFormat:@"http://192.168.31.218/tongjoMobileTest/comment.php"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setTimeoutInterval:REQUEST_TIMEOUT_INTERVAL];
     switch (method) {
