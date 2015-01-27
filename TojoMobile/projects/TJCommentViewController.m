@@ -8,6 +8,8 @@
 
 #import "TJCommentViewController.h"
 #import "TJProjectSender.h"
+#import "TJCommentListViewController.h"
+#import "TJCommentRequestModel.h"
 
 @interface TJCommentViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *commentTextView;
@@ -43,27 +45,20 @@
     if(self.commentTextView.text.length == 0){
         
     }else{
-//        [[TJProjectSender getInstance] postComment:^(BOOL success, NSString *message) {
-//            if (success) {
-//                NSLog(@"success");
-//                //评论成功
-//                
-//            }
-//            else {
-//                NSLog(@"falied");
-//                //评论失败
-//                
-//            }
-//        }];
-        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-        manager.responseSerializer = [AFHTTPResponseSerializer serializer];//我就加了这句话
-        NSDictionary *parameters = @{@"projectId": @"1",@"userId":@"1", @"commentText": @"再测试一下"};
-        
-        [manager POST:@"http://api.tongjo.com/commentlist" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSLog(@"JSON: %@", responseObject);
-            NSLog(@"%@",[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil]);
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"Error: %@", error);
+        TJCommentRequestModel *requestModel = [[TJCommentRequestModel alloc] init];
+        requestModel.userId = 1;
+        requestModel.projectId = 1;
+        requestModel.commentText = self.commentTextView.text;
+        [[TJProjectSender getInstance] postCommentWithCommentRequestModel:requestModel completeBlock:^(BOOL success, NSString *message) {
+            if (success) {
+                NSLog(@"success");
+                //评论成功
+            }
+            else {
+                NSLog(@"falied");
+                //评论失败
+                
+            }
         }];
     }
 }

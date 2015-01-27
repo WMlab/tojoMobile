@@ -7,20 +7,7 @@
 //
 
 #import "TJProjectSender.h"
-#import "TJProjectListResponseModel.h"
-#import "TJProjectListRequestModel.h"
-#import "TJProjectDetailResponseModel.h"
-#import "TJProjectDetailRequestModel.h"
-#import "TJProjectInfoModel.h"
-#import "TJCommentModel.h"
-#import "TJTeamModel.h"
-#import "TJCommentListRequestModel.h"
-#import "TJCommentListResponseModel.h"
-#import "TJTeamListRequestModel.h"
-#import "TJTeamListResponseModel.h"
-#import "TJCommentRequestModel.h"
-#import "TJCommentResponseModel.h"
-#import <AFNetworking.h>
+
 
 static TJProjectSender * _sender = nil;
 
@@ -183,15 +170,13 @@ static TJProjectSender * _sender = nil;
 }
 
 #pragma mark --------- 发布评论 -----------
--(void) postComment: (ProjectCommonCallBack)callback{
-    TJCommentRequestModel *requestModel = [[TJCommentRequestModel alloc] init];
-    requestModel.projectId = 1;
-    requestModel.userId = 1;
-    requestModel.commentText = @"这是一个测试的评论";
-    NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_POST DataModel:requestModel url:REQUEST_URL_PROJECT_COMMENT_LIST];
-    AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
-    reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
-    [reqOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+-(void) postCommentWithCommentRequestModel:(TJCommentRequestModel *)requestModel completeBlock:(ProjectCommonCallBack)callback{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSDictionary *parameters = [self convertToDictionryFromModel:requestModel];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager POST:[NSString stringWithFormat:@"%@%@", BASE_URL, REQUEST_URL_PROJECT_COMMENT_LIST] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
         NSDictionary *responseDic = (NSDictionary *)responseObject;
         NSError *err;
         TJCommentResponseModel *responseModel = [[TJCommentResponseModel alloc] initWithDictionary:responseDic error:&err];
@@ -206,11 +191,10 @@ static TJProjectSender * _sender = nil;
                 callback(false, responseModel.result.message);
             }
         }
+
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed");
     }];
-    [reqOperation start];
-
 }
 
 @end
