@@ -191,7 +191,7 @@ static TJProjectSender * _sender = nil;
     requestModel.projectId = 1;
     requestModel.userId = 1;
     requestModel.commentText = @"这是一个测试的评论";
-    NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_POST DataModel:requestModel url:REQUEST_URL_PROJECT_COMMENT];
+    NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_POST DataModel:requestModel url:REQUEST_URL_PROJECT_COMMENT_LIST];
     AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
     reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
     [reqOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -215,6 +215,7 @@ static TJProjectSender * _sender = nil;
         }
     }];
     [reqOperation start];
+
 }
 
 
