@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>22835240CE679157703A8D9C</key>
+		<key>101768A4D03019914DFA5375</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>24BA59F78174DA4C8B0C2865</key>
+		<key>1197C6A3562ECCE5D3E82C81</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>302F4B366E9E022D89EB9846</key>
+		<key>5933E8FA7020CAC495E69A85</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>56C29234EE9DFD56BC33BE39</key>
+		<key>60F45870D13B2EDDDAEB9E60</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5E71248E30C8E6FE67043D9D</key>
+		<key>A88517E3B955DABB1BA97830</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>61B322C1D3298D09756FBABB</key>
+		<key>B3B16FC8C4230EE7596D8371</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F337208D518CE59A824CBD36</key>
+		<key>E0FEC52D9965D0C571A9E6B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4CA816A8CDF7AF8E5D09E37</key>
 		<dict>
 			<key>primary</key>
 			<true/>

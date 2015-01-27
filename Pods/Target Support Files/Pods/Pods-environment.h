@@ -54,11 +54,18 @@
 #define COCOAPODS_VERSION_MINOR_ALToastView 0
 #define COCOAPODS_VERSION_PATCH_ALToastView 1
 
+// IQKeyboardManager
+#define COCOAPODS_POD_AVAILABLE_IQKeyboardManager
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 3.2.1.0.
+
 // JSONModel
 #define COCOAPODS_POD_AVAILABLE_JSONModel
 #define COCOAPODS_VERSION_MAJOR_JSONModel 1
 #define COCOAPODS_VERSION_MINOR_JSONModel 0
-#define COCOAPODS_VERSION_PATCH_JSONModel 1
+#define COCOAPODS_VERSION_PATCH_JSONModel 2
 
 // MJRefresh
 #define COCOAPODS_POD_AVAILABLE_MJRefresh

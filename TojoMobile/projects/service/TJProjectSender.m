@@ -185,9 +185,6 @@ static TJProjectSender * _sender = nil;
 #pragma mark --------- 发布评论 -----------
 -(void) postComment: (ProjectCommonCallBack)callback{
     TJCommentRequestModel *requestModel = [[TJCommentRequestModel alloc] init];
-//    requestModel.project_id = 1;
-//    requestModel.user_id = 1;
-//    requestModel.content = @"这是一个测试的评论";
     requestModel.projectId = 1;
     requestModel.userId = 1;
     requestModel.commentText = @"这是一个测试的评论";
@@ -210,16 +207,10 @@ static TJProjectSender * _sender = nil;
             }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (callback) {
-            callback(false, @"网络错误");
-        }
+        NSLog(@"failed");
     }];
     [reqOperation start];
 
 }
-
-
-
-
 
 @end

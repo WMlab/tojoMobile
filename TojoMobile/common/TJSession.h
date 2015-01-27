@@ -7,7 +7,36 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TJUserBasicInfoModel.h"
 
 @interface TJSession : NSObject
+
++(instancetype)getInstance;
+
+/**
+ *设置userModel
+ */
+-(BOOL)setupUserInfoModel:(TJUserBasicInfoModel *)model;
+
+/**
+ *获取userModel
+ */
+-(TJUserBasicInfoModel *)getUserInfoModel;
+
+/**
+ *退出登录
+ */
+-(void)clearUserInfoModel;
+
+/**
+ *设置用户ID
+ */
+-(void)setupUserID:(int)userID;
+
+/**
+ *获得用户ID
+ */
+-(int)getUserID;
+
 
 @end

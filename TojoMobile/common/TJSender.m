@@ -70,4 +70,20 @@
     [request setURL:[NSURL URLWithString:urlString]];
     return request;
 }
+
+- (NSDictionary *) convertToDictionryFromModel:(JSONModel *)model {
+    NSMutableDictionary *tempDic = [NSMutableDictionary dictionary];
+    unsigned int outCount;
+    objc_property_t *properties = class_copyPropertyList(model.class, &outCount);
+    for (int i = 0; i < outCount; i++) {
+        objc_property_t property = properties[i];
+        NSString *propName = [NSString stringWithUTF8String:property_getName(property)];
+        id value = [model valueForKey:propName];
+        if (![value isKindOfClass:[NSString class]]) {
+            value = [value stringValue];
+        }
+        [tempDic setValue:value forKey:propName];
+    }
+    return [tempDic copy];
+}
 @end

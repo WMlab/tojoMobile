@@ -36,9 +36,6 @@ static TJUserSender* _sender = nil;
         NSDictionary *responseDic = (NSDictionary *)responseObject;
         NSError *err;
         TJUserLoginResponseModel *responseModel = [[TJUserLoginResponseModel alloc] initWithDictionary:responseDic error:&err];
-//        NSDictionary *resultDic = [responseDic objectForKey:@"result"];
-//        TJResultModel *resultModel = [[TJResultModel alloc] initWithDictionary:resultDic error:nil];
-//        NSString *msg = resultModel.message;
         if (0 == responseModel.result.code && !err) {
 //            NSDictionary *infoModel = [responseDic objectForKey:@"user"];
 //            TJUserLoginResponseModel *responseModel = [[TJUserLoginResponseModel alloc] initWithDictionary:infoModel error:nil];
@@ -56,6 +53,19 @@ static TJUserSender* _sender = nil;
         }
     }];
     [reqOperation start];
+}
+
+-(void) sendRegisterPostWithModel:(TJUserRegisterRequestModel *)model completeBlock:(UserCommonCallBack) callBack {
+    model.email = @"email";
+    model.password = @"pwd";
+    NSDictionary *postDic = [self convertToDictionryFromModel:model];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager POST:[NSString stringWithFormat:@"%@%@",BASE_URL,REQUEST_URL_REGISTRATION] parameters:postDic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
 }
 
 //- (NSMutableURLRequest *) createRequestWithDataModel:(JSONModel *)model url:(NSString *) url
