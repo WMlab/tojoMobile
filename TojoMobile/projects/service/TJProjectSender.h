@@ -33,7 +33,9 @@ typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
 @interface TJProjectSender : TJSender
 
 +(instancetype) getInstance;
-
+/*
+ *  获取项目列表
+ */
 -(void) sendGetProjectListWithViewModel:(TJProjectListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
 
 -(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;

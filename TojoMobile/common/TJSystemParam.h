@@ -17,6 +17,9 @@
 
 #define REQUEST_TIMEOUT_INTERVAL 30
 
+/************** home ***************/
+#define REQUEST_URL_APP_HOME           @"apphome"
+
 /************** user ***************/
 #define REQUEST_URL_LOGIN           @"login"
 #define REQUEST_URL_REGISTRATION @"registration"

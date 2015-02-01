@@ -19,5 +19,6 @@
 #define TJColorHex(c) [UIColor colorWithRed:((c>>16)&0xFF)/255.0 green:((c>>8)&0xFF)/255.0 blue:((c)&0xFF)/255.0 alpha:1.0]
 #define TJColorHexA(c,a) [UIColor colorWithRed:((c>>16)&0xFF)/255.0 green:((c>>8)&0xFF)/255.0 blue:((c)&0xFF)/255.0 alpha:(a)]
 
+#define TJScreenWidth ([[UIScreen mainScreen]bounds].size.width)
 
 #endif

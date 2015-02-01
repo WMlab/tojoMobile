@@ -31,7 +31,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="请输入邮箱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rRv-fs-aAI" customClass="TJTextFIeld">
@@ -358,7 +358,7 @@
                         <viewControllerLayoutGuide type="bottom" id="eu1-lx-hpJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FYN-BD-BK8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="请输入密码，不少于6位" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myl-eb-lss" customClass="TJTextFIeld">
@@ -452,13 +452,13 @@
                                 <exclude reference="g3O-gJ-u9T"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="37v-aO-Boq"/>
-                                <exclude reference="DVL-vz-v4P"/>
-                                <exclude reference="r5R-O5-HgG"/>
                                 <exclude reference="IGt-at-OcB"/>
                                 <exclude reference="S0O-Iq-nfW"/>
                                 <exclude reference="nIR-Pq-tsy"/>
                                 <exclude reference="wtx-7Y-Z3g"/>
+                                <exclude reference="37v-aO-Boq"/>
+                                <exclude reference="DVL-vz-v4P"/>
+                                <exclude reference="r5R-O5-HgG"/>
                                 <exclude reference="2co-1I-fdb"/>
                                 <exclude reference="5bi-id-GVT"/>
                                 <exclude reference="mle-4h-7L7"/>
@@ -471,13 +471,13 @@
                                 <include reference="g3O-gJ-u9T"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="37v-aO-Boq"/>
-                                <include reference="DVL-vz-v4P"/>
-                                <include reference="r5R-O5-HgG"/>
                                 <include reference="IGt-at-OcB"/>
                                 <include reference="S0O-Iq-nfW"/>
                                 <include reference="nIR-Pq-tsy"/>
                                 <include reference="wtx-7Y-Z3g"/>
+                                <include reference="37v-aO-Boq"/>
+                                <include reference="DVL-vz-v4P"/>
+                                <include reference="r5R-O5-HgG"/>
                                 <include reference="2co-1I-fdb"/>
                                 <include reference="5bi-id-GVT"/>
                                 <include reference="mle-4h-7L7"/>
@@ -577,7 +577,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     </tabBar>
                     <connections>
-                        <segue destination="SIe-tV-0lT" kind="relationship" relationship="viewControllers" id="biJ-IJ-8wm"/>
+                        <segue destination="H2N-ni-tib" kind="relationship" relationship="viewControllers" id="biJ-IJ-8wm"/>
                         <segue destination="wZc-pm-3HZ" kind="relationship" relationship="viewControllers" id="9fW-O5-enP"/>
                         <segue destination="xUL-3w-tCK" kind="relationship" relationship="viewControllers" id="plb-XI-vfN"/>
                         <segue destination="DY2-J6-8iR" kind="relationship" relationship="viewControllers" id="Hn7-Rb-hqn"/>
@@ -632,6 +632,7 @@
                         <viewControllerLayoutGuide type="bottom" id="E31-HL-LHV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yxt-Bo-XFa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4X-dj-mga">
@@ -664,25 +665,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llr-zX-Iys" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200" y="646.5"/>
-        </scene>
-        <!--主页-->
-        <scene sceneID="GvE-YC-2xN">
-            <objects>
-                <viewController id="SIe-tV-0lT" customClass="SecondViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JEX-Sq-jhS"/>
-                        <viewControllerLayoutGuide type="bottom" id="dAd-Uj-9ce"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="s3x-C2-2SK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="主页" image="home" id="cDq-mn-aVI"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qAq-BV-JN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="387" y="-770.25"/>
         </scene>
         <!--项目-->
         <scene sceneID="evX-jX-HdO">
@@ -720,6 +702,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9Y-8M-l7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1276.5" y="1595.25"/>
+        </scene>
+        <!--主页-->
+        <scene sceneID="HaA-Tc-il4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H2N-ni-tib" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="主页" image="home" id="cDq-mn-aVI"/>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Qix-JW-9Jc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fr6-P6-ghx" kind="relationship" relationship="rootViewController" id="GxI-XF-Rp3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Aa-lD-033" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="-770.25"/>
+        </scene>
+        <!--主页-->
+        <scene sceneID="BAk-3G-oYk">
+            <objects>
+                <tableViewController id="fr6-P6-ghx" customClass="TJAppHomeViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="upZ-i4-YHS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="fr6-P6-ghx" id="gbP-4F-iit"/>
+                            <outlet property="delegate" destination="fr6-P6-ghx" id="DUD-3K-91p"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="主页" id="mrs-a7-DvN"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQZ-4V-mym" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="-770.25"/>
         </scene>
     </scenes>
     <resources>
