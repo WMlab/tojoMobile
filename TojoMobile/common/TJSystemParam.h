@@ -26,5 +26,6 @@
 #define REQUEST_URL_PROJECT_DETAIL    @"projectdetail"
 #define REQUEST_URL_PROJECT_COMMENT_LIST    @"commentlist"
 #define REQUEST_URL_PROJECT_TEAM_LIST    @"teamlist"
+#define REQUEST_URL_PROJECT_TEAM_BUILD    @"teambuild"
 
 #endif

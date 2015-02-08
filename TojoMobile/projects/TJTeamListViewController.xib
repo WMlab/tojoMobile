@@ -40,8 +40,7 @@
                                     <exclude reference="fiu-AI-G2n"/>
                                 </mask>
                             </variation>
-                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                <rect key="frame" x="204" y="0.0" width="196" height="49"/>
+                            <variation key="heightClass=regular-widthClass=compact">
                                 <mask key="constraints">
                                     <include reference="OPB-5q-TrV"/>
                                     <exclude reference="fiu-AI-G2n"/>

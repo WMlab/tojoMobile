@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TJCreateTeamViewController : UIViewController
+@interface TJCreateTeamViewController : UIViewController<UITextFieldDelegate>
+
 
 @end

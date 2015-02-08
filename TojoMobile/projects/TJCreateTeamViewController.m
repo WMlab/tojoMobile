@@ -9,13 +9,21 @@
 #import "TJCreateTeamViewController.h"
 
 @interface TJCreateTeamViewController ()
-
+@property (weak, nonatomic) IBOutlet UITextField *teamName;
+@property (weak, nonatomic) IBOutlet UITextField *teamMemberNumber;
+@property (weak, nonatomic) IBOutlet UITextField *teamDeadlineDate;
+@property (weak, nonatomic) IBOutlet UITextField *teamDescription;
+@property (strong, nonatomic) UIDatePicker *datePicker;
 @end
 
 @implementation TJCreateTeamViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.teamName.delegate = self;
+    self.teamMemberNumber.delegate = self;
+    self.teamDeadlineDate.delegate = self;
+    self.teamDescription.delegate = self;
     //导航栏
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
@@ -24,6 +32,8 @@
     UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithTitle:@"发布" style:UIBarButtonItemStylePlain target:Nil action:@selector(createTeamMethod)];
     self.navigationItem.rightBarButtonItem = createButton;
     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];}
+
+    //UIDatePicker
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
