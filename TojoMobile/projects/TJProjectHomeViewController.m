@@ -12,11 +12,16 @@
 #import <MJRefresh.h>
 #import "TJProjectCategoryModel.h"
 #import "TJDefine.h"
+#import "TJProjectHomeViewModel.h"
+#import "TJProjectSender.h"
+#import "TJProjectListCell.h"
+#import "TJProjectDetailViewController.h"
 
 @interface TJProjectHomeViewController () <UITableViewDelegate, UITableViewDataSource>
 {
-    dispatch_once_t onceAd,refreshAfterLaunch;
+    dispatch_once_t onceAd,onceList,refreshAfterLaunch;
 }
+@property (strong, nonatomic) TJProjectHomeViewModel *viewModel;
 @property (weak, nonatomic) IBOutlet UITableView *projectTableView;
 @property (weak, nonatomic) IBOutlet UIScrollView *catScrollView;
 
@@ -39,7 +44,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     dispatch_once(&refreshAfterLaunch, ^{
-//        [self performSelector:@selector(refreshAfterAppear) withObject:nil afterDelay:1.0f];
+        [self performSelector:@selector(refreshAfterAppear) withObject:nil afterDelay:1.0f];
     });
 }
 
@@ -50,13 +55,17 @@
 
 - (void)initData {
     [self loadCategoryData];
-    //    if (!_viewModel) {
-    //        _viewModel = [[TJAppHomeViewModel alloc] init];
-    //    }
+    if (!_viewModel) {
+        _viewModel = [[TJProjectHomeViewModel alloc] init];
+    }
+    TJProjectCategoryModel *model = [_catArr objectAtIndex:0];
+    _viewModel.categoryId = model.categoryId;
+    _viewModel.customId = model.customId;
     //    [self loadLastRecordData];
 }
 
 - (void)initView {
+    //tableview上方滑动分类选择视图
     [self setupCatScrollView];
     //定义上拉、下拉加载数据
     [self updateDataSource];
@@ -112,7 +121,15 @@
     }
     [sender setTitleColor:TJColorHex(0x1ec399) forState:UIControlStateNormal];
     sender.titleLabel.font = [UIFont systemFontOfSize:16];
+    //根据分类选择更新viewmodel
+    TJProjectCategoryModel *model = [_catArr objectAtIndex:sender.tag];
+    _viewModel.categoryId = model.categoryId;
+    _viewModel.customId = model.customId;
+
+    //切换分类后，自动下拉刷新更新数据
+    [self.projectTableView headerBeginRefreshing];
 }
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -121,31 +138,58 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    NSInteger rowCount = 0;
+    if ([self hasAdProjects]) {
+        rowCount ++;
+    }
+    return rowCount + _viewModel.projectList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0 && [self hasAdProjects]) {
         //最上面的滚动展示cell
         dispatch_once(&onceAd, ^{
             [tableView registerNib:[UINib nibWithNibName:@"TJAdScrollCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJAdScrollCell"];});
         static NSString *cellId = @"TJAdScrollCell";
         TJAdScrollCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-//        [cell setCellWithAdProjects:_viewModel.adProjectList];
+        [cell setCellWithAdProjects:_viewModel.adProjects];
         return cell;
     }
     else {
-        return nil;
+        dispatch_once(&onceList, ^{
+            [tableView registerNib:[UINib nibWithNibName:@"TJProjectListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJProjectListCell"];
+        });
+        static NSString *cellId = @"TJProjectListCell";
+        TJProjectListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+        TJProjectInfoModel *infoModel = (TJProjectInfoModel *)[_viewModel.projectList objectAtIndex:indexPath.row - [self hasAdProjects]];
+        [cell setCellWithProjectItem:infoModel];
+        
+        return cell;
     }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        return 270;
+        if ([self hasAdProjects]) {
+            return 240;
+        } else {
+            return 130;
+        }
     }
     else {
         return 130;
     }
+}
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    TJProjectDetailViewController *detailViewController = [[TJProjectDetailViewController alloc] init];
+    detailViewController.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 //- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -156,39 +200,6 @@
 //- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
 //    return 30;
 //}
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation
@@ -199,6 +210,25 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark --------- 发服务 -----------
+-(void) getProjectHomeData
+{
+    [[TJProjectSender getInstance] sendGetProjectHomeDataWithViewModel:_viewModel completeBlock:^(BOOL success, NSString *message) {
+        [self.projectTableView headerEndRefreshing];
+        if (success) {
+            NSLog(@"success");
+//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+////                [self saveRecordToDataBase];
+//            });
+            [self.projectTableView reloadData];
+        }
+        else {
+            [self.projectTableView reloadData];
+            NSLog(@"falied");
+        }
+    }];
+}
+
 
 - (void)loadCategoryData {
     NSURL *plistUrl = [[NSBundle mainBundle] URLForResource:@"projectCategory" withExtension:@"plist"];
@@ -208,8 +238,8 @@
     for (int i=0; i<arr.count; i++) {
         TJProjectCategoryModel *model = [[TJProjectCategoryModel alloc] init];
         NSDictionary *dic = [arr objectAtIndex:i];
-        model.catId = [[dic objectForKey:@"catId"] intValue];
-        model.labelId = [[dic objectForKey:@"labelId"] intValue];
+        model.categoryId = [[dic objectForKey:@"categoryId"] intValue];
+        model.customId = [[dic objectForKey:@"customId"] intValue];
         model.catName = [dic objectForKey:@"catName"];
         [tempArr addObject:model];
     }
@@ -219,12 +249,16 @@
 //定义上拉下拉刷新数据的方法。
 - (void)updateDataSource
 {
-//    __block TJProjectHomeViewController *appHomeVc = self;
+    __block TJProjectHomeViewController *projectHomeVc = self;
     
     //下拉刷新
     [self.projectTableView addHeaderWithCallback:^{
-//        [appHomeVc loadAppHomeData];
+        [projectHomeVc getProjectHomeData];
     }];
+}
+
+- (BOOL) hasAdProjects {
+    return !(_viewModel.adProjects.count==0);
 }
 
 @end

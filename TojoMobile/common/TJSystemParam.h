@@ -25,6 +25,7 @@
 #define REQUEST_URL_REGISTRATION @"registration"
 
 /************** project ***************/
+#define REQUEST_URL_PROJECT_HOME    @"projecthome"
 #define REQUEST_URL_PROJECT_LIST    @"projectlist"
 #define REQUEST_URL_PROJECT_DETAIL    @"projectdetail"
 #define REQUEST_URL_PROJECT_COMMENT_LIST    @"commentlist"

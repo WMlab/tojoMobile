@@ -3,65 +3,65 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>catId</key>
-		<integer>0</integer>
-		<key>labelId</key>
+		<key>customId</key>
+		<integer>1</integer>
+		<key>categoryId</key>
 		<integer>0</integer>
 		<key>catName</key>
 		<string>推荐</string>
 	</dict>
 	<dict>
-		<key>catId</key>
-		<integer>0</integer>
-		<key>labelId</key>
+		<key>customId</key>
+		<integer>2</integer>
+		<key>categoryId</key>
 		<integer>0</integer>
 		<key>catName</key>
 		<string>热门</string>
 	</dict>
 	<dict>
-		<key>catId</key>
-		<integer>0</integer>
-		<key>labelId</key>
+		<key>customId</key>
+		<integer>3</integer>
+		<key>categoryId</key>
 		<integer>0</integer>
 		<key>catName</key>
 		<string>最新</string>
 	</dict>
 	<dict>
-		<key>catId</key>
-		<integer>0</integer>
-		<key>labelId</key>
+		<key>customId</key>
+		<integer>4</integer>
+		<key>categoryId</key>
 		<integer>0</integer>
 		<key>catName</key>
 		<string>同校</string>
 	</dict>
 	<dict>
-		<key>catId</key>
+		<key>customId</key>
 		<integer>0</integer>
-		<key>labelId</key>
-		<integer>0</integer>
+		<key>categoryId</key>
+		<integer>2</integer>
 		<key>catName</key>
-		<string>精选</string>
+		<string>计算机</string>
 	</dict>
 	<dict>
-		<key>catId</key>
+		<key>customId</key>
 		<integer>0</integer>
-		<key>labelId</key>
-		<integer>0</integer>
+		<key>categoryId</key>
+		<integer>3</integer>
 		<key>catName</key>
-		<string>互联网</string>
+		<string>平面设计</string>
 	</dict>
 	<dict>
-		<key>catId</key>
+		<key>customId</key>
 		<integer>0</integer>
-		<key>labelId</key>
+		<key>categoryId</key>
 		<integer>0</integer>
 		<key>catName</key>
 		<string>机械设计</string>
 	</dict>
 	<dict>
-		<key>catId</key>
+		<key>customId</key>
 		<integer>0</integer>
-		<key>labelId</key>
+		<key>categoryId</key>
 		<integer>0</integer>
 		<key>catName</key>
 		<string>材料</string>

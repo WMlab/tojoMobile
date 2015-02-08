@@ -26,6 +26,7 @@
 #import "TJCommentRequestModel.h"
 #import "TJCommentResponseModel.h"
 #import <AFNetworking.h>
+#import "TJProjectHomeViewModel.h"
 
 typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
 
@@ -45,5 +46,10 @@ typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
 -(void) sendGetTeamListWithViewModel:(TJTeamListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
 
 -(void) postCommentWithCommentRequestModel:(TJCommentRequestModel *)requestModel completeBlock:(ProjectCommonCallBack)callback;
+/*
+ *  获取项目主页数据
+ */
+-(void) sendGetProjectHomeDataWithViewModel:(TJProjectHomeViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
+
 
 @end

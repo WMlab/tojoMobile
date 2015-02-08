@@ -7,7 +7,8 @@
 //
 
 #import "TJProjectSender.h"
-
+#import "TJProjectHomeRequestModel.h"
+#import "TJProjectHomeResponseModel.h"
 
 static TJProjectSender * _sender = nil;
 
@@ -20,7 +21,46 @@ static TJProjectSender * _sender = nil;
     });
     return _sender;
 }
-
+#pragma mark --------- 项目主页数据请求 ----------
+-(void) sendGetProjectHomeDataWithViewModel:(TJProjectHomeViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback {
+    //先清除原有缓存数据
+    [viewModel.adProjects removeAllObjects];
+    [viewModel.projectList removeAllObjects];
+    
+    TJProjectHomeRequestModel *requestModel = [[TJProjectHomeRequestModel alloc] init];
+    requestModel.categoryId = viewModel.categoryId;
+    requestModel.customId = viewModel.customId;
+    requestModel.userId = 1;
+    NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_PROJECT_HOME];
+    AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
+    reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [reqOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *responseDic = (NSDictionary *)responseObject;
+        NSError *err;
+        TJProjectHomeResponseModel *responseModel = [[TJProjectHomeResponseModel alloc] initWithDictionary:responseDic error:&err];
+        if (0 == responseModel.result.code && !err) {
+            viewModel.categoryId = responseModel.categoryId;
+            viewModel.customId = responseModel.customId;
+            
+            viewModel.adProjects = responseModel.adProjects;
+            viewModel.projectList = responseModel.projectList;
+    
+            if (callback) {
+                callback(true, responseModel.result.message);
+            }
+        }
+        else {
+            if (callback) {
+                callback(false, responseModel.result.message);
+            }
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (callback) {
+            callback(false, @"网络错误");
+        }
+    }];
+    [reqOperation start];
+}
 #pragma mark --------- 项目列表请求 ----------
 -(void) sendGetProjectListWithViewModel:(TJProjectListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback {
     TJProjectListRequestModel *requestModel = [[TJProjectListRequestModel alloc] init];

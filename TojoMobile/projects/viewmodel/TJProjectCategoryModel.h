@@ -10,8 +10,8 @@
 
 @interface TJProjectCategoryModel : JSONModel
 
-@property (nonatomic, assign) int catId;
-@property (nonatomic, assign) int labelId;
+@property (nonatomic, assign) int categoryId;
+@property (nonatomic, assign) int customId;
 @property (nonatomic, strong) NSString *catName;
 
 @end

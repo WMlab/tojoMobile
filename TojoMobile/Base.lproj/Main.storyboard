@@ -620,27 +620,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNR-Zj-ZGh" customClass="TJProjectCategoryHead">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17q-Di-An9">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <color key="backgroundColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="nS9-64-LD2"/>
-                                            <constraint firstAttribute="width" constant="30" id="w1Q-dc-seE"/>
-                                        </constraints>
-                                        <state key="normal" title="下"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="nS9-64-LD2"/>
-                                                <exclude reference="w1Q-dc-seE"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <mask key="constraints">
-                                                <include reference="nS9-64-LD2"/>
-                                                <include reference="w1Q-dc-seE"/>
-                                            </mask>
-                                        </variation>
-                                    </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COZ-Wn-nHy">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                     </scrollView>
@@ -649,39 +628,31 @@
                                 <constraints>
                                     <constraint firstItem="COZ-Wn-nHy" firstAttribute="top" secondItem="bNR-Zj-ZGh" secondAttribute="top" id="Cby-eI-bV6"/>
                                     <constraint firstItem="COZ-Wn-nHy" firstAttribute="leading" secondItem="bNR-Zj-ZGh" secondAttribute="leading" id="Ex8-Sf-gCF"/>
-                                    <constraint firstItem="17q-Di-An9" firstAttribute="top" secondItem="bNR-Zj-ZGh" secondAttribute="top" id="GFf-eD-taq"/>
                                     <constraint firstAttribute="height" constant="30" id="YNM-5W-AMB"/>
-                                    <constraint firstAttribute="trailing" secondItem="17q-Di-An9" secondAttribute="trailing" id="cPR-SL-IFK"/>
+                                    <constraint firstAttribute="trailing" secondItem="COZ-Wn-nHy" secondAttribute="trailing" id="hbe-4Y-dFz"/>
                                     <constraint firstAttribute="bottom" secondItem="COZ-Wn-nHy" secondAttribute="bottom" id="s5C-di-H3g"/>
-                                    <constraint firstItem="17q-Di-An9" firstAttribute="leading" secondItem="COZ-Wn-nHy" secondAttribute="trailing" id="ttx-oh-F9d"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="17q-Di-An9"/>
                                         <exclude reference="COZ-Wn-nHy"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="YNM-5W-AMB"/>
-                                        <exclude reference="GFf-eD-taq"/>
-                                        <exclude reference="cPR-SL-IFK"/>
-                                        <exclude reference="ttx-oh-F9d"/>
                                         <exclude reference="Cby-eI-bV6"/>
                                         <exclude reference="Ex8-Sf-gCF"/>
+                                        <exclude reference="hbe-4Y-dFz"/>
                                         <exclude reference="s5C-di-H3g"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
-                                        <include reference="17q-Di-An9"/>
                                         <include reference="COZ-Wn-nHy"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="YNM-5W-AMB"/>
-                                        <include reference="GFf-eD-taq"/>
-                                        <include reference="cPR-SL-IFK"/>
-                                        <include reference="ttx-oh-F9d"/>
                                         <include reference="Cby-eI-bV6"/>
                                         <include reference="Ex8-Sf-gCF"/>
+                                        <include reference="hbe-4Y-dFz"/>
                                         <include reference="s5C-di-H3g"/>
                                     </mask>
                                 </variation>
