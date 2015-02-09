@@ -18,11 +18,11 @@ static TJSession *_instance = nil;
 
 @implementation TJSession
 
--(void)setupUserID:(int)userID {
-    [self getUserInfoModel].userId = userID;
+-(void)setupUserId:(int)userId {
+    [self getUserInfoModel].userId = userId;
 }
 
--(int)getUserID {
+-(int)getUserId {
     return [self getUserInfoModel].userId;
 }
 

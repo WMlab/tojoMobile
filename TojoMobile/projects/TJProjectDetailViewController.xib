@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -29,33 +30,6 @@
                         <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="points.png" translatesAutoresizingMaskIntoConstraints="NO" id="k2Q-GN-v2Q">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WB8-vK-W6e">
-                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="49" id="63q-Iu-wEj"/>
-                                <constraint firstAttribute="width" constant="130" id="vfs-27-Upo"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                            <state key="normal" title="收藏">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="63q-Iu-wEj"/>
-                                    <exclude reference="vfs-27-Upo"/>
-                                </mask>
-                            </variation>
-                            <variation key="heightClass=regular-widthClass=compact">
-                                <mask key="constraints">
-                                    <include reference="63q-Iu-wEj"/>
-                                    <include reference="vfs-27-Upo"/>
-                                </mask>
-                            </variation>
-                            <connections>
-                                <action selector="collectButtonClicked:" destination="-1" eventType="touchUpInside" id="Bx8-mP-LnF"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSX-WA-YSM">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -92,6 +66,33 @@
                             </variation>
                             <connections>
                                 <action selector="attendButtonClicked:" destination="-1" eventType="touchUpInside" id="VNG-jG-kQo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WB8-vK-W6e">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="49" id="63q-Iu-wEj"/>
+                                <constraint firstAttribute="width" constant="130" id="vfs-27-Upo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="收藏">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="63q-Iu-wEj"/>
+                                    <exclude reference="vfs-27-Upo"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="63q-Iu-wEj"/>
+                                    <include reference="vfs-27-Upo"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="collectButtonClicked:" destination="-1" eventType="touchUpInside" id="Bx8-mP-LnF"/>
                             </connections>
                         </button>
                     </subviews>
@@ -131,9 +132,9 @@
                         <mask key="subviews">
                             <exclude reference="RGP-io-vEx"/>
                             <exclude reference="k2Q-GN-v2Q"/>
-                            <exclude reference="WB8-vK-W6e"/>
                             <exclude reference="FSX-WA-YSM"/>
                             <exclude reference="psH-t3-n47"/>
+                            <exclude reference="WB8-vK-W6e"/>
                         </mask>
                         <mask key="constraints">
                             <exclude reference="ujM-vG-AyE"/>
@@ -165,9 +166,9 @@
                         <mask key="subviews">
                             <include reference="RGP-io-vEx"/>
                             <include reference="k2Q-GN-v2Q"/>
-                            <include reference="WB8-vK-W6e"/>
                             <include reference="FSX-WA-YSM"/>
                             <include reference="psH-t3-n47"/>
+                            <include reference="WB8-vK-W6e"/>
                         </mask>
                         <mask key="constraints">
                             <include reference="ujM-vG-AyE"/>

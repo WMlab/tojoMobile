@@ -17,11 +17,15 @@
 
 #define REQUEST_TIMEOUT_INTERVAL 30
 
+/************** home ***************/
+#define REQUEST_URL_APP_HOME           @"apphome"
+
 /************** user ***************/
 #define REQUEST_URL_LOGIN           @"login"
 #define REQUEST_URL_REGISTRATION @"registration"
 
 /************** project ***************/
+#define REQUEST_URL_PROJECT_HOME    @"projecthome"
 #define REQUEST_URL_PROJECT_LIST    @"projectlist"
 #define REQUEST_URL_PROJECT_DETAIL    @"projectdetail"
 #define REQUEST_URL_PROJECT_COMMENT_LIST    @"commentlist"

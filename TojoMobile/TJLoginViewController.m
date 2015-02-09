@@ -43,7 +43,7 @@
     
     self.loginBtn.layer.cornerRadius = 22;
     self.loginBtn.backgroundColor = TJColorHex(0xcccccc);
-    self.loginBtn.enabled = NO;
+    self.loginBtn.enabled = YES;
     [self.loginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 
@@ -72,6 +72,8 @@
     }
 }
 - (IBAction)loginAction:(id)sender {
+    [self.usernameTextfield resignFirstResponder];
+    [self.passwordTextfield resignFirstResponder];
     [[TJUserSender getInstance] sendUserLoginWithEmail:@"yy@tongjo.com" password:@"123" completeBlock:^(BOOL success, NSString *message) {
         if (!success) {
             UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
@@ -79,9 +81,13 @@
         }
         else {
             [ALToastView toastInView:self.view withText:@"登录成功"];
+            [self performSelector:@selector(hideViewController) withObject:nil afterDelay:0.5];
         }
     }];
 }
 
+-(void) hideViewController {
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{ }];
+}
 
 @end
