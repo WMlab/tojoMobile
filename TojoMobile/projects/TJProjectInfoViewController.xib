@@ -35,11 +35,13 @@
                     <variation key="heightClass=regular-widthClass=compact" constant="24"/>
                 </constraint>
                 <constraint firstItem="OII-UJ-3vv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="FOp-LA-Dd5">
-                    <variation key="heightClass=regular-widthClass=compact" constant="24"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                 </constraint>
                 <constraint firstAttribute="bottom" secondItem="OII-UJ-3vv" secondAttribute="bottom" id="J1F-Is-mPS"/>
                 <constraint firstAttribute="trailing" secondItem="OII-UJ-3vv" secondAttribute="trailing" id="bQ5-SD-bmc"/>
-                <constraint firstItem="OII-UJ-3vv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="fwW-Mb-Gw4"/>
+                <constraint firstItem="OII-UJ-3vv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="fwW-Mb-Gw4">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
                 <constraint firstItem="OII-UJ-3vv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lEy-Nh-UGP"/>
             </constraints>
             <variation key="default">
