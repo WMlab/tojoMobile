@@ -20,6 +20,8 @@
 		3241879A1A6B5B9E0088A3BB /* TJProjectInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324187981A6B5B9E0088A3BB /* TJProjectInfoViewController.xib */; };
 		324187A71A6BE57C0088A3BB /* titleImageTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 324187A61A6BE57C0088A3BB /* titleImageTest.png */; };
 		324187A91A6BF5D70088A3BB /* testHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 324187A81A6BF5D70088A3BB /* testHead.png */; };
+		325A92691A90FE0E00431B0E /* swiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A92681A90FE0E00431B0E /* swiftTest.swift */; };
+		325A926B1A90FE7400431B0E /* BreakOutToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A926A1A90FE7400431B0E /* BreakOutToRefreshView.swift */; };
 		32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F011A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m */; };
 		32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F041A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m */; };
 		32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */; };
@@ -148,6 +150,9 @@
 		324187981A6B5B9E0088A3BB /* TJProjectInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectInfoViewController.xib; path = projects/TJProjectInfoViewController.xib; sourceTree = "<group>"; };
 		324187A61A6BE57C0088A3BB /* titleImageTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleImageTest.png; sourceTree = "<group>"; };
 		324187A81A6BF5D70088A3BB /* testHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testHead.png; sourceTree = "<group>"; };
+		325A92671A90FE0E00431B0E /* TojoMobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TojoMobile-Bridging-Header.h"; sourceTree = "<group>"; };
+		325A92681A90FE0E00431B0E /* swiftTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = swiftTest.swift; path = projects/view/swiftTest.swift; sourceTree = "<group>"; };
+		325A926A1A90FE7400431B0E /* BreakOutToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakOutToRefreshView.swift; sourceTree = "<group>"; };
 		32959F001A5ECFB300C2B9D6 /* TJProjectDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailViewModel.h; path = projects/viewmodel/TJProjectDetailViewModel.h; sourceTree = "<group>"; };
 		32959F011A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailViewModel.m; path = projects/viewmodel/TJProjectDetailViewModel.m; sourceTree = "<group>"; };
 		32959F031A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailRequestModel.h; path = projects/businessmodel/TJProjectDetailRequestModel.h; sourceTree = "<group>"; };
@@ -394,6 +399,7 @@
 		32959EB81A5EBD1C00C2B9D6 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				325A926A1A90FE7400431B0E /* BreakOutToRefreshView.swift */,
 				321146431A66ACC600F89494 /* StrechyParallaxScrollView.h */,
 				321146441A66ACC600F89494 /* StrechyParallaxScrollView.m */,
 				324187871A68A39B0088A3BB /* TJEndDateView.h */,
@@ -408,6 +414,8 @@
 				324187941A68AD900088A3BB /* TJProjectTeamPartView.m */,
 				EAA4E0911A7E5AFD00E9E8D2 /* TJProjectCategoryHead.h */,
 				EAA4E0921A7E5AFD00E9E8D2 /* TJProjectCategoryHead.m */,
+				325A92681A90FE0E00431B0E /* swiftTest.swift */,
+				325A92671A90FE0E00431B0E /* TojoMobile-Bridging-Header.h */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -907,6 +915,7 @@
 			files = (
 				32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */,
 				EA0A0BC01A67CC3C00E37BFD /* TJSession.m in Sources */,
+				325A926B1A90FE7400431B0E /* BreakOutToRefreshView.swift in Sources */,
 				32D8BD921A7605BF002750A0 /* TJCreateTeamRequestModel.m in Sources */,
 				EA0A0BB71A66A9B300E37BFD /* TJProjectListCell.m in Sources */,
 				EA99FC781A5EE9C70069ADBD /* TJUserLoginResponseModel.m in Sources */,
@@ -938,6 +947,7 @@
 				EAA4E0901A7E565000E9E8D2 /* TJProjectHomeViewController.m in Sources */,
 				EA775BCC1A7A675C00B58DB4 /* TJTableHeaderView.m in Sources */,
 				321146391A66997900F89494 /* TJProjectInfoModel.m in Sources */,
+				325A92691A90FE0E00431B0E /* swiftTest.swift in Sources */,
 				EA775BBE1A79330100B58DB4 /* MMScrollPresenter.m in Sources */,
 				EA775BC81A793E0800B58DB4 /* TJFourProjectCell.m in Sources */,
 				EA775BAA1A7923D400B58DB4 /* TJAppHomeSender.m in Sources */,
@@ -1106,6 +1116,7 @@
 			baseConfigurationReference = B2C29C277CF0BF4887084072 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TojoMobile/Info.plist;
@@ -1113,6 +1124,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TojoMobile/TojoMobile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1121,6 +1134,7 @@
 			baseConfigurationReference = 85A33652F3F2C3B494D43C51 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TojoMobile/Info.plist;
@@ -1128,6 +1142,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TojoMobile/TojoMobile-Bridging-Header.h";
 			};
 			name = Release;
 		};

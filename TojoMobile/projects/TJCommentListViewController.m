@@ -23,6 +23,8 @@
     dispatch_once_t onceToken;
 }
 
+@synthesize refreshView;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
@@ -35,25 +37,29 @@
     _viewModel = [[TJCommentListViewModel alloc] init];
     [self loadCommentList];
     
-    //定义上拉、下拉加载数据
-    [self updateDataSource];
+    refreshView = [[BreakOutToRefreshView alloc] initWithScrollView:self.commentTableView];
+    refreshView.delegate = self;
+    [self.commentTableView addSubview:refreshView];
+    
+    //MJRefresh定义上拉、下拉加载数据
+    //[self updateDataSource];
 }
 
-//定义上拉下拉刷新数据的方法。
-- (void)updateDataSource
-{
-    __block TJCommentListViewController *commentVc = self;
-    
-    //下拉刷新
-    [self.commentTableView addHeaderWithCallback:^{
-        //下拉工作
-    }];
-    
-    //上拉加载更多
+//MJRefresh定义上拉下拉刷新数据的方法。
+//- (void)updateDataSource
+//{
+//    __block TJCommentListViewController *commentVc = self;
+
+//下拉刷新
+//    [self.commentTableView addHeaderWithCallback:^{
+//        //下拉工作
+//    }];
+
+//上拉加载更多
 //    [self.commentTableView addFooterWithCallback:^{
 //        //上拉
 //    }];
-}
+//}
 
 #pragma mark --------- 发服务 -----------
 -(void) loadCommentList
@@ -113,11 +119,31 @@
 }
 
 
+#pragma mark - BreakOutToRefreshDelegate
+
+- (void)refreshViewDidRefresh:(BreakOutToRefreshView *)refreshView{
+    // load stuff from the internet
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    [refreshView scrollViewDidScroll:scrollView];
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    [refreshView scrollViewWillEndDragging:scrollView withVelocity:velocity targetContentOffset:targetContentOffset];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [refreshView scrollViewWillBeginDragging:scrollView];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 @end

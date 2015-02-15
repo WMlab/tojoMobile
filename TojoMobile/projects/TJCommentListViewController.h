@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TojoMobile-swift.h"
 
-@interface TJCommentListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface TJCommentListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,BreakOutToRefreshDelegate,UIScrollViewDelegate>
+
+@property (strong, nonatomic) BreakOutToRefreshView *refreshView;
 
 @end
