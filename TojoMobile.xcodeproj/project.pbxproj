@@ -57,6 +57,8 @@
 		32F513B21A6E462700224E74 /* points.png in Resources */ = {isa = PBXBuildFile; fileRef = 32F513B11A6E462700224E74 /* points.png */; };
 		32F513B51A6E68A400224E74 /* TJTeamListRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F513B41A6E68A400224E74 /* TJTeamListRequestModel.m */; };
 		32F513B81A6E68C900224E74 /* TJTeamListResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F513B71A6E68C900224E74 /* TJTeamListResponseModel.m */; };
+		32FD12081A971CB2004D3A15 /* UUDatePicker_DateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD12051A971CB2004D3A15 /* UUDatePicker_DateModel.m */; };
+		32FD12091A971CB2004D3A15 /* UUDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD12071A971CB2004D3A15 /* UUDatePicker.m */; };
 		E42770C64AD3214DC5895880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F87660748CC2C0B4B82EF26 /* libPods.a */; };
 		EA07EB2F1A7E7260006BC0C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA07EB2E1A7E7260006BC0C8 /* Images.xcassets */; };
 		EA07EB311A7E7296006BC0C8 /* projectCategory.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA07EB301A7E7296006BC0C8 /* projectCategory.plist */; };
@@ -215,6 +217,10 @@
 		32F513B41A6E68A400224E74 /* TJTeamListRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJTeamListRequestModel.m; path = projects/businessmodel/TJTeamListRequestModel.m; sourceTree = "<group>"; };
 		32F513B61A6E68C900224E74 /* TJTeamListResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTeamListResponseModel.h; path = projects/businessmodel/TJTeamListResponseModel.h; sourceTree = "<group>"; };
 		32F513B71A6E68C900224E74 /* TJTeamListResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJTeamListResponseModel.m; path = projects/businessmodel/TJTeamListResponseModel.m; sourceTree = "<group>"; };
+		32FD12041A971CB2004D3A15 /* UUDatePicker_DateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUDatePicker_DateModel.h; path = projects/view/UUDatePicker_DateModel.h; sourceTree = "<group>"; };
+		32FD12051A971CB2004D3A15 /* UUDatePicker_DateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUDatePicker_DateModel.m; path = projects/view/UUDatePicker_DateModel.m; sourceTree = "<group>"; };
+		32FD12061A971CB2004D3A15 /* UUDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUDatePicker.h; path = projects/view/UUDatePicker.h; sourceTree = "<group>"; };
+		32FD12071A971CB2004D3A15 /* UUDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUDatePicker.m; path = projects/view/UUDatePicker.m; sourceTree = "<group>"; };
 		85A33652F3F2C3B494D43C51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F87660748CC2C0B4B82EF26 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C29C277CF0BF4887084072 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -399,6 +405,7 @@
 		32959EB81A5EBD1C00C2B9D6 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				32FD12031A971C70004D3A15 /* TJUIPicker */,
 				328870D51A91C514002E8A00 /* BreakOutToRefreshView.swift */,
 				321146431A66ACC600F89494 /* StrechyParallaxScrollView.h */,
 				321146441A66ACC600F89494 /* StrechyParallaxScrollView.m */,
@@ -510,6 +517,17 @@
 				32F513AC1A6E26F700224E74 /* TJTeamListCell.xib */,
 			);
 			name = cell;
+			sourceTree = "<group>";
+		};
+		32FD12031A971C70004D3A15 /* TJUIPicker */ = {
+			isa = PBXGroup;
+			children = (
+				32FD12041A971CB2004D3A15 /* UUDatePicker_DateModel.h */,
+				32FD12051A971CB2004D3A15 /* UUDatePicker_DateModel.m */,
+				32FD12061A971CB2004D3A15 /* UUDatePicker.h */,
+				32FD12071A971CB2004D3A15 /* UUDatePicker.m */,
+			);
+			name = TJUIPicker;
 			sourceTree = "<group>";
 		};
 		3548326D607B0EA4ECF529D9 /* Frameworks */ = {
@@ -920,7 +938,9 @@
 				EA0A0BB71A66A9B300E37BFD /* TJProjectListCell.m in Sources */,
 				EA99FC781A5EE9C70069ADBD /* TJUserLoginResponseModel.m in Sources */,
 				3211463C1A669A7A00F89494 /* TJCommentModel.m in Sources */,
+				32FD12081A971CB2004D3A15 /* UUDatePicker_DateModel.m in Sources */,
 				EA1AD4331A752C06004EADCA /* TJUserRegisterRequestModel.m in Sources */,
+				32FD12091A971CB2004D3A15 /* UUDatePicker.m in Sources */,
 				32C4B4181A71F1E700B8D401 /* TJCommentRequestModel.m in Sources */,
 				EA0A0BC71A67E05300E37BFD /* TJProjectListViewModel.m in Sources */,
 				3241878F1A68AD350088A3BB /* TJProjectDetailInfoView.m in Sources */,

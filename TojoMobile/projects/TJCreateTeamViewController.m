@@ -7,23 +7,25 @@
 //
 
 #import "TJCreateTeamViewController.h"
+#import "UUDatePicker.h"
 
 @interface TJCreateTeamViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *teamName;
-@property (weak, nonatomic) IBOutlet UITextField *teamMemberNumber;
-@property (weak, nonatomic) IBOutlet UITextField *teamDeadlineDate;
-@property (weak, nonatomic) IBOutlet UITextField *teamDescription;
-@property (strong, nonatomic) UIDatePicker *datePicker;
+
 @end
 
 @implementation TJCreateTeamViewController
 
+@synthesize teamName;
+@synthesize teamEndDate;
+@synthesize teamMemberCount;
+@synthesize teamIntroduce;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.teamName.delegate = self;
-    self.teamMemberNumber.delegate = self;
-    self.teamDeadlineDate.delegate = self;
-    self.teamDescription.delegate = self;
+    self.teamMemberCount.delegate = self;
+    self.teamEndDate.delegate = self;
+    self.teamIntroduce.delegate = self;
     //导航栏
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
@@ -31,9 +33,33 @@
     self.navigationItem.title = @"创建团队";
     UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithTitle:@"发布" style:UIBarButtonItemStylePlain target:Nil action:@selector(createTeamMethod)];
     self.navigationItem.rightBarButtonItem = createButton;
-    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];}
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
+    
+    
+    //DatePicker
+    UUDatePicker *datePicker
+    = [[UUDatePicker alloc]initWithframe:CGRectMake(0, 0, 320, 200)
+                             PickerStyle:1
+                             didSelected:^(NSString *year,NSString *month,NSString *day,
+                                           NSString *hour,NSString *minute,NSString *weekDay, NSString *count){
+                                    teamEndDate.text = [NSString stringWithFormat:@"%@-%@-%@",year,month,day];
+                                 }];
+    teamEndDate.inputView = datePicker;
+    NSDate *now = [NSDate date];
+    datePicker.ScrollToDate = now;
+    
+    //MemberCountPicker
+    UUDatePicker *countPicker
+    = [[UUDatePicker alloc]initWithframe:CGRectMake(0, 0, 320, 200)
+                             PickerStyle:4
+                             didSelected:^(NSString *year,NSString *month,NSString *day,
+                                           NSString *hour,NSString *minute,NSString *weekDay, NSString *count){
+                                 teamMemberCount.text = [NSString stringWithFormat:@"%@",count];
+                             }];
+    teamMemberCount.inputView = countPicker;
 
-    //UIDatePicker
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

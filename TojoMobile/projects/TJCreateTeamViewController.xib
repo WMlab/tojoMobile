@@ -7,9 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TJCreateTeamViewController">
             <connections>
-                <outlet property="teamDeadlineDate" destination="XZQ-8Y-rLv" id="RSD-dx-Vuq"/>
-                <outlet property="teamDescription" destination="niv-6h-Zyn" id="2Ly-GK-jzw"/>
-                <outlet property="teamMemberNumber" destination="bsH-cv-ZLj" id="y93-SU-eep"/>
+                <outlet property="teamEndDate" destination="XZQ-8Y-rLv" id="1uy-wO-t27"/>
+                <outlet property="teamIntroduce" destination="niv-6h-Zyn" id="DRs-Zi-uvX"/>
+                <outlet property="teamMemberCount" destination="bsH-cv-ZLj" id="rrc-V3-Sai"/>
                 <outlet property="teamName" destination="NYf-Cy-hip" id="xLf-U2-JgR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,44 +21,84 @@
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="团队名字" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NYf-Cy-hip">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="f1u-Fm-EEv"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="39" y="105" width="170" height="30"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="f1u-Fm-EEv"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="f1u-Fm-EEv"/>
+                        </mask>
                     </variation>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="团队人数" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsH-cv-ZLj">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="128" id="Hfj-rl-8E8"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="39" y="161" width="170" height="30"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Hfj-rl-8E8"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Hfj-rl-8E8"/>
+                        </mask>
                     </variation>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="团队报名截止日期" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZQ-8Y-rLv">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="39" y="212" width="170" height="30"/>
-                    </variation>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="团队介绍" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="niv-6h-Zyn">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="一句话介绍" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="niv-6h-Zyn">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="39" y="269" width="170" height="30"/>
-                    </variation>
                 </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="NYf-Cy-hip" firstAttribute="leading" secondItem="bsH-cv-ZLj" secondAttribute="leading" id="8SF-T8-95E"/>
+                <constraint firstItem="XZQ-8Y-rLv" firstAttribute="leading" secondItem="bsH-cv-ZLj" secondAttribute="trailing" constant="8" symbolic="YES" id="BpJ-cQ-QAC"/>
+                <constraint firstItem="NYf-Cy-hip" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="27" id="CKK-e9-ZnW"/>
+                <constraint firstItem="XZQ-8Y-rLv" firstAttribute="top" secondItem="NYf-Cy-hip" secondAttribute="bottom" constant="13" id="EYY-XD-Oez"/>
+                <constraint firstItem="bsH-cv-ZLj" firstAttribute="baseline" secondItem="XZQ-8Y-rLv" secondAttribute="baseline" id="KHR-8d-haf"/>
+                <constraint firstItem="NYf-Cy-hip" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="QT7-cN-n2S"/>
+                <constraint firstItem="niv-6h-Zyn" firstAttribute="top" secondItem="XZQ-8Y-rLv" secondAttribute="bottom" constant="13" id="Wq7-lN-Vg1"/>
+                <constraint firstItem="NYf-Cy-hip" firstAttribute="leading" secondItem="niv-6h-Zyn" secondAttribute="leading" id="bB4-aA-d1x"/>
+                <constraint firstItem="NYf-Cy-hip" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fJ3-1v-taM"/>
+                <constraint firstItem="NYf-Cy-hip" firstAttribute="trailing" secondItem="niv-6h-Zyn" secondAttribute="trailing" id="ix8-d9-yLf"/>
+                <constraint firstItem="NYf-Cy-hip" firstAttribute="trailing" secondItem="XZQ-8Y-rLv" secondAttribute="trailing" id="uuC-1k-kXu"/>
+            </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="NYf-Cy-hip"/>
                     <exclude reference="bsH-cv-ZLj"/>
                     <exclude reference="XZQ-8Y-rLv"/>
                     <exclude reference="niv-6h-Zyn"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="8SF-T8-95E"/>
+                    <exclude reference="CKK-e9-ZnW"/>
+                    <exclude reference="QT7-cN-n2S"/>
+                    <exclude reference="bB4-aA-d1x"/>
+                    <exclude reference="fJ3-1v-taM"/>
+                    <exclude reference="ix8-d9-yLf"/>
+                    <exclude reference="uuC-1k-kXu"/>
+                    <exclude reference="BpJ-cQ-QAC"/>
+                    <exclude reference="EYY-XD-Oez"/>
+                    <exclude reference="KHR-8d-haf"/>
+                    <exclude reference="Wq7-lN-Vg1"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -67,6 +107,19 @@
                     <include reference="bsH-cv-ZLj"/>
                     <include reference="XZQ-8Y-rLv"/>
                     <include reference="niv-6h-Zyn"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="8SF-T8-95E"/>
+                    <include reference="CKK-e9-ZnW"/>
+                    <include reference="QT7-cN-n2S"/>
+                    <include reference="bB4-aA-d1x"/>
+                    <include reference="fJ3-1v-taM"/>
+                    <include reference="ix8-d9-yLf"/>
+                    <include reference="uuC-1k-kXu"/>
+                    <include reference="BpJ-cQ-QAC"/>
+                    <include reference="EYY-XD-Oez"/>
+                    <include reference="KHR-8d-haf"/>
+                    <include reference="Wq7-lN-Vg1"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="340" y="241"/>

@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface TJCreateTeamViewController : UIViewController<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *teamName;
+@property (weak, nonatomic) IBOutlet UITextField *teamMemberCount;
+@property (weak, nonatomic) IBOutlet UITextField *teamEndDate;
+@property (weak, nonatomic) IBOutlet UITextField *teamIntroduce;
 
 
 @end
