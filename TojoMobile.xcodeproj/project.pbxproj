@@ -42,7 +42,8 @@
 		32D8BD8F1A752325002750A0 /* TJCreateTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D8BD8D1A752325002750A0 /* TJCreateTeamViewController.xib */; };
 		32D8BD921A7605BF002750A0 /* TJCreateTeamRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D8BD911A7605BF002750A0 /* TJCreateTeamRequestModel.m */; };
 		32D8BD951A7605F4002750A0 /* TJCreateTeamResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D8BD941A7605F4002750A0 /* TJCreateTeamResponseModel.m */; };
-		32F513871A6DEC6200224E74 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F513861A6DEC6200224E74 /* TestViewController.m */; };
+		32E2F2BF1A9AF205003C6E4A /* TJTeamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E2F2BD1A9AF205003C6E4A /* TJTeamDetailViewController.m */; };
+		32E2F2C01A9AF205003C6E4A /* TJTeamDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E2F2BE1A9AF205003C6E4A /* TJTeamDetailViewController.xib */; };
 		32F513901A6E03CA00224E74 /* TJTeamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F5138E1A6E03CA00224E74 /* TJTeamListViewController.m */; };
 		32F513911A6E03CA00224E74 /* TJTeamListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F5138F1A6E03CA00224E74 /* TJTeamListViewController.xib */; };
 		32F5139A1A6E171500224E74 /* TJCommentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F513981A6E171500224E74 /* TJCommentListViewController.m */; };
@@ -81,7 +82,6 @@
 		EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E51B1A5A2FB300CA2CCD /* main.m */; };
 		EA68E51F1A5A2FB300CA2CCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E51E1A5A2FB300CA2CCD /* AppDelegate.m */; };
 		EA68E5221A5A2FB300CA2CCD /* TJLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E5211A5A2FB300CA2CCD /* TJLoginViewController.m */; };
-		EA68E5251A5A2FB300CA2CCD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E5241A5A2FB300CA2CCD /* SecondViewController.m */; };
 		EA68E5281A5A2FB300CA2CCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA68E5261A5A2FB300CA2CCD /* Main.storyboard */; };
 		EA68E52D1A5A2FB300CA2CCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA68E52B1A5A2FB300CA2CCD /* LaunchScreen.xib */; };
 		EA68E5391A5A2FB400CA2CCD /* TojoMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E5381A5A2FB400CA2CCD /* TojoMobileTests.m */; };
@@ -192,8 +192,9 @@
 		32D8BD911A7605BF002750A0 /* TJCreateTeamRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCreateTeamRequestModel.m; path = projects/businessmodel/TJCreateTeamRequestModel.m; sourceTree = "<group>"; };
 		32D8BD931A7605F4002750A0 /* TJCreateTeamResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCreateTeamResponseModel.h; path = projects/businessmodel/TJCreateTeamResponseModel.h; sourceTree = "<group>"; };
 		32D8BD941A7605F4002750A0 /* TJCreateTeamResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCreateTeamResponseModel.m; path = projects/businessmodel/TJCreateTeamResponseModel.m; sourceTree = "<group>"; };
-		32F513851A6DEC6200224E74 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		32F513861A6DEC6200224E74 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		32E2F2BC1A9AF205003C6E4A /* TJTeamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTeamDetailViewController.h; path = projects/TJTeamDetailViewController.h; sourceTree = "<group>"; };
+		32E2F2BD1A9AF205003C6E4A /* TJTeamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJTeamDetailViewController.m; path = projects/TJTeamDetailViewController.m; sourceTree = "<group>"; };
+		32E2F2BE1A9AF205003C6E4A /* TJTeamDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJTeamDetailViewController.xib; path = projects/TJTeamDetailViewController.xib; sourceTree = "<group>"; };
 		32F5138D1A6E03CA00224E74 /* TJTeamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTeamListViewController.h; path = projects/TJTeamListViewController.h; sourceTree = "<group>"; };
 		32F5138E1A6E03CA00224E74 /* TJTeamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJTeamListViewController.m; path = projects/TJTeamListViewController.m; sourceTree = "<group>"; };
 		32F5138F1A6E03CA00224E74 /* TJTeamListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJTeamListViewController.xib; path = projects/TJTeamListViewController.xib; sourceTree = "<group>"; };
@@ -263,8 +264,6 @@
 		EA68E51E1A5A2FB300CA2CCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EA68E5201A5A2FB300CA2CCD /* TJLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TJLoginViewController.h; path = ../TJLoginViewController.h; sourceTree = "<group>"; };
 		EA68E5211A5A2FB300CA2CCD /* TJLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TJLoginViewController.m; path = ../TJLoginViewController.m; sourceTree = "<group>"; };
-		EA68E5231A5A2FB300CA2CCD /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		EA68E5241A5A2FB300CA2CCD /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		EA68E5271A5A2FB300CA2CCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA68E52C1A5A2FB300CA2CCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EA68E5321A5A2FB300CA2CCD /* TojoMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TojoMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -398,6 +397,9 @@
 				32D8BD8D1A752325002750A0 /* TJCreateTeamViewController.xib */,
 				EAA4E08E1A7E565000E9E8D2 /* TJProjectHomeViewController.h */,
 				EAA4E08F1A7E565000E9E8D2 /* TJProjectHomeViewController.m */,
+				32E2F2BC1A9AF205003C6E4A /* TJTeamDetailViewController.h */,
+				32E2F2BD1A9AF205003C6E4A /* TJTeamDetailViewController.m */,
+				32E2F2BE1A9AF205003C6E4A /* TJTeamDetailViewController.xib */,
 			);
 			name = projects;
 			sourceTree = "<group>";
@@ -578,13 +580,9 @@
 				32959EB71A5EBD0300C2B9D6 /* projects */,
 				EAEE9B3D1A5C11E500FF3DA9 /* common */,
 				EAEE9B301A5BFFFB00FF3DA9 /* user */,
-				EA68E5231A5A2FB300CA2CCD /* SecondViewController.h */,
-				EA68E5241A5A2FB300CA2CCD /* SecondViewController.m */,
 				EA68E52B1A5A2FB300CA2CCD /* LaunchScreen.xib */,
 				EA07EB2D1A7E7260006BC0C8 /* resources */,
 				EA68E5191A5A2FB300CA2CCD /* Supporting Files */,
-				32F513851A6DEC6200224E74 /* TestViewController.h */,
-				32F513861A6DEC6200224E74 /* TestViewController.m */,
 			);
 			path = TojoMobile;
 			sourceTree = "<group>";
@@ -862,6 +860,7 @@
 				EA68E5281A5A2FB300CA2CCD /* Main.storyboard in Resources */,
 				32F513B21A6E462700224E74 /* points.png in Resources */,
 				EA68E52D1A5A2FB300CA2CCD /* LaunchScreen.xib in Resources */,
+				32E2F2C01A9AF205003C6E4A /* TJTeamDetailViewController.xib in Resources */,
 				EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */,
 				EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */,
 				EA775BD11A7A719E00B58DB4 /* TJHeaderCell.xib in Resources */,
@@ -945,7 +944,6 @@
 				EA0A0BC71A67E05300E37BFD /* TJProjectListViewModel.m in Sources */,
 				3241878F1A68AD350088A3BB /* TJProjectDetailInfoView.m in Sources */,
 				EA99FC771A5EE9C70069ADBD /* TJUserLoginRequestModel.m in Sources */,
-				EA68E5251A5A2FB300CA2CCD /* SecondViewController.m in Sources */,
 				EA775BA71A79230500B58DB4 /* TJAppHomeResponseModel.m in Sources */,
 				EA07EB3E1A80A0D5006BC0C8 /* TJProjectHomeResponseModel.m in Sources */,
 				32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */,
@@ -982,7 +980,6 @@
 				32C4B4071A71D92900B8D401 /* TJUserHomepageResponseModel.m in Sources */,
 				324187891A68A39B0088A3BB /* TJEndDateView.m in Sources */,
 				EA07EB411A81238C006BC0C8 /* TJProjectHomeViewModel.m in Sources */,
-				32F513871A6DEC6200224E74 /* TestViewController.m in Sources */,
 				EA775BAD1A7931AF00B58DB4 /* TJAppHomeViewController.m in Sources */,
 				324187921A68AD630088A3BB /* TJProjectCommentPartView.m in Sources */,
 				EA32484B1A668D9300D45E30 /* TJProjectListResponseModel.m in Sources */,
@@ -1007,6 +1004,7 @@
 				32F513A11A6E24B100224E74 /* TJCommentListRequestModel.m in Sources */,
 				EAC116C21A618C1C00F620DE /* TJFilePath.m in Sources */,
 				EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */,
+				32E2F2BF1A9AF205003C6E4A /* TJTeamDetailViewController.m in Sources */,
 				32C4B40A1A71DC0D00B8D401 /* TJUserHomepageViewModel.m in Sources */,
 				EA1CC7951A761BC500E96FBE /* TJTextFIeld.m in Sources */,
 				EA775BD01A7A719E00B58DB4 /* TJHeaderCell.m in Sources */,

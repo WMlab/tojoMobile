@@ -5,23 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--测试-->
-        <scene sceneID="Za5-Qn-LIN">
-            <objects>
-                <navigationController id="xUL-3w-tCK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="测试" id="cLs-Pt-aI5"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qs2-yK-6Eg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="qpU-Z0-FUl" kind="relationship" relationship="rootViewController" id="EMK-Rv-Igx"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Bu-47-QSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1317" y="1455.75"/>
-        </scene>
         <!--登陆-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
@@ -496,77 +479,6 @@
             </objects>
             <point key="canvasLocation" x="352.5" y="1595.25"/>
         </scene>
-        <!--测试页-->
-        <scene sceneID="Rbc-4c-RaV">
-            <objects>
-                <viewController id="qpU-Z0-FUl" customClass="TestViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="boM-hv-mPQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="dBd-uz-FYO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BLH-PZ-YQ7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azs-Qs-UGa">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="项目详情">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="85" y="108" width="84" height="38"/>
-                                </variation>
-                                <connections>
-                                    <action selector="projectDetailButton:" destination="qpU-Z0-FUl" eventType="touchUpInside" id="OnL-Y0-1aO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Yo-pn-ave">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="评论列表">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="104" y="182" width="60" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="commentListButton:" destination="qpU-Z0-FUl" eventType="touchUpInside" id="NZN-FY-XgA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpJ-QY-sPW">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="团队列表">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="111" y="248" width="60" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="teamListButton:" destination="qpU-Z0-FUl" eventType="touchUpInside" id="mRY-qn-PEs"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Azs-Qs-UGa"/>
-                                <exclude reference="0Yo-pn-ave"/>
-                                <exclude reference="VpJ-QY-sPW"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="Azs-Qs-UGa"/>
-                                <include reference="0Yo-pn-ave"/>
-                                <include reference="VpJ-QY-sPW"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" title="测试页" id="Ccf-rX-x7c"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mys-6U-sZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2070" y="1455.75"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -579,7 +491,6 @@
                     <connections>
                         <segue destination="reW-MG-52K" kind="relationship" relationship="viewControllers" id="7Ir-ff-7M1"/>
                         <segue destination="wZc-pm-3HZ" kind="relationship" relationship="viewControllers" id="9fW-O5-enP"/>
-                        <segue destination="xUL-3w-tCK" kind="relationship" relationship="viewControllers" id="plb-XI-vfN"/>
                         <segue destination="DY2-J6-8iR" kind="relationship" relationship="viewControllers" id="Hn7-Rb-hqn"/>
                     </connections>
                 </tabBarController>

@@ -11,6 +11,7 @@
 #import "TJTeamListViewModel.h"
 #import "TJProjectSender.h"
 #import "TJCreateTeamViewController.h"
+#import "TJTeamDetailViewController.h"
 
 @interface TJTeamListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *teamTableView;
@@ -94,6 +95,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     //点击团队
+    TJTeamDetailViewController *teamDeatailVC = [[TJTeamDetailViewController alloc] init];
+    [self.navigationController pushViewController:teamDeatailVC animated:YES];
 }
 
 
