@@ -23,6 +23,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //导航栏
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
+    [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    self.navigationItem.title = @"登录";
+    UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(hideViewController)];
+    self.navigationItem.rightBarButtonItem = createButton;
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
+    
     [[IQKeyboardManager sharedManager] setEnable:YES];
     
     self.usernameTextfield.borderStyle = UITextBorderStyleNone;

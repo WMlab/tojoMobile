@@ -676,32 +676,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4X-dj-mga">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="弹出登陆界面">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OD6-0h-N5l">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="155" y="424" width="90" height="30"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="751"/>
                                 </variation>
-                                <connections>
-                                    <action selector="showLogin:" destination="oUz-V5-t7l" eventType="touchUpInside" id="X0e-k3-LYm"/>
-                                </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="c4X-dj-mga"/>
+                                <exclude reference="OD6-0h-N5l"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="c4X-dj-mga"/>
+                                <include reference="OD6-0h-N5l"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="wUA-0B-t2D"/>
+                    <connections>
+                        <outlet property="myTableView" destination="OD6-0h-N5l" id="Bve-La-7jR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llr-zX-Iys" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

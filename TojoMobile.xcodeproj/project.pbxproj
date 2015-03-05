@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3208CF751AA7FC720078B378 /* TJUserMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3208CF731AA7FC720078B378 /* TJUserMenuCell.m */; };
+		3208CF761AA7FC720078B378 /* TJUserMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3208CF741AA7FC720078B378 /* TJUserMenuCell.xib */; };
+		3208CF791AA81CA60078B378 /* TJUserAttendProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3208CF781AA81CA60078B378 /* TJUserAttendProjectsViewController.m */; };
+		3208CF7C1AA81CC50078B378 /* TJUserAttendTeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3208CF7B1AA81CC50078B378 /* TJUserAttendTeamsViewController.m */; };
+		3208CF7F1AA81CE40078B378 /* TJUserCollectProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3208CF7E1AA81CE40078B378 /* TJUserCollectProjectsViewController.m */; };
 		321146391A66997900F89494 /* TJProjectInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 321146381A66997900F89494 /* TJProjectInfoModel.m */; };
 		3211463C1A669A7A00F89494 /* TJCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3211463B1A669A7A00F89494 /* TJCommentModel.m */; };
 		3211463F1A669AD600F89494 /* TJTeamModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3211463E1A669AD600F89494 /* TJTeamModel.m */; };
@@ -129,6 +134,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3208CF721AA7FC720078B378 /* TJUserMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJUserMenuCell.h; path = cell/TJUserMenuCell.h; sourceTree = "<group>"; };
+		3208CF731AA7FC720078B378 /* TJUserMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJUserMenuCell.m; path = cell/TJUserMenuCell.m; sourceTree = "<group>"; };
+		3208CF741AA7FC720078B378 /* TJUserMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJUserMenuCell.xib; path = cell/TJUserMenuCell.xib; sourceTree = "<group>"; };
+		3208CF771AA81CA60078B378 /* TJUserAttendProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserAttendProjectsViewController.h; sourceTree = "<group>"; };
+		3208CF781AA81CA60078B378 /* TJUserAttendProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserAttendProjectsViewController.m; sourceTree = "<group>"; };
+		3208CF7A1AA81CC50078B378 /* TJUserAttendTeamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserAttendTeamsViewController.h; sourceTree = "<group>"; };
+		3208CF7B1AA81CC50078B378 /* TJUserAttendTeamsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserAttendTeamsViewController.m; sourceTree = "<group>"; };
+		3208CF7D1AA81CE40078B378 /* TJUserCollectProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserCollectProjectsViewController.h; sourceTree = "<group>"; };
+		3208CF7E1AA81CE40078B378 /* TJUserCollectProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserCollectProjectsViewController.m; sourceTree = "<group>"; };
 		321146371A66997900F89494 /* TJProjectInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectInfoModel.h; path = projects/businessmodel/TJProjectInfoModel.h; sourceTree = "<group>"; };
 		321146381A66997900F89494 /* TJProjectInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectInfoModel.m; path = projects/businessmodel/TJProjectInfoModel.m; sourceTree = "<group>"; };
 		3211463A1A669A7A00F89494 /* TJCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCommentModel.h; path = projects/businessmodel/TJCommentModel.h; sourceTree = "<group>"; };
@@ -353,6 +367,16 @@
 				85A33652F3F2C3B494D43C51 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		3208CF711AA7FBF80078B378 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				3208CF721AA7FC720078B378 /* TJUserMenuCell.h */,
+				3208CF731AA7FC720078B378 /* TJUserMenuCell.m */,
+				3208CF741AA7FC720078B378 /* TJUserMenuCell.xib */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		324187A51A6BE56C0088A3BB /* image */ = {
@@ -719,6 +743,7 @@
 		EAEE9B301A5BFFFB00FF3DA9 /* user */ = {
 			isa = PBXGroup;
 			children = (
+				3208CF711AA7FBF80078B378 /* cell */,
 				EA99FC721A5EE9C70069ADBD /* businessModel */,
 				EAEE9B321A5C006400FF3DA9 /* service */,
 				EAEE9B331A5C006400FF3DA9 /* viewModel */,
@@ -728,6 +753,12 @@
 				EA1CC79B1A7630A000E96FBE /* TJRegisterViewController.m */,
 				EA775B9D1A78044C00B58DB4 /* TJUserViewController.h */,
 				EA775B9E1A78044C00B58DB4 /* TJUserViewController.m */,
+				3208CF771AA81CA60078B378 /* TJUserAttendProjectsViewController.h */,
+				3208CF781AA81CA60078B378 /* TJUserAttendProjectsViewController.m */,
+				3208CF7A1AA81CC50078B378 /* TJUserAttendTeamsViewController.h */,
+				3208CF7B1AA81CC50078B378 /* TJUserAttendTeamsViewController.m */,
+				3208CF7D1AA81CE40078B378 /* TJUserCollectProjectsViewController.h */,
+				3208CF7E1AA81CE40078B378 /* TJUserCollectProjectsViewController.m */,
 			);
 			path = user;
 			sourceTree = "<group>";
@@ -855,6 +886,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA775BC31A79355500B58DB4 /* forest.jpg in Resources */,
+				3208CF761AA7FC720078B378 /* TJUserMenuCell.xib in Resources */,
 				32F513AE1A6E26F700224E74 /* TJTeamListCell.xib in Resources */,
 				32C4B4151A71EB2500B8D401 /* TJCommentViewController.xib in Resources */,
 				EA68E5281A5A2FB300CA2CCD /* Main.storyboard in Resources */,
@@ -939,8 +971,10 @@
 				3211463C1A669A7A00F89494 /* TJCommentModel.m in Sources */,
 				32FD12081A971CB2004D3A15 /* UUDatePicker_DateModel.m in Sources */,
 				EA1AD4331A752C06004EADCA /* TJUserRegisterRequestModel.m in Sources */,
+				3208CF791AA81CA60078B378 /* TJUserAttendProjectsViewController.m in Sources */,
 				32FD12091A971CB2004D3A15 /* UUDatePicker.m in Sources */,
 				32C4B4181A71F1E700B8D401 /* TJCommentRequestModel.m in Sources */,
+				3208CF7F1AA81CE40078B378 /* TJUserCollectProjectsViewController.m in Sources */,
 				EA0A0BC71A67E05300E37BFD /* TJProjectListViewModel.m in Sources */,
 				3241878F1A68AD350088A3BB /* TJProjectDetailInfoView.m in Sources */,
 				EA99FC771A5EE9C70069ADBD /* TJUserLoginRequestModel.m in Sources */,
@@ -949,6 +983,7 @@
 				32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */,
 				32C4B4141A71EB2500B8D401 /* TJCommentViewController.m in Sources */,
 				32C4B41B1A71F20200B8D401 /* TJCommentResponseModel.m in Sources */,
+				3208CF7C1AA81CC50078B378 /* TJUserAttendTeamsViewController.m in Sources */,
 				EA775BD71A7A7FF400B58DB4 /* TJAppHomeRequestModel.m in Sources */,
 				EA99FC711A5ED72A0069ADBD /* TJSender.m in Sources */,
 				32F513A81A6E26C900224E74 /* TJCommentListCell.m in Sources */,
@@ -963,6 +998,7 @@
 				3211463F1A669AD600F89494 /* TJTeamModel.m in Sources */,
 				EA68E51F1A5A2FB300CA2CCD /* AppDelegate.m in Sources */,
 				EAA4E0901A7E565000E9E8D2 /* TJProjectHomeViewController.m in Sources */,
+				3208CF751AA7FC720078B378 /* TJUserMenuCell.m in Sources */,
 				EA775BCC1A7A675C00B58DB4 /* TJTableHeaderView.m in Sources */,
 				321146391A66997900F89494 /* TJProjectInfoModel.m in Sources */,
 				325A92691A90FE0E00431B0E /* swiftTest.swift in Sources */,
@@ -1137,6 +1173,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = TojoMobile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1155,6 +1192,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = TojoMobile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

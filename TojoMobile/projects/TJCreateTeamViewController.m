@@ -31,7 +31,7 @@
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.navigationItem.title = @"创建团队";
-    UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithTitle:@"发布" style:UIBarButtonItemStylePlain target:Nil action:@selector(createTeamMethod)];
+    UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithTitle:@"发布" style:UIBarButtonItemStylePlain target:self action:@selector(createTeamMethod)];
     self.navigationItem.rightBarButtonItem = createButton;
     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     

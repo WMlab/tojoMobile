@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TJUserViewController : UIViewController
+@interface TJUserViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
