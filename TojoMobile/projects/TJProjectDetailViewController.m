@@ -19,12 +19,14 @@
 #import "TJCommentListViewController.h"
 #import "TJTeamListViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <RJImageLoader/UIImageView+RJLoader.h>
 #import "TJProjectSender.h"
 #import <Masonry/Masonry.h>
 
 #define NAVBAR_CHANGE_POINT 50
 
 @interface TJProjectDetailViewController (){
+    int projectId;
     StrechyParallaxScrollView *strechy;
 }
 
@@ -43,59 +45,67 @@
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     self.navigationItem.title = @"项目详情";
     
-    //top view
-    UIImageView *topView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, TJScreenWidth, 3*TJScreenWidth/5)];
-    
-    TJEndDateView *endDateView = [[TJEndDateView alloc] initWithFrame:CGRectMake(0, 0, 90, 33)];
-    [topView addSubview:endDateView];
-    //masonary constraints for parallax view subviews (optional)
-    UIEdgeInsets padding = UIEdgeInsetsMake(10, 0, -40, 320);
-    [endDateView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.equalTo ([NSValue valueWithCGSize:CGSizeMake(80, 33)]);
-        //make.centerY.equalTo (topView);
-        make.left.equalTo(topView).with.offset(padding.left);
-        make.bottom.equalTo(topView).with.offset(padding.bottom);
-    }];
-    
-    //create strechy parallax scroll view
-    strechy = [[StrechyParallaxScrollView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-49-64) andTopView:topView];
-    [self.view addSubview:strechy];
-    
-    //basic info
-    float itemStartY = topView.frame.size.height;
-    TJProjectBasicInfoView *basicInfoView = [[TJProjectBasicInfoView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+200)];
-    [strechy addSubview:basicInfoView];
-    
-    //detial info
-    itemStartY += 200;
-    TJProjectDetailInfoView *detailInfoView = [[TJProjectDetailInfoView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+200)];
-    [detailInfoView.allInfoButton addTarget:self action:@selector(allInfoButtonClicked)forControlEvents:UIControlEventTouchUpInside];
-    [strechy addSubview:detailInfoView];
-    
-    //comment part
-    itemStartY += 200;
-    TJProjectCommentPartView *commentPartView = [[TJProjectCommentPartView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+290)];
-    [commentPartView.allCommentButton addTarget:self action:@selector(allCommentButtonClicked)forControlEvents:UIControlEventTouchUpInside];
-    [strechy addSubview:commentPartView];
-    
-    //team part
-    itemStartY += 290;
-    TJProjectTeamPartView *teamPartView = [[TJProjectTeamPartView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+270)];
-    [teamPartView.allTeamButton addTarget:self action:@selector(allTeamButtonClicked)forControlEvents:UIControlEventTouchUpInside];
-    [strechy addSubview:teamPartView];
-    
-    //set scrollable area (classic uiscrollview stuff)
-    itemStartY = itemStartY+270;
-    [strechy setContentSize:CGSizeMake(TJScreenWidth, itemStartY)];
-    
     viewModel = [[TJProjectDetailViewModel alloc] init];
     //发服务加载
-    [[TJProjectSender getInstance] sendGetProjectDetailWithViewModel:viewModel completeBlock:^(BOOL success, NSString *    message) {
+    [[TJProjectSender getInstance] sendGetProjectDetailWithViewModel:viewModel projectId:projectId completeBlock:^(BOOL success, NSString *    message) {
         if (success) {
             NSLog(@"success");
+            //页面结构载入
+            //top view
+            UIImageView *topImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, TJScreenWidth, 3*TJScreenWidth/5)];
+            
+            TJEndDateView *endDateView = [[TJEndDateView alloc] initWithFrame:CGRectMake(0, 0, 90, 33)];
+            [topImageView addSubview:endDateView];
+            //masonary constraints for parallax view subviews (optional)
+            UIEdgeInsets padding = UIEdgeInsetsMake(10, 0, -40, 320);
+            [endDateView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.size.equalTo ([NSValue valueWithCGSize:CGSizeMake(80, 33)]);
+                //make.centerY.equalTo (topView);
+                make.left.equalTo(topImageView).with.offset(padding.left);
+                make.bottom.equalTo(topImageView).with.offset(padding.bottom);
+            }];
+            
+            //create strechy parallax scroll view
+            strechy = [[StrechyParallaxScrollView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-49-64) andTopView:topImageView];
+            [self.view addSubview:strechy];
+            //basic info
+            float itemStartY = topImageView.frame.size.height;
+            TJProjectBasicInfoView *basicInfoView = [[TJProjectBasicInfoView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+200)];
+            [strechy addSubview:basicInfoView];
+            
+            //detial info
+            itemStartY += 200;
+            TJProjectDetailInfoView *detailInfoView = [[TJProjectDetailInfoView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+200)];
+            [detailInfoView.allInfoButton addTarget:self action:@selector(allInfoButtonClicked)forControlEvents:UIControlEventTouchUpInside];
+            [strechy addSubview:detailInfoView];
+            
+            //comment part
+            itemStartY += 200;
+            TJProjectCommentPartView *commentPartView = [[TJProjectCommentPartView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+290)];
+            [commentPartView.allCommentButton addTarget:self action:@selector(allCommentButtonClicked)forControlEvents:UIControlEventTouchUpInside];
+            [strechy addSubview:commentPartView];
+            
+            //team part
+            itemStartY += 290;
+            TJProjectTeamPartView *teamPartView = [[TJProjectTeamPartView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+270)];
+            [teamPartView.allTeamButton addTarget:self action:@selector(allTeamButtonClicked)forControlEvents:UIControlEventTouchUpInside];
+            [strechy addSubview:teamPartView];
+            
+            //set scrollable area (classic uiscrollview stuff)
+            itemStartY = itemStartY+270;
+            [strechy setContentSize:CGSizeMake(TJScreenWidth, itemStartY)];
+            
+            
             //页面进行赋值
             //top view
-            [topView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, viewModel.projectInfoModel.projectImage]]];
+//            [topImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, viewModel.projectInfoModel.projectImage]]];
+            [topImageView startLoaderWithTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
+            [topImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, viewModel.projectInfoModel.projectImage]] placeholderImage:nil options:SDWebImageCacheMemoryOnly | SDWebImageRefreshCached progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                [topImageView updateImageDownloadProgress:(CGFloat)receivedSize/expectedSize];
+            } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                [topImageView reveal];
+            }];
+            
             [endDateView.endDateLabel setText:viewModel.projectInfoModel.projectEndDate];//set end date
             
             [basicInfoView.projectTitleLabel setText:viewModel.projectInfoModel.projectName];
@@ -103,7 +113,6 @@
             [basicInfoView.projectFounderImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, viewModel.projectInfoModel.projectFounderImage]]];
             [basicInfoView.projectFounderLabel setText:viewModel.projectInfoModel.projectFounderName];
             [basicInfoView.projectFounderUniversityLabel setText:viewModel.projectInfoModel.projectFounderUniversityName];
-            
             //detial info
             detailInfoView.projectDetailLabel.text = viewModel.projectInfoModel.projectText;
             
@@ -126,7 +135,16 @@
             NSLog(@"falied");
         }
     }];
-    
+    //单指单击
+    UITapGestureRecognizer *singleFingerOne = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleFingerEvent:)];
+    singleFingerOne.numberOfTouchesRequired = 1; //手指数
+    singleFingerOne.numberOfTapsRequired = 1; //tap次数
+    singleFingerOne.delegate= self;
+}
+
+#pragma mark --------- 设置id -----------
+- (void)setProjectId:(int)ID{
+    projectId = ID;
 }
 
 #pragma mark --------- 详情页面按钮跳转 -----------
@@ -172,3 +190,5 @@
     [self.navigationController pushViewController:teamListViewController animated:YES];
 }
 @end
+
+#pragma mark --------- UIGestureRecognizerDelegate -----------

@@ -188,6 +188,7 @@
     
     TJProjectDetailViewController *detailViewController = [[TJProjectDetailViewController alloc] init];
     detailViewController.hidesBottomBarWhenPushed = YES;
+    [detailViewController setProjectId:1];
     
     [self.navigationController pushViewController:detailViewController animated:YES];
 }

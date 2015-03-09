@@ -101,9 +101,9 @@ static TJProjectSender * _sender = nil;
 }
 
 #pragma mark --------- 项目详情请求 -----------
--(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback{
+-(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback{
     TJProjectDetailRequestModel *requestModel = [[TJProjectDetailRequestModel alloc] init];
-    requestModel.projectId = 1;
+    requestModel.projectId = projectId;
     NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_PROJECT_DETAIL];
     AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
     reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
