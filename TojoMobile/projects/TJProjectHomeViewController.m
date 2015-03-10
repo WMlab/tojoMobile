@@ -188,7 +188,16 @@
     
     TJProjectDetailViewController *detailViewController = [[TJProjectDetailViewController alloc] init];
     detailViewController.hidesBottomBarWhenPushed = YES;
-    [detailViewController setProjectId:1];
+    
+    TJProjectInfoModel *infoModel = nil;
+    if (indexPath.row == 0 && [self hasAdProjects]) {
+        infoModel = [_viewModel.projectList objectAtIndex:0];
+    }
+    else {
+        infoModel = (TJProjectInfoModel *)[_viewModel.projectList objectAtIndex:indexPath.row - [self hasAdProjects]];
+    }
+
+    [detailViewController setProjectId:infoModel.projectID];
     
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
