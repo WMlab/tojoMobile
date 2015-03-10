@@ -16,8 +16,9 @@
 #import "TJProjectSender.h"
 #import "TJProjectListCell.h"
 #import "TJProjectDetailViewController.h"
+#import "TJScrollImageCell.h"
 
-@interface TJProjectHomeViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TJProjectHomeViewController () <UITableViewDelegate, UITableViewDataSource, TJScrollImageDelegate>
 {
     dispatch_once_t onceAd,onceList,refreshAfterLaunch;
 }
@@ -129,6 +130,11 @@
     //切换分类后，自动下拉刷新更新数据
     [self.projectTableView headerBeginRefreshing];
 }
+#pragma mark - image scrollview delegate
+-(void) selectPageNumber:(NSInteger) index {
+    TJProjectInfoModel *infoModel = [_viewModel.adProjects objectAtIndex:index];
+    [self goToDetailViewWithProjectId:infoModel.projectID];
+}
 
 #pragma mark - Table view data source
 
@@ -149,9 +155,11 @@
     if (indexPath.row == 0 && [self hasAdProjects]) {
         //最上面的滚动展示cell
         dispatch_once(&onceAd, ^{
-            [tableView registerNib:[UINib nibWithNibName:@"TJAdScrollCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJAdScrollCell"];});
-        static NSString *cellId = @"TJAdScrollCell";
-        TJAdScrollCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+            [tableView registerNib:[UINib nibWithNibName:@"TJScrollImageCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJScrollImageCell"];});
+        static NSString *cellId = @"TJScrollImageCell";
+//        TJAdScrollCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+        TJScrollImageCell  *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+        cell.delegate = self;
         [cell setCellWithAdProjects:_viewModel.adProjects];
         return cell;
     }
@@ -185,10 +193,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    TJProjectDetailViewController *detailViewController = [[TJProjectDetailViewController alloc] init];
-    detailViewController.hidesBottomBarWhenPushed = YES;
-    
+
     TJProjectInfoModel *infoModel = nil;
     if (indexPath.row == 0 && [self hasAdProjects]) {
         infoModel = [_viewModel.projectList objectAtIndex:0];
@@ -196,20 +201,16 @@
     else {
         infoModel = (TJProjectInfoModel *)[_viewModel.projectList objectAtIndex:indexPath.row - [self hasAdProjects]];
     }
-
-    [detailViewController setProjectId:infoModel.projectID];
     
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    [self goToDetailViewWithProjectId:infoModel.projectID];
 }
 
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-//    TJProjectCategoryHead *headView = [[TJProjectCategoryHead alloc] init];
-//    return headView;
-//}
-//
-//- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-//    return 30;
-//}
+- (void) goToDetailViewWithProjectId:(int) projectId {
+    TJProjectDetailViewController *detailViewController = [[TJProjectDetailViewController alloc] init];
+    [detailViewController setProjectId:projectId];
+    detailViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detailViewController animated:YES];
+}
 
 /*
 #pragma mark - Navigation

@@ -72,8 +72,6 @@
 		EA07EB3B1A80A099006BC0C8 /* TJProjectHomeRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA07EB3A1A80A099006BC0C8 /* TJProjectHomeRequestModel.m */; };
 		EA07EB3E1A80A0D5006BC0C8 /* TJProjectHomeResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA07EB3D1A80A0D5006BC0C8 /* TJProjectHomeResponseModel.m */; };
 		EA07EB411A81238C006BC0C8 /* TJProjectHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA07EB401A81238C006BC0C8 /* TJProjectHomeViewModel.m */; };
-		EA07EB451A83B915006BC0C8 /* TJAdScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA07EB431A83B915006BC0C8 /* TJAdScrollCell.m */; };
-		EA07EB461A83B915006BC0C8 /* TJAdScrollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA07EB441A83B915006BC0C8 /* TJAdScrollCell.xib */; };
 		EA0A0BB71A66A9B300E37BFD /* TJProjectListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0A0BB51A66A9B300E37BFD /* TJProjectListCell.m */; };
 		EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0A0BB61A66A9B300E37BFD /* TJProjectListCell.xib */; };
 		EA0A0BC01A67CC3C00E37BFD /* TJSession.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0A0BBF1A67CC3C00E37BFD /* TJSession.m */; };
@@ -82,6 +80,10 @@
 		EA1AD4331A752C06004EADCA /* TJUserRegisterRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1AD4321A752C06004EADCA /* TJUserRegisterRequestModel.m */; };
 		EA1CC7951A761BC500E96FBE /* TJTextFIeld.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1CC7941A761BC500E96FBE /* TJTextFIeld.m */; };
 		EA1CC79C1A7630A000E96FBE /* TJRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1CC79B1A7630A000E96FBE /* TJRegisterViewController.m */; };
+		EA2EB3B51AAF2628005440A1 /* TJScrollImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2EB3B31AAF2628005440A1 /* TJScrollImageCell.m */; };
+		EA2EB3B61AAF2628005440A1 /* TJScrollImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2EB3B41AAF2628005440A1 /* TJScrollImageCell.xib */; };
+		EA2EB3C21AAF58F2005440A1 /* TJImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2EB3BF1AAF58F2005440A1 /* TJImageScrollView.m */; };
+		EA2EB3C31AAF58F2005440A1 /* TJScrollPage.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2EB3C11AAF58F2005440A1 /* TJScrollPage.m */; };
 		EA3248481A668D6400D45E30 /* TJProjectListRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3248471A668D6400D45E30 /* TJProjectListRequestModel.m */; };
 		EA32484B1A668D9300D45E30 /* TJProjectListResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32484A1A668D9300D45E30 /* TJProjectListResponseModel.m */; };
 		EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E51B1A5A2FB300CA2CCD /* main.m */; };
@@ -249,9 +251,6 @@
 		EA07EB3D1A80A0D5006BC0C8 /* TJProjectHomeResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectHomeResponseModel.m; path = projects/businessmodel/TJProjectHomeResponseModel.m; sourceTree = "<group>"; };
 		EA07EB3F1A81238C006BC0C8 /* TJProjectHomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectHomeViewModel.h; path = projects/viewmodel/TJProjectHomeViewModel.h; sourceTree = "<group>"; };
 		EA07EB401A81238C006BC0C8 /* TJProjectHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectHomeViewModel.m; path = projects/viewmodel/TJProjectHomeViewModel.m; sourceTree = "<group>"; };
-		EA07EB421A83B915006BC0C8 /* TJAdScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJAdScrollCell.h; path = projects/cell/TJAdScrollCell.h; sourceTree = "<group>"; };
-		EA07EB431A83B915006BC0C8 /* TJAdScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJAdScrollCell.m; path = projects/cell/TJAdScrollCell.m; sourceTree = "<group>"; };
-		EA07EB441A83B915006BC0C8 /* TJAdScrollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJAdScrollCell.xib; path = projects/cell/TJAdScrollCell.xib; sourceTree = "<group>"; };
 		EA0A0BB41A66A9B300E37BFD /* TJProjectListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListCell.h; path = projects/cell/TJProjectListCell.h; sourceTree = "<group>"; };
 		EA0A0BB51A66A9B300E37BFD /* TJProjectListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListCell.m; path = projects/cell/TJProjectListCell.m; sourceTree = "<group>"; };
 		EA0A0BB61A66A9B300E37BFD /* TJProjectListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectListCell.xib; path = projects/cell/TJProjectListCell.xib; sourceTree = "<group>"; };
@@ -267,6 +266,13 @@
 		EA1CC7941A761BC500E96FBE /* TJTextFIeld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJTextFIeld.m; sourceTree = "<group>"; };
 		EA1CC79A1A7630A000E96FBE /* TJRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRegisterViewController.h; sourceTree = "<group>"; };
 		EA1CC79B1A7630A000E96FBE /* TJRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRegisterViewController.m; sourceTree = "<group>"; };
+		EA2EB3B21AAF2628005440A1 /* TJScrollImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJScrollImageCell.h; path = projects/cell/TJScrollImageCell.h; sourceTree = "<group>"; };
+		EA2EB3B31AAF2628005440A1 /* TJScrollImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJScrollImageCell.m; path = projects/cell/TJScrollImageCell.m; sourceTree = "<group>"; };
+		EA2EB3B41AAF2628005440A1 /* TJScrollImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJScrollImageCell.xib; path = projects/cell/TJScrollImageCell.xib; sourceTree = "<group>"; };
+		EA2EB3BE1AAF58F2005440A1 /* TJImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJImageScrollView.h; sourceTree = "<group>"; };
+		EA2EB3BF1AAF58F2005440A1 /* TJImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJImageScrollView.m; sourceTree = "<group>"; };
+		EA2EB3C01AAF58F2005440A1 /* TJScrollPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJScrollPage.h; sourceTree = "<group>"; };
+		EA2EB3C11AAF58F2005440A1 /* TJScrollPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJScrollPage.m; sourceTree = "<group>"; };
 		EA3248461A668D6400D45E30 /* TJProjectListRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListRequestModel.h; path = projects/businessmodel/TJProjectListRequestModel.h; sourceTree = "<group>"; };
 		EA3248471A668D6400D45E30 /* TJProjectListRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListRequestModel.m; path = projects/businessmodel/TJProjectListRequestModel.m; sourceTree = "<group>"; };
 		EA3248491A668D9300D45E30 /* TJProjectListResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListResponseModel.h; path = projects/businessmodel/TJProjectListResponseModel.h; sourceTree = "<group>"; };
@@ -431,6 +437,7 @@
 		32959EB81A5EBD1C00C2B9D6 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				EA2EB3BD1AAF58F2005440A1 /* TJImageScroll */,
 				32FD12031A971C70004D3A15 /* TJUIPicker */,
 				328870D51A91C514002E8A00 /* BreakOutToRefreshView.swift */,
 				321146431A66ACC600F89494 /* StrechyParallaxScrollView.h */,
@@ -529,9 +536,6 @@
 		32959EBC1A5EBD6900C2B9D6 /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				EA07EB421A83B915006BC0C8 /* TJAdScrollCell.h */,
-				EA07EB431A83B915006BC0C8 /* TJAdScrollCell.m */,
-				EA07EB441A83B915006BC0C8 /* TJAdScrollCell.xib */,
 				EA0A0BB41A66A9B300E37BFD /* TJProjectListCell.h */,
 				EA0A0BB51A66A9B300E37BFD /* TJProjectListCell.m */,
 				EA0A0BB61A66A9B300E37BFD /* TJProjectListCell.xib */,
@@ -541,6 +545,9 @@
 				32F513AA1A6E26F700224E74 /* TJTeamListCell.h */,
 				32F513AB1A6E26F700224E74 /* TJTeamListCell.m */,
 				32F513AC1A6E26F700224E74 /* TJTeamListCell.xib */,
+				EA2EB3B21AAF2628005440A1 /* TJScrollImageCell.h */,
+				EA2EB3B31AAF2628005440A1 /* TJScrollImageCell.m */,
+				EA2EB3B41AAF2628005440A1 /* TJScrollImageCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -572,6 +579,18 @@
 				EA07EB301A7E7296006BC0C8 /* projectCategory.plist */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		EA2EB3BD1AAF58F2005440A1 /* TJImageScroll */ = {
+			isa = PBXGroup;
+			children = (
+				EA2EB3BE1AAF58F2005440A1 /* TJImageScrollView.h */,
+				EA2EB3BF1AAF58F2005440A1 /* TJImageScrollView.m */,
+				EA2EB3C01AAF58F2005440A1 /* TJScrollPage.h */,
+				EA2EB3C11AAF58F2005440A1 /* TJScrollPage.m */,
+			);
+			name = TJImageScroll;
+			path = projects/view/TJImageScroll;
 			sourceTree = "<group>";
 		};
 		EA68E50D1A5A2FB300CA2CCD = {
@@ -899,6 +918,7 @@
 				EA07EB2F1A7E7260006BC0C8 /* Images.xcassets in Resources */,
 				EA07EB311A7E7296006BC0C8 /* projectCategory.plist in Resources */,
 				EA775BC91A793E0800B58DB4 /* TJFourProjectCell.xib in Resources */,
+				EA2EB3B61AAF2628005440A1 /* TJScrollImageCell.xib in Resources */,
 				32D8BD8F1A752325002750A0 /* TJCreateTeamViewController.xib in Resources */,
 				324187A71A6BE57C0088A3BB /* titleImageTest.png in Resources */,
 				EA775BC41A79355500B58DB4 /* mountains.jpg in Resources */,
@@ -906,7 +926,6 @@
 				32F5139B1A6E171500224E74 /* TJCommentListViewController.xib in Resources */,
 				32F513911A6E03CA00224E74 /* TJTeamListViewController.xib in Resources */,
 				3241879A1A6B5B9E0088A3BB /* TJProjectInfoViewController.xib in Resources */,
-				EA07EB461A83B915006BC0C8 /* TJAdScrollCell.xib in Resources */,
 				EA775BBB1A79330100B58DB4 /* arrow.png in Resources */,
 				EA775BBC1A79330100B58DB4 /* arrow@2x.png in Resources */,
 				EA775BC21A79355500B58DB4 /* dock.jpg in Resources */,
@@ -979,6 +998,8 @@
 				3241878F1A68AD350088A3BB /* TJProjectDetailInfoView.m in Sources */,
 				EA99FC771A5EE9C70069ADBD /* TJUserLoginRequestModel.m in Sources */,
 				EA775BA71A79230500B58DB4 /* TJAppHomeResponseModel.m in Sources */,
+				EA2EB3C31AAF58F2005440A1 /* TJScrollPage.m in Sources */,
+				EA2EB3B51AAF2628005440A1 /* TJScrollImageCell.m in Sources */,
 				EA07EB3E1A80A0D5006BC0C8 /* TJProjectHomeResponseModel.m in Sources */,
 				32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */,
 				32C4B4141A71EB2500B8D401 /* TJCommentViewController.m in Sources */,
@@ -994,6 +1015,7 @@
 				3241878C1A68AD160088A3BB /* TJProjectBasicInfoView.m in Sources */,
 				32F513B81A6E68C900224E74 /* TJTeamListResponseModel.m in Sources */,
 				32F513901A6E03CA00224E74 /* TJTeamListViewController.m in Sources */,
+				EA2EB3C21AAF58F2005440A1 /* TJImageScrollView.m in Sources */,
 				324187991A6B5B9E0088A3BB /* TJProjectInfoViewController.m in Sources */,
 				3211463F1A669AD600F89494 /* TJTeamModel.m in Sources */,
 				EA68E51F1A5A2FB300CA2CCD /* AppDelegate.m in Sources */,
@@ -1006,7 +1028,6 @@
 				EA775BC81A793E0800B58DB4 /* TJFourProjectCell.m in Sources */,
 				EA775BAA1A7923D400B58DB4 /* TJAppHomeSender.m in Sources */,
 				32F513B51A6E68A400224E74 /* TJTeamListRequestModel.m in Sources */,
-				EA07EB451A83B915006BC0C8 /* TJAdScrollCell.m in Sources */,
 				EAA4E0931A7E5AFD00E9E8D2 /* TJProjectCategoryHead.m in Sources */,
 				EA775BBD1A79330100B58DB4 /* MMScrollPage.m in Sources */,
 				32F5139E1A6E230000224E74 /* TJTeamListViewModel.m in Sources */,
