@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Glance - TojoMobile WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+		<key>Notification - TojoMobile WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>TojoMobile WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 		<key>TojoMobile.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +27,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>32CE51851AB135D900DE07D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EA68E5151A5A2FB300CA2CCD</key>
 		<dict>
 			<key>primary</key>

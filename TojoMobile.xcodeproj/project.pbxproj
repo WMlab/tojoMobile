@@ -43,6 +43,14 @@
 		32C4B4151A71EB2500B8D401 /* TJCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C4B4131A71EB2500B8D401 /* TJCommentViewController.xib */; };
 		32C4B4181A71F1E700B8D401 /* TJCommentRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4171A71F1E700B8D401 /* TJCommentRequestModel.m */; };
 		32C4B41B1A71F20200B8D401 /* TJCommentResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B41A1A71F20200B8D401 /* TJCommentResponseModel.m */; };
+		32CE517D1AB135D900DE07D8 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE517C1AB135D900DE07D8 /* InterfaceController.swift */; };
+		32CE517F1AB135D900DE07D8 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE517E1AB135D900DE07D8 /* NotificationController.swift */; };
+		32CE51811AB135D900DE07D8 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE51801AB135D900DE07D8 /* GlanceController.swift */; };
+		32CE51831AB135D900DE07D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32CE51821AB135D900DE07D8 /* Images.xcassets */; };
+		32CE51871AB135D900DE07D8 /* TojoMobile WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 32CE51861AB135D900DE07D8 /* TojoMobile WatchKit App.app */; };
+		32CE518F1AB135D900DE07D8 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32CE518D1AB135D900DE07D8 /* Interface.storyboard */; };
+		32CE51911AB135D900DE07D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32CE51901AB135D900DE07D8 /* Images.xcassets */; };
+		32CE51941AB135D900DE07D8 /* TojoMobile WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 32CE51771AB135D800DE07D8 /* TojoMobile WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		32D8BD8E1A752325002750A0 /* TJCreateTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D8BD8C1A752325002750A0 /* TJCreateTeamViewController.m */; };
 		32D8BD8F1A752325002750A0 /* TJCreateTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D8BD8D1A752325002750A0 /* TJCreateTeamViewController.xib */; };
 		32D8BD921A7605BF002750A0 /* TJCreateTeamRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D8BD911A7605BF002750A0 /* TJCreateTeamRequestModel.m */; };
@@ -126,6 +134,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		32CE51881AB135D900DE07D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA68E50E1A5A2FB300CA2CCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32CE51851AB135D900DE07D8;
+			remoteInfo = "TojoMobile WatchKit App";
+		};
+		32CE51921AB135D900DE07D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA68E50E1A5A2FB300CA2CCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32CE51761AB135D800DE07D8;
+			remoteInfo = "TojoMobile WatchKit Extension";
+		};
 		EA68E5331A5A2FB300CA2CCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA68E50E1A5A2FB300CA2CCD /* Project object */;
@@ -134,6 +156,20 @@
 			remoteInfo = TojoMobile;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		32CE519B1AB135D900DE07D8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				32CE51941AB135D900DE07D8 /* TojoMobile WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3208CF721AA7FC720078B378 /* TJUserMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJUserMenuCell.h; path = cell/TJUserMenuCell.h; sourceTree = "<group>"; };
@@ -201,6 +237,17 @@
 		32C4B4171A71F1E700B8D401 /* TJCommentRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCommentRequestModel.m; path = projects/businessmodel/TJCommentRequestModel.m; sourceTree = "<group>"; };
 		32C4B4191A71F20200B8D401 /* TJCommentResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCommentResponseModel.h; path = projects/businessmodel/TJCommentResponseModel.h; sourceTree = "<group>"; };
 		32C4B41A1A71F20200B8D401 /* TJCommentResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCommentResponseModel.m; path = projects/businessmodel/TJCommentResponseModel.m; sourceTree = "<group>"; };
+		32CE51771AB135D800DE07D8 /* TojoMobile WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TojoMobile WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32CE517A1AB135D900DE07D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32CE517B1AB135D900DE07D8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		32CE517C1AB135D900DE07D8 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		32CE517E1AB135D900DE07D8 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		32CE51801AB135D900DE07D8 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		32CE51821AB135D900DE07D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		32CE51861AB135D900DE07D8 /* TojoMobile WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TojoMobile WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32CE518C1AB135D900DE07D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32CE518E1AB135D900DE07D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		32CE51901AB135D900DE07D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		32D8BD8B1A752325002750A0 /* TJCreateTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCreateTeamViewController.h; path = projects/TJCreateTeamViewController.h; sourceTree = "<group>"; };
 		32D8BD8C1A752325002750A0 /* TJCreateTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCreateTeamViewController.m; path = projects/TJCreateTeamViewController.m; sourceTree = "<group>"; };
 		32D8BD8D1A752325002750A0 /* TJCreateTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJCreateTeamViewController.xib; path = projects/TJCreateTeamViewController.xib; sourceTree = "<group>"; };
@@ -347,6 +394,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		32CE51741AB135D800DE07D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA68E5131A5A2FB300CA2CCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -552,6 +606,45 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		32CE51781AB135D900DE07D8 /* TojoMobile WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				32CE517C1AB135D900DE07D8 /* InterfaceController.swift */,
+				32CE517E1AB135D900DE07D8 /* NotificationController.swift */,
+				32CE51801AB135D900DE07D8 /* GlanceController.swift */,
+				32CE51821AB135D900DE07D8 /* Images.xcassets */,
+				32CE51791AB135D900DE07D8 /* Supporting Files */,
+			);
+			path = "TojoMobile WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		32CE51791AB135D900DE07D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				32CE517A1AB135D900DE07D8 /* Info.plist */,
+				32CE517B1AB135D900DE07D8 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		32CE518A1AB135D900DE07D8 /* TojoMobile WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				32CE518D1AB135D900DE07D8 /* Interface.storyboard */,
+				32CE51901AB135D900DE07D8 /* Images.xcassets */,
+				32CE518B1AB135D900DE07D8 /* Supporting Files */,
+			);
+			path = "TojoMobile WatchKit App";
+			sourceTree = "<group>";
+		};
+		32CE518B1AB135D900DE07D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				32CE518C1AB135D900DE07D8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		32FD12031A971C70004D3A15 /* TJUIPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -598,6 +691,8 @@
 			children = (
 				EA68E5181A5A2FB300CA2CCD /* TojoMobile */,
 				EA68E5351A5A2FB300CA2CCD /* TojoMobileTests */,
+				32CE51781AB135D900DE07D8 /* TojoMobile WatchKit Extension */,
+				32CE518A1AB135D900DE07D8 /* TojoMobile WatchKit App */,
 				EA68E5171A5A2FB300CA2CCD /* Products */,
 				0CCD19D42C96F430CA607A5F /* Pods */,
 				3548326D607B0EA4ECF529D9 /* Frameworks */,
@@ -609,6 +704,8 @@
 			children = (
 				EA68E5161A5A2FB300CA2CCD /* TojoMobile.app */,
 				EA68E5321A5A2FB300CA2CCD /* TojoMobileTests.xctest */,
+				32CE51771AB135D800DE07D8 /* TojoMobile WatchKit Extension.appex */,
+				32CE51861AB135D900DE07D8 /* TojoMobile WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -824,6 +921,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		32CE51761AB135D800DE07D8 /* TojoMobile WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32CE519A1AB135D900DE07D8 /* Build configuration list for PBXNativeTarget "TojoMobile WatchKit Extension" */;
+			buildPhases = (
+				32CE51731AB135D800DE07D8 /* Sources */,
+				32CE51741AB135D800DE07D8 /* Frameworks */,
+				32CE51751AB135D800DE07D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32CE51891AB135D900DE07D8 /* PBXTargetDependency */,
+			);
+			name = "TojoMobile WatchKit Extension";
+			productName = "TojoMobile WatchKit Extension";
+			productReference = 32CE51771AB135D800DE07D8 /* TojoMobile WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		32CE51851AB135D900DE07D8 /* TojoMobile WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32CE51991AB135D900DE07D8 /* Build configuration list for PBXNativeTarget "TojoMobile WatchKit App" */;
+			buildPhases = (
+				32CE51841AB135D900DE07D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TojoMobile WatchKit App";
+			productName = "TojoMobile WatchKit App";
+			productReference = 32CE51861AB135D900DE07D8 /* TojoMobile WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		EA68E5151A5A2FB300CA2CCD /* TojoMobile */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA68E53C1A5A2FB400CA2CCD /* Build configuration list for PBXNativeTarget "TojoMobile" */;
@@ -833,10 +963,12 @@
 				EA68E5131A5A2FB300CA2CCD /* Frameworks */,
 				EA68E5141A5A2FB300CA2CCD /* Resources */,
 				A515FA7915B8A97959A242A7 /* Copy Pods Resources */,
+				32CE519B1AB135D900DE07D8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				32CE51931AB135D900DE07D8 /* PBXTargetDependency */,
 			);
 			name = TojoMobile;
 			productName = TojoMobile;
@@ -870,6 +1002,13 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Tongjo;
 				TargetAttributes = {
+					32CE51761AB135D800DE07D8 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = B84MT5PP8Y;
+					};
+					32CE51851AB135D900DE07D8 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					EA68E5151A5A2FB300CA2CCD = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = B84MT5PP8Y;
@@ -895,11 +1034,31 @@
 			targets = (
 				EA68E5151A5A2FB300CA2CCD /* TojoMobile */,
 				EA68E5311A5A2FB300CA2CCD /* TojoMobileTests */,
+				32CE51761AB135D800DE07D8 /* TojoMobile WatchKit Extension */,
+				32CE51851AB135D900DE07D8 /* TojoMobile WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		32CE51751AB135D800DE07D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CE51871AB135D900DE07D8 /* TojoMobile WatchKit App.app in Resources */,
+				32CE51831AB135D900DE07D8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32CE51841AB135D900DE07D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CE518F1AB135D900DE07D8 /* Interface.storyboard in Resources */,
+				32CE51911AB135D900DE07D8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA68E5141A5A2FB300CA2CCD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -977,6 +1136,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		32CE51731AB135D800DE07D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CE517F1AB135D900DE07D8 /* NotificationController.swift in Sources */,
+				32CE517D1AB135D900DE07D8 /* InterfaceController.swift in Sources */,
+				32CE51811AB135D900DE07D8 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA68E5121A5A2FB300CA2CCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1081,6 +1250,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		32CE51891AB135D900DE07D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32CE51851AB135D900DE07D8 /* TojoMobile WatchKit App */;
+			targetProxy = 32CE51881AB135D900DE07D8 /* PBXContainerItemProxy */;
+		};
+		32CE51931AB135D900DE07D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32CE51761AB135D800DE07D8 /* TojoMobile WatchKit Extension */;
+			targetProxy = 32CE51921AB135D900DE07D8 /* PBXContainerItemProxy */;
+		};
 		EA68E5341A5A2FB300CA2CCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EA68E5151A5A2FB300CA2CCD /* TojoMobile */;
@@ -1089,6 +1268,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		32CE518D1AB135D900DE07D8 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32CE518E1AB135D900DE07D8 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		EA68E5261A5A2FB300CA2CCD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1108,6 +1295,71 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		32CE51951AB135D900DE07D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TojoMobile WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		32CE51961AB135D900DE07D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = "TojoMobile WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		32CE51971AB135D900DE07D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = TojoMobile_WatchKit_Extension;
+				INFOPLIST_FILE = "TojoMobile WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		32CE51981AB135D900DE07D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				IBSC_MODULE = TojoMobile_WatchKit_Extension;
+				INFOPLIST_FILE = "TojoMobile WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		EA68E53A1A5A2FB400CA2CCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1194,6 +1446,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = TojoMobile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1213,6 +1466,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = TojoMobile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1260,6 +1514,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		32CE51991AB135D900DE07D8 /* Build configuration list for PBXNativeTarget "TojoMobile WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32CE51971AB135D900DE07D8 /* Debug */,
+				32CE51981AB135D900DE07D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		32CE519A1AB135D900DE07D8 /* Build configuration list for PBXNativeTarget "TojoMobile WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32CE51951AB135D900DE07D8 /* Debug */,
+				32CE51961AB135D900DE07D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EA68E5111A5A2FB300CA2CCD /* Build configuration list for PBXProject "TojoMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
