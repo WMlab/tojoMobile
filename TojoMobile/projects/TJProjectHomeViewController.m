@@ -8,7 +8,6 @@
 
 #import "TJProjectHomeViewController.h"
 #import "TJProjectCategoryHead.h"
-#import "TJAdScrollCell.h"
 #import <MJRefresh.h>
 #import "TJProjectCategoryModel.h"
 #import "TJDefine.h"

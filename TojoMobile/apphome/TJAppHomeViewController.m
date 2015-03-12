@@ -7,14 +7,13 @@
 //
 
 #import "TJAppHomeViewController.h"
-#import "TJAdScrollCell.h"
 #import "TJFourProjectCell.h"
 #import "TJHeaderCell.h"
 #import <MJRefresh.h>
 #import "TJAppHomeSender.h"
 #import "TJProjectDetailViewController.h"
 
-@interface TJAppHomeViewController ()<TJFourProjectDelegate, TJAdScrollDelegate>
+@interface TJAppHomeViewController ()<TJFourProjectDelegate>
 {
     dispatch_once_t onceAd,onceProject,onceTitle,refreshAfterLaunch;
 }
@@ -76,62 +75,63 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
-        //最上面的滚动展示cell
-        dispatch_once(&onceAd, ^{
-            [tableView registerNib:[UINib nibWithNibName:@"TJAdScrollCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJAdScrollCell"];});
-        static NSString *cellId = @"TJAdScrollCell";
-        TJAdScrollCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-        cell.delegate = self;
-        [cell setCellWithAdProjects:_viewModel.adProjectList];
-        return cell;
-    }
-    else if(indexPath.row % 2 == 1 ){
-        //每种项目的标题cell
-        dispatch_once(&onceTitle, ^{
-            [tableView registerNib:[UINib nibWithNibName:@"TJHeaderCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJHeaderCell"];
-        });
-        static NSString *cellId = @"TJHeaderCell";
-        TJHeaderCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-        switch (indexPath.row) {
-            case 1:
-                cell.projectTypeLabel.text = @"精选";
-                break;
-            case 3:
-                cell.projectTypeLabel.text = @"热门";
-                break;
-            case 5:
-                cell.projectTypeLabel.text = @"最新";
-                break;
-            default:
-                break;
-        }
-        return cell;
-    }
-    else {
-        //项目的cell，4合1
-        dispatch_once(&onceProject, ^{
-            [tableView registerNib:[UINib nibWithNibName:@"TJFourProjectCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJFourProjectCell"];
-        });
-        static NSString *cellId = @"TJFourProjectCell";
-        TJFourProjectCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-        cell.delegate = self;
-        switch (indexPath.row) {
-            case 2:
-                [cell setCellWithProjects:_viewModel.selectedProjectList];
-                break;
-            case 4:
-                [cell setCellWithProjects:_viewModel.hottestProjectList];
-                break;
-            case 6:
-                [cell setCellWithProjects:_viewModel.latestProjectList];
-                break;
-            default:
-                break;
-        }
-
-        return cell;
-    }
+//    if (indexPath.row == 0) {
+//        //最上面的滚动展示cell
+//        dispatch_once(&onceAd, ^{
+//            [tableView registerNib:[UINib nibWithNibName:@"TJAdScrollCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJAdScrollCell"];});
+////        static NSString *cellId = @"TJAdScrollCell";
+////        TJAdScrollCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+////        cell.delegate = self;
+////        [cell setCellWithAdProjects:_viewModel.adProjectList];
+////        return cell;
+//    }
+//    else if(indexPath.row % 2 == 1 ){
+//        //每种项目的标题cell
+//        dispatch_once(&onceTitle, ^{
+//            [tableView registerNib:[UINib nibWithNibName:@"TJHeaderCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJHeaderCell"];
+//        });
+//        static NSString *cellId = @"TJHeaderCell";
+//        TJHeaderCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+//        switch (indexPath.row) {
+//            case 1:
+//                cell.projectTypeLabel.text = @"精选";
+//                break;
+//            case 3:
+//                cell.projectTypeLabel.text = @"热门";
+//                break;
+//            case 5:
+//                cell.projectTypeLabel.text = @"最新";
+//                break;
+//            default:
+//                break;
+//        }
+//        return cell;
+//    }
+//    else {
+//        //项目的cell，4合1
+//        dispatch_once(&onceProject, ^{
+//            [tableView registerNib:[UINib nibWithNibName:@"TJFourProjectCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJFourProjectCell"];
+//        });
+//        static NSString *cellId = @"TJFourProjectCell";
+//        TJFourProjectCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+//        cell.delegate = self;
+//        switch (indexPath.row) {
+//            case 2:
+//                [cell setCellWithProjects:_viewModel.selectedProjectList];
+//                break;
+//            case 4:
+//                [cell setCellWithProjects:_viewModel.hottestProjectList];
+//                break;
+//            case 6:
+//                [cell setCellWithProjects:_viewModel.latestProjectList];
+//                break;
+//            default:
+//                break;
+//        }
+//
+//        return cell;
+//    }
+    return nil;
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
