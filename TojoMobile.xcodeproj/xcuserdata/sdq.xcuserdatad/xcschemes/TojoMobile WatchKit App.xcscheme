@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0620"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "32CE51851AB135D900DE07D8"
+               BuildableName = "TojoMobile WatchKit App.app"
+               BlueprintName = "TojoMobile WatchKit App"
+               ReferencedContainer = "container:TojoMobile.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EA68E5151A5A2FB300CA2CCD"
+               BuildableName = "TojoMobile.app"
+               BlueprintName = "TojoMobile"
+               ReferencedContainer = "container:TojoMobile.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "32CE51761AB135D800DE07D8"
+               BuildableName = "TojoMobile WatchKit Extension.appex"
+               BlueprintName = "TojoMobile WatchKit Extension"
+               ReferencedContainer = "container:TojoMobile.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "32CE51851AB135D900DE07D8"
+            BuildableName = "TojoMobile WatchKit App.app"
+            BlueprintName = "TojoMobile WatchKit App"
+            ReferencedContainer = "container:TojoMobile.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/TojoMobile">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "32CE51851AB135D900DE07D8"
+            BuildableName = "TojoMobile WatchKit App.app"
+            BlueprintName = "TojoMobile WatchKit App"
+            ReferencedContainer = "container:TojoMobile.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "32CE51851AB135D900DE07D8"
+            BuildableName = "TojoMobile WatchKit App.app"
+            BlueprintName = "TojoMobile WatchKit App"
+            ReferencedContainer = "container:TojoMobile.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/TojoMobile">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "32CE51851AB135D900DE07D8"
+            BuildableName = "TojoMobile WatchKit App.app"
+            BlueprintName = "TojoMobile WatchKit App"
+            ReferencedContainer = "container:TojoMobile.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "32CE51851AB135D900DE07D8"
+            BuildableName = "TojoMobile WatchKit App.app"
+            BlueprintName = "TojoMobile WatchKit App"
+            ReferencedContainer = "container:TojoMobile.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
