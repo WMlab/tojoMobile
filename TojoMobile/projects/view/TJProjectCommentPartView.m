@@ -77,7 +77,8 @@
         latestCommentText.textColor = [UIColor colorWithRed:58/255.0f green:58/255.0f blue:58/255.0f alpha:1.0];
         [latestCommentText setFont:[UIFont fontWithName:@"Helvetica" size:14]];
         [self addSubview:latestCommentText];
-        latestCommentText.lineBreakMode = UILineBreakModeWordWrap;
+        latestCommentText.textAlignment = NSTextAlignmentCenter;
+        latestCommentText.lineBreakMode = NSLineBreakByWordWrapping;
         latestCommentText.numberOfLines = 3;
         [latestCommentText mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).offset(15);
