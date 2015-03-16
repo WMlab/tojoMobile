@@ -16,6 +16,7 @@
 @synthesize projectFounderImg;
 @synthesize projectFounderLabel;
 @synthesize projectFounderUniversityLabel;
+@synthesize projectFounderButton;
 
 - (id)initWithFrame:(CGRect)frame
 {

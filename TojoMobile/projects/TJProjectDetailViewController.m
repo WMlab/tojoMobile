@@ -106,7 +106,8 @@
                 [topImageView reveal];
             }];
             
-            [endDateView.endDateLabel setText:viewModel.projectInfoModel.projectEndDate];//set end date
+            NSString *endDateString = [viewModel.projectInfoModel.projectEndDate substringToIndex:10];
+            [endDateView.endDateLabel setText:endDateString];//set end date
             
             [basicInfoView.projectTitleLabel setText:viewModel.projectInfoModel.projectName];
             [basicInfoView.projectReleasedDateLabel setText:[NSString stringWithFormat:@"发布日期 %@", viewModel.projectInfoModel.projectCreatedDate]];
@@ -135,11 +136,6 @@
             NSLog(@"falied");
         }
     }];
-    //单指单击
-    UITapGestureRecognizer *singleFingerOne = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleFingerEvent:)];
-    singleFingerOne.numberOfTouchesRequired = 1; //手指数
-    singleFingerOne.numberOfTapsRequired = 1; //tap次数
-    singleFingerOne.delegate= self;
 }
 
 #pragma mark --------- 设置id -----------
@@ -191,4 +187,3 @@
 }
 @end
 
-#pragma mark --------- UIGestureRecognizerDelegate -----------

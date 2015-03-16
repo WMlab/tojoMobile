@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TJProjectDetailViewModel.h"
 
-@interface TJProjectDetailViewController : UIViewController<UIGestureRecognizerDelegate>
+@interface TJProjectDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 @property (weak, nonatomic) IBOutlet UIButton *collectButtom;
