@@ -41,7 +41,8 @@
         [projectDetailLabel setText:@""];
         [projectDetailLabel setFont:[UIFont fontWithName:@"Helvetica" size:14]];
         [self addSubview:projectDetailLabel];
-        projectDetailLabel.lineBreakMode = UILineBreakModeWordWrap;
+        projectDetailLabel.textAlignment = NSTextAlignmentCenter;
+        projectDetailLabel.lineBreakMode = NSLineBreakByWordWrapping;
         projectDetailLabel.numberOfLines = 5;
         [projectDetailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).offset(15);

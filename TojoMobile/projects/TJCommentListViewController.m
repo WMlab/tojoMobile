@@ -37,9 +37,10 @@
     _viewModel = [[TJCommentListViewModel alloc] init];
     [self loadCommentList];
     
-    refreshView = [[BreakOutToRefreshView alloc] initWithScrollView:self.commentTableView];
-    refreshView.delegate = self;
-    [self.commentTableView addSubview:refreshView];
+    //game
+//    refreshView = [[BreakOutToRefreshView alloc] initWithScrollView:self.commentTableView];
+//    refreshView.delegate = self;
+//    [self.commentTableView addSubview:refreshView];
     
     //MJRefresh定义上拉、下拉加载数据
     //[self updateDataSource];
