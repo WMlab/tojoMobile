@@ -95,6 +95,7 @@ static int pageViewPadding = 20;
     }];
     
     self.titleScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.frame.size.height - titleViewHeight, self.frame.size.width * [self.pageArray count], titleViewHeight)];
+    self.titleScrollView.contentSize = CGSizeMake(self.frame.size.width * [self.pageArray count], titleViewHeight);
     [self addSubview:self.titleScrollView];
     
     int pageArrayIndex = 0;
@@ -137,7 +138,6 @@ static int pageViewPadding = 20;
     }
     
     self.contentSize = CGSizeMake(self.frame.size.width * self.pageArray.count, self.frame.size.height);
-    self.titleScrollView.contentSize = self.contentSize;
 }
 
 -(int)currentPage

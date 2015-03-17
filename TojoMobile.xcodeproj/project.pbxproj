@@ -1521,6 +1521,7 @@
 				32CE51981AB135D900DE07D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32CE519A1AB135D900DE07D8 /* Build configuration list for PBXNativeTarget "TojoMobile WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -1529,6 +1530,7 @@
 				32CE51961AB135D900DE07D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA68E5111A5A2FB300CA2CCD /* Build configuration list for PBXProject "TojoMobile" */ = {
 			isa = XCConfigurationList;
