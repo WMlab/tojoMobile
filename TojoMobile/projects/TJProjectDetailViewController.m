@@ -25,6 +25,10 @@
 
 #define NAVBAR_CHANGE_POINT 50
 
+#define USER_IMAGE_PROJECT 101
+#define USER_IMAGE_COMMENT 102
+#define USER_IMAGE_TEAM 103
+
 @interface TJProjectDetailViewController (){
     int projectId;
     StrechyParallaxScrollView *strechy;
@@ -71,7 +75,12 @@
             //basic info
             float itemStartY = topImageView.frame.size.height;
             TJProjectBasicInfoView *basicInfoView = [[TJProjectBasicInfoView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+200)];
+            //添加头像点击手势
+            UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapUserImage:)];
+            [basicInfoView.projectFounderImg addGestureRecognizer:singleTap];
+            basicInfoView.projectFounderImg.tag = USER_IMAGE_PROJECT;
             [strechy addSubview:basicInfoView];
+            
             
             //detial info
             itemStartY += 200;
@@ -83,12 +92,20 @@
             itemStartY += 200;
             TJProjectCommentPartView *commentPartView = [[TJProjectCommentPartView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+290)];
             [commentPartView.allCommentButton addTarget:self action:@selector(allCommentButtonClicked)forControlEvents:UIControlEventTouchUpInside];
+            //添加头像点击手势
+            UITapGestureRecognizer *singleTap2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapUserImage:)];
+            [commentPartView.latestCommentUserImg addGestureRecognizer:singleTap2];
+            commentPartView.latestCommentUserImg.tag = USER_IMAGE_COMMENT;
             [strechy addSubview:commentPartView];
             
             //team part
             itemStartY += 290;
             TJProjectTeamPartView *teamPartView = [[TJProjectTeamPartView alloc] initWithFrame:CGRectMake(0, itemStartY, [UIScreen mainScreen].bounds.size.width, itemStartY+270)];
             [teamPartView.allTeamButton addTarget:self action:@selector(allTeamButtonClicked)forControlEvents:UIControlEventTouchUpInside];
+            //添加头像点击手势
+            UITapGestureRecognizer *singleTap3 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapUserImage:)];
+            [teamPartView.latestTeamFounderImg addGestureRecognizer:singleTap3];
+            teamPartView.latestTeamFounderImg.tag = USER_IMAGE_TEAM;
             [strechy addSubview:teamPartView];
             
             //set scrollable area (classic uiscrollview stuff)
@@ -105,6 +122,7 @@
             } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                 [topImageView reveal];
             }];
+            [topImageView setContentMode:UIViewContentModeScaleAspectFill];
             
             NSString *endDateString = [viewModel.projectInfoModel.projectEndDate substringToIndex:10];
             [endDateView.endDateLabel setText:endDateString];//set end date
@@ -141,6 +159,21 @@
 #pragma mark --------- 设置id -----------
 - (void)setProjectId:(int)ID{
     projectId = ID;
+}
+
+-(void)tapUserImage:(UITapGestureRecognizer *) sender
+{
+    NSInteger tag = sender.view.tag;
+    int userId = 0;
+    if (tag == USER_IMAGE_PROJECT) {
+        userId = viewModel.projectInfoModel.projectFounderId;
+    }
+    else if(tag == USER_IMAGE_COMMENT) {
+        userId = viewModel.commentModel.commentUserId;
+    }
+    else if (tag == USER_IMAGE_TEAM) {
+        userId = viewModel.teamModel.teamFounderId;
+    }
 }
 
 #pragma mark --------- 详情页面按钮跳转 -----------

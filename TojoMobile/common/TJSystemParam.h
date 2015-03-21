@@ -21,15 +21,16 @@
 #define REQUEST_URL_APP_HOME           @"apphome"
 
 /************** user ***************/
-#define REQUEST_URL_LOGIN           @"login"
-#define REQUEST_URL_REGISTRATION @"registration"
+#define REQUEST_URL_LOGIN                   @"login"            //登陆
+#define REQUEST_URL_REGISTRATION            @"registration"     //注册
+#define REQUEST_URL_USER_HOMEPAGE           @"homepage"         //他人访问个人主页
 
 /************** project ***************/
-#define REQUEST_URL_PROJECT_HOME    @"projecthome"
-#define REQUEST_URL_PROJECT_LIST    @"projectlist"
-#define REQUEST_URL_PROJECT_DETAIL    @"projectdetail"
+#define REQUEST_URL_PROJECT_HOME            @"projecthome"      //项目主页
+#define REQUEST_URL_PROJECT_LIST            @"projectlist"
+#define REQUEST_URL_PROJECT_DETAIL          @"projectdetail"    //项目详情
 #define REQUEST_URL_PROJECT_COMMENT_LIST    @"commentlist"
-#define REQUEST_URL_PROJECT_TEAM_LIST    @"teamlist"
-#define REQUEST_URL_PROJECT_TEAM_BUILD    @"teambuild"
+#define REQUEST_URL_PROJECT_TEAM_LIST       @"teamlist"
+#define REQUEST_URL_PROJECT_TEAM_BUILD      @"teambuild"
 
 #endif

@@ -44,6 +44,7 @@
         TJProjectInfoModel *model = (TJProjectInfoModel *)[projectArr objectAtIndex:i];
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.imageScrollView.frame.size.width, self.imageScrollView.frame.size.height)];
         [imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, model.projectImage]]];
+        [imageView setContentMode:UIViewContentModeScaleAspectFill];
         
         TJScrollPage *page = [[TJScrollPage alloc] init];
         page.titleLabel.text = model.projectName;

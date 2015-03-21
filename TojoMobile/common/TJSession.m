@@ -18,6 +18,14 @@ static TJSession *_instance = nil;
 
 @implementation TJSession
 
++(instancetype) getInstance {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[TJSession alloc] init];
+    });
+    return _instance;
+}
+
 -(void)setupUserId:(int)userId {
     [self getUserInfoModel].userId = userId;
 }

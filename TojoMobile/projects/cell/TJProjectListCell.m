@@ -40,6 +40,8 @@
     self.teamNumberLabel.text = [NSString stringWithFormat:@"%d", infoModel.teamNumber];
     
     [self.projectImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, infoModel.projectImage]]];
+    [self.projectImageView setContentMode:UIViewContentModeScaleAspectFill];
+    self.projectImageView.clipsToBounds = YES;
     
     NSString *imageUrlStr = [NSString stringWithFormat:@"%@%@", IMAGE_BASE_URL, infoModel.projectFounderImage];
     [self.founderImageView sd_setImageWithURL:[NSURL URLWithString:imageUrlStr]];
