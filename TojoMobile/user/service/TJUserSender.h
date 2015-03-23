@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TJUserHomepageViewModel.h"
 #import "TJSender.h"
 
 typedef void (^UserCommonCallBack)(BOOL success, NSString *message);
@@ -27,5 +28,11 @@ typedef void (^UserCommonCallBack)(BOOL success, NSString *message);
  *  用户注册请求
  */
 -(void) sendRegisterPostWithEmail:(NSString *)email password:(NSString *) password completeBlock:(UserCommonCallBack) callBack;
+
+/**
+ *  获取用户详细信息
+ */
+-(void) sendGetUserDetailInfoWithViewModel:(TJUserHomepageViewModel *)viewModel completeBlock:(UserCommonCallBack) callBack;
+
 
 @end

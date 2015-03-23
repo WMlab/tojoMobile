@@ -14,6 +14,8 @@
 #import "TJUserRegisterRequestModel.h"
 #import "TJRegisterResponseModel.h"
 #import "TJSession.h"
+#import "TJUserHomepageRequestModel.h"
+#import "TJUserHomepageResponseModel.h"
 
 static TJUserSender* _sender = nil;
 @implementation TJUserSender
@@ -55,6 +57,7 @@ static TJUserSender* _sender = nil;
     [reqOperation start];
 }
 
+#pragma mark - 用户注册
 -(void) sendRegisterPostWithEmail:(NSString *)email password:(NSString *) password completeBlock:(UserCommonCallBack) callBack {
     TJUserRegisterRequestModel *model = [[TJUserRegisterRequestModel alloc] init];
     model.email = email;
@@ -83,6 +86,35 @@ static TJUserSender* _sender = nil;
     }];
 }
 
+-(void) sendGetUserDetailInfoWithViewModel:(TJUserHomepageViewModel *)viewModel completeBlock:(UserCommonCallBack) callBack {
+    TJUserHomepageRequestModel *requestModel = [[TJUserHomepageRequestModel alloc] init];
+    requestModel.userId = viewModel.userBasicInfo.userId;
+    NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_USER_HOMEPAGE];
+    AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
+    reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [reqOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
+        NSDictionary *responseDic = (NSDictionary *)responseObject;
+        NSError *err;
+        TJUserHomepageResponseModel *responseModel = [[TJUserHomepageResponseModel alloc] initWithDictionary:responseDic error:&err];
+        if (0 == responseModel.result.code && !err) {
+            viewModel.userBasicInfo = [responseModel.userBasicInfo copy];
+            viewModel.userProjectList = [responseModel.userProjectList copy];
+            viewModel.userTeamList = [responseModel.userTeamList copy];
+            
+            if (callBack) {
+                callBack(true, responseModel.result.message);
+            }
+        }
+        else {
+            callBack(false, responseModel.result.message);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (callBack) {
+            callBack(NO, @"网络错误");
+        }
+    }];
+    [reqOperation start];
+}
 //- (NSMutableURLRequest *) createRequestWithDataModel:(JSONModel *)model url:(NSString *) url
 //{
 //    NSString *postJson = [model toJSONString];

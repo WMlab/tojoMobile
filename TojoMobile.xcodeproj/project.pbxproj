@@ -99,6 +99,9 @@
 		EA68E5281A5A2FB300CA2CCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA68E5261A5A2FB300CA2CCD /* Main.storyboard */; };
 		EA68E52D1A5A2FB300CA2CCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA68E52B1A5A2FB300CA2CCD /* LaunchScreen.xib */; };
 		EA68E5391A5A2FB400CA2CCD /* TojoMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68E5381A5A2FB400CA2CCD /* TojoMobileTests.m */; };
+		EA6F74361AC0420C007A2B73 /* TJUserHomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F74351AC0420C007A2B73 /* TJUserHomepageViewController.m */; };
+		EA6F743A1AC04347007A2B73 /* TJUserBasicInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F74381AC04347007A2B73 /* TJUserBasicInfoCell.m */; };
+		EA6F743B1AC04347007A2B73 /* TJUserBasicInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6F74391AC04347007A2B73 /* TJUserBasicInfoCell.xib */; };
 		EA775B9C1A78007000B58DB4 /* TJRegisterResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA775B9B1A78007000B58DB4 /* TJRegisterResponseModel.m */; };
 		EA775B9F1A78044C00B58DB4 /* TJUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA775B9E1A78044C00B58DB4 /* TJUserViewController.m */; };
 		EA775BA71A79230500B58DB4 /* TJAppHomeResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA775BA61A79230500B58DB4 /* TJAppHomeResponseModel.m */; };
@@ -334,6 +337,11 @@
 		EA68E5321A5A2FB300CA2CCD /* TojoMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TojoMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA68E5371A5A2FB300CA2CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA68E5381A5A2FB400CA2CCD /* TojoMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TojoMobileTests.m; sourceTree = "<group>"; };
+		EA6F74341AC0420C007A2B73 /* TJUserHomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserHomepageViewController.h; sourceTree = "<group>"; };
+		EA6F74351AC0420C007A2B73 /* TJUserHomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserHomepageViewController.m; sourceTree = "<group>"; };
+		EA6F74371AC04347007A2B73 /* TJUserBasicInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJUserBasicInfoCell.h; path = cell/TJUserBasicInfoCell.h; sourceTree = "<group>"; };
+		EA6F74381AC04347007A2B73 /* TJUserBasicInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJUserBasicInfoCell.m; path = cell/TJUserBasicInfoCell.m; sourceTree = "<group>"; };
+		EA6F74391AC04347007A2B73 /* TJUserBasicInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJUserBasicInfoCell.xib; path = cell/TJUserBasicInfoCell.xib; sourceTree = "<group>"; };
 		EA775B9A1A78007000B58DB4 /* TJRegisterResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRegisterResponseModel.h; sourceTree = "<group>"; };
 		EA775B9B1A78007000B58DB4 /* TJRegisterResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRegisterResponseModel.m; sourceTree = "<group>"; };
 		EA775B9D1A78044C00B58DB4 /* TJUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserViewController.h; sourceTree = "<group>"; };
@@ -433,6 +441,9 @@
 				3208CF721AA7FC720078B378 /* TJUserMenuCell.h */,
 				3208CF731AA7FC720078B378 /* TJUserMenuCell.m */,
 				3208CF741AA7FC720078B378 /* TJUserMenuCell.xib */,
+				EA6F74371AC04347007A2B73 /* TJUserBasicInfoCell.h */,
+				EA6F74381AC04347007A2B73 /* TJUserBasicInfoCell.m */,
+				EA6F74391AC04347007A2B73 /* TJUserBasicInfoCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -872,6 +883,8 @@
 				3208CF7B1AA81CC50078B378 /* TJUserAttendTeamsViewController.m */,
 				3208CF7D1AA81CE40078B378 /* TJUserCollectProjectsViewController.h */,
 				3208CF7E1AA81CE40078B378 /* TJUserCollectProjectsViewController.m */,
+				EA6F74341AC0420C007A2B73 /* TJUserHomepageViewController.h */,
+				EA6F74351AC0420C007A2B73 /* TJUserHomepageViewController.m */,
 			);
 			path = user;
 			sourceTree = "<group>";
@@ -1071,6 +1084,7 @@
 				EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */,
 				EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */,
 				EA775BD11A7A719E00B58DB4 /* TJHeaderCell.xib in Resources */,
+				EA6F743B1AC04347007A2B73 /* TJUserBasicInfoCell.xib in Resources */,
 				EA07EB2F1A7E7260006BC0C8 /* Images.xcassets in Resources */,
 				EA07EB311A7E7296006BC0C8 /* projectCategory.plist in Resources */,
 				EA775BC91A793E0800B58DB4 /* TJFourProjectCell.xib in Resources */,
@@ -1207,11 +1221,13 @@
 				EA32484B1A668D9300D45E30 /* TJProjectListResponseModel.m in Sources */,
 				32F513AD1A6E26F700224E74 /* TJTeamListCell.m in Sources */,
 				32C4B3FC1A711C7600B8D401 /* TJCommentListViewModel.m in Sources */,
+				EA6F743A1AC04347007A2B73 /* TJUserBasicInfoCell.m in Sources */,
 				EAC116EC1A61983000F620DE /* TJProjectDetailViewController.m in Sources */,
 				32D8BD951A7605F4002750A0 /* TJCreateTeamResponseModel.m in Sources */,
 				EA07EB341A7E742D006BC0C8 /* TJProjectCategoryModel.m in Sources */,
 				32F513A41A6E24D900224E74 /* TJCommentListResponseModel.m in Sources */,
 				32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */,
+				EA6F74361AC0420C007A2B73 /* TJUserHomepageViewController.m in Sources */,
 				EA68E5221A5A2FB300CA2CCD /* TJLoginViewController.m in Sources */,
 				324187951A68AD900088A3BB /* TJProjectTeamPartView.m in Sources */,
 				32C4B40D1A71DDCB00B8D401 /* TJTeamDetailRequestModel.m in Sources */,
