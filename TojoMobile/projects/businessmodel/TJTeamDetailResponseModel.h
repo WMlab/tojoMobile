@@ -16,7 +16,7 @@
 @property(nonatomic, strong) TJResultModel *result;
 
 @property (nonatomic,copy)TJTeamModel *team;
-@property(nonatomic, strong) NSArray<TJUserBasicInfoModel> *teamMemberList;  // model - TJProjectInfoModel
+@property(nonatomic, strong) NSArray<TJUserBasicInfoModel> *teamMemberList;  // model - TJUserBasicInfoModel
 
 
 @end

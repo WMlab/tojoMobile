@@ -9,6 +9,16 @@
 #import "TJProjectSender.h"
 #import "TJProjectHomeRequestModel.h"
 #import "TJProjectHomeResponseModel.h"
+#import "TJProjectListResponseModel.h"
+#import "TJProjectListRequestModel.h"
+#import "TJProjectDetailResponseModel.h"
+#import "TJProjectDetailRequestModel.h"
+#import "TJCommentListRequestModel.h"
+#import "TJCommentListResponseModel.h"
+#import "TJTeamListRequestModel.h"
+#import "TJTeamListResponseModel.h"
+#import "TJTeamDetailRequestModel.h"
+#import "TJTeamDetailResponseModel.h"
 
 static TJProjectSender * _sender = nil;
 
@@ -209,6 +219,44 @@ static TJProjectSender * _sender = nil;
     [reqOperation start];
 }
 
+#pragma mark --------- 团队详情 -----------
+-(void) sendGetTeamDetailWithViewModel:(TJTeamDetailViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback {
+    TJTeamDetailRequestModel *requestModel = [[TJTeamDetailRequestModel alloc] init];
+//    requestModel.teamId = viewModel.team.teamId;
+    requestModel.teamId = 1;
+    NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_PROJECT_TEAM_DETAIL];
+    AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
+    reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [reqOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *responseDic = (NSDictionary *)responseObject;
+        NSError *err;
+        TJTeamDetailResponseModel *responseModel = [[TJTeamDetailResponseModel alloc] initWithDictionary:responseDic error:&err];
+        if (0 == responseModel.result.code && !err) {
+            NSMutableArray *itemArr = [[NSMutableArray alloc] init];
+            for (int i=0; i<[responseModel.teamMemberList count]; i++) {
+                id item = [responseModel.teamMemberList objectAtIndex:i];
+                if ([item isKindOfClass:[TJUserBasicInfoModel class]]) {
+                    [itemArr addObject:item];
+                }
+            }
+            viewModel.team = responseModel.team;
+            viewModel.teamMemberList = itemArr;
+            if (callback) {
+                callback(true, responseModel.result.message);
+            }
+        }
+        else {
+            if (callback) {
+                callback(false, responseModel.result.message);
+            }
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (callback) {
+            callback(false, @"网络错误");
+        }
+    }];
+    [reqOperation start];
+}
 #pragma mark --------- 发布评论 -----------
 -(void) postCommentWithCommentRequestModel:(TJCommentRequestModel *)requestModel completeBlock:(ProjectCommonCallBack)callback{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];

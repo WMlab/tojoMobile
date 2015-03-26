@@ -20,9 +20,9 @@
 @property (nonatomic,copy) TJProjectInfoModel *info;
 
 /**最近评论**/
-@property (nonatomic,copy)TJCommentModel *comment;
+@property (nonatomic,copy)TJCommentModel<Optional> *comment;
 
 /**最近团队**/
-@property (nonatomic,copy)TJTeamModel *team;
+@property (nonatomic,copy)TJTeamModel<Optional> *team;
 
 @end

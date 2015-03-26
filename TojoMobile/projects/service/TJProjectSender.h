@@ -12,21 +12,14 @@
 #import "TJProjectDetailViewModel.h"
 #import "TJCommentListViewModel.h"
 #import "TJTeamListViewModel.h"
-#import "TJProjectListResponseModel.h"
-#import "TJProjectListRequestModel.h"
-#import "TJProjectDetailResponseModel.h"
-#import "TJProjectDetailRequestModel.h"
 #import "TJProjectInfoModel.h"
 #import "TJCommentModel.h"
 #import "TJTeamModel.h"
-#import "TJCommentListRequestModel.h"
-#import "TJCommentListResponseModel.h"
-#import "TJTeamListRequestModel.h"
-#import "TJTeamListResponseModel.h"
-#import "TJCommentRequestModel.h"
-#import "TJCommentResponseModel.h"
 #import <AFNetworking.h>
 #import "TJProjectHomeViewModel.h"
+#import "TJTeamDetailViewModel.h"
+#import "TJCommentRequestModel.h"
+#import "TJCommentResponseModel.h"
 
 typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
 
@@ -50,6 +43,9 @@ typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
  *  获取项目主页数据
  */
 -(void) sendGetProjectHomeDataWithViewModel:(TJProjectHomeViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
-
+/*
+ *  获取团队详情数据
+ */
+-(void) sendGetTeamDetailWithViewModel:(TJTeamDetailViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
 
 @end

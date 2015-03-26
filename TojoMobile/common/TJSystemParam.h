@@ -32,5 +32,6 @@
 #define REQUEST_URL_PROJECT_COMMENT_LIST    @"commentlist"
 #define REQUEST_URL_PROJECT_TEAM_LIST       @"teamlist"
 #define REQUEST_URL_PROJECT_TEAM_BUILD      @"teambuild"
+#define REQUEST_URL_PROJECT_TEAM_DETAIL     @"teamdetail"       //团队详情
 
 #endif

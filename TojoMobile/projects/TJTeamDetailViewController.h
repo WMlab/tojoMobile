@@ -10,4 +10,6 @@
 
 @interface TJTeamDetailViewController : UIViewController
 
+
+- (void) setTeamId:(int)teamId;
 @end

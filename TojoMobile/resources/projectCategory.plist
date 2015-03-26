@@ -38,7 +38,7 @@
 		<key>customId</key>
 		<integer>0</integer>
 		<key>categoryId</key>
-		<integer>2</integer>
+		<integer>3</integer>
 		<key>catName</key>
 		<string>计算机</string>
 	</dict>
@@ -46,7 +46,7 @@
 		<key>customId</key>
 		<integer>0</integer>
 		<key>categoryId</key>
-		<integer>3</integer>
+		<integer>4</integer>
 		<key>catName</key>
 		<string>平面设计</string>
 	</dict>

@@ -29,6 +29,7 @@
 
 - (void)setCellWithProjectItem:(TJProjectInfoModel *)infoModel
 {
+    [self.contentView setNeedsLayout];
     self.projectNameLabel.text = infoModel.projectName;
     self.projectEndDateLabel.text = [infoModel.projectEndDate substringWithRange:NSMakeRange(0, 10)];
     NSString *founderNameAndUni = [NSString stringWithFormat:@"%@ %@",infoModel.projectFounderUniversityName, infoModel.projectFounderName];
@@ -47,6 +48,7 @@
     [self.founderImageView sd_setImageWithURL:[NSURL URLWithString:imageUrlStr]];
     self.founderImageView.layer.cornerRadius = self.founderImageView.frame.size.height/2;
     self.founderImageView.layer.masksToBounds = YES;
+    [self.contentView layoutIfNeeded];
 }
 
 @end
