@@ -20,6 +20,7 @@
 @end
 
 @implementation TJTeamListViewController{
+    int projectId;
     dispatch_once_t onceToken;
 }
 
@@ -41,7 +42,7 @@
 #pragma mark --------- 发服务 -----------
 -(void) loadTeamList
 {
-    [[TJProjectSender getInstance] sendGetTeamListWithViewModel:_viewModel completeBlock:^(BOOL success, NSString *    message) {
+    [[TJProjectSender getInstance] sendGetTeamListWithViewModel:_viewModel projectId:projectId completeBlock:^(BOOL success, NSString *    message) {
         if (success) {
             NSLog(@"success");
             //页面进行赋值
@@ -58,6 +59,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark --------- 设置id -----------
+- (void)setProjectId:(int)ID{
+    projectId = ID;
+}
 
 #pragma mark - Table view data source
 

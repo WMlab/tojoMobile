@@ -185,12 +185,13 @@
 
 - (void) allCommentButtonClicked{
     TJCommentListViewController *commentListViewController = [[TJCommentListViewController alloc] init];
-    
+    [commentListViewController setProjectId:projectId];
     [self.navigationController pushViewController:commentListViewController animated:YES];
 }
 
 - (void) allTeamButtonClicked{
     TJTeamListViewController *teamListViewController = [[TJTeamListViewController alloc] init];
+    [teamListViewController setProjectId:projectId];
     
     [self.navigationController pushViewController:teamListViewController animated:YES];
 }

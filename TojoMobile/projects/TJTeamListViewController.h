@@ -13,4 +13,6 @@
 - (IBAction)createTeam:(UIButton *)sender;
 - (IBAction)attendByOneself:(UIButton *)sender;
 
+- (void)setProjectId:(int)projectId;
+
 @end

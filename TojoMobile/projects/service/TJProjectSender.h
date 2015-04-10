@@ -34,9 +34,9 @@ typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
 
 -(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback;
 
--(void) sendGetCommentListWithViewModel:(TJCommentListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
+-(void) sendGetCommentListWithViewModel:(TJCommentListViewModel *)viewModel projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback;
 
--(void) sendGetTeamListWithViewModel:(TJTeamListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
+-(void) sendGetTeamListWithViewModel:(TJTeamListViewModel *)viewModel projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback;
 
 -(void) postCommentWithCommentRequestModel:(TJCommentRequestModel *)requestModel completeBlock:(ProjectCommonCallBack)callback;
 /*

@@ -144,9 +144,9 @@ static TJProjectSender * _sender = nil;
 }
 
 #pragma mark --------- 评论列表请求 -----------
--(void) sendGetCommentListWithViewModel:(TJCommentListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback{
+-(void) sendGetCommentListWithViewModel:(TJCommentListViewModel *)viewModel projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback{
     TJCommentListRequestModel *requestModel = [[TJCommentListRequestModel alloc] init];
-    requestModel.projectId = 1;
+    requestModel.projectId = projectId;
     NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_PROJECT_COMMENT_LIST];
     AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
     reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -182,9 +182,9 @@ static TJProjectSender * _sender = nil;
 }
 
 #pragma mark --------- 团队列表请求 -----------
--(void) sendGetTeamListWithViewModel:(TJTeamListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback{
+-(void) sendGetTeamListWithViewModel:(TJTeamListViewModel *)viewModel  projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback{
     TJTeamListRequestModel *requestModel = [[TJTeamListRequestModel alloc] init];
-    requestModel.projectId = 1;
+    requestModel.projectId = projectId;
     NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_PROJECT_TEAM_LIST];
     AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
     reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
