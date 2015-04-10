@@ -51,7 +51,7 @@
     
     viewModel = [[TJProjectDetailViewModel alloc] init];
     //发服务加载
-    [[TJProjectSender getInstance] sendGetProjectDetailWithViewModel:viewModel projectId:projectId completeBlock:^(BOOL success, NSString *    message) {
+    [[TJProjectSender getInstance] sendGetProjectDetailWithViewModel:viewModel projectId:projectId completeBlock:^(BOOL success, NSString *message) {
         if (success) {
             NSLog(@"success");
             //页面结构载入
@@ -115,13 +115,13 @@
             
             //页面进行赋值
             //top view
-//            [topImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, viewModel.projectInfoModel.projectImage]]];
-            [topImageView startLoaderWithTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
-            [topImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, viewModel.projectInfoModel.projectImage]] placeholderImage:nil options:SDWebImageCacheMemoryOnly | SDWebImageRefreshCached progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-                [topImageView updateImageDownloadProgress:(CGFloat)receivedSize/expectedSize];
-            } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                [topImageView reveal];
-            }];
+            [topImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, viewModel.projectInfoModel.projectImage]]];
+//            [topImageView startLoaderWithTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
+//            [topImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, viewModel.projectInfoModel.projectImage]] placeholderImage:nil options:SDWebImageCacheMemoryOnly | SDWebImageRefreshCached progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//                [topImageView updateImageDownloadProgress:(CGFloat)receivedSize/expectedSize];
+//            } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//                [topImageView reveal];
+//            }];
             [topImageView setContentMode:UIViewContentModeScaleAspectFill];
             
             NSString *endDateString = [viewModel.projectInfoModel.projectEndDate substringToIndex:10];
