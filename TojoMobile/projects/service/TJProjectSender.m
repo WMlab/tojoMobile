@@ -222,8 +222,7 @@ static TJProjectSender * _sender = nil;
 #pragma mark --------- 团队详情 -----------
 -(void) sendGetTeamDetailWithViewModel:(TJTeamDetailViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback {
     TJTeamDetailRequestModel *requestModel = [[TJTeamDetailRequestModel alloc] init];
-//    requestModel.teamId = viewModel.team.teamId;
-    requestModel.teamId = 1;
+    requestModel.teamId = viewModel.team.teamId;
     NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_PROJECT_TEAM_DETAIL];
     AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
     reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];

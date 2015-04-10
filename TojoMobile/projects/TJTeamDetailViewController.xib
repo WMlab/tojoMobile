@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TJTeamDetailViewController">
             <connections>
                 <outlet property="constrainTeamFounderLabelWidth" destination="wms-2c-0vH" id="ZOd-Sx-dgc"/>
+                <outlet property="constrainTeamIntroViewHeight" destination="Mup-xl-6eb" id="T3n-Ym-ny8"/>
                 <outlet property="constrainTeamNameLabelWidth" destination="d6R-Mr-JmH" id="4Tt-kZ-EgB"/>
                 <outlet property="contrainTeamOccupyLabelWidth" destination="7da-jk-boy" id="JEq-L9-sJP"/>
                 <outlet property="teamActionView" destination="Zxm-jR-tgC" id="4w7-wC-wMg"/>
@@ -15,6 +16,7 @@
                 <outlet property="teamDetailView" destination="Dip-Xp-iKH" id="GXR-0M-o6J"/>
                 <outlet property="teamFounderImageView" destination="Rso-Ts-JWL" id="dum-TM-eRi"/>
                 <outlet property="teamFounderNameLabel" destination="Qmk-Ax-oVz" id="O5x-df-8ZD"/>
+                <outlet property="teamIntroLabel" destination="XDc-Cb-eYE" id="hpU-w9-D52"/>
                 <outlet property="teamMemberView" destination="RkV-0p-8oj" id="CkB-Kk-LaO"/>
                 <outlet property="teamNameLabel" destination="BRD-rp-vni" id="NEl-HN-dNs"/>
                 <outlet property="teamOccupyInfoLabel" destination="brF-eO-r7s" id="Ciy-kJ-zBt"/>
@@ -262,7 +264,6 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="团队简介" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok5-EE-bn3">
                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="iwD-Mb-pcb"/>
                                         <constraint firstAttribute="height" constant="50" id="nWi-Ml-GS0"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -270,23 +271,17 @@
                                     <nil key="highlightedColor"/>
                                     <variation key="default">
                                         <mask key="constraints">
-                                            <exclude reference="iwD-Mb-pcb"/>
                                             <exclude reference="nWi-Ml-GS0"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
                                         <mask key="constraints">
-                                            <include reference="iwD-Mb-pcb"/>
                                             <include reference="nWi-Ml-GS0"/>
                                         </mask>
                                     </variation>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDc-Cb-eYE">
                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="110" id="6Hw-Nj-rno"/>
-                                        <constraint firstAttribute="height" constant="110" id="ad1-5h-Qhv"/>
-                                    </constraints>
                                     <attributedString key="attributedText">
                                         <fragment content="    ">
                                             <attributes>
@@ -399,18 +394,6 @@
                                         </fragment>
                                     </attributedString>
                                     <nil key="highlightedColor"/>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="6Hw-Nj-rno"/>
-                                            <exclude reference="ad1-5h-Qhv"/>
-                                        </mask>
-                                    </variation>
-                                    <variation key="heightClass=regular-widthClass=compact">
-                                        <mask key="constraints">
-                                            <include reference="6Hw-Nj-rno"/>
-                                            <include reference="ad1-5h-Qhv"/>
-                                        </mask>
-                                    </variation>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -418,6 +401,7 @@
                                 <constraint firstAttribute="trailing" secondItem="XDc-Cb-eYE" secondAttribute="trailing" constant="10" id="Ftj-fO-dYW"/>
                                 <constraint firstAttribute="height" constant="160" id="Mup-xl-6eb"/>
                                 <constraint firstItem="XDc-Cb-eYE" firstAttribute="top" secondItem="ok5-EE-bn3" secondAttribute="bottom" id="alv-Y6-91h"/>
+                                <constraint firstAttribute="bottom" secondItem="XDc-Cb-eYE" secondAttribute="bottom" id="c92-g9-8gW"/>
                                 <constraint firstItem="ok5-EE-bn3" firstAttribute="leading" secondItem="Dip-Xp-iKH" secondAttribute="leading" id="kqU-2M-nhs"/>
                                 <constraint firstItem="ok5-EE-bn3" firstAttribute="top" secondItem="Dip-Xp-iKH" secondAttribute="top" id="lne-Ri-YDs"/>
                                 <constraint firstAttribute="trailing" secondItem="ok5-EE-bn3" secondAttribute="trailing" id="si8-vy-mue"/>
@@ -430,12 +414,13 @@
                                 </mask>
                                 <mask key="constraints">
                                     <exclude reference="Mup-xl-6eb"/>
-                                    <exclude reference="Ftj-fO-dYW"/>
-                                    <exclude reference="alv-Y6-91h"/>
-                                    <exclude reference="tba-ww-af3"/>
                                     <exclude reference="kqU-2M-nhs"/>
                                     <exclude reference="lne-Ri-YDs"/>
                                     <exclude reference="si8-vy-mue"/>
+                                    <exclude reference="Ftj-fO-dYW"/>
+                                    <exclude reference="alv-Y6-91h"/>
+                                    <exclude reference="c92-g9-8gW"/>
+                                    <exclude reference="tba-ww-af3"/>
                                 </mask>
                             </variation>
                             <variation key="heightClass=regular-widthClass=compact">
@@ -445,12 +430,13 @@
                                 </mask>
                                 <mask key="constraints">
                                     <include reference="Mup-xl-6eb"/>
-                                    <include reference="Ftj-fO-dYW"/>
-                                    <include reference="alv-Y6-91h"/>
-                                    <include reference="tba-ww-af3"/>
                                     <include reference="kqU-2M-nhs"/>
                                     <include reference="lne-Ri-YDs"/>
                                     <include reference="si8-vy-mue"/>
+                                    <include reference="Ftj-fO-dYW"/>
+                                    <include reference="alv-Y6-91h"/>
+                                    <include reference="c92-g9-8gW"/>
+                                    <include reference="tba-ww-af3"/>
                                 </mask>
                             </variation>
                         </view>

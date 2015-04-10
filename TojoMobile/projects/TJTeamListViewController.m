@@ -96,6 +96,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     //点击团队
     TJTeamDetailViewController *teamDeatailVC = [[TJTeamDetailViewController alloc] init];
+    TJTeamModel *teamModel = (TJTeamModel *)[_viewModel.teamList objectAtIndex:indexPath.row];
+    [teamDeatailVC setTeamId:teamModel.teamId];
     [self.navigationController pushViewController:teamDeatailVC animated:YES];
 }
 
