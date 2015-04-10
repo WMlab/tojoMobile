@@ -20,6 +20,7 @@
 @end
 
 @implementation TJCommentListViewController{
+    int projectId;
     dispatch_once_t onceToken;
 }
 
@@ -65,7 +66,7 @@
 #pragma mark --------- 发服务 -----------
 -(void) loadCommentList
 {
-    [[TJProjectSender getInstance] sendGetCommentListWithViewModel:_viewModel completeBlock:^(BOOL success, NSString *    message) {
+    [[TJProjectSender getInstance] sendGetCommentListWithViewModel:_viewModel projectId:projectId completeBlock:^(BOOL success, NSString *message) {
         if (success) {
             NSLog(@"success");
             //页面进行赋值
@@ -108,6 +109,10 @@
     return 70.0;
 }
 
+#pragma mark --------- 设置id -----------
+- (void)setProjectId:(int)ID{
+    projectId = ID;
+}
 
 #pragma mark - Table view delegate
 

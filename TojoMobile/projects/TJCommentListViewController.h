@@ -13,4 +13,6 @@
 
 @property (strong, nonatomic) BreakOutToRefreshView *refreshView;
 
+- (void)setProjectId:(int)projectId;
+
 @end
