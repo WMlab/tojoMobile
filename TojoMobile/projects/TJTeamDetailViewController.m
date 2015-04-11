@@ -24,14 +24,24 @@
 @property (weak, nonatomic) IBOutlet UILabel *teamNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *teamFounderNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *teamOccupyInfoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *teamIntroLabel;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constrainTeamNameLabelWidth;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constrainTeamFounderLabelWidth;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contrainTeamOccupyLabelWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constrainTeamIntroViewHeight;
 
 @end
 
 @implementation TJTeamDetailViewController
+
+- (instancetype) init {
+    self = [super init];
+    if (self) {
+        self.viewModel = [[TJTeamDetailViewModel alloc] init];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,7 +60,6 @@
 }
 
 - (void)initData {
-    _viewModel = [[TJTeamDetailViewModel alloc] init];
 }
 
 - (void)initView {
@@ -76,6 +85,11 @@
             self.teamOccupyInfoLabel.text = teamOccupyInfoStr;
             CGRect teamOccupyInfoLabelRect = [teamOccupyInfoStr boundingRectWithSize:CGSizeMake(MAXFLOAT, self.teamOccupyInfoLabel.bounds.size.height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.teamOccupyInfoLabel.font} context:nil];
             self.contrainTeamOccupyLabelWidth.constant = teamOccupyInfoLabelRect.size.width;
+            
+            NSString *teamIntroStr = _viewModel.team.teamDescription;
+            self.teamIntroLabel.text = teamIntroStr;
+            CGRect teamIntroLabelRect = [teamIntroStr boundingRectWithSize:CGSizeMake(self.teamIntroLabel.bounds.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.teamOccupyInfoLabel.font} context:nil];
+            self.constrainTeamIntroViewHeight.constant = teamIntroLabelRect.size.height + 50;
         }
     }];
 }

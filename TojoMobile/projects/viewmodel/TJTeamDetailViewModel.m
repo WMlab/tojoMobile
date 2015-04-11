@@ -10,4 +10,13 @@
 
 @implementation TJTeamDetailViewModel
 
+-(instancetype)init {
+    self = [super init];
+    if (self) {
+        _team = [[TJTeamModel alloc] init];
+        _teamMemberList = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 @end
