@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TJProjectInfoModel.h"
 
 @interface TJProjectInfoViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+-(void)setInfoModel:(TJProjectInfoModel *)infoModel;
 
 @end
