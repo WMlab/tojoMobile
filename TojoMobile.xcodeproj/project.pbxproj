@@ -134,6 +134,8 @@
 		EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC116E81A61983000F620DE /* TJProjectDetailViewController.xib */; };
 		EAC116EE1A61983000F620DE /* TJProjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116EA1A61983000F620DE /* TJProjectListViewController.m */; };
 		EAEE9B361A5C012900FF3DA9 /* TJUserSender.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE9B351A5C012900FF3DA9 /* TJUserSender.m */; };
+		EAFAAFFF1AD8F012006628E9 /* TJMemberCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFAAFFD1AD8F012006628E9 /* TJMemberCollectionCell.m */; };
+		EAFAB0001AD8F012006628E9 /* TJMemberCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFAAFFE1AD8F012006628E9 /* TJMemberCollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -400,6 +402,9 @@
 		EAEE9B341A5C012900FF3DA9 /* TJUserSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserSender.h; sourceTree = "<group>"; };
 		EAEE9B351A5C012900FF3DA9 /* TJUserSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserSender.m; sourceTree = "<group>"; };
 		EAEE9B3E1A5C120200FF3DA9 /* TJSystemParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJSystemParam.h; sourceTree = "<group>"; };
+		EAFAAFFC1AD8F012006628E9 /* TJMemberCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJMemberCollectionCell.h; path = projects/cell/TJMemberCollectionCell.h; sourceTree = "<group>"; };
+		EAFAAFFD1AD8F012006628E9 /* TJMemberCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJMemberCollectionCell.m; path = projects/cell/TJMemberCollectionCell.m; sourceTree = "<group>"; };
+		EAFAAFFE1AD8F012006628E9 /* TJMemberCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJMemberCollectionCell.xib; path = projects/cell/TJMemberCollectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -615,6 +620,9 @@
 				EA2EB3B21AAF2628005440A1 /* TJScrollImageCell.h */,
 				EA2EB3B31AAF2628005440A1 /* TJScrollImageCell.m */,
 				EA2EB3B41AAF2628005440A1 /* TJScrollImageCell.xib */,
+				EAFAAFFC1AD8F012006628E9 /* TJMemberCollectionCell.h */,
+				EAFAAFFD1AD8F012006628E9 /* TJMemberCollectionCell.m */,
+				EAFAAFFE1AD8F012006628E9 /* TJMemberCollectionCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -1097,6 +1105,7 @@
 				32D8BD8F1A752325002750A0 /* TJCreateTeamViewController.xib in Resources */,
 				324187A71A6BE57C0088A3BB /* titleImageTest.png in Resources */,
 				EA775BC41A79355500B58DB4 /* mountains.jpg in Resources */,
+				EAFAB0001AD8F012006628E9 /* TJMemberCollectionCell.xib in Resources */,
 				324187A91A6BF5D70088A3BB /* testHead.png in Resources */,
 				32F5139B1A6E171500224E74 /* TJCommentListViewController.xib in Resources */,
 				32F513911A6E03CA00224E74 /* TJTeamListViewController.xib in Resources */,
@@ -1247,6 +1256,7 @@
 				EA775B9F1A78044C00B58DB4 /* TJUserViewController.m in Sources */,
 				32F513A11A6E24B100224E74 /* TJCommentListRequestModel.m in Sources */,
 				EAC116C21A618C1C00F620DE /* TJFilePath.m in Sources */,
+				EAFAAFFF1AD8F012006628E9 /* TJMemberCollectionCell.m in Sources */,
 				EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */,
 				32E2F2BF1A9AF205003C6E4A /* TJTeamDetailViewController.m in Sources */,
 				32C4B40A1A71DC0D00B8D401 /* TJUserHomepageViewModel.m in Sources */,

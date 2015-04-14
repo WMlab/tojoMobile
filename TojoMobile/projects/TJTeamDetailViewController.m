@@ -10,8 +10,9 @@
 #import "TJTeamDetailViewModel.h"
 #import "TJProjectSender.h"
 #import <UIImageView+WebCache.h>
+#import "TJMemberCollectionCell.h"
 
-@interface TJTeamDetailViewController ()
+@interface TJTeamDetailViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (strong, nonatomic) TJTeamDetailViewModel *viewModel;
 
@@ -92,6 +93,15 @@
             self.constrainTeamIntroViewHeight.constant = teamIntroLabelRect.size.height + 50;
         }
     }];
+}
+
+#pragma mark - UICollectionView Datasource
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return _viewModel.teamMemberList.count;
+}
+
+-(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
 }
 /*
 #pragma mark - Navigation
