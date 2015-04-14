@@ -12,6 +12,7 @@
 #import "TJUserAttendProjectsViewController.h"
 #import "TJUserAttendTeamsViewController.h"
 #import "TJUserCollectProjectsViewController.h"
+#import "TJSettingTableViewController.h"
 
 @interface TJUserViewController ()
 
@@ -31,7 +32,7 @@
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.navigationItem.title = @"我";
-    UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(showLogin)];
+    UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(setting)];
     self.navigationItem.rightBarButtonItem = createButton;
     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     
@@ -45,6 +46,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)setting {
+    TJSettingTableViewController *settingVC = [[TJSettingTableViewController alloc] init];
+    [self.navigationController pushViewController:settingVC animated:TRUE];
+}
+
 - (void)showLogin{
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UINavigationController *loginNav = (UINavigationController *)[sb instantiateViewControllerWithIdentifier:@"loginNav"];
@@ -129,6 +136,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.section) {
+        case 0:
+            switch (indexPath.row) {
+                case 0:
+                {
+                    [self showLogin];
+                }
+                    break;
+                    
+                default:
+                    break;
+            }
+            break;
+
         case 1:
             switch (indexPath.row) {
                 case 0:

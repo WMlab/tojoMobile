@@ -21,7 +21,7 @@
 		<key>TojoMobile WatchKit App.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
@@ -34,6 +34,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>32C3BEFB1ADCAE36004F4629</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>32C3BF211ADCAFC9004F4629</key>
 		<dict>
 			<key>primary</key>
 			<true/>
