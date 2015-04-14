@@ -55,15 +55,17 @@
 
 #pragma mark - table view delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSInteger row = 0;
     if (section == 0) {
+        row = 1;
+    }else if(section == 1){
         row = 3;
     }
-    return 3;
+    return row;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -75,6 +77,18 @@
     TJUserMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     switch (indexPath.section) {
         case 0:
+        {
+            switch (indexPath.row) {
+                case 0:
+                    [cell setCellWithItemText:@"个人资料"];
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
+            break;
+        case 1:
         {
             switch (indexPath.row) {
                 case 0:
@@ -115,7 +129,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.section) {
-        case 0:
+        case 1:
             switch (indexPath.row) {
                 case 0:
                 {

@@ -179,7 +179,7 @@
 #pragma mark --------- 详情页面按钮跳转 -----------
 - (void) allInfoButtonClicked{
     TJProjectInfoViewController *infoViewController = [[TJProjectInfoViewController alloc] init];
-    
+    [infoViewController setInfoModel:viewModel.projectInfoModel];
     [self.navigationController pushViewController:infoViewController animated:YES];
 }
 
