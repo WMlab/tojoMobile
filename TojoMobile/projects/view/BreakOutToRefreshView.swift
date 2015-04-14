@@ -212,7 +212,7 @@ extension BreakOutToRefreshView: UIScrollViewDelegate {
   }
   
   override func update(currentTime: NSTimeInterval) {
-    let ball = self.childNodeWithName(ballName) as SKSpriteNode!
+    let ball = self.childNodeWithName(ballName) as! SKSpriteNode!
     
     let maxSpeed: CGFloat = 600.0
     let speed = sqrt(ball.physicsBody!.velocity.dx * ball.physicsBody!.velocity.dx + ball.physicsBody!.velocity.dy * ball.physicsBody!.velocity.dy)
