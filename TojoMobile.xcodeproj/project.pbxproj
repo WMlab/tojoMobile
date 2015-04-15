@@ -477,10 +477,10 @@
 		32959EB71A5EBD0300C2B9D6 /* projects */ = {
 			isa = PBXGroup;
 			children = (
+				32959EBA1A5EBD3A00C2B9D6 /* businessmodel */,
 				324187A51A6BE56C0088A3BB /* image */,
 				32959EBC1A5EBD6900C2B9D6 /* cell */,
 				32959EBB1A5EBD4B00C2B9D6 /* viewmodel */,
-				32959EBA1A5EBD3A00C2B9D6 /* businessmodel */,
 				32959EB91A5EBD2B00C2B9D6 /* service */,
 				32959EB81A5EBD1C00C2B9D6 /* view */,
 				EAC116E61A61983000F620DE /* TJProjectDetailViewController.h */,
@@ -1578,6 +1578,7 @@
 				32C3BF341ADCAFC9004F4629 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32C3BF361ADCAFC9004F4629 /* Build configuration list for PBXNativeTarget "TojoMobile WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -1586,6 +1587,7 @@
 				32C3BF321ADCAFC9004F4629 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA68E5111A5A2FB300CA2CCD /* Build configuration list for PBXProject "TojoMobile" */ = {
 			isa = XCConfigurationList;

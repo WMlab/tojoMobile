@@ -205,9 +205,6 @@
 
 #pragma mark --------- 下方Tab按钮跳转 -----------
 
-- (IBAction)collectButtonClicked:(UIButton *)sender {
-}
-
 - (IBAction)commentButtonClicked:(UIButton *)sender {
     TJCommentViewController *commentViewController = [[TJCommentViewController alloc] init];
     
