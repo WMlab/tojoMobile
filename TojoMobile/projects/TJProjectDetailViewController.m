@@ -179,7 +179,7 @@
 #pragma mark --------- 详情页面按钮跳转 -----------
 - (void) allInfoButtonClicked{
     TJProjectInfoViewController *infoViewController = [[TJProjectInfoViewController alloc] init];
-    
+    [infoViewController setInfoModel:viewModel.projectInfoModel];
     [self.navigationController pushViewController:infoViewController animated:YES];
 }
 
@@ -204,9 +204,6 @@
 }
 
 #pragma mark --------- 下方Tab按钮跳转 -----------
-
-- (IBAction)collectButtonClicked:(UIButton *)sender {
-}
 
 - (IBAction)commentButtonClicked:(UIButton *)sender {
     TJCommentViewController *commentViewController = [[TJCommentViewController alloc] init];

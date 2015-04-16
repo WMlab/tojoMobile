@@ -12,7 +12,6 @@
 @interface TJProjectDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
-@property (weak, nonatomic) IBOutlet UIButton *collectButtom;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 @property (weak, nonatomic) IBOutlet UIButton *attendButton;
 @property (nonatomic, strong) TJProjectDetailViewModel *viewModel;

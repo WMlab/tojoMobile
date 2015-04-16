@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "TJDefine.h"
 #import "TJDataBase.h"
+#import "TJUserSender.h"
 @interface AppDelegate ()
 
 @end
@@ -25,6 +26,11 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         [self initDatabase];
     });
+    //启动App，登陆
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        [self getUserLoginInfo];
+    });
+
 
     return YES;
 }
@@ -53,6 +59,18 @@
 
 -(void)initDatabase{
     [[TJDataBase getInstance] initDatabase];
+}
+
+-(void)getUserLoginInfo {
+    NSUserDefaults * usrDefault = [NSUserDefaults standardUserDefaults];
+    NSString * usr = [usrDefault objectForKey:@"usr"];
+    NSString * pwd = [usrDefault objectForKey:@"pwd"];
+    if ([usr length] > 0 && [pwd length] > 0) {
+        [[TJUserSender getInstance] sendUserLoginWithEmail:usr password:pwd completeBlock:^(BOOL success, NSString *message) {
+            
+        }];
+    }
+
 }
 
 @end

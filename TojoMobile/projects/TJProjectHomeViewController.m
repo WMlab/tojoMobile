@@ -170,7 +170,6 @@
         TJProjectListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
         TJProjectInfoModel *infoModel = (TJProjectInfoModel *)[_viewModel.projectList objectAtIndex:indexPath.row - [self hasAdProjects]];
         [cell setCellWithProjectItem:infoModel];
-        
         return cell;
     }
 }

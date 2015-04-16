@@ -41,4 +41,11 @@ static TJSession *_instance = nil;
     return _userInfoModel;
 }
 
+-(BOOL)setupUserInfoModel:(TJUserBasicInfoModel *)model {
+    return true;
+}
+
+-(void)clearUserInfoModel {
+    
+}
 @end

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--登陆-->
@@ -628,7 +628,7 @@
             </objects>
             <point key="canvasLocation" x="1083" y="-804.75"/>
         </scene>
-        <!--浏览项目-->
+        <!--舟信-->
         <scene sceneID="ouG-Eq-4de">
             <objects>
                 <tableViewController id="vul-2J-K2F" customClass="TJProjectListViewController" sceneMemberID="viewController">
@@ -641,7 +641,7 @@
                             <outlet property="delegate" destination="vul-2J-K2F" id="h9d-1T-krG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="浏览项目" id="shC-w4-Cbn"/>
+                    <navigationItem key="navigationItem" title="舟信" id="shC-w4-Cbn"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2u-V5-azI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -705,11 +705,11 @@
             </objects>
             <point key="canvasLocation" x="1200" y="646.5"/>
         </scene>
-        <!--项目-->
+        <!--舟信-->
         <scene sceneID="evX-jX-HdO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wZc-pm-3HZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="项目" image="project" id="MOe-P7-2aB"/>
+                    <tabBarItem key="tabBarItem" title="舟信" image="project" id="MOe-P7-2aB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rxy-br-yjn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

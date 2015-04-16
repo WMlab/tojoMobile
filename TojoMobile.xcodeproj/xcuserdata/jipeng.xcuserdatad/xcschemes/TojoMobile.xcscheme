@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EA68E5151A5A2FB300CA2CCD"
-               BuildableName = "TojoMobile.app"
+               BuildableName = "&#x540c;&#x821f;.app"
                BlueprintName = "TojoMobile"
                ReferencedContainer = "container:TojoMobile.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EA68E5151A5A2FB300CA2CCD"
-            BuildableName = "TojoMobile.app"
+            BuildableName = "&#x540c;&#x821f;.app"
             BlueprintName = "TojoMobile"
             ReferencedContainer = "container:TojoMobile.xcodeproj">
          </BuildableReference>
@@ -72,11 +72,12 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EA68E5151A5A2FB300CA2CCD"
-            BuildableName = "TojoMobile.app"
+            BuildableName = "&#x540c;&#x821f;.app"
             BlueprintName = "TojoMobile"
             ReferencedContainer = "container:TojoMobile.xcodeproj">
          </BuildableReference>
@@ -90,11 +91,12 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EA68E5151A5A2FB300CA2CCD"
-            BuildableName = "TojoMobile.app"
+            BuildableName = "&#x540c;&#x821f;.app"
             BlueprintName = "TojoMobile"
             ReferencedContainer = "container:TojoMobile.xcodeproj">
          </BuildableReference>

@@ -12,6 +12,8 @@
 #import "TJUserAttendProjectsViewController.h"
 #import "TJUserAttendTeamsViewController.h"
 #import "TJUserCollectProjectsViewController.h"
+#import "TJSettingTableViewController.h"
+#import "TJUserBasicInfoCell.h"
 
 @interface TJUserViewController ()
 
@@ -31,7 +33,7 @@
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.navigationItem.title = @"我";
-    UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(showLogin)];
+    UIBarButtonItem *createButton = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(setting)];
     self.navigationItem.rightBarButtonItem = createButton;
     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     
@@ -45,6 +47,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)setting {
+    TJSettingTableViewController *settingVC = [[TJSettingTableViewController alloc] init];
+    [self.navigationController pushViewController:settingVC animated:TRUE];
+}
+
 - (void)showLogin{
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UINavigationController *loginNav = (UINavigationController *)[sb instantiateViewControllerWithIdentifier:@"loginNav"];
@@ -55,55 +63,48 @@
 
 #pragma mark - table view delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSInteger row = 0;
     if (section == 0) {
-        row = 3;
+        row = 1;
+    }else if(section == 1){
+        row = 2;
     }
-    return 3;
+    return row;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *CellIdentifier = @"TJUserMenuCell";
+    static NSString *CellIdentifier1 = @"TJUserMenuCell";
+    static NSString *CellIdentifier2 = @"TJUserBasicInfoCell";
     //[self.myTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
-    dispatch_once(&onceToken, ^{
-        [tableView registerNib:[UINib nibWithNibName:CellIdentifier bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier];
-    });
-    TJUserMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    switch (indexPath.section) {
-        case 0:
-        {
-            switch (indexPath.row) {
-                case 0:
-                    [cell setCellWithItemText:@"我参与的项目"];
-                    break;
-                case 1:
-                    [cell setCellWithItemText:@"我参与的团队"];
-                    break;
-                case 2:
-                    [cell setCellWithItemText:@"我收藏的项目"];
-                    break;
-                    
-                default:
-                    [cell setCellWithItemText:@"其它"];
-
-                    break;
-            }
+    [tableView registerNib:[UINib nibWithNibName:CellIdentifier1 bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier1];
+    [tableView registerNib:[UINib nibWithNibName:CellIdentifier2 bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier2];
+    TJUserMenuCell *menuCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier1];
+    TJUserBasicInfoCell *userCell =  [tableView dequeueReusableCellWithIdentifier:CellIdentifier2];
+    
+    if (indexPath.section == 0) {
+        return userCell;
+    }else {
+        if (indexPath.row == 0) {
+            [menuCell setCellWithItemText:@"我参与的项目"];
         }
-            break;
-            
-        default:
-            [cell setCellWithItemText:@"其它"];
-            break;
+        if (indexPath.row == 1) {
+            [menuCell setCellWithItemText:@"我参与的团队"];
+        }
+        return menuCell;
     }
-    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 44;
+    if (indexPath.section == 0) {
+        return 80;
+    } else {
+        return 44;
+    }
+    
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 20.0;
@@ -119,6 +120,19 @@
             switch (indexPath.row) {
                 case 0:
                 {
+                    [self showLogin];
+                }
+                    break;
+                    
+                default:
+                    break;
+            }
+            break;
+
+        case 1:
+            switch (indexPath.row) {
+                case 0:
+                {
                     TJUserAttendProjectsViewController *attendProjectVC = [[TJUserAttendProjectsViewController alloc] init];
                     [self.navigationController pushViewController:attendProjectVC animated:YES];
                 }
@@ -127,12 +141,6 @@
                 {
                     TJUserAttendTeamsViewController *attendTeamVC = [[TJUserAttendTeamsViewController alloc] init];
                     [self.navigationController pushViewController:attendTeamVC animated:YES];
-                }
-                    break;
-                case 2:
-                {
-                    TJUserCollectProjectsViewController *collectProjectVC = [[TJUserCollectProjectsViewController alloc] init];
-                    [self.navigationController pushViewController:collectProjectVC animated:YES];
                 }
                     break;
                     

@@ -25,11 +25,24 @@
 		3241879A1A6B5B9E0088A3BB /* TJProjectInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324187981A6B5B9E0088A3BB /* TJProjectInfoViewController.xib */; };
 		324187A71A6BE57C0088A3BB /* titleImageTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 324187A61A6BE57C0088A3BB /* titleImageTest.png */; };
 		324187A91A6BF5D70088A3BB /* testHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 324187A81A6BF5D70088A3BB /* testHead.png */; };
+		32574ABC1ADFFBD100756630 /* TJLogoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32574ABA1ADFFBD100756630 /* TJLogoutTableViewCell.m */; };
+		32574ABD1ADFFBD100756630 /* TJLogoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32574ABB1ADFFBD100756630 /* TJLogoutTableViewCell.xib */; };
 		328870D61A91C514002E8A00 /* BreakOutToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328870D51A91C514002E8A00 /* BreakOutToRefreshView.swift */; };
 		32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F011A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m */; };
 		32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F041A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m */; };
 		32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */; };
 		32959F0B1A5ECFCC00C2B9D6 /* TJProjectSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F0A1A5ECFCC00C2B9D6 /* TJProjectSender.m */; };
+		32C3BF1B1ADCAFC9004F4629 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C3BF1A1ADCAFC9004F4629 /* InterfaceController.swift */; };
+		32C3BF1D1ADCAFC9004F4629 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C3BF1C1ADCAFC9004F4629 /* NotificationController.swift */; };
+		32C3BF1F1ADCAFC9004F4629 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32C3BF1E1ADCAFC9004F4629 /* Images.xcassets */; };
+		32C3BF231ADCAFC9004F4629 /* TojoMobile WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 32C3BF221ADCAFC9004F4629 /* TojoMobile WatchKit App.app */; };
+		32C3BF2B1ADCAFC9004F4629 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C3BF291ADCAFC9004F4629 /* Interface.storyboard */; };
+		32C3BF2D1ADCAFC9004F4629 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32C3BF2C1ADCAFC9004F4629 /* Images.xcassets */; };
+		32C3BF301ADCAFC9004F4629 /* TojoMobile WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 32C3BF151ADCAFC9004F4629 /* TojoMobile WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		32C3BF411ADCE013004F4629 /* TJAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C3BF3F1ADCE013004F4629 /* TJAboutViewController.swift */; };
+		32C3BF421ADCE013004F4629 /* TJAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C3BF401ADCE013004F4629 /* TJAboutViewController.xib */; };
+		32C3BF471ADCEA61004F4629 /* TJSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C3BF451ADCEA61004F4629 /* TJSettingTableViewController.m */; };
+		32C3BF481ADCEA61004F4629 /* TJSettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C3BF461ADCEA61004F4629 /* TJSettingTableViewController.xib */; };
 		32C4B3FC1A711C7600B8D401 /* TJCommentListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B3FB1A711C7600B8D401 /* TJCommentListViewModel.m */; };
 		32C4B3FE1A714BA800B8D401 /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C4B3FD1A714BA800B8D401 /* time.png */; };
 		32C4B4011A71D73F00B8D401 /* TJUserBasicInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4001A71D73F00B8D401 /* TJUserBasicInfoModel.m */; };
@@ -42,14 +55,6 @@
 		32C4B4151A71EB2500B8D401 /* TJCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C4B4131A71EB2500B8D401 /* TJCommentViewController.xib */; };
 		32C4B4181A71F1E700B8D401 /* TJCommentRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4171A71F1E700B8D401 /* TJCommentRequestModel.m */; };
 		32C4B41B1A71F20200B8D401 /* TJCommentResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B41A1A71F20200B8D401 /* TJCommentResponseModel.m */; };
-		32CE517D1AB135D900DE07D8 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE517C1AB135D900DE07D8 /* InterfaceController.swift */; };
-		32CE517F1AB135D900DE07D8 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE517E1AB135D900DE07D8 /* NotificationController.swift */; };
-		32CE51811AB135D900DE07D8 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE51801AB135D900DE07D8 /* GlanceController.swift */; };
-		32CE51831AB135D900DE07D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32CE51821AB135D900DE07D8 /* Images.xcassets */; };
-		32CE51871AB135D900DE07D8 /* TojoMobile WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 32CE51861AB135D900DE07D8 /* TojoMobile WatchKit App.app */; };
-		32CE518F1AB135D900DE07D8 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32CE518D1AB135D900DE07D8 /* Interface.storyboard */; };
-		32CE51911AB135D900DE07D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32CE51901AB135D900DE07D8 /* Images.xcassets */; };
-		32CE51941AB135D900DE07D8 /* TojoMobile WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 32CE51771AB135D800DE07D8 /* TojoMobile WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		32D8BD8E1A752325002750A0 /* TJCreateTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D8BD8C1A752325002750A0 /* TJCreateTeamViewController.m */; };
 		32D8BD8F1A752325002750A0 /* TJCreateTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D8BD8D1A752325002750A0 /* TJCreateTeamViewController.xib */; };
 		32D8BD921A7605BF002750A0 /* TJCreateTeamRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D8BD911A7605BF002750A0 /* TJCreateTeamRequestModel.m */; };
@@ -136,21 +141,28 @@
 		EAEE9B361A5C012900FF3DA9 /* TJUserSender.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE9B351A5C012900FF3DA9 /* TJUserSender.m */; };
 		EAFAAFFF1AD8F012006628E9 /* TJMemberCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFAAFFD1AD8F012006628E9 /* TJMemberCollectionCell.m */; };
 		EAFAB0001AD8F012006628E9 /* TJMemberCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFAAFFE1AD8F012006628E9 /* TJMemberCollectionCell.xib */; };
+		EAFAB0041ADCBEB5006628E9 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAB0031ADCBEB5006628E9 /* libstdc++.6.dylib */; };
+		EAFAB0061ADCFA47006628E9 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAB0051ADCFA47006628E9 /* libxml2.dylib */; };
+		EAFAB0081ADCFA58006628E9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAB0071ADCFA58006628E9 /* libiconv.dylib */; };
+		EAFAB00A1ADCFA64006628E9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAB0091ADCFA64006628E9 /* libz.dylib */; };
+		EAFAB00C1ADCFA6E006628E9 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAB00B1ADCFA6E006628E9 /* libresolv.dylib */; };
+		EAFAB00E1ADCFA76006628E9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAB00D1ADCFA76006628E9 /* CFNetwork.framework */; };
+		EAFAB0101ADCFA83006628E9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAB00F1ADCFA83006628E9 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		32CE51881AB135D900DE07D8 /* PBXContainerItemProxy */ = {
+		32C3BF241ADCAFC9004F4629 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA68E50E1A5A2FB300CA2CCD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 32CE51851AB135D900DE07D8;
+			remoteGlobalIDString = 32C3BF211ADCAFC9004F4629;
 			remoteInfo = "TojoMobile WatchKit App";
 		};
-		32CE51921AB135D900DE07D8 /* PBXContainerItemProxy */ = {
+		32C3BF2E1ADCAFC9004F4629 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA68E50E1A5A2FB300CA2CCD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 32CE51761AB135D800DE07D8;
+			remoteGlobalIDString = 32C3BF141ADCAFC8004F4629;
 			remoteInfo = "TojoMobile WatchKit Extension";
 		};
 		EA68E5331A5A2FB300CA2CCD /* PBXContainerItemProxy */ = {
@@ -169,7 +181,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				32CE51941AB135D900DE07D8 /* TojoMobile WatchKit Extension.appex in Embed App Extensions */,
+				32C3BF301ADCAFC9004F4629 /* TojoMobile WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +221,9 @@
 		324187981A6B5B9E0088A3BB /* TJProjectInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectInfoViewController.xib; path = projects/TJProjectInfoViewController.xib; sourceTree = "<group>"; };
 		324187A61A6BE57C0088A3BB /* titleImageTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleImageTest.png; sourceTree = "<group>"; };
 		324187A81A6BF5D70088A3BB /* testHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testHead.png; sourceTree = "<group>"; };
+		32574AB91ADFFBD100756630 /* TJLogoutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJLogoutTableViewCell.h; path = cell/TJLogoutTableViewCell.h; sourceTree = "<group>"; };
+		32574ABA1ADFFBD100756630 /* TJLogoutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJLogoutTableViewCell.m; path = cell/TJLogoutTableViewCell.m; sourceTree = "<group>"; };
+		32574ABB1ADFFBD100756630 /* TJLogoutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJLogoutTableViewCell.xib; path = cell/TJLogoutTableViewCell.xib; sourceTree = "<group>"; };
 		325A92671A90FE0E00431B0E /* TojoMobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TojoMobile-Bridging-Header.h"; sourceTree = "<group>"; };
 		328870D51A91C514002E8A00 /* BreakOutToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BreakOutToRefreshView.swift; path = projects/view/BreakOutToRefreshView.swift; sourceTree = "<group>"; };
 		32959F001A5ECFB300C2B9D6 /* TJProjectDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailViewModel.h; path = projects/viewmodel/TJProjectDetailViewModel.h; sourceTree = "<group>"; };
@@ -219,6 +234,21 @@
 		32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailResponseModel.m; path = projects/businessmodel/TJProjectDetailResponseModel.m; sourceTree = "<group>"; };
 		32959F091A5ECFCC00C2B9D6 /* TJProjectSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectSender.h; path = projects/service/TJProjectSender.h; sourceTree = "<group>"; };
 		32959F0A1A5ECFCC00C2B9D6 /* TJProjectSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectSender.m; path = projects/service/TJProjectSender.m; sourceTree = "<group>"; };
+		32C3BF151ADCAFC9004F4629 /* TojoMobile WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TojoMobile WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C3BF181ADCAFC9004F4629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32C3BF191ADCAFC9004F4629 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		32C3BF1A1ADCAFC9004F4629 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		32C3BF1C1ADCAFC9004F4629 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		32C3BF1E1ADCAFC9004F4629 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		32C3BF221ADCAFC9004F4629 /* TojoMobile WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TojoMobile WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C3BF281ADCAFC9004F4629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32C3BF2A1ADCAFC9004F4629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		32C3BF2C1ADCAFC9004F4629 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		32C3BF3F1ADCE013004F4629 /* TJAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TJAboutViewController.swift; sourceTree = "<group>"; };
+		32C3BF401ADCE013004F4629 /* TJAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJAboutViewController.xib; sourceTree = "<group>"; };
+		32C3BF441ADCEA61004F4629 /* TJSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJSettingTableViewController.h; sourceTree = "<group>"; };
+		32C3BF451ADCEA61004F4629 /* TJSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJSettingTableViewController.m; sourceTree = "<group>"; };
+		32C3BF461ADCEA61004F4629 /* TJSettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJSettingTableViewController.xib; sourceTree = "<group>"; };
 		32C4B3FA1A711C7600B8D401 /* TJCommentListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCommentListViewModel.h; path = projects/viewmodel/TJCommentListViewModel.h; sourceTree = "<group>"; };
 		32C4B3FB1A711C7600B8D401 /* TJCommentListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCommentListViewModel.m; path = projects/viewmodel/TJCommentListViewModel.m; sourceTree = "<group>"; };
 		32C4B3FD1A714BA800B8D401 /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
@@ -241,17 +271,6 @@
 		32C4B4171A71F1E700B8D401 /* TJCommentRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCommentRequestModel.m; path = projects/businessmodel/TJCommentRequestModel.m; sourceTree = "<group>"; };
 		32C4B4191A71F20200B8D401 /* TJCommentResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCommentResponseModel.h; path = projects/businessmodel/TJCommentResponseModel.h; sourceTree = "<group>"; };
 		32C4B41A1A71F20200B8D401 /* TJCommentResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCommentResponseModel.m; path = projects/businessmodel/TJCommentResponseModel.m; sourceTree = "<group>"; };
-		32CE51771AB135D800DE07D8 /* TojoMobile WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TojoMobile WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		32CE517A1AB135D900DE07D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32CE517B1AB135D900DE07D8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		32CE517C1AB135D900DE07D8 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		32CE517E1AB135D900DE07D8 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		32CE51801AB135D900DE07D8 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
-		32CE51821AB135D900DE07D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		32CE51861AB135D900DE07D8 /* TojoMobile WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TojoMobile WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		32CE518C1AB135D900DE07D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32CE518E1AB135D900DE07D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		32CE51901AB135D900DE07D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		32D8BD8B1A752325002750A0 /* TJCreateTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJCreateTeamViewController.h; path = projects/TJCreateTeamViewController.h; sourceTree = "<group>"; };
 		32D8BD8C1A752325002750A0 /* TJCreateTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJCreateTeamViewController.m; path = projects/TJCreateTeamViewController.m; sourceTree = "<group>"; };
 		32D8BD8D1A752325002750A0 /* TJCreateTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJCreateTeamViewController.xib; path = projects/TJCreateTeamViewController.xib; sourceTree = "<group>"; };
@@ -328,7 +347,7 @@
 		EA3248471A668D6400D45E30 /* TJProjectListRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListRequestModel.m; path = projects/businessmodel/TJProjectListRequestModel.m; sourceTree = "<group>"; };
 		EA3248491A668D9300D45E30 /* TJProjectListResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListResponseModel.h; path = projects/businessmodel/TJProjectListResponseModel.h; sourceTree = "<group>"; };
 		EA32484A1A668D9300D45E30 /* TJProjectListResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListResponseModel.m; path = projects/businessmodel/TJProjectListResponseModel.m; sourceTree = "<group>"; };
-		EA68E5161A5A2FB300CA2CCD /* TojoMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TojoMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA68E5161A5A2FB300CA2CCD /* 同舟.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "同舟.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA68E51A1A5A2FB300CA2CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA68E51B1A5A2FB300CA2CCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA68E51D1A5A2FB300CA2CCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -405,10 +424,17 @@
 		EAFAAFFC1AD8F012006628E9 /* TJMemberCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJMemberCollectionCell.h; path = projects/cell/TJMemberCollectionCell.h; sourceTree = "<group>"; };
 		EAFAAFFD1AD8F012006628E9 /* TJMemberCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJMemberCollectionCell.m; path = projects/cell/TJMemberCollectionCell.m; sourceTree = "<group>"; };
 		EAFAAFFE1AD8F012006628E9 /* TJMemberCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJMemberCollectionCell.xib; path = projects/cell/TJMemberCollectionCell.xib; sourceTree = "<group>"; };
+		EAFAB0031ADCBEB5006628E9 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		EAFAB0051ADCFA47006628E9 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		EAFAB0071ADCFA58006628E9 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		EAFAB0091ADCFA64006628E9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EAFAB00B1ADCFA6E006628E9 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
+		EAFAB00D1ADCFA76006628E9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EAFAB00F1ADCFA83006628E9 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		32CE51741AB135D800DE07D8 /* Frameworks */ = {
+		32C3BF121ADCAFC8004F4629 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,6 +445,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFAB0101ADCFA83006628E9 /* MobileCoreServices.framework in Frameworks */,
+				EAFAB00E1ADCFA76006628E9 /* CFNetwork.framework in Frameworks */,
+				EAFAB00C1ADCFA6E006628E9 /* libresolv.dylib in Frameworks */,
+				EAFAB00A1ADCFA64006628E9 /* libz.dylib in Frameworks */,
+				EAFAB0081ADCFA58006628E9 /* libiconv.dylib in Frameworks */,
+				EAFAB0061ADCFA47006628E9 /* libxml2.dylib in Frameworks */,
+				EAFAB0041ADCBEB5006628E9 /* libstdc++.6.dylib in Frameworks */,
 				EA1864591A66310500117C8A /* libsqlite3.dylib in Frameworks */,
 				E42770C64AD3214DC5895880 /* libPods.a in Frameworks */,
 			);
@@ -452,6 +485,9 @@
 				EA6F74371AC04347007A2B73 /* TJUserBasicInfoCell.h */,
 				EA6F74381AC04347007A2B73 /* TJUserBasicInfoCell.m */,
 				EA6F74391AC04347007A2B73 /* TJUserBasicInfoCell.xib */,
+				32574AB91ADFFBD100756630 /* TJLogoutTableViewCell.h */,
+				32574ABA1ADFFBD100756630 /* TJLogoutTableViewCell.m */,
+				32574ABB1ADFFBD100756630 /* TJLogoutTableViewCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -470,10 +506,10 @@
 		32959EB71A5EBD0300C2B9D6 /* projects */ = {
 			isa = PBXGroup;
 			children = (
+				32959EBA1A5EBD3A00C2B9D6 /* businessmodel */,
 				324187A51A6BE56C0088A3BB /* image */,
 				32959EBC1A5EBD6900C2B9D6 /* cell */,
 				32959EBB1A5EBD4B00C2B9D6 /* viewmodel */,
-				32959EBA1A5EBD3A00C2B9D6 /* businessmodel */,
 				32959EB91A5EBD2B00C2B9D6 /* service */,
 				32959EB81A5EBD1C00C2B9D6 /* view */,
 				EAC116E61A61983000F620DE /* TJProjectDetailViewController.h */,
@@ -627,41 +663,40 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
-		32CE51781AB135D900DE07D8 /* TojoMobile WatchKit Extension */ = {
+		32C3BF161ADCAFC9004F4629 /* TojoMobile WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				32CE517C1AB135D900DE07D8 /* InterfaceController.swift */,
-				32CE517E1AB135D900DE07D8 /* NotificationController.swift */,
-				32CE51801AB135D900DE07D8 /* GlanceController.swift */,
-				32CE51821AB135D900DE07D8 /* Images.xcassets */,
-				32CE51791AB135D900DE07D8 /* Supporting Files */,
+				32C3BF1A1ADCAFC9004F4629 /* InterfaceController.swift */,
+				32C3BF1C1ADCAFC9004F4629 /* NotificationController.swift */,
+				32C3BF1E1ADCAFC9004F4629 /* Images.xcassets */,
+				32C3BF171ADCAFC9004F4629 /* Supporting Files */,
 			);
 			path = "TojoMobile WatchKit Extension";
 			sourceTree = "<group>";
 		};
-		32CE51791AB135D900DE07D8 /* Supporting Files */ = {
+		32C3BF171ADCAFC9004F4629 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				32CE517A1AB135D900DE07D8 /* Info.plist */,
-				32CE517B1AB135D900DE07D8 /* PushNotificationPayload.apns */,
+				32C3BF181ADCAFC9004F4629 /* Info.plist */,
+				32C3BF191ADCAFC9004F4629 /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		32CE518A1AB135D900DE07D8 /* TojoMobile WatchKit App */ = {
+		32C3BF261ADCAFC9004F4629 /* TojoMobile WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				32CE518D1AB135D900DE07D8 /* Interface.storyboard */,
-				32CE51901AB135D900DE07D8 /* Images.xcassets */,
-				32CE518B1AB135D900DE07D8 /* Supporting Files */,
+				32C3BF291ADCAFC9004F4629 /* Interface.storyboard */,
+				32C3BF2C1ADCAFC9004F4629 /* Images.xcassets */,
+				32C3BF271ADCAFC9004F4629 /* Supporting Files */,
 			);
 			path = "TojoMobile WatchKit App";
 			sourceTree = "<group>";
 		};
-		32CE518B1AB135D900DE07D8 /* Supporting Files */ = {
+		32C3BF271ADCAFC9004F4629 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				32CE518C1AB135D900DE07D8 /* Info.plist */,
+				32C3BF281ADCAFC9004F4629 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -680,6 +715,13 @@
 		3548326D607B0EA4ECF529D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAFAB00F1ADCFA83006628E9 /* MobileCoreServices.framework */,
+				EAFAB00D1ADCFA76006628E9 /* CFNetwork.framework */,
+				EAFAB00B1ADCFA6E006628E9 /* libresolv.dylib */,
+				EAFAB0091ADCFA64006628E9 /* libz.dylib */,
+				EAFAB0071ADCFA58006628E9 /* libiconv.dylib */,
+				EAFAB0051ADCFA47006628E9 /* libxml2.dylib */,
+				EAFAB0031ADCBEB5006628E9 /* libstdc++.6.dylib */,
 				EA1864581A66310500117C8A /* libsqlite3.dylib */,
 				9F87660748CC2C0B4B82EF26 /* libPods.a */,
 			);
@@ -712,8 +754,8 @@
 			children = (
 				EA68E5181A5A2FB300CA2CCD /* TojoMobile */,
 				EA68E5351A5A2FB300CA2CCD /* TojoMobileTests */,
-				32CE51781AB135D900DE07D8 /* TojoMobile WatchKit Extension */,
-				32CE518A1AB135D900DE07D8 /* TojoMobile WatchKit App */,
+				32C3BF161ADCAFC9004F4629 /* TojoMobile WatchKit Extension */,
+				32C3BF261ADCAFC9004F4629 /* TojoMobile WatchKit App */,
 				EA68E5171A5A2FB300CA2CCD /* Products */,
 				0CCD19D42C96F430CA607A5F /* Pods */,
 				3548326D607B0EA4ECF529D9 /* Frameworks */,
@@ -723,10 +765,10 @@
 		EA68E5171A5A2FB300CA2CCD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA68E5161A5A2FB300CA2CCD /* TojoMobile.app */,
+				EA68E5161A5A2FB300CA2CCD /* 同舟.app */,
 				EA68E5321A5A2FB300CA2CCD /* TojoMobileTests.xctest */,
-				32CE51771AB135D800DE07D8 /* TojoMobile WatchKit Extension.appex */,
-				32CE51861AB135D900DE07D8 /* TojoMobile WatchKit App.app */,
+				32C3BF151ADCAFC9004F4629 /* TojoMobile WatchKit Extension.appex */,
+				32C3BF221ADCAFC9004F4629 /* TojoMobile WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -898,6 +940,11 @@
 				3208CF7E1AA81CE40078B378 /* TJUserCollectProjectsViewController.m */,
 				EA6F74341AC0420C007A2B73 /* TJUserHomepageViewController.h */,
 				EA6F74351AC0420C007A2B73 /* TJUserHomepageViewController.m */,
+				32C3BF3F1ADCE013004F4629 /* TJAboutViewController.swift */,
+				32C3BF401ADCE013004F4629 /* TJAboutViewController.xib */,
+				32C3BF441ADCEA61004F4629 /* TJSettingTableViewController.h */,
+				32C3BF451ADCEA61004F4629 /* TJSettingTableViewController.m */,
+				32C3BF461ADCEA61004F4629 /* TJSettingTableViewController.xib */,
 			);
 			path = user;
 			sourceTree = "<group>";
@@ -944,29 +991,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		32CE51761AB135D800DE07D8 /* TojoMobile WatchKit Extension */ = {
+		32C3BF141ADCAFC8004F4629 /* TojoMobile WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32CE519A1AB135D900DE07D8 /* Build configuration list for PBXNativeTarget "TojoMobile WatchKit Extension" */;
+			buildConfigurationList = 32C3BF361ADCAFC9004F4629 /* Build configuration list for PBXNativeTarget "TojoMobile WatchKit Extension" */;
 			buildPhases = (
-				32CE51731AB135D800DE07D8 /* Sources */,
-				32CE51741AB135D800DE07D8 /* Frameworks */,
-				32CE51751AB135D800DE07D8 /* Resources */,
+				32C3BF111ADCAFC8004F4629 /* Sources */,
+				32C3BF121ADCAFC8004F4629 /* Frameworks */,
+				32C3BF131ADCAFC8004F4629 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				32CE51891AB135D900DE07D8 /* PBXTargetDependency */,
+				32C3BF251ADCAFC9004F4629 /* PBXTargetDependency */,
 			);
 			name = "TojoMobile WatchKit Extension";
 			productName = "TojoMobile WatchKit Extension";
-			productReference = 32CE51771AB135D800DE07D8 /* TojoMobile WatchKit Extension.appex */;
+			productReference = 32C3BF151ADCAFC9004F4629 /* TojoMobile WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit-extension";
 		};
-		32CE51851AB135D900DE07D8 /* TojoMobile WatchKit App */ = {
+		32C3BF211ADCAFC9004F4629 /* TojoMobile WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32CE51991AB135D900DE07D8 /* Build configuration list for PBXNativeTarget "TojoMobile WatchKit App" */;
+			buildConfigurationList = 32C3BF351ADCAFC9004F4629 /* Build configuration list for PBXNativeTarget "TojoMobile WatchKit App" */;
 			buildPhases = (
-				32CE51841AB135D900DE07D8 /* Resources */,
+				32C3BF201ADCAFC9004F4629 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -974,7 +1021,7 @@
 			);
 			name = "TojoMobile WatchKit App";
 			productName = "TojoMobile WatchKit App";
-			productReference = 32CE51861AB135D900DE07D8 /* TojoMobile WatchKit App.app */;
+			productReference = 32C3BF221ADCAFC9004F4629 /* TojoMobile WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp";
 		};
 		EA68E5151A5A2FB300CA2CCD /* TojoMobile */ = {
@@ -991,11 +1038,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				32CE51931AB135D900DE07D8 /* PBXTargetDependency */,
+				32C3BF2F1ADCAFC9004F4629 /* PBXTargetDependency */,
 			);
 			name = TojoMobile;
 			productName = TojoMobile;
-			productReference = EA68E5161A5A2FB300CA2CCD /* TojoMobile.app */;
+			productReference = EA68E5161A5A2FB300CA2CCD /* 同舟.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EA68E5311A5A2FB300CA2CCD /* TojoMobileTests */ = {
@@ -1025,12 +1072,13 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Tongjo;
 				TargetAttributes = {
-					32CE51761AB135D800DE07D8 = {
-						CreatedOnToolsVersion = 6.2;
+					32C3BF141ADCAFC8004F4629 = {
+						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = B84MT5PP8Y;
 					};
-					32CE51851AB135D900DE07D8 = {
-						CreatedOnToolsVersion = 6.2;
+					32C3BF211ADCAFC9004F4629 = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = B84MT5PP8Y;
 					};
 					EA68E5151A5A2FB300CA2CCD = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -1057,28 +1105,28 @@
 			targets = (
 				EA68E5151A5A2FB300CA2CCD /* TojoMobile */,
 				EA68E5311A5A2FB300CA2CCD /* TojoMobileTests */,
-				32CE51761AB135D800DE07D8 /* TojoMobile WatchKit Extension */,
-				32CE51851AB135D900DE07D8 /* TojoMobile WatchKit App */,
+				32C3BF141ADCAFC8004F4629 /* TojoMobile WatchKit Extension */,
+				32C3BF211ADCAFC9004F4629 /* TojoMobile WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		32CE51751AB135D800DE07D8 /* Resources */ = {
+		32C3BF131ADCAFC8004F4629 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32CE51871AB135D900DE07D8 /* TojoMobile WatchKit App.app in Resources */,
-				32CE51831AB135D900DE07D8 /* Images.xcassets in Resources */,
+				32C3BF231ADCAFC9004F4629 /* TojoMobile WatchKit App.app in Resources */,
+				32C3BF1F1ADCAFC9004F4629 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		32CE51841AB135D900DE07D8 /* Resources */ = {
+		32C3BF201ADCAFC9004F4629 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32CE518F1AB135D900DE07D8 /* Interface.storyboard in Resources */,
-				32CE51911AB135D900DE07D8 /* Images.xcassets in Resources */,
+				32C3BF2B1ADCAFC9004F4629 /* Interface.storyboard in Resources */,
+				32C3BF2D1ADCAFC9004F4629 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1091,9 +1139,11 @@
 				32F513AE1A6E26F700224E74 /* TJTeamListCell.xib in Resources */,
 				32C4B4151A71EB2500B8D401 /* TJCommentViewController.xib in Resources */,
 				EA68E5281A5A2FB300CA2CCD /* Main.storyboard in Resources */,
+				32574ABD1ADFFBD100756630 /* TJLogoutTableViewCell.xib in Resources */,
 				32F513B21A6E462700224E74 /* points.png in Resources */,
 				EA68E52D1A5A2FB300CA2CCD /* LaunchScreen.xib in Resources */,
 				32E2F2C01A9AF205003C6E4A /* TJTeamDetailViewController.xib in Resources */,
+				32C3BF481ADCEA61004F4629 /* TJSettingTableViewController.xib in Resources */,
 				EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */,
 				EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */,
 				EA775BD11A7A719E00B58DB4 /* TJHeaderCell.xib in Resources */,
@@ -1104,6 +1154,7 @@
 				EA2EB3B61AAF2628005440A1 /* TJScrollImageCell.xib in Resources */,
 				32D8BD8F1A752325002750A0 /* TJCreateTeamViewController.xib in Resources */,
 				324187A71A6BE57C0088A3BB /* titleImageTest.png in Resources */,
+				32C3BF421ADCE013004F4629 /* TJAboutViewController.xib in Resources */,
 				EA775BC41A79355500B58DB4 /* mountains.jpg in Resources */,
 				EAFAB0001AD8F012006628E9 /* TJMemberCollectionCell.xib in Resources */,
 				324187A91A6BF5D70088A3BB /* testHead.png in Resources */,
@@ -1161,13 +1212,12 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		32CE51731AB135D800DE07D8 /* Sources */ = {
+		32C3BF111ADCAFC8004F4629 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32CE517F1AB135D900DE07D8 /* NotificationController.swift in Sources */,
-				32CE517D1AB135D900DE07D8 /* InterfaceController.swift in Sources */,
-				32CE51811AB135D900DE07D8 /* GlanceController.swift in Sources */,
+				32C3BF1D1ADCAFC9004F4629 /* NotificationController.swift in Sources */,
+				32C3BF1B1ADCAFC9004F4629 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1207,6 +1257,8 @@
 				321146451A66ACC600F89494 /* StrechyParallaxScrollView.m in Sources */,
 				EAC116BF1A618ADC00F620DE /* TJDataBase.m in Sources */,
 				EAC116EE1A61983000F620DE /* TJProjectListViewController.m in Sources */,
+				32C3BF471ADCEA61004F4629 /* TJSettingTableViewController.m in Sources */,
+				32574ABC1ADFFBD100756630 /* TJLogoutTableViewCell.m in Sources */,
 				3241878C1A68AD160088A3BB /* TJProjectBasicInfoView.m in Sources */,
 				32F513B81A6E68C900224E74 /* TJTeamListResponseModel.m in Sources */,
 				32F513901A6E03CA00224E74 /* TJTeamListViewController.m in Sources */,
@@ -1219,6 +1271,7 @@
 				EA775BCC1A7A675C00B58DB4 /* TJTableHeaderView.m in Sources */,
 				321146391A66997900F89494 /* TJProjectInfoModel.m in Sources */,
 				EA775BBE1A79330100B58DB4 /* MMScrollPresenter.m in Sources */,
+				32C3BF411ADCE013004F4629 /* TJAboutViewController.swift in Sources */,
 				EA775BC81A793E0800B58DB4 /* TJFourProjectCell.m in Sources */,
 				EA775BAA1A7923D400B58DB4 /* TJAppHomeSender.m in Sources */,
 				32F513B51A6E68A400224E74 /* TJTeamListRequestModel.m in Sources */,
@@ -1278,15 +1331,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		32CE51891AB135D900DE07D8 /* PBXTargetDependency */ = {
+		32C3BF251ADCAFC9004F4629 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 32CE51851AB135D900DE07D8 /* TojoMobile WatchKit App */;
-			targetProxy = 32CE51881AB135D900DE07D8 /* PBXContainerItemProxy */;
+			target = 32C3BF211ADCAFC9004F4629 /* TojoMobile WatchKit App */;
+			targetProxy = 32C3BF241ADCAFC9004F4629 /* PBXContainerItemProxy */;
 		};
-		32CE51931AB135D900DE07D8 /* PBXTargetDependency */ = {
+		32C3BF2F1ADCAFC9004F4629 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 32CE51761AB135D800DE07D8 /* TojoMobile WatchKit Extension */;
-			targetProxy = 32CE51921AB135D900DE07D8 /* PBXContainerItemProxy */;
+			target = 32C3BF141ADCAFC8004F4629 /* TojoMobile WatchKit Extension */;
+			targetProxy = 32C3BF2E1ADCAFC9004F4629 /* PBXContainerItemProxy */;
 		};
 		EA68E5341A5A2FB300CA2CCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1296,10 +1349,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		32CE518D1AB135D900DE07D8 /* Interface.storyboard */ = {
+		32C3BF291ADCAFC9004F4629 /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				32CE518E1AB135D900DE07D8 /* Base */,
+				32C3BF2A1ADCAFC9004F4629 /* Base */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -1323,11 +1376,13 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		32CE51951AB135D900DE07D8 /* Debug */ = {
+		32C3BF311ADCAFC9004F4629 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1341,12 +1396,14 @@
 			};
 			name = Debug;
 		};
-		32CE51961AB135D900DE07D8 /* Release */ = {
+		32C3BF321ADCAFC9004F4629 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "TojoMobile WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -1355,10 +1412,14 @@
 			};
 			name = Release;
 		};
-		32CE51971AB135D900DE07D8 /* Debug */ = {
+		32C3BF331ADCAFC9004F4629 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1367,21 +1428,27 @@
 				INFOPLIST_FILE = "TojoMobile WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
 			name = Debug;
 		};
-		32CE51981AB135D900DE07D8 /* Release */ = {
+		32C3BF341ADCAFC9004F4629 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
 				IBSC_MODULE = TojoMobile_WatchKit_Extension;
 				INFOPLIST_FILE = "TojoMobile WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -1479,7 +1546,7 @@
 				INFOPLIST_FILE = TojoMobile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "同舟";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TojoMobile/TojoMobile-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1499,7 +1566,7 @@
 				INFOPLIST_FILE = TojoMobile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "同舟";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TojoMobile/TojoMobile-Bridging-Header.h";
 			};
@@ -1542,20 +1609,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		32CE51991AB135D900DE07D8 /* Build configuration list for PBXNativeTarget "TojoMobile WatchKit App" */ = {
+		32C3BF351ADCAFC9004F4629 /* Build configuration list for PBXNativeTarget "TojoMobile WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				32CE51971AB135D900DE07D8 /* Debug */,
-				32CE51981AB135D900DE07D8 /* Release */,
+				32C3BF331ADCAFC9004F4629 /* Debug */,
+				32C3BF341ADCAFC9004F4629 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32CE519A1AB135D900DE07D8 /* Build configuration list for PBXNativeTarget "TojoMobile WatchKit Extension" */ = {
+		32C3BF361ADCAFC9004F4629 /* Build configuration list for PBXNativeTarget "TojoMobile WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				32CE51951AB135D900DE07D8 /* Debug */,
-				32CE51961AB135D900DE07D8 /* Release */,
+				32C3BF311ADCAFC9004F4629 /* Debug */,
+				32C3BF321ADCAFC9004F4629 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
