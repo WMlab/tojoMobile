@@ -14,14 +14,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="登出" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4i-CX-ZzP">
-                        <rect key="frame" x="139" y="11" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登出" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4i-CX-ZzP">
+                        <rect key="frame" x="140" y="10" width="40" height="24"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerX" secondItem="o4i-CX-ZzP" secondAttribute="centerX" id="bpW-3d-RtQ"/>
+                    <constraint firstAttribute="centerY" secondItem="o4i-CX-ZzP" secondAttribute="centerY" id="egZ-ER-Ta8"/>
+                </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="1" green="0.29174876592576382" blue="0.30420759412607901" alpha="1" colorSpace="calibratedRGB"/>
         </tableViewCell>

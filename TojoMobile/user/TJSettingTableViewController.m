@@ -55,27 +55,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier1 = @"TJUserMenuCell";
     static NSString *CellIdentifier2 = @"TJLogoutTableViewCell";
-    //[self.myTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
-    dispatch_once(&onceToken, ^{
-        [tableView registerNib:[UINib nibWithNibName:CellIdentifier1 bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier1];
-        [tableView registerNib:[UINib nibWithNibName:CellIdentifier2 bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier2];
-    });
-    TJUserMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier1 forIndexPath:indexPath];
-    TJLogoutTableViewCell *logoutCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier2 forIndexPath:indexPath];
+    [tableView registerNib:[UINib nibWithNibName:CellIdentifier1 bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier1];
+    [tableView registerNib:[UINib nibWithNibName:CellIdentifier2 bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier2];
+    TJUserMenuCell *menuCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier1];
+    TJLogoutTableViewCell *logoutCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier2];
     if (indexPath.section == 0) {
-        switch (indexPath.row) {
-            case 0:
-                [cell setCellWithItemText:@"账号管理"];
-                break;
-            case 1:
-                [cell setCellWithItemText:@"关于同舟"];
-                break;
-            default:
-                [cell setCellWithItemText:@"其它"];
-                break;
+        if(indexPath.row == 0){
+            [menuCell setCellWithItemText:@"账号管理"];
         }
-        return cell;
-    } else {
+        if(indexPath.row == 1){
+            [menuCell setCellWithItemText:@"关于同舟"];
+        }
+        return menuCell;
+    }else{
         return logoutCell;
     }
 }
