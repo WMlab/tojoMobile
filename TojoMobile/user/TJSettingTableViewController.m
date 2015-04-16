@@ -8,6 +8,7 @@
 
 #import "TJSettingTableViewController.h"
 #import "TJUserMenuCell.h"
+#import "TJLogoutTableViewCell.h"
 
 @interface TJSettingTableViewController ()
 
@@ -52,47 +53,39 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"TJUserMenuCell";
+    static NSString *CellIdentifier1 = @"TJUserMenuCell";
+    static NSString *CellIdentifier2 = @"TJLogoutTableViewCell";
     //[self.myTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
     dispatch_once(&onceToken, ^{
-        [tableView registerNib:[UINib nibWithNibName:CellIdentifier bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier];
+        [tableView registerNib:[UINib nibWithNibName:CellIdentifier1 bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier1];
+        [tableView registerNib:[UINib nibWithNibName:CellIdentifier2 bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier2];
     });
-    TJUserMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    switch (indexPath.section) {
-        case 0:
-        {
-            switch (indexPath.row) {
-                case 0:
-                    [cell setCellWithItemText:@"账号管理"];
-                    break;
-                case 1:
-                    [cell setCellWithItemText:@"关于同舟"];
-                    break;
-                    
-                default:
-                    break;
-            }
+    TJUserMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier1 forIndexPath:indexPath];
+    TJLogoutTableViewCell *logoutCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier2 forIndexPath:indexPath];
+    if (indexPath.section == 0) {
+        switch (indexPath.row) {
+            case 0:
+                [cell setCellWithItemText:@"账号管理"];
+                break;
+            case 1:
+                [cell setCellWithItemText:@"关于同舟"];
+                break;
+            default:
+                [cell setCellWithItemText:@"其它"];
+                break;
         }
-            break;
-        case 1:
-        {
-            switch (indexPath.row) {
-                case 0:
-                    [cell setCellWithItemText:@"登出"];
-                    break;
-                    
-                default:
-                    
-                    break;
-            }
-        }
-            break;
-            
-        default:
-            [cell setCellWithItemText:@"其它"];
-            break;
+        return cell;
+    } else {
+        return logoutCell;
     }
-    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 20.0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.5;
 }
 
 /*

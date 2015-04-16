@@ -163,12 +163,6 @@
                     [self.navigationController pushViewController:attendTeamVC animated:YES];
                 }
                     break;
-                case 2:
-                {
-                    TJUserCollectProjectsViewController *collectProjectVC = [[TJUserCollectProjectsViewController alloc] init];
-                    [self.navigationController pushViewController:collectProjectVC animated:YES];
-                }
-                    break;
                     
                 default:
                     break;
