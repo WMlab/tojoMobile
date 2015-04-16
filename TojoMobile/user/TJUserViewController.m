@@ -13,6 +13,7 @@
 #import "TJUserAttendTeamsViewController.h"
 #import "TJUserCollectProjectsViewController.h"
 #import "TJSettingTableViewController.h"
+#import "TJUserBasicInfoCell.h"
 
 @interface TJUserViewController ()
 
@@ -70,61 +71,40 @@
     if (section == 0) {
         row = 1;
     }else if(section == 1){
-        row = 3;
+        row = 2;
     }
     return row;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *CellIdentifier = @"TJUserMenuCell";
+    static NSString *CellIdentifier1 = @"TJUserMenuCell";
+    static NSString *CellIdentifier2 = @"TJUserBasicInfoCell";
     //[self.myTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
-    dispatch_once(&onceToken, ^{
-        [tableView registerNib:[UINib nibWithNibName:CellIdentifier bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier];
-    });
-    TJUserMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    switch (indexPath.section) {
-        case 0:
-        {
-            switch (indexPath.row) {
-                case 0:
-                    [cell setCellWithItemText:@"个人资料"];
-                    break;
-                    
-                default:
-                    break;
-            }
+    [tableView registerNib:[UINib nibWithNibName:CellIdentifier1 bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier1];
+    [tableView registerNib:[UINib nibWithNibName:CellIdentifier2 bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier2];
+    TJUserMenuCell *menuCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier1];
+    TJUserBasicInfoCell *userCell =  [tableView dequeueReusableCellWithIdentifier:CellIdentifier2];
+    
+    if (indexPath.section == 0) {
+        return userCell;
+    }else {
+        if (indexPath.row == 0) {
+            [menuCell setCellWithItemText:@"我参与的项目"];
         }
-            break;
-        case 1:
-        {
-            switch (indexPath.row) {
-                case 0:
-                    [cell setCellWithItemText:@"我参与的项目"];
-                    break;
-                case 1:
-                    [cell setCellWithItemText:@"我参与的团队"];
-                    break;
-                case 2:
-                    [cell setCellWithItemText:@"我收藏的项目"];
-                    break;
-                    
-                default:
-                    [cell setCellWithItemText:@"其它"];
-
-                    break;
-            }
+        if (indexPath.row == 1) {
+            [menuCell setCellWithItemText:@"我参与的团队"];
         }
-            break;
-            
-        default:
-            [cell setCellWithItemText:@"其它"];
-            break;
+        return menuCell;
     }
-    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 44;
+    if (indexPath.section == 0) {
+        return 80;
+    } else {
+        return 44;
+    }
+    
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 20.0;
