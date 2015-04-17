@@ -705,6 +705,23 @@
             </objects>
             <point key="canvasLocation" x="1200" y="646.5"/>
         </scene>
+        <!--User Homepage View Controller-->
+        <scene sceneID="p10-CW-DHc">
+            <objects>
+                <tableViewController id="4BV-As-AUi" customClass="TJUserHomepageViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="05N-c5-82E">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="4BV-As-AUi" id="3lO-K6-Ujt"/>
+                            <outlet property="delegate" destination="4BV-As-AUi" id="JAZ-Sx-Uv3"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evP-hR-ZaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2137.5" y="848.25"/>
+        </scene>
         <!--舟信-->
         <scene sceneID="evX-jX-HdO">
             <objects>

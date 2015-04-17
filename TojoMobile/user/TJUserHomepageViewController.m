@@ -19,6 +19,14 @@
 
 @implementation TJUserHomepageViewController
 
+- (instancetype) init {
+    self = [super init];
+    if (self) {
+        _viewModel = [[TJUserHomepageViewModel alloc] init];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -27,6 +35,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self sendGetUserDetailInfoRequest];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,6 +75,15 @@
     }
     else {
         return nil;
+    }
+}
+
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 80.0;
+    }
+    else {
+        return 40;
     }
 }
 
