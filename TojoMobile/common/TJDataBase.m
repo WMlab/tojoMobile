@@ -34,13 +34,23 @@ static TJDataBase *_database = nil;
     if (![fileMgr isExecutableFileAtPath:databasePath]) {
         const char *dbpath = [databasePath UTF8String];
         if (sqlite3_open(dbpath, &db)==SQLITE_OK) {
-            const char *createSql="create table if not exists projectlist (id integer primary key autoincrement,categoryId integer, projectID integer, projectName text, projectImage text, projectCreatedDate text, projectEndDate text, projectFounderId integer, projectFounderName text, projectFounderImage text, projectFounderUniversityId integer, projectFounderUniversityName text, projectLabel text, projectText text, teamNumber integer, commentNumber integer)";
+            //创建projectlist table
+            const char *createSql="create table if not exists projectlist (id integer primary key autoincrement, projectId integer, projectName text, projectImage text, projectCreatedDate text, projectEndDate text, projectFounderId integer, projectFounderName text, projectFounderImage text, projectFounderUniversityId integer, projectFounderUniversityName text, projectLabel text, projectText text, teamNumber integer, commentNumber integer)";
             if (sqlite3_exec(db, createSql, nil, nil, nil) == SQLITE_OK) {
                 NSLog(@"projectlist table create OK");
             }
             else{
                 NSLog(@"projectlist table create Fail");
             }
+            //创建projectCategory table
+            const char *createSql2 = "create table if not exists projectCategory (id integer primary key autoincrement,categoryId integer, customId integer, projectId integer, projectType integer)";//projectType 0-普通，1-广告位
+            if (sqlite3_exec(db, createSql2, nil, nil, nil) == SQLITE_OK) {
+                NSLog(@"projectCategory table create OK");
+            }
+            else{
+                NSLog(@"projectCategory table create Fail");
+            }
+            //end
             NSLog(@"database initOK");
             sqlite3_close(db);
         }
@@ -50,92 +60,140 @@ static TJDataBase *_database = nil;
     }
 }
 
--(NSArray *)getProjectsWithCategoryId:(int)categoryId
+-(TJProjectHomeViewModel *)getProjectHomeDataWithViewModel:(TJProjectHomeViewModel *)viewModel
 {
-    NSMutableArray * result = [[NSMutableArray alloc] init];
-    NSString * sql = @"SELECT projectID, projectName, projectImage, projectCreatedDate, projectEndDate, projectFounderId, projectFounderName, projectFounderImage, projectFounderUniversityId, projectFounderUniversityName, teamNumber, commentNumber, projectLabel FROM projectlist WHERE categoryId = ?";
+    NSString * sql1 = @"SELECT projectId, projectName, projectImage, projectCreatedDate, projectEndDate, projectFounderId, projectFounderName, projectFounderImage, projectFounderUniversityId, projectFounderUniversityName, teamNumber, commentNumber, projectLabel FROM projectlist WHERE projectId in (SELECT projectId FROM projectCategory where categoryId = ? and customId = ? and projectType = 0) ";
+    NSString * sql2 = @"SELECT projectId, projectName, projectImage, projectCreatedDate, projectEndDate, projectFounderId, projectFounderName, projectFounderImage, projectFounderUniversityId, projectFounderUniversityName, teamNumber, commentNumber, projectLabel FROM projectlist WHERE projectId in (SELECT projectId FROM projectCategory where categoryId = ? and customId = ? and projectType = 1) ";
+
     NSString * databasePath = TJPathForDocumentsResource(@"database.db");
     NSFileManager * fileMgr = [NSFileManager defaultManager];
     if (![fileMgr isExecutableFileAtPath:databasePath]) {
         const char *dbpath = [databasePath UTF8String];
         if (sqlite3_open(dbpath, &db)==SQLITE_OK) {
-            sqlite3_stmt *stmt;
-            if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, nil) == SQLITE_OK) {
-                sqlite3_bind_text(stmt, 1, [[NSString stringWithFormat:@"%d", categoryId] UTF8String], -1, NULL);
+            sqlite3_stmt *stmt1, *stmt2;
+            if (sqlite3_prepare_v2(db, [sql1 UTF8String], -1, &stmt1, nil) == SQLITE_OK) {
+                sqlite3_bind_text(stmt1, 1, [[NSString stringWithFormat:@"%d", viewModel.categoryId] UTF8String], -1, NULL);
+                sqlite3_bind_text(stmt1, 2, [[NSString stringWithFormat:@"%d", viewModel.customId] UTF8String], -1, NULL);
             }
-            while(sqlite3_step(stmt) == SQLITE_ROW) {
-                int projectID = sqlite3_column_int(stmt, 0);
-                char *projectName = (char *)sqlite3_column_text(stmt, 1);
-                NSString *projectNameStr = [[NSString alloc] initWithUTF8String:projectName];
-                char *projectImage = (char *)sqlite3_column_text(stmt, 2);
-                NSString *projectImageStr = [[NSString alloc] initWithUTF8String:projectImage];
-                char *projectCreatedDate = (char *)sqlite3_column_text(stmt, 3);
-                NSString *projectCreatedDateStr = [[NSString alloc] initWithUTF8String:projectCreatedDate];
-                char *projectEndDate = (char *)sqlite3_column_text(stmt, 4);
-                NSString *projectEndDateStr = [[NSString alloc] initWithUTF8String:projectEndDate];
-                int projectFounderId = sqlite3_column_int(stmt, 5);
-                char *projectFounderName = (char *)sqlite3_column_text(stmt, 6);
-                NSString *projectFounderNameStr = [[NSString alloc] initWithUTF8String:projectFounderName];
-                char *projectFounderImage = (char *)sqlite3_column_text(stmt, 7);
-                NSString *projectFounderImageStr = [[NSString alloc] initWithUTF8String:projectFounderImage];
-                int projectFounderUniversityId = sqlite3_column_int(stmt, 8);
-                char *projectFounderUniversityName = (char *)sqlite3_column_text(stmt, 9);
-                NSString *projectFounderUniversityNameStr = [[NSString alloc] initWithUTF8String:projectFounderUniversityName];
-                int teamNumber = sqlite3_column_int(stmt, 10);
-                int commentNumber = sqlite3_column_int(stmt, 11);
-                char *projectLabel = (char *)sqlite3_column_text(stmt, 12);
-                NSString *projectLabelStr = [[NSString alloc] initWithUTF8String:projectLabel];
-
-                TJProjectInfoModel *model = [[TJProjectInfoModel alloc] init];
-                model.projectID = projectID;
-                model.projectName = projectNameStr;
-                model.projectImage = projectImageStr;
-                model.projectCreatedDate = projectCreatedDateStr;
-                model.projectEndDate = projectEndDateStr;
-                model.projectFounderId = projectFounderId;
-                model.projectFounderName = projectFounderNameStr;
-                model.projectFounderImage = projectFounderImageStr;
-                model.projectFounderUniversityId = projectFounderUniversityId;
-                model.projectFounderUniversityName = projectFounderUniversityNameStr;
-                model.teamNumber = teamNumber;
-                model.commentNumber = commentNumber;
-                model.projectLabel = projectLabelStr;
-                [result addObject:model];
+            if (sqlite3_prepare_v2(db, [sql2 UTF8String], -1, &stmt2, nil) == SQLITE_OK) {
+                sqlite3_bind_text(stmt2, 1, [[NSString stringWithFormat:@"%d", viewModel.categoryId] UTF8String], -1, NULL);
+                sqlite3_bind_text(stmt2, 2, [[NSString stringWithFormat:@"%d", viewModel.customId] UTF8String], -1, NULL);
             }
-            sqlite3_finalize(stmt);
+            
+            viewModel.projectList = [self getProjectArrayWithSql:stmt1];
+            viewModel.adProjects = [self getProjectArrayWithSql:stmt2];
+            sqlite3_finalize(stmt1);
+            sqlite3_finalize(stmt2);
             sqlite3_close(db);
         }
     }
-
-    return result;
+    return viewModel;
 }
 
--(BOOL)insertProjectWithMutableArray:(NSArray *)array andCategoryId:(int)categoryId {
-    NSString * sql = @"insert into projectlist (categoryId, projectID, projectName, projectImage, projectCreatedDate, projectEndDate, projectFounderId, projectFounderName, projectFounderImage, projectFounderUniversityId, projectFounderUniversityName, teamNumber, commentNumber, projectLabel) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+- (NSMutableArray *) getProjectArrayWithSql:(sqlite3_stmt *) stmt {
+    NSMutableArray *resultArr = [[NSMutableArray alloc] init];
+    while(sqlite3_step(stmt) == SQLITE_ROW) {
+        int projectId = sqlite3_column_int(stmt, 0);
+        char *projectName = (char *)sqlite3_column_text(stmt, 1);
+        NSString *projectNameStr = [[NSString alloc] initWithUTF8String:projectName];
+        char *projectImage = (char *)sqlite3_column_text(stmt, 2);
+        NSString *projectImageStr = [[NSString alloc] initWithUTF8String:projectImage];
+        char *projectCreatedDate = (char *)sqlite3_column_text(stmt, 3);
+        NSString *projectCreatedDateStr = [[NSString alloc] initWithUTF8String:projectCreatedDate];
+        char *projectEndDate = (char *)sqlite3_column_text(stmt, 4);
+        NSString *projectEndDateStr = [[NSString alloc] initWithUTF8String:projectEndDate];
+        int projectFounderId = sqlite3_column_int(stmt, 5);
+        char *projectFounderName = (char *)sqlite3_column_text(stmt, 6);
+        NSString *projectFounderNameStr = [[NSString alloc] initWithUTF8String:projectFounderName];
+        char *projectFounderImage = (char *)sqlite3_column_text(stmt, 7);
+        NSString *projectFounderImageStr = [[NSString alloc] initWithUTF8String:projectFounderImage];
+        int projectFounderUniversityId = sqlite3_column_int(stmt, 8);
+        char *projectFounderUniversityName = (char *)sqlite3_column_text(stmt, 9);
+        NSString *projectFounderUniversityNameStr = [[NSString alloc] initWithUTF8String:projectFounderUniversityName];
+        int teamNumber = sqlite3_column_int(stmt, 10);
+        int commentNumber = sqlite3_column_int(stmt, 11);
+        char *projectLabel = (char *)sqlite3_column_text(stmt, 12);
+        NSString *projectLabelStr = [[NSString alloc] initWithUTF8String:projectLabel];
+        
+        TJProjectInfoModel *model = [[TJProjectInfoModel alloc] init];
+        model.projectID = projectId;
+        model.projectName = projectNameStr;
+        model.projectImage = projectImageStr;
+        model.projectCreatedDate = projectCreatedDateStr;
+        model.projectEndDate = projectEndDateStr;
+        model.projectFounderId = projectFounderId;
+        model.projectFounderName = projectFounderNameStr;
+        model.projectFounderImage = projectFounderImageStr;
+        model.projectFounderUniversityId = projectFounderUniversityId;
+        model.projectFounderUniversityName = projectFounderUniversityNameStr;
+        model.teamNumber = teamNumber;
+        model.commentNumber = commentNumber;
+        model.projectLabel = projectLabelStr;
+        [resultArr addObject:model];
+    }
+    return resultArr;
+}
+
+-(BOOL)insertProjectWithModel:(TJProjectHomeViewModel *)viewModel {
+    NSMutableArray *projectAllArr = [[NSMutableArray alloc] initWithArray:viewModel.adProjects];
+    [projectAllArr addObjectsFromArray:viewModel.projectList];
+    
+    NSString *sql1 = @"insert into projectlist (projectId, projectName, projectImage, projectCreatedDate, projectEndDate, projectFounderId, projectFounderName, projectFounderImage, projectFounderUniversityId, projectFounderUniversityName, teamNumber, commentNumber, projectLabel) values (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    NSString *sql2 = @"INSERT INTO projectCategory (categoryId, customId, projectId, projectType) values (?,?,?,?)";
     NSString * databasePath = TJPathForDocumentsResource(@"database.db");
     
     NSFileManager * fileMgr = [NSFileManager defaultManager];
     if (![fileMgr isExecutableFileAtPath:databasePath]) {
         const char *dbpath = [databasePath UTF8String];
         if (sqlite3_open(dbpath, &db)==SQLITE_OK) {
-            const char *insertSql=[sql UTF8String];
-            for (TJProjectInfoModel *cell in array) {
+            //表projectlist的插入
+            const char *insertSql1=[sql1 UTF8String];
+            for (TJProjectInfoModel *cell in projectAllArr) {
                 sqlite3_stmt *stmt;
-                if(sqlite3_prepare_v2(db, insertSql, -1, &stmt, NULL) == SQLITE_OK) {
-                    sqlite3_bind_int(stmt, 1, categoryId);;
-                    sqlite3_bind_int(stmt, 2, cell.projectID);
-                    sqlite3_bind_text(stmt, 3, [cell.projectName UTF8String], -1, NULL);
-                    sqlite3_bind_text(stmt, 4, [cell.projectImage UTF8String], -1, NULL);
-                    sqlite3_bind_text(stmt, 5, [cell.projectCreatedDate UTF8String], -1, NULL);
-                    sqlite3_bind_text(stmt, 6, [cell.projectEndDate UTF8String], -1, NULL);
-                    sqlite3_bind_int(stmt, 7, cell.projectFounderId);
-                    sqlite3_bind_text(stmt, 8, [cell.projectFounderName UTF8String], -1, NULL);
-                    sqlite3_bind_text(stmt, 9, [cell.projectFounderImage UTF8String], -1, NULL);
-                    sqlite3_bind_int(stmt, 10, cell.projectFounderUniversityId);
-                    sqlite3_bind_text(stmt, 11, [cell.projectFounderUniversityName UTF8String], -1, NULL);
-                    sqlite3_bind_int(stmt, 12, cell.teamNumber);
-                    sqlite3_bind_int(stmt, 13, cell.commentNumber);
-                    sqlite3_bind_text(stmt, 14, [cell.projectLabel UTF8String], -1, NULL);
+                if(sqlite3_prepare_v2(db, insertSql1, -1, &stmt, NULL) == SQLITE_OK) {
+                    sqlite3_bind_int(stmt, 1, cell.projectID);
+                    sqlite3_bind_text(stmt, 2, [cell.projectName UTF8String], -1, NULL);
+                    sqlite3_bind_text(stmt, 3, [cell.projectImage UTF8String], -1, NULL);
+                    sqlite3_bind_text(stmt, 4, [cell.projectCreatedDate UTF8String], -1, NULL);
+                    sqlite3_bind_text(stmt, 5, [cell.projectEndDate UTF8String], -1, NULL);
+                    sqlite3_bind_int(stmt, 6, cell.projectFounderId);
+                    sqlite3_bind_text(stmt, 7, [cell.projectFounderName UTF8String], -1, NULL);
+                    sqlite3_bind_text(stmt, 8, [cell.projectFounderImage UTF8String], -1, NULL);
+                    sqlite3_bind_int(stmt, 9, cell.projectFounderUniversityId);
+                    sqlite3_bind_text(stmt, 10, [cell.projectFounderUniversityName UTF8String], -1, NULL);
+                    sqlite3_bind_int(stmt, 11, cell.teamNumber);
+                    sqlite3_bind_int(stmt, 12, cell.commentNumber);
+                    sqlite3_bind_text(stmt, 13, [cell.projectLabel UTF8String], -1, NULL);
+                }
+                if (sqlite3_step(stmt) == SQLITE_DONE) {
+                }else{
+                    NSLog(@"insert data Fail");
+                }
+                sqlite3_finalize(stmt);
+            }
+            //表projectCategory的插入
+            const char *insertSql2=[sql2 UTF8String];
+            for (TJProjectInfoModel *model in viewModel.projectList) {
+                sqlite3_stmt *stmt;
+                if(sqlite3_prepare_v2(db, insertSql2, -1, &stmt, NULL) == SQLITE_OK) {
+                    sqlite3_bind_int(stmt, 1, viewModel.categoryId);
+                    sqlite3_bind_int(stmt, 2, viewModel.customId);
+                    sqlite3_bind_int(stmt, 3, model.projectID);
+                    sqlite3_bind_int(stmt, 4, 0);
+                }
+                if (sqlite3_step(stmt) == SQLITE_DONE) {
+                }else{
+                    NSLog(@"insert data Fail");
+                }
+                sqlite3_finalize(stmt);
+            }
+            for (TJProjectInfoModel *model in viewModel.adProjects) {
+                sqlite3_stmt *stmt;
+                if(sqlite3_prepare_v2(db, insertSql2, -1, &stmt, NULL) == SQLITE_OK) {
+                    sqlite3_bind_int(stmt, 1, viewModel.categoryId);
+                    sqlite3_bind_int(stmt, 2, viewModel.customId);
+                    sqlite3_bind_int(stmt, 3, model.projectID);
+                    sqlite3_bind_int(stmt, 4, 1);
                 }
                 if (sqlite3_step(stmt) == SQLITE_DONE) {
                 }else{
@@ -151,24 +209,40 @@ static TJDataBase *_database = nil;
     return YES;
 }
 
--(BOOL)clearNewsWithCategoryId:(int)categoryId{
-    NSString * sql = @"delete from projectlist where categoryId = ?";
-    NSString * databasePath = TJPathForDocumentsResource(@"database.db");
+-(BOOL)clearProjectsWithViewModel:(TJProjectHomeViewModel *)viewModel {
+    NSString *sql1 = @"DELETE FROM projectlist WHERE projectId IN (select projectId from projectCategory WHERE categoryId = ? AND customId = ? )";
+    NSString *sql2 = @"DELETE FROM projectCategory WHERE categoryId = ? AND customId = ?";
     
+    NSString * databasePath = TJPathForDocumentsResource(@"database.db");
     NSFileManager * fileMgr = [NSFileManager defaultManager];
     if (![fileMgr isExecutableFileAtPath:databasePath]) {
         const char *dbpath = [databasePath UTF8String];
         if (sqlite3_open(dbpath, &db)==SQLITE_OK) {
-            const char *deleteSql=[sql UTF8String];
-            sqlite3_stmt *stmt;
-            if(sqlite3_prepare_v2(db, deleteSql, -1, &stmt, NULL) == SQLITE_OK) {
-                sqlite3_bind_int(stmt, 1, categoryId);
+            //删除表projectlist
+            const char *deleteSql1=[sql1 UTF8String];
+            sqlite3_stmt *stmt1;
+            if(sqlite3_prepare_v2(db, deleteSql1, -1, &stmt1, NULL) == SQLITE_OK) {
+                sqlite3_bind_int(stmt1, 1, viewModel.categoryId);
+                sqlite3_bind_int(stmt1, 2, viewModel.customId);
             }
-            if (sqlite3_step(stmt) == SQLITE_DONE) {
+            if (sqlite3_step(stmt1) == SQLITE_DONE) {
             }else{
                 NSLog(@"delete data Fail");
             }
-            sqlite3_finalize(stmt);
+            sqlite3_finalize(stmt1);
+            //删除表projectCategory
+            const char *deleteSql2=[sql2 UTF8String];
+            sqlite3_stmt *stmt2;
+            if(sqlite3_prepare_v2(db, deleteSql2, -1, &stmt2, NULL) == SQLITE_OK) {
+                sqlite3_bind_int(stmt2, 1, viewModel.categoryId);
+                sqlite3_bind_int(stmt2, 2, viewModel.customId);
+            }
+            if (sqlite3_step(stmt2) == SQLITE_DONE) {
+            }else{
+                NSLog(@"delete data Fail");
+            }
+            sqlite3_finalize(stmt2);
+
             sqlite3_close(db);
         }else {
             NSLog(@"database initFail");

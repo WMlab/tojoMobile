@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "TJProjectHomeViewModel.h"
 @interface TJDataBase : NSObject
 
 +(instancetype)getInstance;
@@ -15,11 +15,11 @@
 -(void)initDatabase;
 
 /*** 获取缓存 ***/
--(NSArray *)getProjectsWithCategoryId:(int)categoryId;
+-(TJProjectHomeViewModel *)getProjectHomeDataWithViewModel:(TJProjectHomeViewModel *)viewModel;
 
 /*** 添加缓存 ***/
--(BOOL)insertProjectWithMutableArray:(NSArray *)array andCategoryId:(int)categoryId;
+-(BOOL)insertProjectWithModel:(TJProjectHomeViewModel *)viewModel;
 
 /*** 删除原有缓存 ***/
--(BOOL)clearNewsWithCategoryId:(int)categoryId;
+-(BOOL)clearProjectsWithViewModel:(TJProjectHomeViewModel *)viewModel;
 @end

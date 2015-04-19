@@ -16,6 +16,7 @@
 #import "TJProjectListCell.h"
 #import "TJProjectDetailViewController.h"
 #import "TJScrollImageCell.h"
+#import "TJDataBase.h"
 
 @interface TJProjectHomeViewController () <UITableViewDelegate, UITableViewDataSource, TJScrollImageDelegate>
 {
@@ -61,7 +62,7 @@
     TJProjectCategoryModel *model = [_catArr objectAtIndex:0];
     _viewModel.categoryId = model.categoryId;
     _viewModel.customId = model.customId;
-    //    [self loadLastRecordData];
+    [self loadLastRecordData];
 }
 
 - (void)initView {
@@ -125,7 +126,9 @@
     TJProjectCategoryModel *model = [_catArr objectAtIndex:sender.tag];
     _viewModel.categoryId = model.categoryId;
     _viewModel.customId = model.customId;
-
+   
+    [self loadLastRecordData];
+    
     //切换分类后，自动下拉刷新更新数据
     [self.projectTableView headerBeginRefreshing];
 }
@@ -226,9 +229,10 @@
         [self.projectTableView headerEndRefreshing];
         if (success) {
             NSLog(@"success");
-//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-////                [self saveRecordToDataBase];
-//            });
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [self saveRecordToDataBase];
+            });
+
             [self.projectTableView reloadData];
         }
         else {
@@ -269,5 +273,19 @@
 - (BOOL) hasAdProjects {
     return !(_viewModel.adProjects.count==0);
 }
+
+#pragma mark --------- 缓存 -----------
+-(void)saveRecordToDataBase {
+    
+    
+    [[TJDataBase getInstance] clearProjectsWithViewModel:_viewModel];
+    [[TJDataBase getInstance] insertProjectWithModel:_viewModel];
+}
+
+-(void)loadLastRecordData {
+    _viewModel = [[TJDataBase getInstance] getProjectHomeDataWithViewModel:_viewModel];
+}
+
+
 
 @end

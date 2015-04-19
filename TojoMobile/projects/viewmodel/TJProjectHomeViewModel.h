@@ -13,7 +13,8 @@
 @property (nonatomic, assign) int categoryId;
 @property (nonatomic, assign) int customId;
 
-@property (nonatomic, strong) NSMutableArray *adProjects;
-@property (nonatomic, strong) NSMutableArray *projectList;
+@property (nonatomic, strong) NSMutableArray *adProjects; // model - TJProjectInfoModel
+@property (nonatomic, strong) NSMutableArray *projectList;// model - TJProjectInfoModel
+
 
 @end
