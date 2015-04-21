@@ -42,10 +42,14 @@ static TJSession *_instance = nil;
 }
 
 -(BOOL)setupUserInfoModel:(TJUserBasicInfoModel *)model {
+    _userInfoModel = model;
     return true;
 }
 
 -(void)clearUserInfoModel {
-    
+    _userInfoModel = [[TJUserBasicInfoModel alloc]init];
+    NSUserDefaults * usrDefault = [NSUserDefaults standardUserDefaults];
+    [usrDefault removeObjectForKey:@"usr"];
+    [usrDefault removeObjectForKey:@"pwd"];
 }
 @end

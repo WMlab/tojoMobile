@@ -42,7 +42,9 @@ static TJUserSender* _sender = nil;
         NSError *err;
         TJUserLoginResponseModel *responseModel = [[TJUserLoginResponseModel alloc] initWithDictionary:responseDic error:&err];
         if (0 == responseModel.result.code && !err) {
-            [[TJSession getInstance] setupUserId:responseModel.userId];
+//            [[TJSession getInstance] setupUserId:responseModel.userId];
+            [[TJSession getInstance] setupUserId:responseModel.userInfo.userId];
+            
             if (callBack) {
                 callBack(true, responseModel.result.message);
             }

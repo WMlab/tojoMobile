@@ -11,6 +11,8 @@
 
 #define TJScreenWidth ([[UIScreen mainScreen]bounds].size.width)
 
+#define TJUserLoginSuccess @"kTJUserLoginSuccess"
+
 //#define BASE_URL @"http://api.tongjo.com/"
 #define BASE_URL @"http://api.tongjo.com/"
 #define IMAGE_BASE_URL @"http://api.tongjo.com/files/"
