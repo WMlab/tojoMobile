@@ -34,5 +34,9 @@ typedef void (^UserCommonCallBack)(BOOL success, NSString *message);
  */
 -(void) sendGetUserDetailInfoWithViewModel:(TJUserHomepageViewModel *)viewModel completeBlock:(UserCommonCallBack) callBack;
 
+/**
+ *  修改账号密码
+ */
+-(void) sendRevisePasswordWithUserId:(int)userId oldPassword:(NSString *)oldPwd andNewPassword:(NSString *)neewPwd completeBlock:(UserCommonCallBack) callBack;
 
 @end

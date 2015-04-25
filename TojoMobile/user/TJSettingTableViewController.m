@@ -10,6 +10,7 @@
 #import "TJUserMenuCell.h"
 #import "TJLogoutTableViewCell.h"
 #import "TJSession.h"
+#import "TJRevisePasswordViewController.h"
 
 @interface TJSettingTableViewController ()
 
@@ -121,6 +122,8 @@
     if (indexPath.section == 1) {
         [[TJSession getInstance] clearUserInfoModel];
         //跳转到未登录状态下的【我的】
+        TJRevisePasswordViewController *vc = [[TJRevisePasswordViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
@@ -626,7 +626,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zaM-Zr-e2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1083" y="-804.75"/>
+            <point key="canvasLocation" x="1095" y="-774.75"/>
         </scene>
         <!--舟信-->
         <scene sceneID="ouG-Eq-4de">
@@ -652,7 +652,8 @@
             <objects>
                 <navigationController id="DY2-J6-8iR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我" image="mine" id="DB9-et-dTP"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WSJ-Th-9hJ">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="WSJ-Th-9hJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -664,7 +665,7 @@
             </objects>
             <point key="canvasLocation" x="387" y="641.25"/>
         </scene>
-        <!--User View Controller-->
+        <!--我-->
         <scene sceneID="fwK-Pl-ALU">
             <objects>
                 <viewController id="oUz-V5-t7l" customClass="TJUserViewController" sceneMemberID="viewController">
@@ -696,7 +697,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="wUA-0B-t2D"/>
+                    <navigationItem key="navigationItem" title="我" id="wUA-0B-t2D"/>
                     <connections>
                         <outlet property="myTableView" destination="OD6-0h-N5l" id="Bve-La-7jR"/>
                     </connections>
@@ -710,6 +711,7 @@
             <objects>
                 <tableViewController id="4BV-As-AUi" customClass="TJUserHomepageViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="05N-c5-82E">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -728,7 +730,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wZc-pm-3HZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="舟信" image="project" id="MOe-P7-2aB"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rxy-br-yjn">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Rxy-br-yjn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
@@ -585,24 +585,24 @@
                             <exclude reference="RkV-0p-8oj"/>
                         </mask>
                         <mask key="constraints">
+                            <exclude reference="3lt-hd-Abp"/>
+                            <exclude reference="I3S-Ae-o1w"/>
+                            <exclude reference="M33-yf-42N"/>
+                            <exclude reference="1NV-aU-2BR"/>
+                            <exclude reference="3Dl-2Y-jLD"/>
+                            <exclude reference="L02-St-Crk"/>
+                            <exclude reference="IVO-r3-DLr"/>
+                            <exclude reference="N7r-Pa-nMA"/>
+                            <exclude reference="UIK-px-lLx"/>
+                            <exclude reference="wOk-SZ-eLI"/>
+                            <exclude reference="GW7-wa-Hql"/>
+                            <exclude reference="PQa-1s-YYs"/>
+                            <exclude reference="tZN-zC-jmd"/>
                             <exclude reference="0F4-T9-Cgx"/>
                             <exclude reference="bW7-e3-Swv"/>
                             <exclude reference="ebG-Ie-azt"/>
                             <exclude reference="tRH-JQ-LsF"/>
                             <exclude reference="vbB-s3-NJW"/>
-                            <exclude reference="GW7-wa-Hql"/>
-                            <exclude reference="PQa-1s-YYs"/>
-                            <exclude reference="tZN-zC-jmd"/>
-                            <exclude reference="1NV-aU-2BR"/>
-                            <exclude reference="3Dl-2Y-jLD"/>
-                            <exclude reference="L02-St-Crk"/>
-                            <exclude reference="3lt-hd-Abp"/>
-                            <exclude reference="I3S-Ae-o1w"/>
-                            <exclude reference="M33-yf-42N"/>
-                            <exclude reference="IVO-r3-DLr"/>
-                            <exclude reference="N7r-Pa-nMA"/>
-                            <exclude reference="UIK-px-lLx"/>
-                            <exclude reference="wOk-SZ-eLI"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
@@ -614,24 +614,24 @@
                             <include reference="RkV-0p-8oj"/>
                         </mask>
                         <mask key="constraints">
+                            <include reference="3lt-hd-Abp"/>
+                            <include reference="I3S-Ae-o1w"/>
+                            <include reference="M33-yf-42N"/>
+                            <include reference="1NV-aU-2BR"/>
+                            <include reference="3Dl-2Y-jLD"/>
+                            <include reference="L02-St-Crk"/>
+                            <include reference="IVO-r3-DLr"/>
+                            <include reference="N7r-Pa-nMA"/>
+                            <exclude reference="UIK-px-lLx"/>
+                            <include reference="wOk-SZ-eLI"/>
+                            <include reference="GW7-wa-Hql"/>
+                            <include reference="PQa-1s-YYs"/>
+                            <include reference="tZN-zC-jmd"/>
                             <include reference="0F4-T9-Cgx"/>
                             <include reference="bW7-e3-Swv"/>
                             <include reference="ebG-Ie-azt"/>
                             <include reference="tRH-JQ-LsF"/>
                             <include reference="vbB-s3-NJW"/>
-                            <include reference="GW7-wa-Hql"/>
-                            <include reference="PQa-1s-YYs"/>
-                            <include reference="tZN-zC-jmd"/>
-                            <include reference="1NV-aU-2BR"/>
-                            <include reference="3Dl-2Y-jLD"/>
-                            <include reference="L02-St-Crk"/>
-                            <include reference="3lt-hd-Abp"/>
-                            <include reference="I3S-Ae-o1w"/>
-                            <include reference="M33-yf-42N"/>
-                            <include reference="IVO-r3-DLr"/>
-                            <include reference="N7r-Pa-nMA"/>
-                            <exclude reference="UIK-px-lLx"/>
-                            <include reference="wOk-SZ-eLI"/>
                         </mask>
                     </variation>
                 </scrollView>

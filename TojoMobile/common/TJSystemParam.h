@@ -26,6 +26,7 @@
 #define REQUEST_URL_LOGIN                   @"login"            //登陆
 #define REQUEST_URL_REGISTRATION            @"registration"     //注册
 #define REQUEST_URL_USER_HOMEPAGE           @"homepage"         //他人访问个人主页
+#define REQUEST_URL_REVISE_PASSWORD         @"revisepassword"   //修改密码
 
 /************** project ***************/
 #define REQUEST_URL_PROJECT_HOME            @"projecthome"      //项目主页
