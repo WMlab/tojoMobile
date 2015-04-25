@@ -116,7 +116,7 @@ static TJDataBase *_database = nil;
         NSString *projectLabelStr = [[NSString alloc] initWithUTF8String:projectLabel];
         
         TJProjectInfoModel *model = [[TJProjectInfoModel alloc] init];
-        model.projectID = projectId;
+        model.projectId = projectId;
         model.projectName = projectNameStr;
         model.projectImage = projectImageStr;
         model.projectCreatedDate = projectCreatedDateStr;
@@ -151,7 +151,7 @@ static TJDataBase *_database = nil;
             for (TJProjectInfoModel *cell in projectAllArr) {
                 sqlite3_stmt *stmt;
                 if(sqlite3_prepare_v2(db, insertSql1, -1, &stmt, NULL) == SQLITE_OK) {
-                    sqlite3_bind_int(stmt, 1, cell.projectID);
+                    sqlite3_bind_int(stmt, 1, cell.projectId);
                     sqlite3_bind_text(stmt, 2, [cell.projectName UTF8String], -1, NULL);
                     sqlite3_bind_text(stmt, 3, [cell.projectImage UTF8String], -1, NULL);
                     sqlite3_bind_text(stmt, 4, [cell.projectCreatedDate UTF8String], -1, NULL);
@@ -178,7 +178,7 @@ static TJDataBase *_database = nil;
                 if(sqlite3_prepare_v2(db, insertSql2, -1, &stmt, NULL) == SQLITE_OK) {
                     sqlite3_bind_int(stmt, 1, viewModel.categoryId);
                     sqlite3_bind_int(stmt, 2, viewModel.customId);
-                    sqlite3_bind_int(stmt, 3, model.projectID);
+                    sqlite3_bind_int(stmt, 3, model.projectId);
                     sqlite3_bind_int(stmt, 4, 0);
                 }
                 if (sqlite3_step(stmt) == SQLITE_DONE) {
@@ -192,7 +192,7 @@ static TJDataBase *_database = nil;
                 if(sqlite3_prepare_v2(db, insertSql2, -1, &stmt, NULL) == SQLITE_OK) {
                     sqlite3_bind_int(stmt, 1, viewModel.categoryId);
                     sqlite3_bind_int(stmt, 2, viewModel.customId);
-                    sqlite3_bind_int(stmt, 3, model.projectID);
+                    sqlite3_bind_int(stmt, 3, model.projectId);
                     sqlite3_bind_int(stmt, 4, 1);
                 }
                 if (sqlite3_step(stmt) == SQLITE_DONE) {
