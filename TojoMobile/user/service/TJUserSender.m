@@ -105,7 +105,7 @@ static TJUserSender* _sender = nil;
         if (0 == responseModel.result.code && !err) {
             viewModel.userBasicInfo = [responseModel.userBasicInfo copy];
             viewModel.userProjectList = [responseModel.userProjectList copy];
-            viewModel.userTeamList = [responseModel.userTeamList copy];
+//            viewModel.userTeamList = [responseModel.userTeamList copy];
             
             if (callBack) {
                 callBack(true, responseModel.result.message);
