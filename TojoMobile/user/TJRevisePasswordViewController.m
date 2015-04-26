@@ -29,7 +29,7 @@
 //    [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
 //    [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.navigationItem.title = @"修改密码";
-    UIBarButtonItem *completeButton = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(changePwd)];
+    UIBarButtonItem *completeButton = [[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStylePlain target:self action:@selector(changePwd)];
     self.navigationItem.rightBarButtonItem = completeButton;
     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
 
@@ -47,6 +47,10 @@
 }
 
 - (void) changePwd {
+    [self.oldPwdField resignFirstResponder];
+    [self.freshPwdField resignFirstResponder];
+    [self.freshPwdAgainField resignFirstResponder];
+    
     if ([self checkInputValidate]) {
         int userId = [[TJSession getInstance] getUserId];
         [[TJUserSender getInstance] sendRevisePasswordWithUserId:userId oldPassword:[self md5:self.oldPwdField.text] andNewPassword:[self md5:self.freshPwdField.text] completeBlock:^(BOOL success, NSString *message) {

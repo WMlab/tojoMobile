@@ -9,10 +9,13 @@
 #import "TJUserHomepageViewController.h"
 #import "TJUserHomepageViewModel.h"
 #import "TJUserBasicInfoCell.h"
+#import "TJUserLabelCell.h"
+#import "TJProjectListCell.h"
 #import "TJUserSender.h"
+#import "TJProjectDetailViewController.h"
 
 @interface TJUserHomepageViewController () {
-    dispatch_once_t onceInfo;
+    dispatch_once_t onceInfo,onceLabel,onceProject;
 }
 @property (nonatomic, strong) TJUserHomepageViewModel *viewModel;
 @end
@@ -47,7 +50,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -56,10 +59,10 @@
         return 1;
     }
     else if (section == 1) {
-        return 0;
+        return 1;
     }
     else {
-        return 0;
+        return _viewModel.userProjectList.count;
     }
 }
 
@@ -73,53 +76,92 @@
         [cell setCellWithModel:_viewModel.userBasicInfo];
         return cell;
     }
+    else if (indexPath.section == 1){
+        dispatch_once(&onceLabel, ^{
+            [tableView registerNib:[UINib nibWithNibName:@"TJUserLabelCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJUserLabelCell"];});
+        static NSString *cellId = @"TJUserLabelCell";
+        TJUserLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+        [cell setCellWithLabels:_viewModel.userLabelArr];
+        return cell;
+    }
     else {
-        return nil;
+        dispatch_once(&onceProject, ^{
+            [tableView registerNib:[UINib nibWithNibName:@"TJProjectListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJProjectListCell"];
+        });
+        static NSString *cellId = @"TJProjectListCell";
+        TJProjectListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+        TJProjectInfoModel *infoModel = (TJProjectInfoModel *)[_viewModel.userProjectList objectAtIndex:indexPath.row];
+        [cell setCellWithProjectItem:infoModel];
+        return cell;
     }
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return 80.0;
+        return 170.0;
+    }
+    else if (indexPath.section == 1) {
+        return [TJUserLabelCell getCellHeightWithLabels:_viewModel.userLabelArr];
+    }
+    else if (indexPath.section == 2){
+        return 130;
     }
     else {
         return 40;
     }
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return 0;
+    }
+    return 30;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *secView = [[UIView alloc] initWithFrame:CGRectMake(0, 5, TJScreenWidth, 20)];
+    secView.backgroundColor = [UIColor whiteColor];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:secView.frame];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = [UIFont systemFontOfSize:16];
+    [secView addSubview:titleLabel];
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+    if (section == 1) {
+        if (_viewModel.userBasicInfo.userGender == 0) {
+            titleLabel.text = @"她的标签";
+        }
+        else {
+            titleLabel.text = @"他的标签";
+        }
+        return secView;
+    }
+    else if (section == 2) {
+        if (_viewModel.userBasicInfo.userGender == 0) {
+            titleLabel.text = @"她的项目";
+        }
+        else {
+            titleLabel.text = @"他的项目";
+        }
+        return secView;
+    }
+    else {
+        return nil;
+    }
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+
+#pragma mark - tableview delegate
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 2) {
+        TJProjectDetailViewController *detailViewController = [[TJProjectDetailViewController alloc] init];
+        TJProjectInfoModel *projectModel = [_viewModel.userProjectList objectAtIndex:indexPath.row];
+        [detailViewController setProjectId:projectModel.projectId];
+        detailViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:detailViewController animated:YES];
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-*/
 
 /*
 #pragma mark - Navigation

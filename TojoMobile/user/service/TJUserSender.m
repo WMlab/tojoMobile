@@ -104,8 +104,10 @@ static TJUserSender* _sender = nil;
         TJUserHomepageResponseModel *responseModel = [[TJUserHomepageResponseModel alloc] initWithDictionary:responseDic error:&err];
         if (0 == responseModel.result.code && !err) {
             viewModel.userBasicInfo = [responseModel.userBasicInfo copy];
-            viewModel.userProjectList = [responseModel.userProjectList copy];
-//            viewModel.userTeamList = [responseModel.userTeamList copy];
+            viewModel.userProjectList = [responseModel.userProjectList mutableCopy];
+            viewModel.userLabelArr = [responseModel.userLabelArr mutableCopy];
+            viewModel.projectCount = responseModel.projectCount;
+            viewModel.userLabelCount = responseModel.userLabelCount;
             
             if (callBack) {
                 callBack(true, responseModel.result.message);
@@ -122,9 +124,11 @@ static TJUserSender* _sender = nil;
     [reqOperation start];
 }
 
+#pragma mark - 修改密码
 - (void)sendRevisePasswordWithUserId:(int)userId oldPassword:(NSString *)pwdOld andNewPassword:(NSString *)pwdNew completeBlock:(UserCommonCallBack)callBack {
     TJRevisePasswordRequestModel *requestModel = [[TJRevisePasswordRequestModel alloc] init];
-    requestModel.userId = userId;
+//    requestModel.userId = userId;
+    requestModel.userId = 5;
     requestModel.passwordNew = pwdNew;
     requestModel.passwordOld = pwdOld;
     NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_REVISE_PASSWORD];
