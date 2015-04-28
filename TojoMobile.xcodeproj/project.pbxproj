@@ -133,19 +133,21 @@
 		EA99FC781A5EE9C70069ADBD /* TJUserLoginResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99FC761A5EE9C70069ADBD /* TJUserLoginResponseModel.m */; };
 		EA9BAE4C1AED27CA0095A91D /* TJUserLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9BAE4A1AED27CA0095A91D /* TJUserLabelCell.m */; };
 		EA9BAE4D1AED27CA0095A91D /* TJUserLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9BAE4B1AED27CA0095A91D /* TJUserLabelCell.xib */; };
-		EAA02E6A1AE1576000AA7233 /* TJUserHomepageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02E691AE1576000AA7233 /* TJUserHomepageViewModel.m */; };
 		EAA4E0901A7E565000E9E8D2 /* TJProjectHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA4E08F1A7E565000E9E8D2 /* TJProjectHomeViewController.m */; };
 		EAA4E0931A7E5AFD00E9E8D2 /* TJProjectCategoryHead.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA4E0921A7E5AFD00E9E8D2 /* TJProjectCategoryHead.m */; };
+		EAB6C6501AEFDB0600F21997 /* TJRevisePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB6C64E1AEFDB0600F21997 /* TJRevisePasswordViewController.m */; };
+		EAB6C6511AEFDB0600F21997 /* TJRevisePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAB6C64F1AEFDB0600F21997 /* TJRevisePasswordViewController.xib */; };
+		EAB6C6581AEFDB2700F21997 /* TJRevisePasswordRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB6C6531AEFDB2700F21997 /* TJRevisePasswordRequestModel.m */; };
+		EAB6C6591AEFDB2700F21997 /* TJRevisePasswordResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB6C6551AEFDB2700F21997 /* TJRevisePasswordResponseModel.m */; };
+		EAB6C65A1AEFDB2700F21997 /* TJUserLabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB6C6571AEFDB2700F21997 /* TJUserLabelModel.m */; };
+		EAB6C65D1AEFDC0A00F21997 /* TJUserHomepageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB6C65C1AEFDC0A00F21997 /* TJUserHomepageViewModel.m */; };
+		EAB6C65E1AEFE8BB00F21997 /* TJSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02E621AE02E3600AA7233 /* TJSettingTableViewController.m */; };
 		EAC116BC1A615AD200F620DE /* TJResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116BB1A615AD200F620DE /* TJResultModel.m */; };
 		EAC116BF1A618ADC00F620DE /* TJDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116BE1A618ADC00F620DE /* TJDataBase.m */; };
 		EAC116C21A618C1C00F620DE /* TJFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116C11A618C1C00F620DE /* TJFilePath.m */; };
 		EAC116EC1A61983000F620DE /* TJProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116E71A61983000F620DE /* TJProjectDetailViewController.m */; };
 		EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC116E81A61983000F620DE /* TJProjectDetailViewController.xib */; };
 		EAC116EE1A61983000F620DE /* TJProjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116EA1A61983000F620DE /* TJProjectListViewController.m */; };
-		EAD66A281AEB7B3800915B12 /* TJRevisePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD66A261AEB7B3800915B12 /* TJRevisePasswordViewController.m */; };
-		EAD66A291AEB7B3800915B12 /* TJRevisePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD66A271AEB7B3800915B12 /* TJRevisePasswordViewController.xib */; };
-		EAD66A2C1AEB8CF500915B12 /* TJRevisePasswordRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD66A2B1AEB8CF500915B12 /* TJRevisePasswordRequestModel.m */; };
-		EAD66A2F1AEB8D0D00915B12 /* TJRevisePasswordResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD66A2E1AEB8D0D00915B12 /* TJRevisePasswordResponseModel.m */; };
 		EAEE9B361A5C012900FF3DA9 /* TJUserSender.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE9B351A5C012900FF3DA9 /* TJUserSender.m */; };
 		EAFAAFFF1AD8F012006628E9 /* TJMemberCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFAAFFD1AD8F012006628E9 /* TJMemberCollectionCell.m */; };
 		EAFAB0001AD8F012006628E9 /* TJMemberCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFAAFFE1AD8F012006628E9 /* TJMemberCollectionCell.xib */; };
@@ -423,11 +425,21 @@
 		EA9BAE4B1AED27CA0095A91D /* TJUserLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJUserLabelCell.xib; path = cell/TJUserLabelCell.xib; sourceTree = "<group>"; };
 		EAA02E611AE02E3600AA7233 /* TJSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJSettingTableViewController.h; sourceTree = "<group>"; };
 		EAA02E621AE02E3600AA7233 /* TJSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJSettingTableViewController.m; sourceTree = "<group>"; };
-		EAA02E691AE1576000AA7233 /* TJUserHomepageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserHomepageViewModel.m; sourceTree = "<group>"; };
 		EAA4E08E1A7E565000E9E8D2 /* TJProjectHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectHomeViewController.h; path = projects/TJProjectHomeViewController.h; sourceTree = "<group>"; };
 		EAA4E08F1A7E565000E9E8D2 /* TJProjectHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectHomeViewController.m; path = projects/TJProjectHomeViewController.m; sourceTree = "<group>"; };
 		EAA4E0911A7E5AFD00E9E8D2 /* TJProjectCategoryHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectCategoryHead.h; path = projects/view/TJProjectCategoryHead.h; sourceTree = "<group>"; };
 		EAA4E0921A7E5AFD00E9E8D2 /* TJProjectCategoryHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectCategoryHead.m; path = projects/view/TJProjectCategoryHead.m; sourceTree = "<group>"; };
+		EAB6C64D1AEFDB0600F21997 /* TJRevisePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRevisePasswordViewController.h; sourceTree = "<group>"; };
+		EAB6C64E1AEFDB0600F21997 /* TJRevisePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRevisePasswordViewController.m; sourceTree = "<group>"; };
+		EAB6C64F1AEFDB0600F21997 /* TJRevisePasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJRevisePasswordViewController.xib; sourceTree = "<group>"; };
+		EAB6C6521AEFDB2700F21997 /* TJRevisePasswordRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRevisePasswordRequestModel.h; sourceTree = "<group>"; };
+		EAB6C6531AEFDB2700F21997 /* TJRevisePasswordRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRevisePasswordRequestModel.m; sourceTree = "<group>"; };
+		EAB6C6541AEFDB2700F21997 /* TJRevisePasswordResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRevisePasswordResponseModel.h; sourceTree = "<group>"; };
+		EAB6C6551AEFDB2700F21997 /* TJRevisePasswordResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRevisePasswordResponseModel.m; sourceTree = "<group>"; };
+		EAB6C6561AEFDB2700F21997 /* TJUserLabelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserLabelModel.h; sourceTree = "<group>"; };
+		EAB6C6571AEFDB2700F21997 /* TJUserLabelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserLabelModel.m; sourceTree = "<group>"; };
+		EAB6C65B1AEFDC0A00F21997 /* TJUserHomepageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserHomepageViewModel.h; sourceTree = "<group>"; };
+		EAB6C65C1AEFDC0A00F21997 /* TJUserHomepageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserHomepageViewModel.m; sourceTree = "<group>"; };
 		EAC116BA1A615AD200F620DE /* TJResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJResultModel.h; sourceTree = "<group>"; };
 		EAC116BB1A615AD200F620DE /* TJResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJResultModel.m; sourceTree = "<group>"; };
 		EAC116BD1A618ADB00F620DE /* TJDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJDataBase.h; sourceTree = "<group>"; };
@@ -439,10 +451,6 @@
 		EAC116E81A61983000F620DE /* TJProjectDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectDetailViewController.xib; path = projects/TJProjectDetailViewController.xib; sourceTree = "<group>"; };
 		EAC116E91A61983000F620DE /* TJProjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListViewController.h; path = projects/TJProjectListViewController.h; sourceTree = "<group>"; };
 		EAC116EA1A61983000F620DE /* TJProjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListViewController.m; path = projects/TJProjectListViewController.m; sourceTree = "<group>"; };
-		EAD66A261AEB7B3800915B12 /* TJRevisePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRevisePasswordViewController.m; sourceTree = "<group>"; };
-		EAD66A271AEB7B3800915B12 /* TJRevisePasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJRevisePasswordViewController.xib; sourceTree = "<group>"; };
-		EAD66A2B1AEB8CF500915B12 /* TJRevisePasswordRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRevisePasswordRequestModel.m; sourceTree = "<group>"; };
-		EAD66A2E1AEB8D0D00915B12 /* TJRevisePasswordResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRevisePasswordResponseModel.m; sourceTree = "<group>"; };
 		EAEE9B341A5C012900FF3DA9 /* TJUserSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserSender.h; sourceTree = "<group>"; };
 		EAEE9B351A5C012900FF3DA9 /* TJUserSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserSender.m; sourceTree = "<group>"; };
 		EAEE9B3E1A5C120200FF3DA9 /* TJSystemParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJSystemParam.h; sourceTree = "<group>"; };
@@ -929,6 +937,12 @@
 		EA99FC721A5EE9C70069ADBD /* businessModel */ = {
 			isa = PBXGroup;
 			children = (
+				EAB6C6521AEFDB2700F21997 /* TJRevisePasswordRequestModel.h */,
+				EAB6C6531AEFDB2700F21997 /* TJRevisePasswordRequestModel.m */,
+				EAB6C6541AEFDB2700F21997 /* TJRevisePasswordResponseModel.h */,
+				EAB6C6551AEFDB2700F21997 /* TJRevisePasswordResponseModel.m */,
+				EAB6C6561AEFDB2700F21997 /* TJUserLabelModel.h */,
+				EAB6C6571AEFDB2700F21997 /* TJUserLabelModel.m */,
 				EA99FC731A5EE9C70069ADBD /* TJUserLoginRequestModel.h */,
 				EA99FC741A5EE9C70069ADBD /* TJUserLoginRequestModel.m */,
 				EA99FC751A5EE9C70069ADBD /* TJUserLoginResponseModel.h */,
@@ -980,6 +994,9 @@
 				32C3BF451ADCEA61004F4629 /* TJSettingTableViewController.m */,
 				32D1F6A11AEB8E4600CE47D7 /* TJUserTableViewController.h */,
 				32D1F6A21AEB8E4600CE47D7 /* TJUserTableViewController.m */,
+				EAB6C64D1AEFDB0600F21997 /* TJRevisePasswordViewController.h */,
+				EAB6C64E1AEFDB0600F21997 /* TJRevisePasswordViewController.m */,
+				EAB6C64F1AEFDB0600F21997 /* TJRevisePasswordViewController.xib */,
 			);
 			path = user;
 			sourceTree = "<group>";
@@ -996,6 +1013,8 @@
 		EAEE9B331A5C006400FF3DA9 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EAB6C65B1AEFDC0A00F21997 /* TJUserHomepageViewModel.h */,
+				EAB6C65C1AEFDC0A00F21997 /* TJUserHomepageViewModel.m */,
 				32D1F6A41AEBBD5700CE47D7 /* TJUserAttendProjectListViewModel.h */,
 				32D1F6A51AEBBD5700CE47D7 /* TJUserAttendProjectListViewModel.m */,
 				32D1F6A71AEBBE1800CE47D7 /* TJUserAttendTeamListViewModel.h */,
@@ -1182,7 +1201,7 @@
 				EA9BAE4D1AED27CA0095A91D /* TJUserLabelCell.xib in Resources */,
 				32E2F2C01A9AF205003C6E4A /* TJTeamDetailViewController.xib in Resources */,
 				EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */,
-				EAD66A291AEB7B3800915B12 /* TJRevisePasswordViewController.xib in Resources */,
+				EAB6C6511AEFDB0600F21997 /* TJRevisePasswordViewController.xib in Resources */,
 				EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */,
 				EA775BD11A7A719E00B58DB4 /* TJHeaderCell.xib in Resources */,
 				EA6F743B1AC04347007A2B73 /* TJUserBasicInfoCell.xib in Resources */,
@@ -1262,9 +1281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB6C65E1AEFE8BB00F21997 /* TJSettingTableViewController.m in Sources */,
 				32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */,
 				EA0A0BC01A67CC3C00E37BFD /* TJSession.m in Sources */,
-				EAD66A2C1AEB8CF500915B12 /* TJRevisePasswordRequestModel.m in Sources */,
+				EAB6C65A1AEFDB2700F21997 /* TJUserLabelModel.m in Sources */,
 				328870D61A91C514002E8A00 /* BreakOutToRefreshView.swift in Sources */,
 				32D8BD921A7605BF002750A0 /* TJCreateTeamRequestModel.m in Sources */,
 				EA0A0BB71A66A9B300E37BFD /* TJProjectListCell.m in Sources */,
@@ -1283,11 +1303,12 @@
 				EA99FC771A5EE9C70069ADBD /* TJUserLoginRequestModel.m in Sources */,
 				EA775BA71A79230500B58DB4 /* TJAppHomeResponseModel.m in Sources */,
 				EA9BAE4C1AED27CA0095A91D /* TJUserLabelCell.m in Sources */,
-				EAD66A281AEB7B3800915B12 /* TJRevisePasswordViewController.m in Sources */,
 				EA2EB3C31AAF58F2005440A1 /* TJScrollPage.m in Sources */,
 				EA2EB3B51AAF2628005440A1 /* TJScrollImageCell.m in Sources */,
+				EAB6C6501AEFDB0600F21997 /* TJRevisePasswordViewController.m in Sources */,
 				EA07EB3E1A80A0D5006BC0C8 /* TJProjectHomeResponseModel.m in Sources */,
 				32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */,
+				EAB6C6591AEFDB2700F21997 /* TJRevisePasswordResponseModel.m in Sources */,
 				32C4B4141A71EB2500B8D401 /* TJCommentViewController.m in Sources */,
 				32C4B41B1A71F20200B8D401 /* TJCommentResponseModel.m in Sources */,
 				3208CF7C1AA81CC50078B378 /* TJUserAttendTeamsViewController.m in Sources */,
@@ -1321,7 +1342,6 @@
 				32F5139E1A6E230000224E74 /* TJTeamListViewModel.m in Sources */,
 				EA775BD41A7A7F1900B58DB4 /* TJAppHomeViewModel.m in Sources */,
 				32959F0B1A5ECFCC00C2B9D6 /* TJProjectSender.m in Sources */,
-				EAA02E6A1AE1576000AA7233 /* TJUserHomepageViewModel.m in Sources */,
 				32C4B4041A71D8CD00B8D401 /* TJUserHomepageRequestModel.m in Sources */,
 				32D1F6B51AEBC13D00CE47D7 /* TJUserAttendTeamListRequestModel.m in Sources */,
 				32C4B4071A71D92900B8D401 /* TJUserHomepageResponseModel.m in Sources */,
@@ -1353,10 +1373,11 @@
 				EA3248481A668D6400D45E30 /* TJProjectListRequestModel.m in Sources */,
 				EA775B9F1A78044C00B58DB4 /* TJUserViewController.m in Sources */,
 				32F513A11A6E24B100224E74 /* TJCommentListRequestModel.m in Sources */,
+				EAB6C6581AEFDB2700F21997 /* TJRevisePasswordRequestModel.m in Sources */,
+				EAB6C65D1AEFDC0A00F21997 /* TJUserHomepageViewModel.m in Sources */,
 				EAC116C21A618C1C00F620DE /* TJFilePath.m in Sources */,
 				EAFAAFFF1AD8F012006628E9 /* TJMemberCollectionCell.m in Sources */,
 				EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */,
-				EAD66A2F1AEB8D0D00915B12 /* TJRevisePasswordResponseModel.m in Sources */,
 				32E2F2BF1A9AF205003C6E4A /* TJTeamDetailViewController.m in Sources */,
 				EA1CC7951A761BC500E96FBE /* TJTextFIeld.m in Sources */,
 				EA775BD01A7A719E00B58DB4 /* TJHeaderCell.m in Sources */,

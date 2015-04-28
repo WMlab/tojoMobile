@@ -9,7 +9,7 @@
 #import "TJSettingTableViewController.h"
 #import "TJUserMenuCell.h"
 #import "TJLogoutTableViewCell.h"
-#import "TJAboutViewController.h"
+//#import "TJAboutViewController.h"
 
 @interface TJSettingTableViewController ()
 
@@ -123,8 +123,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         if (indexPath.row == 1) {
-            TJAboutViewController *aboutVC = [[TJAboutViewController alloc] init];
-            [self.navigationController pushViewController:aboutVC animated:TRUE];
+//            TJAboutViewController *aboutVC = [[TJAboutViewController alloc] init];
+//            [self.navigationController pushViewController:aboutVC animated:TRUE];
         }
     }
 }
