@@ -26,10 +26,6 @@
 		324187A91A6BF5D70088A3BB /* testHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 324187A81A6BF5D70088A3BB /* testHead.png */; };
 		32574ABC1ADFFBD100756630 /* TJLogoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32574ABA1ADFFBD100756630 /* TJLogoutTableViewCell.m */; };
 		32574ABD1ADFFBD100756630 /* TJLogoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32574ABB1ADFFBD100756630 /* TJLogoutTableViewCell.xib */; };
-		32574AC11AE0B05600756630 /* TJPersonalInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32574ABF1AE0B05600756630 /* TJPersonalInfoTableViewCell.m */; };
-		32574AC21AE0B05600756630 /* TJPersonalInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32574AC01AE0B05600756630 /* TJPersonalInfoTableViewCell.xib */; };
-		32574AC61AE0B74200756630 /* TJAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32574AC41AE0B74200756630 /* TJAboutViewController.m */; };
-		32574AC71AE0B74200756630 /* TJAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32574AC51AE0B74200756630 /* TJAboutViewController.xib */; };
 		328870D61A91C514002E8A00 /* BreakOutToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328870D51A91C514002E8A00 /* BreakOutToRefreshView.swift */; };
 		32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F011A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m */; };
 		32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F041A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m */; };
@@ -42,7 +38,6 @@
 		32C3BF2B1ADCAFC9004F4629 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C3BF291ADCAFC9004F4629 /* Interface.storyboard */; };
 		32C3BF2D1ADCAFC9004F4629 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32C3BF2C1ADCAFC9004F4629 /* Images.xcassets */; };
 		32C3BF301ADCAFC9004F4629 /* TojoMobile WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 32C3BF151ADCAFC9004F4629 /* TojoMobile WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		32C3BF471ADCEA61004F4629 /* TJSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C3BF451ADCEA61004F4629 /* TJSettingTableViewController.m */; };
 		32C4B3FC1A711C7600B8D401 /* TJCommentListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B3FB1A711C7600B8D401 /* TJCommentListViewModel.m */; };
 		32C4B3FE1A714BA800B8D401 /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C4B3FD1A714BA800B8D401 /* time.png */; };
 		32C4B4011A71D73F00B8D401 /* TJUserBasicInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4001A71D73F00B8D401 /* TJUserBasicInfoModel.m */; };
@@ -138,10 +133,6 @@
 		EA99FC781A5EE9C70069ADBD /* TJUserLoginResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99FC761A5EE9C70069ADBD /* TJUserLoginResponseModel.m */; };
 		EA9BAE4C1AED27CA0095A91D /* TJUserLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9BAE4A1AED27CA0095A91D /* TJUserLabelCell.m */; };
 		EA9BAE4D1AED27CA0095A91D /* TJUserLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9BAE4B1AED27CA0095A91D /* TJUserLabelCell.xib */; };
-		EAA02E641AE02E3600AA7233 /* TJAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA02E5F1AE02E3600AA7233 /* TJAboutViewController.swift */; };
-		EAA02E651AE02E3600AA7233 /* TJAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA02E601AE02E3600AA7233 /* TJAboutViewController.xib */; };
-		EAA02E661AE02E3600AA7233 /* TJSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02E621AE02E3600AA7233 /* TJSettingTableViewController.m */; };
-		EAA02E671AE02E3600AA7233 /* TJSettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA02E631AE02E3600AA7233 /* TJSettingTableViewController.xib */; };
 		EAA02E6A1AE1576000AA7233 /* TJUserHomepageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02E691AE1576000AA7233 /* TJUserHomepageViewModel.m */; };
 		EAA4E0901A7E565000E9E8D2 /* TJProjectHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA4E08F1A7E565000E9E8D2 /* TJProjectHomeViewController.m */; };
 		EAA4E0931A7E5AFD00E9E8D2 /* TJProjectCategoryHead.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA4E0921A7E5AFD00E9E8D2 /* TJProjectCategoryHead.m */; };
@@ -155,7 +146,6 @@
 		EAD66A291AEB7B3800915B12 /* TJRevisePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD66A271AEB7B3800915B12 /* TJRevisePasswordViewController.xib */; };
 		EAD66A2C1AEB8CF500915B12 /* TJRevisePasswordRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD66A2B1AEB8CF500915B12 /* TJRevisePasswordRequestModel.m */; };
 		EAD66A2F1AEB8D0D00915B12 /* TJRevisePasswordResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD66A2E1AEB8D0D00915B12 /* TJRevisePasswordResponseModel.m */; };
-		EAD66A321AEB960A00915B12 /* TJUserLabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD66A311AEB960A00915B12 /* TJUserLabelModel.m */; };
 		EAEE9B361A5C012900FF3DA9 /* TJUserSender.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE9B351A5C012900FF3DA9 /* TJUserSender.m */; };
 		EAFAAFFF1AD8F012006628E9 /* TJMemberCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFAAFFD1AD8F012006628E9 /* TJMemberCollectionCell.m */; };
 		EAFAB0001AD8F012006628E9 /* TJMemberCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFAAFFE1AD8F012006628E9 /* TJMemberCollectionCell.xib */; };
@@ -240,12 +230,6 @@
 		32574AB91ADFFBD100756630 /* TJLogoutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJLogoutTableViewCell.h; path = cell/TJLogoutTableViewCell.h; sourceTree = "<group>"; };
 		32574ABA1ADFFBD100756630 /* TJLogoutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJLogoutTableViewCell.m; path = cell/TJLogoutTableViewCell.m; sourceTree = "<group>"; };
 		32574ABB1ADFFBD100756630 /* TJLogoutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJLogoutTableViewCell.xib; path = cell/TJLogoutTableViewCell.xib; sourceTree = "<group>"; };
-		32574ABE1AE0B05600756630 /* TJPersonalInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPersonalInfoTableViewCell.h; sourceTree = "<group>"; };
-		32574ABF1AE0B05600756630 /* TJPersonalInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPersonalInfoTableViewCell.m; sourceTree = "<group>"; };
-		32574AC01AE0B05600756630 /* TJPersonalInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJPersonalInfoTableViewCell.xib; sourceTree = "<group>"; };
-		32574AC31AE0B74200756630 /* TJAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJAboutViewController.h; sourceTree = "<group>"; };
-		32574AC41AE0B74200756630 /* TJAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJAboutViewController.m; sourceTree = "<group>"; };
-		32574AC51AE0B74200756630 /* TJAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJAboutViewController.xib; sourceTree = "<group>"; };
 		325A92671A90FE0E00431B0E /* TojoMobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TojoMobile-Bridging-Header.h"; sourceTree = "<group>"; };
 		328870D51A91C514002E8A00 /* BreakOutToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BreakOutToRefreshView.swift; path = projects/view/BreakOutToRefreshView.swift; sourceTree = "<group>"; };
 		32959F001A5ECFB300C2B9D6 /* TJProjectDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailViewModel.h; path = projects/viewmodel/TJProjectDetailViewModel.h; sourceTree = "<group>"; };
@@ -437,12 +421,8 @@
 		EA9BAE491AED27CA0095A91D /* TJUserLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJUserLabelCell.h; path = cell/TJUserLabelCell.h; sourceTree = "<group>"; };
 		EA9BAE4A1AED27CA0095A91D /* TJUserLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJUserLabelCell.m; path = cell/TJUserLabelCell.m; sourceTree = "<group>"; };
 		EA9BAE4B1AED27CA0095A91D /* TJUserLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJUserLabelCell.xib; path = cell/TJUserLabelCell.xib; sourceTree = "<group>"; };
-		EAA02E5F1AE02E3600AA7233 /* TJAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TJAboutViewController.swift; sourceTree = "<group>"; };
-		EAA02E601AE02E3600AA7233 /* TJAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJAboutViewController.xib; sourceTree = "<group>"; };
 		EAA02E611AE02E3600AA7233 /* TJSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJSettingTableViewController.h; sourceTree = "<group>"; };
 		EAA02E621AE02E3600AA7233 /* TJSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJSettingTableViewController.m; sourceTree = "<group>"; };
-		EAA02E631AE02E3600AA7233 /* TJSettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJSettingTableViewController.xib; sourceTree = "<group>"; };
-		EAA02E681AE1576000AA7233 /* TJUserHomepageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserHomepageViewModel.h; sourceTree = "<group>"; };
 		EAA02E691AE1576000AA7233 /* TJUserHomepageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserHomepageViewModel.m; sourceTree = "<group>"; };
 		EAA4E08E1A7E565000E9E8D2 /* TJProjectHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectHomeViewController.h; path = projects/TJProjectHomeViewController.h; sourceTree = "<group>"; };
 		EAA4E08F1A7E565000E9E8D2 /* TJProjectHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectHomeViewController.m; path = projects/TJProjectHomeViewController.m; sourceTree = "<group>"; };
@@ -459,15 +439,10 @@
 		EAC116E81A61983000F620DE /* TJProjectDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectDetailViewController.xib; path = projects/TJProjectDetailViewController.xib; sourceTree = "<group>"; };
 		EAC116E91A61983000F620DE /* TJProjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListViewController.h; path = projects/TJProjectListViewController.h; sourceTree = "<group>"; };
 		EAC116EA1A61983000F620DE /* TJProjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListViewController.m; path = projects/TJProjectListViewController.m; sourceTree = "<group>"; };
-		EAD66A251AEB7B3800915B12 /* TJRevisePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRevisePasswordViewController.h; sourceTree = "<group>"; };
 		EAD66A261AEB7B3800915B12 /* TJRevisePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRevisePasswordViewController.m; sourceTree = "<group>"; };
 		EAD66A271AEB7B3800915B12 /* TJRevisePasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJRevisePasswordViewController.xib; sourceTree = "<group>"; };
-		EAD66A2A1AEB8CF500915B12 /* TJRevisePasswordRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRevisePasswordRequestModel.h; sourceTree = "<group>"; };
 		EAD66A2B1AEB8CF500915B12 /* TJRevisePasswordRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRevisePasswordRequestModel.m; sourceTree = "<group>"; };
-		EAD66A2D1AEB8D0D00915B12 /* TJRevisePasswordResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRevisePasswordResponseModel.h; sourceTree = "<group>"; };
 		EAD66A2E1AEB8D0D00915B12 /* TJRevisePasswordResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRevisePasswordResponseModel.m; sourceTree = "<group>"; };
-		EAD66A301AEB960A00915B12 /* TJUserLabelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserLabelModel.h; sourceTree = "<group>"; };
-		EAD66A311AEB960A00915B12 /* TJUserLabelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserLabelModel.m; sourceTree = "<group>"; };
 		EAEE9B341A5C012900FF3DA9 /* TJUserSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserSender.h; sourceTree = "<group>"; };
 		EAEE9B351A5C012900FF3DA9 /* TJUserSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserSender.m; sourceTree = "<group>"; };
 		EAEE9B3E1A5C120200FF3DA9 /* TJSystemParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJSystemParam.h; sourceTree = "<group>"; };
@@ -987,11 +962,8 @@
 				EA99FC721A5EE9C70069ADBD /* businessModel */,
 				EAEE9B321A5C006400FF3DA9 /* service */,
 				EAEE9B331A5C006400FF3DA9 /* viewModel */,
-				EAA02E5F1AE02E3600AA7233 /* TJAboutViewController.swift */,
-				EAA02E601AE02E3600AA7233 /* TJAboutViewController.xib */,
 				EAA02E611AE02E3600AA7233 /* TJSettingTableViewController.h */,
 				EAA02E621AE02E3600AA7233 /* TJSettingTableViewController.m */,
-				EAA02E631AE02E3600AA7233 /* TJSettingTableViewController.xib */,
 				EA68E5201A5A2FB300CA2CCD /* TJLoginViewController.h */,
 				EA68E5211A5A2FB300CA2CCD /* TJLoginViewController.m */,
 				EA1CC79A1A7630A000E96FBE /* TJRegisterViewController.h */,
@@ -1006,12 +978,6 @@
 				EA6F74351AC0420C007A2B73 /* TJUserHomepageViewController.m */,
 				32C3BF441ADCEA61004F4629 /* TJSettingTableViewController.h */,
 				32C3BF451ADCEA61004F4629 /* TJSettingTableViewController.m */,
-				32574ABE1AE0B05600756630 /* TJPersonalInfoTableViewCell.h */,
-				32574ABF1AE0B05600756630 /* TJPersonalInfoTableViewCell.m */,
-				32574AC01AE0B05600756630 /* TJPersonalInfoTableViewCell.xib */,
-				32574AC31AE0B74200756630 /* TJAboutViewController.h */,
-				32574AC41AE0B74200756630 /* TJAboutViewController.m */,
-				32574AC51AE0B74200756630 /* TJAboutViewController.xib */,
 				32D1F6A11AEB8E4600CE47D7 /* TJUserTableViewController.h */,
 				32D1F6A21AEB8E4600CE47D7 /* TJUserTableViewController.m */,
 			);
@@ -1030,8 +996,6 @@
 		EAEE9B331A5C006400FF3DA9 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
-				32C4B4081A71DC0D00B8D401 /* TJUserHomepageViewModel.h */,
-				32C4B4091A71DC0D00B8D401 /* TJUserHomepageViewModel.m */,
 				32D1F6A41AEBBD5700CE47D7 /* TJUserAttendProjectListViewModel.h */,
 				32D1F6A51AEBBD5700CE47D7 /* TJUserAttendProjectListViewModel.m */,
 				32D1F6A71AEBBE1800CE47D7 /* TJUserAttendTeamListViewModel.h */,
@@ -1215,7 +1179,6 @@
 				32574ABD1ADFFBD100756630 /* TJLogoutTableViewCell.xib in Resources */,
 				32F513B21A6E462700224E74 /* points.png in Resources */,
 				EA68E52D1A5A2FB300CA2CCD /* LaunchScreen.xib in Resources */,
-				EAA02E671AE02E3600AA7233 /* TJSettingTableViewController.xib in Resources */,
 				EA9BAE4D1AED27CA0095A91D /* TJUserLabelCell.xib in Resources */,
 				32E2F2C01A9AF205003C6E4A /* TJTeamDetailViewController.xib in Resources */,
 				EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */,
@@ -1231,7 +1194,6 @@
 				324187A71A6BE57C0088A3BB /* titleImageTest.png in Resources */,
 				EA775BC41A79355500B58DB4 /* mountains.jpg in Resources */,
 				EAFAB0001AD8F012006628E9 /* TJMemberCollectionCell.xib in Resources */,
-				32574AC21AE0B05600756630 /* TJPersonalInfoTableViewCell.xib in Resources */,
 				324187A91A6BF5D70088A3BB /* testHead.png in Resources */,
 				32F5139B1A6E171500224E74 /* TJCommentListViewController.xib in Resources */,
 				32F513911A6E03CA00224E74 /* TJTeamListViewController.xib in Resources */,
@@ -1239,7 +1201,6 @@
 				EA775BBB1A79330100B58DB4 /* arrow.png in Resources */,
 				EA775BBC1A79330100B58DB4 /* arrow@2x.png in Resources */,
 				EA775BC21A79355500B58DB4 /* dock.jpg in Resources */,
-				32574AC71AE0B74200756630 /* TJAboutViewController.xib in Resources */,
 				32C4B3FE1A714BA800B8D401 /* time.png in Resources */,
 				32F513A91A6E26C900224E74 /* TJCommentListCell.xib in Resources */,
 			);
@@ -1302,7 +1263,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */,
-				32574AC61AE0B74200756630 /* TJAboutViewController.m in Sources */,
 				EA0A0BC01A67CC3C00E37BFD /* TJSession.m in Sources */,
 				EAD66A2C1AEB8CF500915B12 /* TJRevisePasswordRequestModel.m in Sources */,
 				328870D61A91C514002E8A00 /* BreakOutToRefreshView.swift in Sources */,
@@ -1310,7 +1270,6 @@
 				EA0A0BB71A66A9B300E37BFD /* TJProjectListCell.m in Sources */,
 				EA99FC781A5EE9C70069ADBD /* TJUserLoginResponseModel.m in Sources */,
 				3211463C1A669A7A00F89494 /* TJCommentModel.m in Sources */,
-				32574AC11AE0B05600756630 /* TJPersonalInfoTableViewCell.m in Sources */,
 				32FD12081A971CB2004D3A15 /* UUDatePicker_DateModel.m in Sources */,
 				32D1F6AC1AEBC07100CE47D7 /* TJUserAttendProjectListRequestModel.m in Sources */,
 				EA1AD4331A752C06004EADCA /* TJUserRegisterRequestModel.m in Sources */,
@@ -1351,7 +1310,6 @@
 				3208CF751AA7FC720078B378 /* TJUserMenuCell.m in Sources */,
 				EA775BCC1A7A675C00B58DB4 /* TJTableHeaderView.m in Sources */,
 				321146391A66997900F89494 /* TJProjectInfoModel.m in Sources */,
-				EAA02E641AE02E3600AA7233 /* TJAboutViewController.swift in Sources */,
 				EA775BBE1A79330100B58DB4 /* MMScrollPresenter.m in Sources */,
 				32D1F6B21AEBC11B00CE47D7 /* TJUserAttendProjectListResponseModel.m in Sources */,
 				EA775BC81A793E0800B58DB4 /* TJFourProjectCell.m in Sources */,
