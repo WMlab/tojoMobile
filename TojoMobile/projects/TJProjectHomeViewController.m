@@ -132,7 +132,7 @@
 #pragma mark - image scrollview delegate
 -(void) selectPageNumber:(NSInteger) index {
     TJProjectInfoModel *infoModel = [_viewModel.adProjects objectAtIndex:index];
-    [self goToDetailViewWithProjectId:infoModel.projectID];
+    [self goToDetailViewWithProjectId:infoModel.projectId];
 }
 
 #pragma mark - Table view data source
@@ -201,7 +201,7 @@
         infoModel = (TJProjectInfoModel *)[_viewModel.projectList objectAtIndex:indexPath.row - [self hasAdProjects]];
     }
     
-    [self goToDetailViewWithProjectId:infoModel.projectID];
+    [self goToDetailViewWithProjectId:infoModel.projectId];
 }
 
 - (void) goToDetailViewWithProjectId:(int) projectId {

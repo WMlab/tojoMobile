@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TojoMobile/projects/service/TJProjectSender.m"
-            timestampString = "444062298.747958"
+            timestampString = "451669246.480164"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "@implementation TJProjectSender"
             landmarkType = "3">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TojoMobile/projects/service/TJProjectSender.m"
-            timestampString = "444062298.747958"
+            timestampString = "451669246.480164"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "-sendGetCommentListWithViewModel:projectId:completeBlock:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TojoMobile/projects/service/TJProjectSender.m"
-            timestampString = "444062610.531288"
+            timestampString = "451669246.480164"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
             landmarkName = "-sendGetCommentListWithViewModel:projectId:completeBlock:"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TojoMobile/user/TJUserViewController.m"
-            timestampString = "450893724.806859"
+            timestampString = "451645774.348935"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "-showLogin"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TojoMobile/projects/service/TJProjectSender.m"
-            timestampString = "450692277.424026"
+            timestampString = "451669246.480164"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
+            startingLineNumber = "307"
+            endingLineNumber = "307"
             landmarkName = "-sendGetTeamDetailWithViewModel:completeBlock:"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TojoMobile/projects/service/TJProjectSender.m"
-            timestampString = "450692281.281163"
+            timestampString = "451669246.480164"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "253"
-            endingLineNumber = "253"
+            startingLineNumber = "330"
+            endingLineNumber = "330"
             landmarkName = "-sendGetTeamDetailWithViewModel:completeBlock:"
             landmarkType = "5">
          </BreakpointContent>

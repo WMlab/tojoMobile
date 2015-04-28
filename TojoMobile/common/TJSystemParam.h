@@ -33,5 +33,7 @@
 #define REQUEST_URL_PROJECT_TEAM_LIST       @"teamlist"
 #define REQUEST_URL_PROJECT_TEAM_BUILD      @"teambuild"
 #define REQUEST_URL_PROJECT_TEAM_DETAIL     @"teamdetail"       //团队详情
+#define REQUEST_URL_USER_PROJECT_LIST       @"userproject"      //用户项目
+#define REQUEST_URL_USER_TEAM_LIST          @"userteam"         //用户团队
 
 #endif

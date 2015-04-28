@@ -87,7 +87,7 @@ static TJDataBase *_database = nil;
                 NSString *projectLabelStr = [[NSString alloc] initWithUTF8String:projectLabel];
 
                 TJProjectInfoModel *model = [[TJProjectInfoModel alloc] init];
-                model.projectID = projectID;
+                model.projectId = projectID;
                 model.projectName = projectNameStr;
                 model.projectImage = projectImageStr;
                 model.projectCreatedDate = projectCreatedDateStr;
@@ -123,7 +123,7 @@ static TJDataBase *_database = nil;
                 sqlite3_stmt *stmt;
                 if(sqlite3_prepare_v2(db, insertSql, -1, &stmt, NULL) == SQLITE_OK) {
                     sqlite3_bind_int(stmt, 1, categoryId);;
-                    sqlite3_bind_int(stmt, 2, cell.projectID);
+                    sqlite3_bind_int(stmt, 2, cell.projectId);
                     sqlite3_bind_text(stmt, 3, [cell.projectName UTF8String], -1, NULL);
                     sqlite3_bind_text(stmt, 4, [cell.projectImage UTF8String], -1, NULL);
                     sqlite3_bind_text(stmt, 5, [cell.projectCreatedDate UTF8String], -1, NULL);

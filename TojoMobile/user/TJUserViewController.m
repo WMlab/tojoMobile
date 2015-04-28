@@ -11,7 +11,6 @@
 #import "TJUserMenuCell.h"
 #import "TJUserAttendProjectsViewController.h"
 #import "TJUserAttendTeamsViewController.h"
-#import "TJUserCollectProjectsViewController.h"
 #import "TJSettingTableViewController.h"
 #import "TJUserBasicInfoCell.h"
 

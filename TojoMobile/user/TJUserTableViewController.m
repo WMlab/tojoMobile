@@ -1,27 +1,27 @@
 //
-//  TJUserCollectProjectsViewController.m
+//  TJUserTableViewController.m
 //  TojoMobile
 //
-//  Created by sdq on 15/3/5.
+//  Created by sdq on 15/4/25.
 //  Copyright (c) 2015年 Tongjo. All rights reserved.
 //
 
-#import "TJUserCollectProjectsViewController.h"
+#import "TJUserTableViewController.h"
 
-@interface TJUserCollectProjectsViewController ()
+@interface TJUserTableViewController ()
 
 @end
 
-@implementation TJUserCollectProjectsViewController
+@implementation TJUserTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //导航栏
-    self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
-    [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-    self.navigationItem.title = @"我收藏的项目";
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,17 +31,17 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Potentially incomplete method implementation.
+//    // Return the number of sections.
+//    return 0;
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//#warning Incomplete method implementation.
+//    // Return the number of rows in the section.
+//    return 0;
+//}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

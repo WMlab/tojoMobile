@@ -110,6 +110,44 @@ static TJProjectSender * _sender = nil;
     [reqOperation start];
 }
 
+#pragma mark --------- 用户项目列表请求 ----------
+-(void) sendGetUserProjectListWithViewModel:(TJUserAttendProjectListViewModel *)viewModel withUserId:(int)userId completeBlock:(ProjectCommonCallBack)callback{
+    TJUserAttendProjectListRequestModel *requestModel = [[TJUserAttendProjectListRequestModel alloc] init];
+    requestModel.userId = userId;
+    NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_USER_PROJECT_LIST];
+    AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
+    reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [reqOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *responseDic = (NSDictionary *)responseObject;
+        NSError *err;
+        TJUserAttendProjectListResponseModel *responseModel = [[TJUserAttendProjectListResponseModel alloc] initWithDictionary:responseDic error:&err];
+        if (0 == responseModel.result.code && responseModel.count == responseModel.projectList.count && !err) {
+            NSMutableArray *itemArr = [[NSMutableArray alloc] init];
+            for (int i=0; i<[responseModel.projectList count]; i++) {
+                id item = [responseModel.projectList objectAtIndex:i];
+                if ([item isKindOfClass:[TJProjectInfoModel class]]) {
+                    [itemArr addObject:item];
+                }
+            }
+            viewModel.userProjectList = itemArr;
+            viewModel.projectCount = responseModel.count;
+            if (callback) {
+                callback(true, responseModel.result.message);
+            }
+        }
+        else {
+            if (callback) {
+                callback(false, responseModel.result.message);
+            }
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (callback) {
+            callback(false, @"网络错误");
+        }
+    }];
+    [reqOperation start];
+}
+
 #pragma mark --------- 项目详情请求 -----------
 -(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback{
     TJProjectDetailRequestModel *requestModel = [[TJProjectDetailRequestModel alloc] init];
@@ -202,6 +240,45 @@ static TJProjectSender * _sender = nil;
                 }
             }
             viewModel.teamList = itemArr;
+            if (callback) {
+                callback(true, responseModel.result.message);
+            }
+        }
+        else {
+            if (callback) {
+                callback(false, responseModel.result.message);
+            }
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (callback) {
+            callback(false, @"网络错误");
+        }
+    }];
+    [reqOperation start];
+}
+
+#pragma mark --------- 用户团队列表 -----------
+-(void) sendGetUserTeamListWithViewModel:(TJUserAttendTeamListViewModel *)viewModel withUserId:(int)userId completeBlock:(ProjectCommonCallBack)callback{
+    TJUserAttendTeamListRequestModel *requestModel = [[TJUserAttendTeamListRequestModel alloc] init];
+    requestModel.userId = userId;
+    NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_PROJECT_TEAM_LIST];
+    AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
+    reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [reqOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *responseDic = (NSDictionary *)responseObject;
+        NSError *err;
+        TJUserAttendTeamListResponseModel *responseModel = [[TJUserAttendTeamListResponseModel alloc] initWithDictionary:responseDic error:&err];
+        if (0 == responseModel.result.code && !err) {
+            //处理
+            NSMutableArray *itemArr = [[NSMutableArray alloc] init];
+            for (int i=0; i<responseModel.count; i++) {
+                id item = [responseModel.teamList objectAtIndex:i];
+                if ([item isKindOfClass:[TJTeamModel class]]) {
+                    [itemArr addObject:item];
+                }
+            }
+            viewModel.userTeamList = itemArr;
+            viewModel.teamCount = responseModel.count;
             if (callback) {
                 callback(true, responseModel.result.message);
             }

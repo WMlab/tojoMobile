@@ -9,6 +9,7 @@
 #import "TJSettingTableViewController.h"
 #import "TJUserMenuCell.h"
 #import "TJLogoutTableViewCell.h"
+#import "TJAboutViewController.h"
 
 @interface TJSettingTableViewController ()
 
@@ -20,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
+    self.navigationItem.title = @"设置";
     
 }
 
@@ -114,21 +117,18 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    if (indexPath.section == 0) {
+        if (indexPath.row == 1) {
+            TJAboutViewController *aboutVC = [[TJAboutViewController alloc] init];
+            [self.navigationController pushViewController:aboutVC animated:TRUE];
+        }
+    }
 }
-*/
 
 /*
 #pragma mark - Navigation

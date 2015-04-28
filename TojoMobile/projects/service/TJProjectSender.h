@@ -20,6 +20,12 @@
 #import "TJTeamDetailViewModel.h"
 #import "TJCommentRequestModel.h"
 #import "TJCommentResponseModel.h"
+#import "TJUserAttendProjectListViewModel.h"
+#import "TJUserAttendProjectListRequestModel.h"
+#import "TJUserAttendProjectListResponseModel.h"
+#import "TJUserAttendTeamListViewModel.h"
+#import "TJUserAttendTeamListRequestModel.h"
+#import "TJUserAttendTeamListResponseModel.h"
 
 typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
 
@@ -32,11 +38,15 @@ typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
  */
 -(void) sendGetProjectListWithViewModel:(TJProjectListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
 
+-(void) sendGetUserProjectListWithViewModel:(TJProjectListViewModel *)viewModel withUserId:(int)userId completeBlock:(ProjectCommonCallBack)callback;
+
 -(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback;
 
 -(void) sendGetCommentListWithViewModel:(TJCommentListViewModel *)viewModel projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback;
 
 -(void) sendGetTeamListWithViewModel:(TJTeamListViewModel *)viewModel projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback;
+
+-(void) sendGetUserTeamListWithViewModel:(TJTeamListViewModel *)viewModel withUserId:(int)userId completeBlock:(ProjectCommonCallBack)callback;
 
 -(void) postCommentWithCommentRequestModel:(TJCommentRequestModel *)requestModel completeBlock:(ProjectCommonCallBack)callback;
 /*
