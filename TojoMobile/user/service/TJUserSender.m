@@ -16,6 +16,8 @@
 #import "TJSession.h"
 #import "TJUserHomepageRequestModel.h"
 #import "TJUserHomepageResponseModel.h"
+#import "TJRevisePasswordRequestModel.h"
+#import "TJRevisePasswordResponseModel.h"
 
 static TJUserSender* _sender = nil;
 @implementation TJUserSender
@@ -42,6 +44,9 @@ static TJUserSender* _sender = nil;
         NSError *err;
         TJUserLoginResponseModel *responseModel = [[TJUserLoginResponseModel alloc] initWithDictionary:responseDic error:&err];
         if (0 == responseModel.result.code && !err) {
+//            [[TJSession getInstance] setupUserId:responseModel.userId];
+            [[TJSession getInstance] setupUserId:responseModel.userInfo.userId];
+            
             if (callBack) {
                 callBack(true, responseModel.result.message);
             }
@@ -86,6 +91,7 @@ static TJUserSender* _sender = nil;
     }];
 }
 
+#pragma mark - 个人主页
 -(void) sendGetUserDetailInfoWithViewModel:(TJUserHomepageViewModel *)viewModel completeBlock:(UserCommonCallBack) callBack {
     TJUserHomepageRequestModel *requestModel = [[TJUserHomepageRequestModel alloc] init];
     requestModel.userId = viewModel.userBasicInfo.userId;
@@ -98,8 +104,10 @@ static TJUserSender* _sender = nil;
         TJUserHomepageResponseModel *responseModel = [[TJUserHomepageResponseModel alloc] initWithDictionary:responseDic error:&err];
         if (0 == responseModel.result.code && !err) {
             viewModel.userBasicInfo = [responseModel.userBasicInfo copy];
-            viewModel.userProjectList = [responseModel.userProjectList copy];
-            viewModel.userTeamList = [responseModel.userTeamList copy];
+            viewModel.userProjectList = [responseModel.userProjectList mutableCopy];
+            viewModel.userLabelArr = [responseModel.userLabelArr mutableCopy];
+            viewModel.projectCount = responseModel.projectCount;
+            viewModel.userLabelCount = responseModel.userLabelCount;
             
             if (callBack) {
                 callBack(true, responseModel.result.message);
@@ -114,6 +122,37 @@ static TJUserSender* _sender = nil;
         }
     }];
     [reqOperation start];
+}
+
+#pragma mark - 修改密码
+- (void)sendRevisePasswordWithUserId:(int)userId oldPassword:(NSString *)pwdOld andNewPassword:(NSString *)pwdNew completeBlock:(UserCommonCallBack)callBack {
+    TJRevisePasswordRequestModel *requestModel = [[TJRevisePasswordRequestModel alloc] init];
+//    requestModel.userId = userId;
+    requestModel.userId = 5;
+    requestModel.passwordNew = pwdNew;
+    requestModel.passwordOld = pwdOld;
+    NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_REVISE_PASSWORD];
+    AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
+    reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [reqOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
+        NSDictionary *responseDic = (NSDictionary *)responseObject;
+        NSError *err;
+        TJRevisePasswordResponseModel *responseModel = [[TJRevisePasswordResponseModel alloc] initWithDictionary:responseDic error:&err];
+        if (0 == responseModel.result.code && !err) {
+            if (callBack) {
+                callBack(true, responseModel.result.message);
+            }
+        }
+        else {
+            callBack(false, responseModel.result.message);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (callBack) {
+            callBack(NO, @"网络错误");
+        }
+    }];
+    [reqOperation start];
+
 }
 //- (NSMutableURLRequest *) createRequestWithDataModel:(JSONModel *)model url:(NSString *) url
 //{

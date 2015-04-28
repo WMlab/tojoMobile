@@ -33,9 +33,6 @@ static TJProjectSender * _sender = nil;
 }
 #pragma mark --------- 项目主页数据请求 ----------
 -(void) sendGetProjectHomeDataWithViewModel:(TJProjectHomeViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback {
-    //先清除原有缓存数据
-    [viewModel.adProjects removeAllObjects];
-    [viewModel.projectList removeAllObjects];
     
     TJProjectHomeRequestModel *requestModel = [[TJProjectHomeRequestModel alloc] init];
     requestModel.categoryId = viewModel.categoryId;
@@ -45,6 +42,10 @@ static TJProjectSender * _sender = nil;
     AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
     reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
     [reqOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //先清除原有缓存数据
+        [viewModel.adProjects removeAllObjects];
+        [viewModel.projectList removeAllObjects];
+
         NSDictionary *responseDic = (NSDictionary *)responseObject;
         NSError *err;
         TJProjectHomeResponseModel *responseModel = [[TJProjectHomeResponseModel alloc] initWithDictionary:responseDic error:&err];
@@ -60,6 +61,10 @@ static TJProjectSender * _sender = nil;
             }
         }
         else {
+            //先清除原有缓存数据
+            [viewModel.adProjects removeAllObjects];
+            [viewModel.projectList removeAllObjects];
+
             if (callback) {
                 callback(false, responseModel.result.message);
             }

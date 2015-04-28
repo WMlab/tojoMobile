@@ -16,9 +16,9 @@
 @property(nonatomic, strong) TJUserBasicInfoModel *userBasicInfo;//用户基本信息
 
 @property(nonatomic, assign) int projectCount;  //用户参与的项目数量
-@property(nonatomic, strong) NSArray<TJProjectInfoModel> *userProjectList;  // model - TJProjectInfoModel
+@property(nonatomic, strong) NSMutableArray *userProjectList;  // model - TJProjectInfoModel
 
-@property(nonatomic, assign) int teamCount;   //用户参与的团队数量
-@property(nonatomic, strong) NSArray<TJTeamModel> *userTeamList;  // model - TJTeamModel
+@property(nonatomic, assign) int userLabelCount; //用户标签数量
+@property(nonatomic, strong) NSMutableArray *userLabelArr;  //model - TJUserLabelModel
 
 @end

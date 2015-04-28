@@ -7,6 +7,7 @@
 //
 
 #import "TJTextFIeld.h"
+#import "TJDefine.h"
 
 @implementation TJTextFIeld
 
@@ -31,6 +32,19 @@
     CGRect iconRect = [super leftViewRectForBounds:bounds];
     iconRect.origin.x += 15;
     return iconRect;
+}
+
+-(void) setTextFieldStyle:(TEXTFIELD_TYPE) type {
+    if (type == TEXTFIELD_TYPE_LOGIN) {
+        
+    }
+    else if (type == TEXTFIELD_TYPE_REVISE_PASSWORD) {
+        self.borderStyle = UITextBorderStyleNone;
+        self.layer.borderColor = TJColorHex(0x9e9e9f).CGColor;
+        self.layer.cornerRadius = 22;
+        self.layer.masksToBounds = YES;
+        self.layer.borderWidth = 0.5;
+    }
 }
 
 @end

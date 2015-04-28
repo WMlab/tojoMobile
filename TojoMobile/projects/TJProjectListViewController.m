@@ -185,12 +185,12 @@
 
 #pragma mark --------- 缓存 -----------
 -(void)saveRecordToDataBase {
-    [[TJDataBase getInstance] clearNewsWithCategoryId:_viewModel.categoryId];
-    [[TJDataBase getInstance] insertProjectWithMutableArray:_viewModel.projectList andCategoryId:_viewModel.categoryId];
+//    [[TJDataBase getInstance] clearNewsWithCategoryId:_viewModel.categoryId];
+//    [[TJDataBase getInstance] insertProjectWithMutableArray:_viewModel.projectList andCategoryId:_viewModel.categoryId];
 }
 
 -(void)loadLastRecordData {
-    _viewModel.projectList = [[TJDataBase getInstance] getProjectsWithCategoryId:_viewModel.categoryId];
+//    _viewModel.projectList = [[TJDataBase getInstance] getProjectsWithCategoryId:_viewModel.categoryId];
 }
 
 @end

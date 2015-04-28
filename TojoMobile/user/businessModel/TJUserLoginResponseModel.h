@@ -8,13 +8,17 @@
 
 #import "JSONModel.h"
 #import "TJResultModel.h"
+#import "TJUserBasicInfoModel.h"
 
 @interface TJUserLoginResponseModel : JSONModel
 
 @property (nonatomic, strong) TJResultModel *result;
-@property (nonatomic, assign) int userId;
-@property (nonatomic, copy) NSString *email;
-@property (nonatomic, copy) NSString *realName;
-@property (nonatomic, assign) short gender;
+
+@property (nonatomic, strong) TJUserBasicInfoModel *userInfo;
+
+//@property (nonatomic, assign) int userId;
+//@property (nonatomic, copy) NSString *email;
+//@property (nonatomic, copy) NSString *realName;
+//@property (nonatomic, assign) short gender;
 
 @end

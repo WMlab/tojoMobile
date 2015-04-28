@@ -48,7 +48,6 @@
 		32C4B4011A71D73F00B8D401 /* TJUserBasicInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4001A71D73F00B8D401 /* TJUserBasicInfoModel.m */; };
 		32C4B4041A71D8CD00B8D401 /* TJUserHomepageRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4031A71D8CD00B8D401 /* TJUserHomepageRequestModel.m */; };
 		32C4B4071A71D92900B8D401 /* TJUserHomepageResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4061A71D92900B8D401 /* TJUserHomepageResponseModel.m */; };
-		32C4B40A1A71DC0D00B8D401 /* TJUserHomepageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4091A71DC0D00B8D401 /* TJUserHomepageViewModel.m */; };
 		32C4B40D1A71DDCB00B8D401 /* TJTeamDetailRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B40C1A71DDCB00B8D401 /* TJTeamDetailRequestModel.m */; };
 		32C4B4101A71DDEA00B8D401 /* TJTeamDetailResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B40F1A71DDEA00B8D401 /* TJTeamDetailResponseModel.m */; };
 		32C4B4141A71EB2500B8D401 /* TJCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4B4121A71EB2500B8D401 /* TJCommentViewController.m */; };
@@ -137,6 +136,13 @@
 		EA99FC711A5ED72A0069ADBD /* TJSender.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99FC701A5ED72A0069ADBD /* TJSender.m */; };
 		EA99FC771A5EE9C70069ADBD /* TJUserLoginRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99FC741A5EE9C70069ADBD /* TJUserLoginRequestModel.m */; };
 		EA99FC781A5EE9C70069ADBD /* TJUserLoginResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99FC761A5EE9C70069ADBD /* TJUserLoginResponseModel.m */; };
+		EA9BAE4C1AED27CA0095A91D /* TJUserLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9BAE4A1AED27CA0095A91D /* TJUserLabelCell.m */; };
+		EA9BAE4D1AED27CA0095A91D /* TJUserLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9BAE4B1AED27CA0095A91D /* TJUserLabelCell.xib */; };
+		EAA02E641AE02E3600AA7233 /* TJAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA02E5F1AE02E3600AA7233 /* TJAboutViewController.swift */; };
+		EAA02E651AE02E3600AA7233 /* TJAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA02E601AE02E3600AA7233 /* TJAboutViewController.xib */; };
+		EAA02E661AE02E3600AA7233 /* TJSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02E621AE02E3600AA7233 /* TJSettingTableViewController.m */; };
+		EAA02E671AE02E3600AA7233 /* TJSettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA02E631AE02E3600AA7233 /* TJSettingTableViewController.xib */; };
+		EAA02E6A1AE1576000AA7233 /* TJUserHomepageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02E691AE1576000AA7233 /* TJUserHomepageViewModel.m */; };
 		EAA4E0901A7E565000E9E8D2 /* TJProjectHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA4E08F1A7E565000E9E8D2 /* TJProjectHomeViewController.m */; };
 		EAA4E0931A7E5AFD00E9E8D2 /* TJProjectCategoryHead.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA4E0921A7E5AFD00E9E8D2 /* TJProjectCategoryHead.m */; };
 		EAC116BC1A615AD200F620DE /* TJResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116BB1A615AD200F620DE /* TJResultModel.m */; };
@@ -145,9 +151,21 @@
 		EAC116EC1A61983000F620DE /* TJProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116E71A61983000F620DE /* TJProjectDetailViewController.m */; };
 		EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC116E81A61983000F620DE /* TJProjectDetailViewController.xib */; };
 		EAC116EE1A61983000F620DE /* TJProjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC116EA1A61983000F620DE /* TJProjectListViewController.m */; };
+		EAD66A281AEB7B3800915B12 /* TJRevisePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD66A261AEB7B3800915B12 /* TJRevisePasswordViewController.m */; };
+		EAD66A291AEB7B3800915B12 /* TJRevisePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD66A271AEB7B3800915B12 /* TJRevisePasswordViewController.xib */; };
+		EAD66A2C1AEB8CF500915B12 /* TJRevisePasswordRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD66A2B1AEB8CF500915B12 /* TJRevisePasswordRequestModel.m */; };
+		EAD66A2F1AEB8D0D00915B12 /* TJRevisePasswordResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD66A2E1AEB8D0D00915B12 /* TJRevisePasswordResponseModel.m */; };
+		EAD66A321AEB960A00915B12 /* TJUserLabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD66A311AEB960A00915B12 /* TJUserLabelModel.m */; };
 		EAEE9B361A5C012900FF3DA9 /* TJUserSender.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE9B351A5C012900FF3DA9 /* TJUserSender.m */; };
 		EAFAAFFF1AD8F012006628E9 /* TJMemberCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFAAFFD1AD8F012006628E9 /* TJMemberCollectionCell.m */; };
 		EAFAB0001AD8F012006628E9 /* TJMemberCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFAAFFE1AD8F012006628E9 /* TJMemberCollectionCell.xib */; };
+		EAFAB0041ADCBEB5006628E9 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAB0031ADCBEB5006628E9 /* libstdc++.6.dylib */; };
+		EAFAB0061ADCFA47006628E9 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAB0051ADCFA47006628E9 /* libxml2.dylib */; };
+		EAFAB0081ADCFA58006628E9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAB0071ADCFA58006628E9 /* libiconv.dylib */; };
+		EAFAB00A1ADCFA64006628E9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAB0091ADCFA64006628E9 /* libz.dylib */; };
+		EAFAB00C1ADCFA6E006628E9 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAB00B1ADCFA6E006628E9 /* libresolv.dylib */; };
+		EAFAB00E1ADCFA76006628E9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAB00D1ADCFA76006628E9 /* CFNetwork.framework */; };
+		EAFAB0101ADCFA83006628E9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFAB00F1ADCFA83006628E9 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,8 +277,6 @@
 		32C4B4031A71D8CD00B8D401 /* TJUserHomepageRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserHomepageRequestModel.m; sourceTree = "<group>"; };
 		32C4B4051A71D92900B8D401 /* TJUserHomepageResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserHomepageResponseModel.h; sourceTree = "<group>"; };
 		32C4B4061A71D92900B8D401 /* TJUserHomepageResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserHomepageResponseModel.m; sourceTree = "<group>"; };
-		32C4B4081A71DC0D00B8D401 /* TJUserHomepageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserHomepageViewModel.h; sourceTree = "<group>"; };
-		32C4B4091A71DC0D00B8D401 /* TJUserHomepageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserHomepageViewModel.m; sourceTree = "<group>"; };
 		32C4B40B1A71DDCB00B8D401 /* TJTeamDetailRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTeamDetailRequestModel.h; path = projects/businessmodel/TJTeamDetailRequestModel.h; sourceTree = "<group>"; };
 		32C4B40C1A71DDCB00B8D401 /* TJTeamDetailRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJTeamDetailRequestModel.m; path = projects/businessmodel/TJTeamDetailRequestModel.m; sourceTree = "<group>"; };
 		32C4B40E1A71DDEA00B8D401 /* TJTeamDetailResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTeamDetailResponseModel.h; path = projects/businessmodel/TJTeamDetailResponseModel.h; sourceTree = "<group>"; };
@@ -418,6 +434,16 @@
 		EA99FC741A5EE9C70069ADBD /* TJUserLoginRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserLoginRequestModel.m; sourceTree = "<group>"; };
 		EA99FC751A5EE9C70069ADBD /* TJUserLoginResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserLoginResponseModel.h; sourceTree = "<group>"; };
 		EA99FC761A5EE9C70069ADBD /* TJUserLoginResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserLoginResponseModel.m; sourceTree = "<group>"; };
+		EA9BAE491AED27CA0095A91D /* TJUserLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJUserLabelCell.h; path = cell/TJUserLabelCell.h; sourceTree = "<group>"; };
+		EA9BAE4A1AED27CA0095A91D /* TJUserLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJUserLabelCell.m; path = cell/TJUserLabelCell.m; sourceTree = "<group>"; };
+		EA9BAE4B1AED27CA0095A91D /* TJUserLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJUserLabelCell.xib; path = cell/TJUserLabelCell.xib; sourceTree = "<group>"; };
+		EAA02E5F1AE02E3600AA7233 /* TJAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TJAboutViewController.swift; sourceTree = "<group>"; };
+		EAA02E601AE02E3600AA7233 /* TJAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJAboutViewController.xib; sourceTree = "<group>"; };
+		EAA02E611AE02E3600AA7233 /* TJSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJSettingTableViewController.h; sourceTree = "<group>"; };
+		EAA02E621AE02E3600AA7233 /* TJSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJSettingTableViewController.m; sourceTree = "<group>"; };
+		EAA02E631AE02E3600AA7233 /* TJSettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJSettingTableViewController.xib; sourceTree = "<group>"; };
+		EAA02E681AE1576000AA7233 /* TJUserHomepageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserHomepageViewModel.h; sourceTree = "<group>"; };
+		EAA02E691AE1576000AA7233 /* TJUserHomepageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserHomepageViewModel.m; sourceTree = "<group>"; };
 		EAA4E08E1A7E565000E9E8D2 /* TJProjectHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectHomeViewController.h; path = projects/TJProjectHomeViewController.h; sourceTree = "<group>"; };
 		EAA4E08F1A7E565000E9E8D2 /* TJProjectHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectHomeViewController.m; path = projects/TJProjectHomeViewController.m; sourceTree = "<group>"; };
 		EAA4E0911A7E5AFD00E9E8D2 /* TJProjectCategoryHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectCategoryHead.h; path = projects/view/TJProjectCategoryHead.h; sourceTree = "<group>"; };
@@ -433,12 +459,28 @@
 		EAC116E81A61983000F620DE /* TJProjectDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJProjectDetailViewController.xib; path = projects/TJProjectDetailViewController.xib; sourceTree = "<group>"; };
 		EAC116E91A61983000F620DE /* TJProjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectListViewController.h; path = projects/TJProjectListViewController.h; sourceTree = "<group>"; };
 		EAC116EA1A61983000F620DE /* TJProjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectListViewController.m; path = projects/TJProjectListViewController.m; sourceTree = "<group>"; };
+		EAD66A251AEB7B3800915B12 /* TJRevisePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRevisePasswordViewController.h; sourceTree = "<group>"; };
+		EAD66A261AEB7B3800915B12 /* TJRevisePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRevisePasswordViewController.m; sourceTree = "<group>"; };
+		EAD66A271AEB7B3800915B12 /* TJRevisePasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJRevisePasswordViewController.xib; sourceTree = "<group>"; };
+		EAD66A2A1AEB8CF500915B12 /* TJRevisePasswordRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRevisePasswordRequestModel.h; sourceTree = "<group>"; };
+		EAD66A2B1AEB8CF500915B12 /* TJRevisePasswordRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRevisePasswordRequestModel.m; sourceTree = "<group>"; };
+		EAD66A2D1AEB8D0D00915B12 /* TJRevisePasswordResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRevisePasswordResponseModel.h; sourceTree = "<group>"; };
+		EAD66A2E1AEB8D0D00915B12 /* TJRevisePasswordResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRevisePasswordResponseModel.m; sourceTree = "<group>"; };
+		EAD66A301AEB960A00915B12 /* TJUserLabelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserLabelModel.h; sourceTree = "<group>"; };
+		EAD66A311AEB960A00915B12 /* TJUserLabelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserLabelModel.m; sourceTree = "<group>"; };
 		EAEE9B341A5C012900FF3DA9 /* TJUserSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserSender.h; sourceTree = "<group>"; };
 		EAEE9B351A5C012900FF3DA9 /* TJUserSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserSender.m; sourceTree = "<group>"; };
 		EAEE9B3E1A5C120200FF3DA9 /* TJSystemParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJSystemParam.h; sourceTree = "<group>"; };
 		EAFAAFFC1AD8F012006628E9 /* TJMemberCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJMemberCollectionCell.h; path = projects/cell/TJMemberCollectionCell.h; sourceTree = "<group>"; };
 		EAFAAFFD1AD8F012006628E9 /* TJMemberCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJMemberCollectionCell.m; path = projects/cell/TJMemberCollectionCell.m; sourceTree = "<group>"; };
 		EAFAAFFE1AD8F012006628E9 /* TJMemberCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJMemberCollectionCell.xib; path = projects/cell/TJMemberCollectionCell.xib; sourceTree = "<group>"; };
+		EAFAB0031ADCBEB5006628E9 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		EAFAB0051ADCFA47006628E9 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		EAFAB0071ADCFA58006628E9 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		EAFAB0091ADCFA64006628E9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EAFAB00B1ADCFA6E006628E9 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
+		EAFAB00D1ADCFA76006628E9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EAFAB00F1ADCFA83006628E9 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -453,6 +495,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFAB0101ADCFA83006628E9 /* MobileCoreServices.framework in Frameworks */,
+				EAFAB00E1ADCFA76006628E9 /* CFNetwork.framework in Frameworks */,
+				EAFAB00C1ADCFA6E006628E9 /* libresolv.dylib in Frameworks */,
+				EAFAB00A1ADCFA64006628E9 /* libz.dylib in Frameworks */,
+				EAFAB0081ADCFA58006628E9 /* libiconv.dylib in Frameworks */,
+				EAFAB0061ADCFA47006628E9 /* libxml2.dylib in Frameworks */,
+				EAFAB0041ADCBEB5006628E9 /* libstdc++.6.dylib in Frameworks */,
 				EA1864591A66310500117C8A /* libsqlite3.dylib in Frameworks */,
 				E42770C64AD3214DC5895880 /* libPods.a in Frameworks */,
 			);
@@ -489,6 +538,9 @@
 				32574AB91ADFFBD100756630 /* TJLogoutTableViewCell.h */,
 				32574ABA1ADFFBD100756630 /* TJLogoutTableViewCell.m */,
 				32574ABB1ADFFBD100756630 /* TJLogoutTableViewCell.xib */,
+				EA9BAE491AED27CA0095A91D /* TJUserLabelCell.h */,
+				EA9BAE4A1AED27CA0095A91D /* TJUserLabelCell.m */,
+				EA9BAE4B1AED27CA0095A91D /* TJUserLabelCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -716,6 +768,13 @@
 		3548326D607B0EA4ECF529D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAFAB00F1ADCFA83006628E9 /* MobileCoreServices.framework */,
+				EAFAB00D1ADCFA76006628E9 /* CFNetwork.framework */,
+				EAFAB00B1ADCFA6E006628E9 /* libresolv.dylib */,
+				EAFAB0091ADCFA64006628E9 /* libz.dylib */,
+				EAFAB0071ADCFA58006628E9 /* libiconv.dylib */,
+				EAFAB0051ADCFA47006628E9 /* libxml2.dylib */,
+				EAFAB0031ADCBEB5006628E9 /* libstdc++.6.dylib */,
 				EA1864581A66310500117C8A /* libsqlite3.dylib */,
 				9F87660748CC2C0B4B82EF26 /* libPods.a */,
 			);
@@ -928,6 +987,11 @@
 				EA99FC721A5EE9C70069ADBD /* businessModel */,
 				EAEE9B321A5C006400FF3DA9 /* service */,
 				EAEE9B331A5C006400FF3DA9 /* viewModel */,
+				EAA02E5F1AE02E3600AA7233 /* TJAboutViewController.swift */,
+				EAA02E601AE02E3600AA7233 /* TJAboutViewController.xib */,
+				EAA02E611AE02E3600AA7233 /* TJSettingTableViewController.h */,
+				EAA02E621AE02E3600AA7233 /* TJSettingTableViewController.m */,
+				EAA02E631AE02E3600AA7233 /* TJSettingTableViewController.xib */,
 				EA68E5201A5A2FB300CA2CCD /* TJLoginViewController.h */,
 				EA68E5211A5A2FB300CA2CCD /* TJLoginViewController.m */,
 				EA1CC79A1A7630A000E96FBE /* TJRegisterViewController.h */,
@@ -1151,8 +1215,11 @@
 				32574ABD1ADFFBD100756630 /* TJLogoutTableViewCell.xib in Resources */,
 				32F513B21A6E462700224E74 /* points.png in Resources */,
 				EA68E52D1A5A2FB300CA2CCD /* LaunchScreen.xib in Resources */,
+				EAA02E671AE02E3600AA7233 /* TJSettingTableViewController.xib in Resources */,
+				EA9BAE4D1AED27CA0095A91D /* TJUserLabelCell.xib in Resources */,
 				32E2F2C01A9AF205003C6E4A /* TJTeamDetailViewController.xib in Resources */,
 				EA0A0BB81A66A9B300E37BFD /* TJProjectListCell.xib in Resources */,
+				EAD66A291AEB7B3800915B12 /* TJRevisePasswordViewController.xib in Resources */,
 				EAC116ED1A61983000F620DE /* TJProjectDetailViewController.xib in Resources */,
 				EA775BD11A7A719E00B58DB4 /* TJHeaderCell.xib in Resources */,
 				EA6F743B1AC04347007A2B73 /* TJUserBasicInfoCell.xib in Resources */,
@@ -1237,6 +1304,7 @@
 				32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */,
 				32574AC61AE0B74200756630 /* TJAboutViewController.m in Sources */,
 				EA0A0BC01A67CC3C00E37BFD /* TJSession.m in Sources */,
+				EAD66A2C1AEB8CF500915B12 /* TJRevisePasswordRequestModel.m in Sources */,
 				328870D61A91C514002E8A00 /* BreakOutToRefreshView.swift in Sources */,
 				32D8BD921A7605BF002750A0 /* TJCreateTeamRequestModel.m in Sources */,
 				EA0A0BB71A66A9B300E37BFD /* TJProjectListCell.m in Sources */,
@@ -1255,6 +1323,8 @@
 				3241878F1A68AD350088A3BB /* TJProjectDetailInfoView.m in Sources */,
 				EA99FC771A5EE9C70069ADBD /* TJUserLoginRequestModel.m in Sources */,
 				EA775BA71A79230500B58DB4 /* TJAppHomeResponseModel.m in Sources */,
+				EA9BAE4C1AED27CA0095A91D /* TJUserLabelCell.m in Sources */,
+				EAD66A281AEB7B3800915B12 /* TJRevisePasswordViewController.m in Sources */,
 				EA2EB3C31AAF58F2005440A1 /* TJScrollPage.m in Sources */,
 				EA2EB3B51AAF2628005440A1 /* TJScrollImageCell.m in Sources */,
 				EA07EB3E1A80A0D5006BC0C8 /* TJProjectHomeResponseModel.m in Sources */,
@@ -1269,7 +1339,6 @@
 				321146451A66ACC600F89494 /* StrechyParallaxScrollView.m in Sources */,
 				EAC116BF1A618ADC00F620DE /* TJDataBase.m in Sources */,
 				EAC116EE1A61983000F620DE /* TJProjectListViewController.m in Sources */,
-				32C3BF471ADCEA61004F4629 /* TJSettingTableViewController.m in Sources */,
 				32574ABC1ADFFBD100756630 /* TJLogoutTableViewCell.m in Sources */,
 				3241878C1A68AD160088A3BB /* TJProjectBasicInfoView.m in Sources */,
 				32F513B81A6E68C900224E74 /* TJTeamListResponseModel.m in Sources */,
@@ -1282,6 +1351,7 @@
 				3208CF751AA7FC720078B378 /* TJUserMenuCell.m in Sources */,
 				EA775BCC1A7A675C00B58DB4 /* TJTableHeaderView.m in Sources */,
 				321146391A66997900F89494 /* TJProjectInfoModel.m in Sources */,
+				EAA02E641AE02E3600AA7233 /* TJAboutViewController.swift in Sources */,
 				EA775BBE1A79330100B58DB4 /* MMScrollPresenter.m in Sources */,
 				32D1F6B21AEBC11B00CE47D7 /* TJUserAttendProjectListResponseModel.m in Sources */,
 				EA775BC81A793E0800B58DB4 /* TJFourProjectCell.m in Sources */,
@@ -1293,6 +1363,7 @@
 				32F5139E1A6E230000224E74 /* TJTeamListViewModel.m in Sources */,
 				EA775BD41A7A7F1900B58DB4 /* TJAppHomeViewModel.m in Sources */,
 				32959F0B1A5ECFCC00C2B9D6 /* TJProjectSender.m in Sources */,
+				EAA02E6A1AE1576000AA7233 /* TJUserHomepageViewModel.m in Sources */,
 				32C4B4041A71D8CD00B8D401 /* TJUserHomepageRequestModel.m in Sources */,
 				32D1F6B51AEBC13D00CE47D7 /* TJUserAttendTeamListRequestModel.m in Sources */,
 				32C4B4071A71D92900B8D401 /* TJUserHomepageResponseModel.m in Sources */,
@@ -1327,8 +1398,8 @@
 				EAC116C21A618C1C00F620DE /* TJFilePath.m in Sources */,
 				EAFAAFFF1AD8F012006628E9 /* TJMemberCollectionCell.m in Sources */,
 				EA68E51C1A5A2FB300CA2CCD /* main.m in Sources */,
+				EAD66A2F1AEB8D0D00915B12 /* TJRevisePasswordResponseModel.m in Sources */,
 				32E2F2BF1A9AF205003C6E4A /* TJTeamDetailViewController.m in Sources */,
-				32C4B40A1A71DC0D00B8D401 /* TJUserHomepageViewModel.m in Sources */,
 				EA1CC7951A761BC500E96FBE /* TJTextFIeld.m in Sources */,
 				EA775BD01A7A719E00B58DB4 /* TJHeaderCell.m in Sources */,
 				EA07EB3B1A80A099006BC0C8 /* TJProjectHomeRequestModel.m in Sources */,

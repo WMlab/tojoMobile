@@ -20,8 +20,8 @@
                             <constraint firstAttribute="height" constant="50" id="zhu-Xc-l8K"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="丹青" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02T-Jg-u7O">
-                        <rect key="frame" x="43" y="63" width="34" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="丹青" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02T-Jg-u7O">
+                        <rect key="frame" x="0.0" y="63" width="120" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="34" id="Eoi-I0-uwt"/>
                             <constraint firstAttribute="height" constant="21" id="Mv7-0o-Itv"/>
@@ -29,12 +29,16 @@
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Eoi-I0-uwt"/>
+                            </mask>
+                        </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="同济大学" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4y-GA-Whu">
-                        <rect key="frame" x="32" y="85" width="56" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="同济大学" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4y-GA-Whu">
+                        <rect key="frame" x="0.0" y="85" width="120" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="SlC-eC-SiZ"/>
-                            <constraint firstAttribute="width" constant="56" id="XFw-fG-78U"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -44,12 +48,16 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="02T-Jg-u7O" secondAttribute="trailing" id="K7r-EC-djw"/>
                 <constraint firstItem="D4y-GA-Whu" firstAttribute="top" secondItem="02T-Jg-u7O" secondAttribute="bottom" constant="1" id="Rdf-EZ-Xg8"/>
+                <constraint firstItem="D4y-GA-Whu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VQf-aJ-pgv"/>
                 <constraint firstAttribute="centerX" secondItem="02T-Jg-u7O" secondAttribute="centerX" id="bWA-Kl-lef"/>
                 <constraint firstAttribute="centerX" secondItem="8oM-JF-eqs" secondAttribute="centerX" id="qRV-JM-8O1"/>
                 <constraint firstItem="02T-Jg-u7O" firstAttribute="top" secondItem="8oM-JF-eqs" secondAttribute="bottom" constant="5" id="s29-NH-FyO"/>
+                <constraint firstAttribute="trailing" secondItem="D4y-GA-Whu" secondAttribute="trailing" id="sBf-JP-hVN"/>
                 <constraint firstItem="8oM-JF-eqs" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="srf-KX-wav"/>
                 <constraint firstAttribute="centerX" secondItem="D4y-GA-Whu" secondAttribute="centerX" id="stK-Me-h8u"/>
+                <constraint firstItem="02T-Jg-u7O" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="t8N-pn-PVI"/>
             </constraints>
             <size key="customSize" width="119" height="103"/>
             <connections>
@@ -57,7 +65,7 @@
                 <outlet property="memberNameLabel" destination="02T-Jg-u7O" id="PT0-xk-6nI"/>
                 <outlet property="memberSchoolLabel" destination="D4y-GA-Whu" id="RM6-Nf-2e0"/>
             </connections>
-            <point key="canvasLocation" x="262" y="335"/>
+            <point key="canvasLocation" x="131" y="250"/>
         </collectionViewCell>
     </objects>
 </document>

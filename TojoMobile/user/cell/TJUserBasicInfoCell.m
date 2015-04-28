@@ -31,6 +31,9 @@
 
 -(void) setCellWithModel:(TJUserBasicInfoModel *)infoModel {
     [self.userImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, infoModel.userImage]]];
+    self.userImageView.layer.cornerRadius = self.userImageView.frame.size.height/2;
+    self.userImageView.layer.masksToBounds = YES;
+
     self.userNameLabel.text = infoModel.userRealName;
     self.userSchoolLabel.text = infoModel.userUniversity;
 }

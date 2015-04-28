@@ -22,6 +22,7 @@
 #import <RJImageLoader/UIImageView+RJLoader.h>
 #import "TJProjectSender.h"
 #import <Masonry/Masonry.h>
+#import "TJUserHomepageViewController.h"
 
 #define NAVBAR_CHANGE_POINT 50
 
@@ -78,6 +79,7 @@
             //添加头像点击手势
             UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapUserImage:)];
             [basicInfoView.projectFounderImg addGestureRecognizer:singleTap];
+            basicInfoView.projectFounderImg.userInteractionEnabled = YES;
             basicInfoView.projectFounderImg.tag = USER_IMAGE_PROJECT;
             [strechy addSubview:basicInfoView];
             
@@ -95,6 +97,7 @@
             //添加头像点击手势
             UITapGestureRecognizer *singleTap2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapUserImage:)];
             [commentPartView.latestCommentUserImg addGestureRecognizer:singleTap2];
+            commentPartView.latestCommentUserImg.userInteractionEnabled = YES;
             commentPartView.latestCommentUserImg.tag = USER_IMAGE_COMMENT;
             [strechy addSubview:commentPartView];
             
@@ -105,6 +108,7 @@
             //添加头像点击手势
             UITapGestureRecognizer *singleTap3 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapUserImage:)];
             [teamPartView.latestTeamFounderImg addGestureRecognizer:singleTap3];
+            teamPartView.latestTeamFounderImg.userInteractionEnabled = YES;
             teamPartView.latestTeamFounderImg.tag = USER_IMAGE_TEAM;
             [strechy addSubview:teamPartView];
             
@@ -174,6 +178,9 @@
     else if (tag == USER_IMAGE_TEAM) {
         userId = viewModel.teamModel.teamFounderId;
     }
+    TJUserHomepageViewController *userHomeVC = [[TJUserHomepageViewController alloc] init];
+    [userHomeVC setUserId:userId];
+    [self.navigationController pushViewController:userHomeVC animated:YES];
 }
 
 #pragma mark --------- 详情页面按钮跳转 -----------

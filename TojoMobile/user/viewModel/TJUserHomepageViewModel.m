@@ -10,4 +10,13 @@
 
 @implementation TJUserHomepageViewModel
 
+-(instancetype)init {
+    self = [super init];
+    if (self) {
+        _userBasicInfo = [[TJUserBasicInfoModel alloc] init];
+        _projectCount = 0;
+    }
+    return self;
+}
+
 @end

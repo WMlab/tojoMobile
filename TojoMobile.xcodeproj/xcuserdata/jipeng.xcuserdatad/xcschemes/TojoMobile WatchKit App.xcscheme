@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "32CE51851AB135D900DE07D8"
+               BlueprintIdentifier = "32C3BF211ADCAFC9004F4629"
                BuildableName = "TojoMobile WatchKit App.app"
                BlueprintName = "TojoMobile WatchKit App"
                ReferencedContainer = "container:TojoMobile.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "32CE51761AB135D800DE07D8"
+               BlueprintIdentifier = "32C3BF141ADCAFC8004F4629"
                BuildableName = "TojoMobile WatchKit Extension.appex"
                BlueprintName = "TojoMobile WatchKit Extension"
                ReferencedContainer = "container:TojoMobile.xcodeproj">
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EA68E5151A5A2FB300CA2CCD"
-               BuildableName = "TojoMobile.app"
+               BuildableName = "&#x540c;&#x821f;.app"
                BlueprintName = "TojoMobile"
                ReferencedContainer = "container:TojoMobile.xcodeproj">
             </BuildableReference>
@@ -60,7 +60,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "32CE51851AB135D900DE07D8"
+            BlueprintIdentifier = "32C3BF211ADCAFC9004F4629"
             BuildableName = "TojoMobile WatchKit App.app"
             BlueprintName = "TojoMobile WatchKit App"
             ReferencedContainer = "container:TojoMobile.xcodeproj">
@@ -82,7 +82,7 @@
          RemotePath = "/TojoMobile">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "32CE51851AB135D900DE07D8"
+            BlueprintIdentifier = "32C3BF211ADCAFC9004F4629"
             BuildableName = "TojoMobile WatchKit App.app"
             BlueprintName = "TojoMobile WatchKit App"
             ReferencedContainer = "container:TojoMobile.xcodeproj">
@@ -91,7 +91,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "32CE51851AB135D900DE07D8"
+            BlueprintIdentifier = "32C3BF211ADCAFC9004F4629"
             BuildableName = "TojoMobile WatchKit App.app"
             BlueprintName = "TojoMobile WatchKit App"
             ReferencedContainer = "container:TojoMobile.xcodeproj">
@@ -112,7 +112,7 @@
          RemotePath = "/TojoMobile">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "32CE51851AB135D900DE07D8"
+            BlueprintIdentifier = "32C3BF211ADCAFC9004F4629"
             BuildableName = "TojoMobile WatchKit App.app"
             BlueprintName = "TojoMobile WatchKit App"
             ReferencedContainer = "container:TojoMobile.xcodeproj">
@@ -121,7 +121,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "32CE51851AB135D900DE07D8"
+            BlueprintIdentifier = "32C3BF211ADCAFC9004F4629"
             BuildableName = "TojoMobile WatchKit App.app"
             BlueprintName = "TojoMobile WatchKit App"
             ReferencedContainer = "container:TojoMobile.xcodeproj">

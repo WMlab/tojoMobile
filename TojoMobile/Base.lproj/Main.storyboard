@@ -814,7 +814,8 @@
             <objects>
                 <navigationController id="DY2-J6-8iR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我" image="mine" id="DB9-et-dTP"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WSJ-Th-9hJ">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="WSJ-Th-9hJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -832,7 +833,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wZc-pm-3HZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="舟信" image="project" id="MOe-P7-2aB"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rxy-br-yjn">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Rxy-br-yjn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

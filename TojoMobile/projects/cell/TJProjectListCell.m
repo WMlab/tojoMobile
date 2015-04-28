@@ -11,7 +11,7 @@
 
 @interface TJProjectListCell ()
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constrainWidthFounderNameLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constrainFounderNameLabelWidth;
 @end
 
 @implementation TJProjectListCell
@@ -30,12 +30,13 @@
 - (void)setCellWithProjectItem:(TJProjectInfoModel *)infoModel
 {
     [self.contentView setNeedsLayout];
+    [self setNeedsUpdateConstraints];
     self.projectNameLabel.text = infoModel.projectName;
     self.projectEndDateLabel.text = [infoModel.projectEndDate substringWithRange:NSMakeRange(0, 10)];
     NSString *founderNameAndUni = [NSString stringWithFormat:@"%@ %@",infoModel.projectFounderUniversityName, infoModel.projectFounderName];
     self.founderNameAndUniLabel.text = founderNameAndUni;
     CGRect rect = [founderNameAndUni boundingRectWithSize:CGSizeMake(MAXFLOAT, self.founderNameAndUniLabel.bounds.size.height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.founderNameAndUniLabel.font} context:nil];
-    self.constrainWidthFounderNameLabel.constant = rect.size.width;
+    self.constrainFounderNameLabelWidth.constant = rect.size.width;
     
     self.projectLabel.text = infoModel.projectLabel;
     self.teamNumberLabel.text = [NSString stringWithFormat:@"%d", infoModel.teamNumber];
@@ -49,6 +50,7 @@
     self.founderImageView.layer.cornerRadius = self.founderImageView.frame.size.height/2;
     self.founderImageView.layer.masksToBounds = YES;
     [self.contentView layoutIfNeeded];
+    [self updateConstraintsIfNeeded];
 }
 
 @end
