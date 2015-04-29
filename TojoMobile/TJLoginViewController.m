@@ -98,6 +98,7 @@
                 [usrDefault setObject:[self md5:self.passwordTextfield.text] forKey:@"pwd"];
                 [usrDefault synchronize];
             });
+            
             [self performSelector:@selector(hideViewController) withObject:nil afterDelay:0.5];
             [[NSNotificationCenter defaultCenter] postNotificationName:TJUserLoginSuccess object:nil];
         }
