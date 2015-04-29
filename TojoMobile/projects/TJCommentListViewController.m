@@ -24,7 +24,7 @@
     dispatch_once_t onceToken;
 }
 
-@synthesize refreshView;
+//@synthesize refreshView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,11 +37,6 @@
     
     _viewModel = [[TJCommentListViewModel alloc] init];
     [self loadCommentList];
-    
-    //game
-//    refreshView = [[BreakOutToRefreshView alloc] initWithScrollView:self.commentTableView];
-//    refreshView.delegate = self;
-//    [self.commentTableView addSubview:refreshView];
     
     //MJRefresh定义上拉、下拉加载数据
     //[self updateDataSource];
@@ -122,27 +117,6 @@
     TJCommentViewController *commentViewController = [[TJCommentViewController alloc] init];
     
     [self.navigationController pushViewController:commentViewController animated:YES];
-}
-
-
-#pragma mark - BreakOutToRefreshDelegate
-
-- (void)refreshViewDidRefresh:(BreakOutToRefreshView *)refreshView{
-    // load stuff from the internet
-}
-
-#pragma mark - UIScrollViewDelegate
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    [refreshView scrollViewDidScroll:scrollView];
-}
-
-- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
-    [refreshView scrollViewWillEndDragging:scrollView withVelocity:velocity targetContentOffset:targetContentOffset];
-}
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    [refreshView scrollViewWillBeginDragging:scrollView];
 }
 
 - (void)didReceiveMemoryWarning {
