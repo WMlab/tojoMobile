@@ -8,8 +8,15 @@
 
 #import "TJUserTableViewController.h"
 #import "TJSession.h"
+#import "TJUserBasicInfoModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "TJSystemParam.h"
 
 @interface TJUserTableViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *userAvatar;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UILabel *userUniversity;
+@property (strong, nonatomic) TJUserBasicInfoModel *userInfo;
 
 @end
 
@@ -17,13 +24,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+    self.userInfo = [[TJSession getInstance] getUserInfoModel];
+    if (self.userInfo.userId == 0) {
+        self.userName.text = @"未登录";
+        self.userUniversity.text = @" ";
+        [self showLogin];
+    } else {
+        self.userName.text = self.userInfo.userRealName;
+        self.userUniversity.text = self.userInfo.userUniversity;
+        [self.userAvatar sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, self.userInfo.userImage]]];
+        [self.tableView reloadData];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)showLogin{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController *loginNav = (UINavigationController *)[sb instantiateViewControllerWithIdentifier:@"loginNav"];
+    
+    //    TJLoginViewController * loginVC = (TJLoginViewController *)[sb instantiateViewControllerWithIdentifier:@"loginVC"];
+    [self presentViewController:loginNav animated:YES completion:^{}];
 }
 
 #pragma mark - Table view data source

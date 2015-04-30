@@ -9,9 +9,11 @@
 #import "TJSettingTableViewController.h"
 #import "TJUserMenuCell.h"
 #import "TJLogoutTableViewCell.h"
-//#import "TJAboutViewController.h"
+#import "TJRevisePasswordViewController.h"
+#import "TJAboutTongjoViewController.h"
+#import "TJSession.h"
 
-@interface TJSettingTableViewController ()
+@interface TJSettingTableViewController () <UIActionSheetDelegate>
 
 @end
 
@@ -64,7 +66,7 @@
     TJLogoutTableViewCell *logoutCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier2];
     if (indexPath.section == 0) {
         if(indexPath.row == 0){
-            [menuCell setCellWithItemText:@"账号管理"];
+            [menuCell setCellWithItemText:@"修改密码"];
         }
         if(indexPath.row == 1){
             [menuCell setCellWithItemText:@"关于同舟"];
@@ -122,10 +124,26 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        if (indexPath.row == 1) {
-//            TJAboutViewController *aboutVC = [[TJAboutViewController alloc] init];
-//            [self.navigationController pushViewController:aboutVC animated:TRUE];
+        if (indexPath.row == 0) {
+            TJRevisePasswordViewController *revisePasswordVC = [[TJRevisePasswordViewController alloc] init];
+            [self.navigationController pushViewController:revisePasswordVC animated:YES];
         }
+        if (indexPath.row == 1) {
+            TJAboutTongjoViewController *aboutVC = [[TJAboutTongjoViewController alloc] init];
+            aboutVC.url = [NSURL URLWithString:@"http://www.tongjo.com/about#/about"];
+            [self.navigationController pushViewController:aboutVC animated:YES];
+        }
+    }
+    if (indexPath.section == 1) {
+        UIActionSheet *myActionSheet = [[UIActionSheet alloc] initWithTitle:@"确认退出？" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:nil];
+        [myActionSheet showInView:self.view];
+    }
+}
+
+#pragma mark - action sheet delegate
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0) {
+        [[TJSession getInstance] clearUserInfoModel];
     }
 }
 

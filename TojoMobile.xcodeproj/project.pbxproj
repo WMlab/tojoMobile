@@ -75,6 +75,8 @@
 		32F513B21A6E462700224E74 /* points.png in Resources */ = {isa = PBXBuildFile; fileRef = 32F513B11A6E462700224E74 /* points.png */; };
 		32F513B51A6E68A400224E74 /* TJTeamListRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F513B41A6E68A400224E74 /* TJTeamListRequestModel.m */; };
 		32F513B81A6E68C900224E74 /* TJTeamListResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F513B71A6E68C900224E74 /* TJTeamListResponseModel.m */; };
+		32F607FB1AF258DA0053DF88 /* TJAboutTongjoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F607F91AF258DA0053DF88 /* TJAboutTongjoViewController.m */; };
+		32F607FC1AF258DA0053DF88 /* TJAboutTongjoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F607FA1AF258DA0053DF88 /* TJAboutTongjoViewController.xib */; };
 		32FD12081A971CB2004D3A15 /* UUDatePicker_DateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD12051A971CB2004D3A15 /* UUDatePicker_DateModel.m */; };
 		32FD12091A971CB2004D3A15 /* UUDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD12071A971CB2004D3A15 /* UUDatePicker.m */; };
 		E42770C64AD3214DC5895880 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F87660748CC2C0B4B82EF26 /* libPods.a */; };
@@ -318,6 +320,9 @@
 		32F513B41A6E68A400224E74 /* TJTeamListRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJTeamListRequestModel.m; path = projects/businessmodel/TJTeamListRequestModel.m; sourceTree = "<group>"; };
 		32F513B61A6E68C900224E74 /* TJTeamListResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJTeamListResponseModel.h; path = projects/businessmodel/TJTeamListResponseModel.h; sourceTree = "<group>"; };
 		32F513B71A6E68C900224E74 /* TJTeamListResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJTeamListResponseModel.m; path = projects/businessmodel/TJTeamListResponseModel.m; sourceTree = "<group>"; };
+		32F607F81AF258DA0053DF88 /* TJAboutTongjoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJAboutTongjoViewController.h; sourceTree = "<group>"; };
+		32F607F91AF258DA0053DF88 /* TJAboutTongjoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJAboutTongjoViewController.m; sourceTree = "<group>"; };
+		32F607FA1AF258DA0053DF88 /* TJAboutTongjoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJAboutTongjoViewController.xib; sourceTree = "<group>"; };
 		32FD12041A971CB2004D3A15 /* UUDatePicker_DateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUDatePicker_DateModel.h; path = projects/view/UUDatePicker_DateModel.h; sourceTree = "<group>"; };
 		32FD12051A971CB2004D3A15 /* UUDatePicker_DateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUDatePicker_DateModel.m; path = projects/view/UUDatePicker_DateModel.m; sourceTree = "<group>"; };
 		32FD12061A971CB2004D3A15 /* UUDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUDatePicker.h; path = projects/view/UUDatePicker.h; sourceTree = "<group>"; };
@@ -992,6 +997,9 @@
 				EAB6C64D1AEFDB0600F21997 /* TJRevisePasswordViewController.h */,
 				EAB6C64E1AEFDB0600F21997 /* TJRevisePasswordViewController.m */,
 				EAB6C64F1AEFDB0600F21997 /* TJRevisePasswordViewController.xib */,
+				32F607F81AF258DA0053DF88 /* TJAboutTongjoViewController.h */,
+				32F607F91AF258DA0053DF88 /* TJAboutTongjoViewController.m */,
+				32F607FA1AF258DA0053DF88 /* TJAboutTongjoViewController.xib */,
 			);
 			path = user;
 			sourceTree = "<group>";
@@ -1187,6 +1195,7 @@
 				EA775BC31A79355500B58DB4 /* forest.jpg in Resources */,
 				3208CF761AA7FC720078B378 /* TJUserMenuCell.xib in Resources */,
 				32F513AE1A6E26F700224E74 /* TJTeamListCell.xib in Resources */,
+				32F607FC1AF258DA0053DF88 /* TJAboutTongjoViewController.xib in Resources */,
 				32C4B4151A71EB2500B8D401 /* TJCommentViewController.xib in Resources */,
 				EA68E5281A5A2FB300CA2CCD /* Main.storyboard in Resources */,
 				32574ABD1ADFFBD100756630 /* TJLogoutTableViewCell.xib in Resources */,
@@ -1276,6 +1285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAB6C65E1AEFE8BB00F21997 /* TJSettingTableViewController.m in Sources */,
+				32F607FB1AF258DA0053DF88 /* TJAboutTongjoViewController.m in Sources */,
 				32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */,
 				EA0A0BC01A67CC3C00E37BFD /* TJSession.m in Sources */,
 				EAB6C65A1AEFDB2700F21997 /* TJUserLabelModel.m in Sources */,

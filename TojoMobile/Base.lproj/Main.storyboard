@@ -778,6 +778,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="KGP-es-SPn"/>
+                    <connections>
+                        <outlet property="userAvatar" destination="1bD-2S-yEh" id="S3n-gJ-8Jv"/>
+                        <outlet property="userName" destination="3Ue-xf-Lec" id="j8k-5z-RWq"/>
+                        <outlet property="userUniversity" destination="wsl-ta-PH8" id="4B9-CT-v2p"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEz-zQ-RuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
