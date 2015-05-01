@@ -1,58 +1,50 @@
 //
-//  TJUserTableViewController.m
+//  TJChangeUserInfoViewController.m
 //  TojoMobile
 //
-//  Created by sdq on 15/4/25.
+//  Created by sdq on 15/5/1.
 //  Copyright (c) 2015年 Tongjo. All rights reserved.
 //
 
-#import "TJUserTableViewController.h"
+#import "TJChangeUserInfoViewController.h"
 #import "TJSession.h"
-#import "TJUserBasicInfoModel.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 #import "TJSystemParam.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
-@interface TJUserTableViewController ()
+@interface TJChangeUserInfoViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *userAvatar;
 @property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UILabel *userGender;
 @property (weak, nonatomic) IBOutlet UILabel *userUniversity;
-@property (strong, nonatomic) TJUserBasicInfoModel *userInfo;
 
 @end
 
-@implementation TJUserTableViewController
+@implementation TJChangeUserInfoViewController
+
+@synthesize userInfo;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     //导航栏
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-    self.navigationItem.title = @"我";
+    self.navigationItem.title = @"基本信息";
     
     self.userInfo = [[TJSession getInstance] getUserInfoModel];
-    if (self.userInfo.userId == 0) {
-        self.userName.text = @"未登录";
-        self.userUniversity.text = @" ";
-        [self showLogin];
+    self.userName.text = self.userInfo.userRealName;
+    if (self.userInfo.userGender == 1) {
+        self.userGender.text = @"男";
+    } else {
+        self.userGender.text = @"女";
     }
+    self.userUniversity.text = self.userInfo.userUniversity;
     self.userAvatar.layer.masksToBounds = YES;
     self.userAvatar.layer.cornerRadius = 32;
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
-    self.userInfo = [[TJSession getInstance] getUserInfoModel];
-    if (self.userInfo.userId == 0) {
-        self.userName.text = @"未登录";
-        self.userUniversity.text = @" ";
-        
-    } else {
-        self.userName.text = self.userInfo.userRealName;
-        self.userUniversity.text = self.userInfo.userUniversity;
-        [self.userAvatar sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, self.userInfo.userImage]]];
-        [self.tableView reloadData];
-    }
+    [self.userAvatar sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, self.userInfo.userImage]]];
+    [self.tableView reloadData];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,32 +52,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)showLogin{
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UINavigationController *loginNav = (UINavigationController *)[sb instantiateViewControllerWithIdentifier:@"loginNav"];
-    
-    //    TJLoginViewController * loginVC = (TJLoginViewController *)[sb instantiateViewControllerWithIdentifier:@"loginVC"];
-    [self presentViewController:loginNav animated:YES completion:^{}];
-}
-
 #pragma mark - Table view data source
-
-- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
-    UITableViewHeaderFooterView *v = (UITableViewHeaderFooterView *)view;
-    v.backgroundView.backgroundColor = [UIColor clearColor];
-}
-
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Potentially incomplete method implementation.
-//    // Return the number of sections.
-//    return 0;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete method implementation.
-//    // Return the number of rows in the section.
-//    return 0;
-//}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

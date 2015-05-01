@@ -26,6 +26,7 @@
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     self.navigationItem.title = @"设置";
     
+    self.tableView.backgroundColor = [UIColor colorWithRed:245/255.f green:245/255.f blue:245/255.f alpha:1];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -122,6 +123,11 @@
 
 #pragma mark - Table view delegate
 
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
+    UITableViewHeaderFooterView *v = (UITableViewHeaderFooterView *)view;
+    v.backgroundView.backgroundColor = [UIColor clearColor];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
@@ -135,7 +141,7 @@
         }
     }
     if (indexPath.section == 1) {
-        UIActionSheet *myActionSheet = [[UIActionSheet alloc] initWithTitle:@"确认退出？" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:nil];
+        UIActionSheet *myActionSheet = [[UIActionSheet alloc] initWithTitle:@"确认退出？" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"退出" otherButtonTitles:nil];
         [myActionSheet showInView:self.view];
     }
 }
@@ -144,6 +150,8 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 0) {
         [[TJSession getInstance] clearUserInfoModel];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        //[[self navigationController] popViewControllerAnimated:YES];
     }
 }
 
