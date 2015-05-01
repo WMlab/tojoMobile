@@ -16,12 +16,18 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UMg-Ab-RBF">
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMg-Ab-RBF">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="UMg-Ab-RBF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NjX-tq-E1e"/>
+                <constraint firstAttribute="trailing" secondItem="UMg-Ab-RBF" secondAttribute="trailing" id="Qs3-yU-UQ4"/>
+                <constraint firstItem="UMg-Ab-RBF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dFe-Sc-v7G"/>
+                <constraint firstAttribute="bottom" secondItem="UMg-Ab-RBF" secondAttribute="bottom" id="zA7-YK-Zs7"/>
+            </constraints>
         </view>
     </objects>
 </document>

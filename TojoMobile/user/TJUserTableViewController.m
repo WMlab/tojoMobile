@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *userName;
 @property (weak, nonatomic) IBOutlet UILabel *userUniversity;
 @property (strong, nonatomic) TJUserBasicInfoModel *userInfo;
+@property BOOL isLogin;
 
 @end
 
@@ -32,10 +33,13 @@
     
     self.userInfo = [[TJSession getInstance] getUserInfoModel];
     if (self.userInfo.userId == 0) {
-        self.userName.text = @"未登录";
-        self.userUniversity.text = @" ";
+        self.userName.text = @"您好！";
+        self.userUniversity.text = @"请先登陆";
+        [self.userAvatar setImage:[UIImage imageNamed:@"person"]];
         [self showLogin];
+        self.isLogin = FALSE;
     }
+    
     self.userAvatar.layer.masksToBounds = YES;
     self.userAvatar.layer.cornerRadius = 32;
 }
@@ -44,14 +48,16 @@
     [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
     self.userInfo = [[TJSession getInstance] getUserInfoModel];
     if (self.userInfo.userId == 0) {
-        self.userName.text = @"未登录";
-        self.userUniversity.text = @" ";
-        
+        self.userName.text = @"您好！";
+        self.userUniversity.text = @"请先登陆";
+        [self.userAvatar setImage:[UIImage imageNamed:@"person"]];
+        self.isLogin = FALSE;
     } else {
         self.userName.text = self.userInfo.userRealName;
         self.userUniversity.text = self.userInfo.userUniversity;
         [self.userAvatar sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, self.userInfo.userImage]]];
         [self.tableView reloadData];
+        self.isLogin = TRUE;
     }
 }
 
@@ -68,11 +74,33 @@
     [self presentViewController:loginNav animated:YES completion:^{}];
 }
 
-#pragma mark - Table view data source
+#pragma mark - Table view datasource and delegate
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
     UITableViewHeaderFooterView *v = (UITableViewHeaderFooterView *)view;
     v.backgroundView.backgroundColor = [UIColor clearColor];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.isLogin) {
+        if (indexPath.section == 0) {
+            [self performSegueWithIdentifier:@"changeUserInfo" sender:self];
+        }
+        if (indexPath.section == 1) {
+            if (indexPath.row == 0) {
+                [self performSegueWithIdentifier:@"userProject" sender:self];
+            }
+            if (indexPath.row == 1) {
+                [self performSegueWithIdentifier:@"userTeam" sender:self];
+            }
+        }
+        if (indexPath.section == 2) {
+            [self performSegueWithIdentifier:@"appSetting" sender:self];
+        }
+    } else {
+        [self showLogin];
+    }
+    
 }
 
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

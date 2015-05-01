@@ -331,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-466.5" y="1595.25"/>
+            <point key="canvasLocation" x="3262" y="2193"/>
         </scene>
         <!--注册-->
         <scene sceneID="n0W-bh-ZuW">
@@ -478,7 +478,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ex-c7-0Kp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352.5" y="1595.25"/>
+            <point key="canvasLocation" x="4081" y="2193"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -696,9 +696,6 @@
                                                 <constraint firstAttribute="centerY" secondItem="1bD-2S-yEh" secondAttribute="centerY" id="rIA-0J-vfe"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="jiB-y7-5HE" kind="show" identifier="changeUserInfo" id="rL8-Eq-ZUR"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -727,9 +724,6 @@
                                                 <constraint firstItem="fYy-9r-JcM" firstAttribute="top" secondItem="FRT-g7-4LF" secondAttribute="topMargin" constant="41" id="vm7-yQ-ltP"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="u1a-V7-VUR" kind="show" id="Zjm-cX-yqs"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="rbY-oy-y7w" rowHeight="50" style="IBUITableViewCellStyleDefault" id="oGA-Ht-XAB">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -744,9 +738,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Nh6-TJ-5u6" kind="show" id="gck-QI-taX"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -765,9 +756,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="kKE-Qu-U9J" kind="show" identifier="appSetting" id="Sei-WP-hw3"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -782,11 +770,15 @@
                         <outlet property="userAvatar" destination="1bD-2S-yEh" id="S3n-gJ-8Jv"/>
                         <outlet property="userName" destination="3Ue-xf-Lec" id="j8k-5z-RWq"/>
                         <outlet property="userUniversity" destination="wsl-ta-PH8" id="4B9-CT-v2p"/>
+                        <segue destination="jiB-y7-5HE" kind="show" identifier="changeUserInfo" id="yQm-lq-DCa"/>
+                        <segue destination="u1a-V7-VUR" kind="show" identifier="userProject" id="eSy-Wz-uOk"/>
+                        <segue destination="Nh6-TJ-5u6" kind="show" identifier="userTeam" id="4Me-Mh-bJn"/>
+                        <segue destination="kKE-Qu-U9J" kind="show" identifier="appSetting" id="rgX-I8-ekj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEz-zQ-RuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1187" y="653"/>
+            <point key="canvasLocation" x="2452" y="989"/>
         </scene>
         <!--Setting Table View Controller-->
         <scene sceneID="p7Q-I0-WyD">
@@ -812,7 +804,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TaR-u9-NOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2323" y="2885"/>
+            <point key="canvasLocation" x="3379" y="1329"/>
         </scene>
         <!--我-->
         <scene sceneID="HQm-nv-nBY">
@@ -830,7 +822,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zb-ql-Mid" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="387" y="641.25"/>
+            <point key="canvasLocation" x="599" y="1277"/>
         </scene>
         <!--舟信-->
         <scene sceneID="evX-jX-HdO">
@@ -868,7 +860,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9Y-8M-l7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1276.5" y="1595.25"/>
+            <point key="canvasLocation" x="2452" y="2193"/>
         </scene>
         <!--主页-->
         <scene sceneID="HaA-Tc-il4">
@@ -888,7 +880,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Aa-lD-033" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2331" y="-89.25"/>
+            <point key="canvasLocation" x="2347" y="-470"/>
         </scene>
         <!--Change User Info View Controller-->
         <scene sceneID="ECf-Oq-h8v">
@@ -1073,7 +1065,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMD-gf-uIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2323" y="641"/>
+            <point key="canvasLocation" x="3371" y="629"/>
         </scene>
         <!--User Attend Projects View Controller-->
         <scene sceneID="sw4-Zz-5HC">
@@ -1099,7 +1091,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0T0-e3-WiN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2323" y="1405"/>
+            <point key="canvasLocation" x="4049" y="629"/>
         </scene>
         <!--User Attend Teams View Controller-->
         <scene sceneID="wkA-Od-Oif">
@@ -1125,7 +1117,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xw9-Rw-5mI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2323" y="2171"/>
+            <point key="canvasLocation" x="4049" y="1329"/>
         </scene>
         <!--主页-->
         <scene sceneID="BAk-3G-oYk">
@@ -1145,7 +1137,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQZ-4V-mym" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3144" y="-89.25"/>
+            <point key="canvasLocation" x="3160" y="-470"/>
         </scene>
     </scenes>
     <resources>
