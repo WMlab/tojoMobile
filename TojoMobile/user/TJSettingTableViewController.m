@@ -9,9 +9,11 @@
 #import "TJSettingTableViewController.h"
 #import "TJUserMenuCell.h"
 #import "TJLogoutTableViewCell.h"
-//#import "TJAboutViewController.h"
+#import "TJRevisePasswordViewController.h"
+#import "TJAboutTongjoViewController.h"
+#import "TJSession.h"
 
-@interface TJSettingTableViewController ()
+@interface TJSettingTableViewController () <UIActionSheetDelegate>
 
 @end
 
@@ -24,6 +26,7 @@
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     self.navigationItem.title = @"设置";
     
+    self.tableView.backgroundColor = [UIColor colorWithRed:245/255.f green:245/255.f blue:245/255.f alpha:1];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,7 +67,7 @@
     TJLogoutTableViewCell *logoutCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier2];
     if (indexPath.section == 0) {
         if(indexPath.row == 0){
-            [menuCell setCellWithItemText:@"账号管理"];
+            [menuCell setCellWithItemText:@"修改密码"];
         }
         if(indexPath.row == 1){
             [menuCell setCellWithItemText:@"关于同舟"];
@@ -120,12 +123,35 @@
 
 #pragma mark - Table view delegate
 
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
+    UITableViewHeaderFooterView *v = (UITableViewHeaderFooterView *)view;
+    v.backgroundView.backgroundColor = [UIColor clearColor];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        if (indexPath.row == 1) {
-//            TJAboutViewController *aboutVC = [[TJAboutViewController alloc] init];
-//            [self.navigationController pushViewController:aboutVC animated:TRUE];
+        if (indexPath.row == 0) {
+            TJRevisePasswordViewController *revisePasswordVC = [[TJRevisePasswordViewController alloc] init];
+            [self.navigationController pushViewController:revisePasswordVC animated:YES];
         }
+        if (indexPath.row == 1) {
+            TJAboutTongjoViewController *aboutVC = [[TJAboutTongjoViewController alloc] init];
+            aboutVC.url = [NSURL URLWithString:@"http://www.tongjo.com/about#/about"];
+            [self.navigationController pushViewController:aboutVC animated:YES];
+        }
+    }
+    if (indexPath.section == 1) {
+        UIActionSheet *myActionSheet = [[UIActionSheet alloc] initWithTitle:@"确认退出？" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"退出" otherButtonTitles:nil];
+        [myActionSheet showInView:self.view];
+    }
+}
+
+#pragma mark - action sheet delegate
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0) {
+        [[TJSession getInstance] clearUserInfoModel];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        //[[self navigationController] popViewControllerAnimated:YES];
     }
 }
 
