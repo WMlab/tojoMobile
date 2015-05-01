@@ -1,36 +1,50 @@
 //
-//  TJUserAttendProjectsViewController.m
+//  TJChangeUserInfoViewController.m
 //  TojoMobile
 //
-//  Created by sdq on 15/3/5.
+//  Created by sdq on 15/5/1.
 //  Copyright (c) 2015年 Tongjo. All rights reserved.
 //
 
-#import "TJUserAttendProjectsViewController.h"
-#import "TJUserAttendProjectListViewModel.h"
-#import "TJProjectListCell.h"
-#import "TJProjectSender.h"
+#import "TJChangeUserInfoViewController.h"
+#import "TJSession.h"
+#import "TJSystemParam.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
-@interface TJUserAttendProjectsViewController ()
-@property (nonatomic,strong) TJUserAttendProjectListViewModel *viewModel;
+@interface TJChangeUserInfoViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *userAvatar;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UILabel *userGender;
+@property (weak, nonatomic) IBOutlet UILabel *userUniversity;
+
 @end
 
-@implementation TJUserAttendProjectsViewController {
-    dispatch_once_t onceToken;
-}
+@implementation TJChangeUserInfoViewController
+
+@synthesize userInfo;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     //导航栏
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-    self.navigationItem.title = @"我参加的项目";
+    self.navigationItem.title = @"基本信息";
     
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
+    self.userInfo = [[TJSession getInstance] getUserInfoModel];
+    self.userName.text = self.userInfo.userRealName;
+    if (self.userInfo.userGender == 1) {
+        self.userGender.text = @"男";
+    } else {
+        self.userGender.text = @"女";
+    }
+    self.userUniversity.text = self.userInfo.userUniversity;
+    self.userAvatar.layer.masksToBounds = YES;
+    self.userAvatar.layer.cornerRadius = 32;
+    [self.userAvatar sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, self.userInfo.userImage]]];
+    [self.tableView reloadData];
     
-    [self loadProjectList];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,47 +52,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark --------- 发服务 -----------
--(void) loadProjectList
-{
-    [[TJProjectSender getInstance] sendGetUserProjectListWithViewModel:_viewModel withUserId:1 completeBlock:^(BOOL success, NSString *message) {
-        if (success) {
-            NSLog(@"success");
-            [self.tableView reloadData];
-        }
-        else {
-            NSLog(@"falied");
-        }
-    }];
-}
-
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSUInteger count = [_viewModel.userProjectList count];
-    return count;
-}
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    dispatch_once(&onceToken, ^{
-        [tableView registerNib:[UINib nibWithNibName:@"TJProjectListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJProjectListCell"];
-    });
-    static NSString *cellId = @"TJProjectListCell";
-    TJProjectListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    TJProjectInfoModel *infoModel = (TJProjectInfoModel *)[_viewModel.userProjectList objectAtIndex:indexPath.row];
-    [cell setCellWithProjectItem:infoModel];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // Configure the cell...
     
     return cell;
 }
-
--(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 130.0;
-}
+*/
 
 /*
 // Override to support conditional editing of the table view.

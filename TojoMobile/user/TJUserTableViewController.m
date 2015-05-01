@@ -8,8 +8,16 @@
 
 #import "TJUserTableViewController.h"
 #import "TJSession.h"
+#import "TJUserBasicInfoModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "TJSystemParam.h"
 
 @interface TJUserTableViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *userAvatar;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UILabel *userUniversity;
+@property (strong, nonatomic) TJUserBasicInfoModel *userInfo;
+@property BOOL isLogin;
 
 @end
 
@@ -17,8 +25,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //导航栏
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
+    [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    self.navigationItem.title = @"我";
     
+    self.userInfo = [[TJSession getInstance] getUserInfoModel];
+    if (self.userInfo.userId == 0) {
+        self.userName.text = @"您好！";
+        self.userUniversity.text = @"请先登陆";
+        [self.userAvatar setImage:[UIImage imageNamed:@"person"]];
+        [self showLogin];
+        self.isLogin = FALSE;
+    }
     
+    self.userAvatar.layer.masksToBounds = YES;
+    self.userAvatar.layer.cornerRadius = 32;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+    self.userInfo = [[TJSession getInstance] getUserInfoModel];
+    if (self.userInfo.userId == 0) {
+        self.userName.text = @"您好！";
+        self.userUniversity.text = @"请先登陆";
+        [self.userAvatar setImage:[UIImage imageNamed:@"person"]];
+        self.isLogin = FALSE;
+    } else {
+        self.userName.text = self.userInfo.userRealName;
+        self.userUniversity.text = self.userInfo.userUniversity;
+        [self.userAvatar sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_BASE_URL, self.userInfo.userImage]]];
+        [self.tableView reloadData];
+        self.isLogin = TRUE;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,7 +66,42 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+- (void)showLogin{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController *loginNav = (UINavigationController *)[sb instantiateViewControllerWithIdentifier:@"loginNav"];
+    
+    //    TJLoginViewController * loginVC = (TJLoginViewController *)[sb instantiateViewControllerWithIdentifier:@"loginVC"];
+    [self presentViewController:loginNav animated:YES completion:^{}];
+}
+
+#pragma mark - Table view datasource and delegate
+
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
+    UITableViewHeaderFooterView *v = (UITableViewHeaderFooterView *)view;
+    v.backgroundView.backgroundColor = [UIColor clearColor];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.isLogin) {
+        if (indexPath.section == 0) {
+            [self performSegueWithIdentifier:@"changeUserInfo" sender:self];
+        }
+        if (indexPath.section == 1) {
+            if (indexPath.row == 0) {
+                [self performSegueWithIdentifier:@"userProject" sender:self];
+            }
+            if (indexPath.row == 1) {
+                [self performSegueWithIdentifier:@"userTeam" sender:self];
+            }
+        }
+        if (indexPath.section == 2) {
+            [self performSegueWithIdentifier:@"appSetting" sender:self];
+        }
+    } else {
+        [self showLogin];
+    }
+    
+}
 
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Potentially incomplete method implementation.
