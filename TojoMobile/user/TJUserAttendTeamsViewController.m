@@ -7,12 +7,17 @@
 //
 
 #import "TJUserAttendTeamsViewController.h"
+#import "TJUserAttendTeamListViewModel.h"
+#import "TJProjectSender.h"
+#import "TJTeamListCell.h"
 
 @interface TJUserAttendTeamsViewController ()
-
+@property (nonatomic,strong) TJUserAttendTeamListViewModel *viewModel;
 @end
 
-@implementation TJUserAttendTeamsViewController
+@implementation TJUserAttendTeamsViewController {
+    dispatch_once_t onceToken;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +27,16 @@
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.navigationItem.title = @"我参与的团队";
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self setExtraCellLineHidden:self.tableView];
+    
+    if (!_viewModel) {
+        _viewModel = [[TJUserAttendTeamListViewModel alloc] init];
+    }
+    
+    [self loadTeamList];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,29 +44,56 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark --------- 发服务 -----------
+-(void) loadTeamList
+{
+    [[TJProjectSender getInstance] sendGetUserTeamListWithViewModel:_viewModel withUserId:1 completeBlock:^(BOOL success, NSString *message) {
+        if (success) {
+            NSLog(@"success");
+            [self.tableView reloadData];
+        }
+        else {
+            NSLog(@"falied");
+        }
+    }];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    NSUInteger count = [_viewModel.userTeamList count];
+    return count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    dispatch_once(&onceToken, ^{
+        [tableView registerNib:[UINib nibWithNibName:@"TJTeamListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TJTeamListCell"];
+    });
+    static NSString *cellId = @"TJTeamListCell";
+    TJTeamListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    TJTeamModel *infoModel = (TJTeamModel *)[_viewModel.userTeamList objectAtIndex:indexPath.row];
+    [cell setCellWithTeamItem:infoModel];
     
     return cell;
 }
-*/
+
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80.0;
+}
+
+//消除多余分割线
+- (void)setExtraCellLineHidden: (UITableView *)tableView
+{
+    UIView *view =[ [UIView alloc]init];
+    view.backgroundColor = [UIColor clearColor];
+    [tableView setTableFooterView:view];
+}
 
 /*
 // Override to support conditional editing of the table view.

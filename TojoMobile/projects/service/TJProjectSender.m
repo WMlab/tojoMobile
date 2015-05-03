@@ -266,8 +266,9 @@ static TJProjectSender * _sender = nil;
 -(void) sendGetUserTeamListWithViewModel:(TJUserAttendTeamListViewModel *)viewModel withUserId:(int)userId completeBlock:(ProjectCommonCallBack)callback{
     TJUserAttendTeamListRequestModel *requestModel = [[TJUserAttendTeamListRequestModel alloc] init];
     requestModel.userId = userId;
-    NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_PROJECT_TEAM_LIST];
+    NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_USER_TEAM_LIST];
     AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
+    [SVProgressHUD show];
     reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
     [reqOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *responseDic = (NSDictionary *)responseObject;
