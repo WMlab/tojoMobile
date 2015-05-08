@@ -70,8 +70,6 @@
             UIEdgeInsets padding = UIEdgeInsetsMake(10, 0, -40, 320);
             [endDateView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.size.equalTo ([NSValue valueWithCGSize:CGSizeMake(80, 33)]);
-                //make.centerY.equalTo (topView);
-                make.left.equalTo(topImageView).with.offset(padding.left);
                 make.bottom.equalTo(topImageView).with.offset(padding.bottom);
             }];
             
@@ -165,6 +163,10 @@
     }];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.userInfo = [[TJSession getInstance] getUserInfoModel];
+}
+
 #pragma mark --------- 设置id -----------
 - (void)setProjectId:(int)ID{
     projectId = ID;
@@ -237,7 +239,7 @@
         [self showLogin];
     } else {
         TJCommentViewController *commentViewController = [[TJCommentViewController alloc] init];
-        
+        commentViewController.projectId = projectId;
         [self.navigationController pushViewController:commentViewController animated:YES];
     }
     
