@@ -10,8 +10,8 @@
 #import "TJUserMenuCell.h"
 #import "TJLogoutTableViewCell.h"
 #import "TJRevisePasswordViewController.h"
-#import "TJAboutTongjoViewController.h"
 #import "TJSession.h"
+#import "KINWebBrowserViewController.h"
 
 @interface TJSettingTableViewController () <UIActionSheetDelegate>
 
@@ -135,9 +135,9 @@
             [self.navigationController pushViewController:revisePasswordVC animated:YES];
         }
         if (indexPath.row == 1) {
-            TJAboutTongjoViewController *aboutVC = [[TJAboutTongjoViewController alloc] init];
-            aboutVC.url = [NSURL URLWithString:@"http://www.tongjo.com/about#/about"];
-            [self.navigationController pushViewController:aboutVC animated:YES];
+            KINWebBrowserViewController *webBrowser = [KINWebBrowserViewController webBrowser];
+            [self.navigationController pushViewController:webBrowser animated:YES];
+            [webBrowser loadURLString:@"http://www.tongjo.com/about#/about"];
         }
     }
     if (indexPath.section == 1) {

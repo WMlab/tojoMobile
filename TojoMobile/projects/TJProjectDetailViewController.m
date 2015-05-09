@@ -19,7 +19,6 @@
 #import "TJCommentListViewController.h"
 #import "TJTeamListViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import <RJImageLoader/UIImageView+RJLoader.h>
 #import "TJProjectSender.h"
 #import <Masonry/Masonry.h>
 #import "TJUserHomepageViewController.h"
