@@ -14,9 +14,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "-sendGetProjectHomeDataWithViewModel:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "67">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,9 +28,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "-sendGetProjectListWithViewModel:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "107">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -46,9 +42,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "-sendGetProjectHomeDataWithViewModel:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "74">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,9 +56,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "-sendGetProjectListWithViewModel:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "98">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -78,9 +70,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "183"
-            endingLineNumber = "183"
-            landmarkName = "-sendGetProjectDetailWithViewModel:projectId:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "183">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,9 +100,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "-sendGetProjectListWithViewModel:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "89">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -126,9 +114,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "203"
-            endingLineNumber = "203"
-            landmarkName = "-sendGetCommentListWithViewModel:projectId:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "203">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -142,9 +128,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "217"
-            endingLineNumber = "217"
-            landmarkName = "-sendGetCommentListWithViewModel:projectId:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "217">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -238,9 +222,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "307"
-            endingLineNumber = "307"
-            landmarkName = "-sendGetTeamDetailWithViewModel:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "307">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -254,9 +236,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "330"
-            endingLineNumber = "330"
-            landmarkName = "-sendGetTeamDetailWithViewModel:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "330">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -270,9 +250,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "-loadProjectList"
-            landmarkType = "5">
+            endingLineNumber = "44">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -318,9 +296,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "-sendGetUserProjectListWithViewModel:withUserId:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "120">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -334,9 +310,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "-sendGetUserProjectListWithViewModel:withUserId:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "126">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -366,9 +340,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
-            landmarkType = "5">
+            endingLineNumber = "90">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -430,9 +402,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "372"
-            endingLineNumber = "372"
-            landmarkName = "-postUserAttendProjectRequestModel:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "372">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -446,9 +416,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "378"
-            endingLineNumber = "378"
-            landmarkName = "-postUserAttendProjectRequestModel:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "378">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -462,9 +430,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "394"
-            endingLineNumber = "394"
-            landmarkName = "-postUserAttendProjectRequestModel:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "394">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -510,9 +476,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "-sendGetProjectDetailWithViewModel:projectId:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "158">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -526,9 +490,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "344"
-            endingLineNumber = "344"
-            landmarkName = "-postCommentWithCommentRequestModel:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "344">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -542,9 +504,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "353"
-            endingLineNumber = "353"
-            landmarkName = "-postCommentWithCommentRequestModel:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "353">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -558,9 +518,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "366"
-            endingLineNumber = "366"
-            landmarkName = "-postCommentWithCommentRequestModel:completeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "366">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
