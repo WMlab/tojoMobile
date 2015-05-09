@@ -52,7 +52,7 @@
     [self.freshPwdAgainField resignFirstResponder];
     
     if ([self checkInputValidate]) {
-        int userId = [[TJSession getInstance] getUserId];
+        NSString *userId = [[TJSession getInstance] getUserId];
         [[TJUserSender getInstance] sendRevisePasswordWithUserId:userId oldPassword:[self md5:self.oldPwdField.text] andNewPassword:[self md5:self.freshPwdField.text] completeBlock:^(BOOL success, NSString *message) {
             if (success) {
                 [ALToastView toastInView:self.view withText:@"修改成功"];

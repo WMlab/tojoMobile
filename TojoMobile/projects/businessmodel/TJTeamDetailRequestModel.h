@@ -10,6 +10,6 @@
 
 @interface TJTeamDetailRequestModel : JSONModel
 
-@property (nonatomic,assign)int teamId;
+@property (nonatomic, copy)NSString * teamId;
 
 @end

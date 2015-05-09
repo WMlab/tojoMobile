@@ -14,11 +14,13 @@
 
 @interface TJUserBasicInfoModel : JSONModel
 
-@property (nonatomic, assign) int userId;
+@property (nonatomic, copy) NSString *userId;
 @property (nonatomic, copy) NSString *userEmail;
 @property (nonatomic, copy) NSString *userRealName;
 @property (nonatomic, assign) int userGender;
 @property (nonatomic, copy) NSString *userUniversity;
 @property (nonatomic, copy) NSString *userImage;
+@property (nonatomic, copy) NSString <Optional> *hxUsername;
+@property (nonatomic, copy) NSString <Optional> *hxPassword;
 
 @end

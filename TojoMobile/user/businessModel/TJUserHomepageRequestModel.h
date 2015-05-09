@@ -10,6 +10,6 @@
 
 @interface TJUserHomepageRequestModel : JSONModel
 
-@property(nonatomic, assign) int userId;
+@property(nonatomic, copy) NSString * userId;
 
 @end

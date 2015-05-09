@@ -123,10 +123,9 @@ static TJUserSender* _sender = nil;
 }
 
 #pragma mark - 修改密码
-- (void)sendRevisePasswordWithUserId:(int)userId oldPassword:(NSString *)pwdOld andNewPassword:(NSString *)pwdNew completeBlock:(UserCommonCallBack)callBack {
+- (void)sendRevisePasswordWithUserId:(NSString *)userId oldPassword:(NSString *)pwdOld andNewPassword:(NSString *)pwdNew completeBlock:(UserCommonCallBack)callBack {
     TJRevisePasswordRequestModel *requestModel = [[TJRevisePasswordRequestModel alloc] init];
-//    requestModel.userId = userId;
-    requestModel.userId = 5;
+    requestModel.userId = [[TJSession getInstance] getUserId];
     requestModel.passwordNew = pwdNew;
     requestModel.passwordOld = pwdOld;
     NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_REVISE_PASSWORD];

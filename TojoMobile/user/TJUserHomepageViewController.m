@@ -185,7 +185,7 @@
 }
 
 #pragma mark --------属性相关--------
--(void) setUserId:(int)userId
+-(void) setUserId:(NSString *)userId
 {
     _viewModel.userBasicInfo.userId = userId;
 }

@@ -59,7 +59,7 @@
 
 - (void)refreshAfterAppear {
     //打开程序自动下拉刷新页面
-    [self.tableView headerBeginRefreshing];
+    [self.tableView.header beginRefreshing];
 }
 
 #pragma mark - Table view data source
@@ -133,7 +133,7 @@
 
     TJProjectDetailViewController *detailViewController = [[TJProjectDetailViewController alloc] init];
     detailViewController.hidesBottomBarWhenPushed = YES;
-    [detailViewController setProjectId:1];
+//    [detailViewController setProjectId:1];
     
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
@@ -154,12 +154,12 @@
     __block TJProjectListViewController *projectListVc = self;
     
     //下拉刷新
-    [self.tableView addHeaderWithCallback:^{
+    [self.tableView addLegendHeaderWithRefreshingBlock:^{
         [projectListVc loadProjectList];
     }];
     
     //上拉加载更多
-    [self.tableView addFooterWithCallback:^{
+    [self.tableView addLegendFooterWithRefreshingBlock:^{
 //        [projectListVc upRefreshMoreData];
     }];
 }

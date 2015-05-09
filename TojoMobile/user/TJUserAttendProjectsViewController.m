@@ -45,7 +45,7 @@
 }
 
 #pragma mark --------- 发服务 -----------
--(void) loadProjectListWithUserId:(int)userId
+-(void) loadProjectListWithUserId:(NSString *)userId
 {
     [[TJProjectSender getInstance] sendGetUserProjectListWithViewModel:_viewModel withUserId:userId completeBlock:^(BOOL success, NSString *message) {
         if (success) {

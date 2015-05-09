@@ -31,12 +31,12 @@
 /**
  *设置用户ID
  */
--(void)setupUserId:(int)userId;
+-(void)setupUserId:(NSString *)userId;
 
 /**
  *获得用户ID
  */
--(int)getUserId;
+-(NSString *)getUserId;
 
 
 @end

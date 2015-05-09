@@ -40,15 +40,15 @@ typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
  */
 -(void) sendGetProjectListWithViewModel:(TJProjectListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
 
--(void) sendGetUserProjectListWithViewModel:(TJUserAttendProjectListViewModel *)viewModel withUserId:(int)userId completeBlock:(ProjectCommonCallBack)callback;
+-(void) sendGetUserProjectListWithViewModel:(TJUserAttendProjectListViewModel *)viewModel withUserId:(NSString *)userId completeBlock:(ProjectCommonCallBack)callback;
 
--(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback;
+-(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel projectId:(NSString *)projectId completeBlock:(ProjectCommonCallBack)callback;
 
--(void) sendGetCommentListWithViewModel:(TJCommentListViewModel *)viewModel projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback;
+-(void) sendGetCommentListWithViewModel:(TJCommentListViewModel *)viewModel projectId:(NSString *)projectId completeBlock:(ProjectCommonCallBack)callback;
 
--(void) sendGetTeamListWithViewModel:(TJTeamListViewModel *)viewModel projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback;
+-(void) sendGetTeamListWithViewModel:(TJTeamListViewModel *)viewModel projectId:(NSString *)projectId completeBlock:(ProjectCommonCallBack)callback;
 
--(void) sendGetUserTeamListWithViewModel:(TJUserAttendTeamListViewModel *)viewModel withUserId:(int)userId completeBlock:(ProjectCommonCallBack)callback;
+-(void) sendGetUserTeamListWithViewModel:(TJUserAttendTeamListViewModel *)viewModel withUserId:(NSString *)userId completeBlock:(ProjectCommonCallBack)callback;
 
 -(void) postCommentWithCommentRequestModel:(TJCommentRequestModel *)requestModel completeBlock:(ProjectCommonCallBack)callback;
 //个人参加

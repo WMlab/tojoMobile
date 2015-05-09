@@ -93,7 +93,8 @@ static TJDataBase *_database = nil;
 - (NSMutableArray *) getProjectArrayWithSql:(sqlite3_stmt *) stmt {
     NSMutableArray *resultArr = [[NSMutableArray alloc] init];
     while(sqlite3_step(stmt) == SQLITE_ROW) {
-        int projectId = sqlite3_column_int(stmt, 0);
+        char *projectId = (char *)sqlite3_column_text(stmt, 0);
+        NSString *projectIdStr = [[NSString alloc] initWithUTF8String:projectId];
         char *projectName = (char *)sqlite3_column_text(stmt, 1);
         NSString *projectNameStr = [[NSString alloc] initWithUTF8String:projectName];
         char *projectImage = (char *)sqlite3_column_text(stmt, 2);
@@ -102,7 +103,8 @@ static TJDataBase *_database = nil;
         NSString *projectCreatedDateStr = [[NSString alloc] initWithUTF8String:projectCreatedDate];
         char *projectEndDate = (char *)sqlite3_column_text(stmt, 4);
         NSString *projectEndDateStr = [[NSString alloc] initWithUTF8String:projectEndDate];
-        int projectFounderId = sqlite3_column_int(stmt, 5);
+        char *projectFounderId = (char *)sqlite3_column_text(stmt, 5);
+        NSString *projectFounderIdStr = [[NSString alloc] initWithUTF8String:projectFounderId];
         char *projectFounderName = (char *)sqlite3_column_text(stmt, 6);
         NSString *projectFounderNameStr = [[NSString alloc] initWithUTF8String:projectFounderName];
         char *projectFounderImage = (char *)sqlite3_column_text(stmt, 7);
@@ -116,12 +118,12 @@ static TJDataBase *_database = nil;
         NSString *projectLabelStr = [[NSString alloc] initWithUTF8String:projectLabel];
         
         TJProjectInfoModel *model = [[TJProjectInfoModel alloc] init];
-        model.projectId = projectId;
+        model.projectId = projectIdStr;
         model.projectName = projectNameStr;
         model.projectImage = projectImageStr;
         model.projectCreatedDate = projectCreatedDateStr;
         model.projectEndDate = projectEndDateStr;
-        model.projectFounderId = projectFounderId;
+        model.projectFounderId = projectFounderIdStr;
         model.projectFounderName = projectFounderNameStr;
         model.projectFounderImage = projectFounderImageStr;
         model.projectFounderUniversityId = projectFounderUniversityId;
@@ -151,12 +153,12 @@ static TJDataBase *_database = nil;
             for (TJProjectInfoModel *cell in projectAllArr) {
                 sqlite3_stmt *stmt;
                 if(sqlite3_prepare_v2(db, insertSql1, -1, &stmt, NULL) == SQLITE_OK) {
-                    sqlite3_bind_int(stmt, 1, cell.projectId);
+                    sqlite3_bind_text(stmt, 1, [cell.projectId UTF8String], -1, NULL);
                     sqlite3_bind_text(stmt, 2, [cell.projectName UTF8String], -1, NULL);
                     sqlite3_bind_text(stmt, 3, [cell.projectImage UTF8String], -1, NULL);
                     sqlite3_bind_text(stmt, 4, [cell.projectCreatedDate UTF8String], -1, NULL);
                     sqlite3_bind_text(stmt, 5, [cell.projectEndDate UTF8String], -1, NULL);
-                    sqlite3_bind_int(stmt, 6, cell.projectFounderId);
+                    sqlite3_bind_text(stmt, 6, [cell.projectFounderId UTF8String], -1, NULL);
                     sqlite3_bind_text(stmt, 7, [cell.projectFounderName UTF8String], -1, NULL);
                     sqlite3_bind_text(stmt, 8, [cell.projectFounderImage UTF8String], -1, NULL);
                     sqlite3_bind_int(stmt, 9, cell.projectFounderUniversityId);
@@ -178,7 +180,7 @@ static TJDataBase *_database = nil;
                 if(sqlite3_prepare_v2(db, insertSql2, -1, &stmt, NULL) == SQLITE_OK) {
                     sqlite3_bind_int(stmt, 1, viewModel.categoryId);
                     sqlite3_bind_int(stmt, 2, viewModel.customId);
-                    sqlite3_bind_int(stmt, 3, model.projectId);
+                    sqlite3_bind_text(stmt, 3, [model.projectId UTF8String], -1, NULL);
                     sqlite3_bind_int(stmt, 4, 0);
                 }
                 if (sqlite3_step(stmt) == SQLITE_DONE) {
@@ -192,7 +194,7 @@ static TJDataBase *_database = nil;
                 if(sqlite3_prepare_v2(db, insertSql2, -1, &stmt, NULL) == SQLITE_OK) {
                     sqlite3_bind_int(stmt, 1, viewModel.categoryId);
                     sqlite3_bind_int(stmt, 2, viewModel.customId);
-                    sqlite3_bind_int(stmt, 3, model.projectId);
+                    sqlite3_bind_text(stmt, 3, [model.projectId UTF8String], -1, NULL);
                     sqlite3_bind_int(stmt, 4, 1);
                 }
                 if (sqlite3_step(stmt) == SQLITE_DONE) {

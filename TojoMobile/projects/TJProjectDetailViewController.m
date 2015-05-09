@@ -32,7 +32,7 @@
 #define USER_IMAGE_TEAM 103
 
 @interface TJProjectDetailViewController (){
-    int projectId;
+    NSString *projectId;
     StrechyParallaxScrollView *strechy;
 }
 @property (strong, nonatomic) TJUserBasicInfoModel *userInfo;
@@ -167,14 +167,14 @@
 }
 
 #pragma mark --------- 设置id -----------
-- (void)setProjectId:(int)ID{
+- (void)setProjectId:(NSString *)ID{
     projectId = ID;
 }
 
 -(void)tapUserImage:(UITapGestureRecognizer *) sender
 {
     NSInteger tag = sender.view.tag;
-    int userId = 0;
+    NSString *userId = @"";
     if (tag == USER_IMAGE_PROJECT) {
         userId = viewModel.projectInfoModel.projectFounderId;
     }
@@ -191,7 +191,7 @@
 
 #pragma mark --------- 详情页面按钮跳转 -----------
 - (void) allInfoButtonClicked{
-    if (self.userInfo.userId == 0) {
+    if (self.userInfo.userId == nil) {
         [self showLogin];
     } else {
         TJProjectInfoViewController *infoViewController = [[TJProjectInfoViewController alloc] init];
@@ -202,7 +202,7 @@
 }
 
 - (void) allCommentButtonClicked{
-    if (self.userInfo.userId == 0) {
+    if (self.userInfo.userId == nil) {
         [self showLogin];
     } else {
         TJCommentListViewController *commentListViewController = [[TJCommentListViewController alloc] init];
@@ -213,7 +213,7 @@
 }
 
 - (void) allTeamButtonClicked{
-    if (self.userInfo.userId == 0) {
+    if (self.userInfo.userId == nil) {
         [self showLogin];
     } else {
         TJTeamListViewController *teamListViewController = [[TJTeamListViewController alloc] init];
@@ -234,7 +234,7 @@
 #pragma mark --------- 下方Tab按钮跳转 -----------
 
 - (IBAction)commentButtonClicked:(UIButton *)sender {
-    if (self.userInfo.userId == 0) {
+    if (self.userInfo.userId == nil) {
         [self showLogin];
     } else {
         TJCommentViewController *commentViewController = [[TJCommentViewController alloc] init];

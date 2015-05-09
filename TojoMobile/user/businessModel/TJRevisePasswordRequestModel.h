@@ -10,7 +10,7 @@
 
 @interface TJRevisePasswordRequestModel : JSONModel
 
-@property (nonatomic, assign) int userId;
+@property (nonatomic, copy) NSString *userId;
 
 @property (nonatomic, strong) NSString *passwordNew;
 
