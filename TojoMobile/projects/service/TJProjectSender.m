@@ -338,6 +338,7 @@ static TJProjectSender * _sender = nil;
     }];
     [reqOperation start];
 }
+
 #pragma mark --------- 发布评论 -----------
 -(void) postCommentWithCommentRequestModel:(TJCommentRequestModel *)requestModel completeBlock:(ProjectCommonCallBack)callback{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -364,6 +365,35 @@ static TJProjectSender * _sender = nil;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed");
     }];
+}
+
+#pragma mark --------- 个人参加项目 -----------
+-(void) postUserAttendProjectRequestModel:(TJUserAttendRequestModel *)requestModel completeBlock: (ProjectCommonCallBack)callback {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSDictionary *parameters = [self convertToDictionryFromModel:requestModel];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager POST:[NSString stringWithFormat:@"%@%@", BASE_URL, REQUEST_URL_USER_PROJECT_LIST] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        NSDictionary *responseDic = (NSDictionary *)responseObject;
+        NSError *err;
+        TJUserAttendResponseModel *responseModel = [[TJUserAttendResponseModel alloc] initWithDictionary:responseDic error:&err];
+        if (0 == responseModel.result.code && !err) {
+            //处理
+            if (callback) {
+                callback(true, responseModel.result.message);
+            }
+        }
+        else {
+            if (callback) {
+                callback(false, responseModel.result.message);
+            }
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"failed");
+    }];
+
 }
 
 @end

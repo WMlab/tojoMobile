@@ -23,6 +23,8 @@
 #import "TJProjectSender.h"
 #import <Masonry/Masonry.h>
 #import "TJUserHomepageViewController.h"
+#import "TJUserBasicInfoModel.h"
+#import "TJSession.h"
 
 #define NAVBAR_CHANGE_POINT 50
 
@@ -34,6 +36,7 @@
     int projectId;
     StrechyParallaxScrollView *strechy;
 }
+@property (strong, nonatomic) TJUserBasicInfoModel *userInfo;
 
 @end
 
@@ -50,6 +53,8 @@
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     self.navigationItem.title = @"项目详情";
     
+    self.userInfo = [[TJSession getInstance] getUserInfoModel];
+    
     viewModel = [[TJProjectDetailViewModel alloc] init];
     //发服务加载
     [[TJProjectSender getInstance] sendGetProjectDetailWithViewModel:viewModel projectId:projectId completeBlock:^(BOOL success, NSString *message) {
@@ -65,8 +70,6 @@
             UIEdgeInsets padding = UIEdgeInsetsMake(10, 0, -40, 320);
             [endDateView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.size.equalTo ([NSValue valueWithCGSize:CGSizeMake(80, 33)]);
-                //make.centerY.equalTo (topView);
-                make.left.equalTo(topImageView).with.offset(padding.left);
                 make.bottom.equalTo(topImageView).with.offset(padding.bottom);
             }];
             
@@ -160,6 +163,10 @@
     }];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.userInfo = [[TJSession getInstance] getUserInfoModel];
+}
+
 #pragma mark --------- 设置id -----------
 - (void)setProjectId:(int)ID{
     projectId = ID;
@@ -185,22 +192,37 @@
 
 #pragma mark --------- 详情页面按钮跳转 -----------
 - (void) allInfoButtonClicked{
-    TJProjectInfoViewController *infoViewController = [[TJProjectInfoViewController alloc] init];
-    [infoViewController setInfoModel:viewModel.projectInfoModel];
-    [self.navigationController pushViewController:infoViewController animated:YES];
+    if (self.userInfo.userId == 0) {
+        [self showLogin];
+    } else {
+        TJProjectInfoViewController *infoViewController = [[TJProjectInfoViewController alloc] init];
+        [infoViewController setInfoModel:viewModel.projectInfoModel];
+        [self.navigationController pushViewController:infoViewController animated:YES];
+    }
+    
 }
 
 - (void) allCommentButtonClicked{
-    TJCommentListViewController *commentListViewController = [[TJCommentListViewController alloc] init];
-    [commentListViewController setProjectId:projectId];
-    [self.navigationController pushViewController:commentListViewController animated:YES];
+    if (self.userInfo.userId == 0) {
+        [self showLogin];
+    } else {
+        TJCommentListViewController *commentListViewController = [[TJCommentListViewController alloc] init];
+        [commentListViewController setProjectId:projectId];
+        [self.navigationController pushViewController:commentListViewController animated:YES];
+    }
+    
 }
 
 - (void) allTeamButtonClicked{
-    TJTeamListViewController *teamListViewController = [[TJTeamListViewController alloc] init];
-    [teamListViewController setProjectId:projectId];
+    if (self.userInfo.userId == 0) {
+        [self showLogin];
+    } else {
+        TJTeamListViewController *teamListViewController = [[TJTeamListViewController alloc] init];
+        [teamListViewController setProjectId:projectId];
+        
+        [self.navigationController pushViewController:teamListViewController animated:YES];
+    }
     
-    [self.navigationController pushViewController:teamListViewController animated:YES];
 }
 
 
@@ -213,15 +235,37 @@
 #pragma mark --------- 下方Tab按钮跳转 -----------
 
 - (IBAction)commentButtonClicked:(UIButton *)sender {
-    TJCommentViewController *commentViewController = [[TJCommentViewController alloc] init];
+    if (self.userInfo.userId == 0) {
+        [self showLogin];
+    } else {
+        TJCommentViewController *commentViewController = [[TJCommentViewController alloc] init];
+        commentViewController.projectId = projectId;
+        [self.navigationController pushViewController:commentViewController animated:YES];
+    }
     
-    [self.navigationController pushViewController:commentViewController animated:YES];
+    
 }
 
 - (IBAction)attendButtonClicked:(UIButton *)sender {
-    TJTeamListViewController *teamListViewController = [[TJTeamListViewController alloc] init];
+    if (self.userInfo.userId == 0) {
+        [self showLogin];
+    } else {
+        TJTeamListViewController *teamListViewController = [[TJTeamListViewController alloc] init];
+        
+        [self.navigationController pushViewController:teamListViewController animated:YES];
+    }
     
-    [self.navigationController pushViewController:teamListViewController animated:YES];
+    
 }
+
+#pragma mark - login
+- (void)showLogin{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController *loginNav = (UINavigationController *)[sb instantiateViewControllerWithIdentifier:@"loginNav"];
+    
+    //    TJLoginViewController * loginVC = (TJLoginViewController *)[sb instantiateViewControllerWithIdentifier:@"loginVC"];
+    [self presentViewController:loginNav animated:YES completion:^{}];
+}
+
 @end
 

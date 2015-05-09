@@ -12,6 +12,7 @@
 #import "TJProjectSender.h"
 #import "TJCreateTeamViewController.h"
 #import "TJTeamDetailViewController.h"
+#import "TJUserAttendRequestModel.h"
 
 @interface TJTeamListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *teamTableView;
@@ -114,5 +115,19 @@
 }
 
 - (IBAction)attendByOneself:(UIButton *)sender {
+    TJUserAttendRequestModel *requestModel = [[TJUserAttendRequestModel alloc] init];
+    requestModel.userId = 1;
+    requestModel.projectId = projectId;
+    [[TJProjectSender getInstance] postUserAttendProjectRequestModel:requestModel completeBlock:^(BOOL success, NSString *message) {
+        if (success) {
+            NSLog(@"success");
+            //参加成功
+        }
+        else {
+            NSLog(@"falied");
+            //参加失败
+            
+        }
+    }];
 }
 @end

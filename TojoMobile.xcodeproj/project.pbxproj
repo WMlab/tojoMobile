@@ -26,6 +26,8 @@
 		324187A91A6BF5D70088A3BB /* testHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 324187A81A6BF5D70088A3BB /* testHead.png */; };
 		32574ABC1ADFFBD100756630 /* TJLogoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32574ABA1ADFFBD100756630 /* TJLogoutTableViewCell.m */; };
 		32574ABD1ADFFBD100756630 /* TJLogoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32574ABB1ADFFBD100756630 /* TJLogoutTableViewCell.xib */; };
+		3266F20F1AF7ADDB0040D131 /* TJUserAttendRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3266F20E1AF7ADDB0040D131 /* TJUserAttendRequestModel.m */; };
+		3266F2121AF7AE080040D131 /* TJUserAttendResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3266F2111AF7AE080040D131 /* TJUserAttendResponseModel.m */; };
 		32959F021A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F011A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m */; };
 		32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F041A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m */; };
 		32959F081A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32959F061A5ECFBE00C2B9D6 /* TJProjectDetailResponseModel.m */; };
@@ -233,6 +235,10 @@
 		32574AB91ADFFBD100756630 /* TJLogoutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJLogoutTableViewCell.h; path = cell/TJLogoutTableViewCell.h; sourceTree = "<group>"; };
 		32574ABA1ADFFBD100756630 /* TJLogoutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJLogoutTableViewCell.m; path = cell/TJLogoutTableViewCell.m; sourceTree = "<group>"; };
 		32574ABB1ADFFBD100756630 /* TJLogoutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TJLogoutTableViewCell.xib; path = cell/TJLogoutTableViewCell.xib; sourceTree = "<group>"; };
+		3266F20D1AF7ADDB0040D131 /* TJUserAttendRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJUserAttendRequestModel.h; path = projects/businessmodel/TJUserAttendRequestModel.h; sourceTree = "<group>"; };
+		3266F20E1AF7ADDB0040D131 /* TJUserAttendRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJUserAttendRequestModel.m; path = projects/businessmodel/TJUserAttendRequestModel.m; sourceTree = "<group>"; };
+		3266F2101AF7AE080040D131 /* TJUserAttendResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJUserAttendResponseModel.h; path = projects/businessmodel/TJUserAttendResponseModel.h; sourceTree = "<group>"; };
+		3266F2111AF7AE080040D131 /* TJUserAttendResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJUserAttendResponseModel.m; path = projects/businessmodel/TJUserAttendResponseModel.m; sourceTree = "<group>"; };
 		32959F001A5ECFB300C2B9D6 /* TJProjectDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailViewModel.h; path = projects/viewmodel/TJProjectDetailViewModel.h; sourceTree = "<group>"; };
 		32959F011A5ECFB300C2B9D6 /* TJProjectDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJProjectDetailViewModel.m; path = projects/viewmodel/TJProjectDetailViewModel.m; sourceTree = "<group>"; };
 		32959F031A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJProjectDetailRequestModel.h; path = projects/businessmodel/TJProjectDetailRequestModel.h; sourceTree = "<group>"; };
@@ -650,6 +656,10 @@
 				EA07EB3A1A80A099006BC0C8 /* TJProjectHomeRequestModel.m */,
 				EA07EB3C1A80A0D5006BC0C8 /* TJProjectHomeResponseModel.h */,
 				EA07EB3D1A80A0D5006BC0C8 /* TJProjectHomeResponseModel.m */,
+				3266F20D1AF7ADDB0040D131 /* TJUserAttendRequestModel.h */,
+				3266F20E1AF7ADDB0040D131 /* TJUserAttendRequestModel.m */,
+				3266F2101AF7AE080040D131 /* TJUserAttendResponseModel.h */,
+				3266F2111AF7AE080040D131 /* TJUserAttendResponseModel.m */,
 			);
 			name = businessmodel;
 			sourceTree = "<group>";
@@ -1358,6 +1368,7 @@
 				EA07EB341A7E742D006BC0C8 /* TJProjectCategoryModel.m in Sources */,
 				32F513A41A6E24D900224E74 /* TJCommentListResponseModel.m in Sources */,
 				32959F071A5ECFBE00C2B9D6 /* TJProjectDetailRequestModel.m in Sources */,
+				3266F20F1AF7ADDB0040D131 /* TJUserAttendRequestModel.m in Sources */,
 				EA6F74361AC0420C007A2B73 /* TJUserHomepageViewController.m in Sources */,
 				32D1F6A61AEBBD5700CE47D7 /* TJUserAttendProjectListViewModel.m in Sources */,
 				EA68E5221A5A2FB300CA2CCD /* TJLoginViewController.m in Sources */,
@@ -1370,6 +1381,7 @@
 				32F5139A1A6E171500224E74 /* TJCommentListViewController.m in Sources */,
 				EAC116BC1A615AD200F620DE /* TJResultModel.m in Sources */,
 				32C4B4101A71DDEA00B8D401 /* TJTeamDetailResponseModel.m in Sources */,
+				3266F2121AF7AE080040D131 /* TJUserAttendResponseModel.m in Sources */,
 				EA3248481A668D6400D45E30 /* TJProjectListRequestModel.m in Sources */,
 				32F513A11A6E24B100224E74 /* TJCommentListRequestModel.m in Sources */,
 				EAB6C6581AEFDB2700F21997 /* TJRevisePasswordRequestModel.m in Sources */,

@@ -32,6 +32,10 @@
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.navigationItem.title = @"评论";
+    UIBarButtonItem *commitButton = [[UIBarButtonItem alloc] initWithTitle:@"发表" style:UIBarButtonItemStylePlain target:self action:@selector(commitMethod)];
+    self.navigationItem.rightBarButtonItem = commitButton;
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
+    
     [self.commentTableView setDelegate:self];
     [self.commentTableView setDataSource:self];
     
@@ -109,12 +113,10 @@
     projectId = ID;
 }
 
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+- (void) commitMethod {
     //点击评论
     TJCommentViewController *commentViewController = [[TJCommentViewController alloc] init];
+    commentViewController.projectId = projectId;
     
     [self.navigationController pushViewController:commentViewController animated:YES];
 }

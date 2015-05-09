@@ -10,16 +10,23 @@
 #import "TJProjectSender.h"
 #import "TJCommentListViewController.h"
 #import "TJCommentRequestModel.h"
+#import "TJSession.h"
 
 @interface TJCommentViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *commentTextView;
 @property (nonatomic, assign) Boolean isEmpty;
+@property (strong, nonatomic) TJUserBasicInfoModel *userInfo;
+
 @end
 
 @implementation TJCommentViewController
 
+@synthesize projectId;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.userInfo = [[TJUserBasicInfoModel alloc]init];
     //导航栏
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:30/255.0f green:195/255.0f blue:153/255.0f alpha:1.0]];
@@ -34,6 +41,8 @@
     self.commentTextView.text = @"请发表一些评论吧~";
     self.commentTextView.textColor = [UIColor lightGrayColor];
     self.isEmpty = YES;
+    
+    self.userInfo = [[TJSession getInstance] getUserInfoModel];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,8 +55,8 @@
         
     }else{
         TJCommentRequestModel *requestModel = [[TJCommentRequestModel alloc] init];
-        requestModel.userId = 1;
-        requestModel.projectId = 1;
+        requestModel.userId = _userInfo.userId;
+        requestModel.projectId = projectId;
         requestModel.commentText = self.commentTextView.text;
         [[TJProjectSender getInstance] postCommentWithCommentRequestModel:requestModel completeBlock:^(BOOL success, NSString *message) {
             if (success) {

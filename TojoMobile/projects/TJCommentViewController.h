@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TJUserBasicInfoModel.h"
 
 @interface TJCommentViewController : UIViewController<UITextViewDelegate>
+
+@property (nonatomic) int projectId;
 
 @end
