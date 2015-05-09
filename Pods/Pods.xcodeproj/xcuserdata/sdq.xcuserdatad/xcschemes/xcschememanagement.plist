@@ -44,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,7 +87,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30A68B35973E7D1C0911D833</key>
+		<key>6DC57867753EBE18584234F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,7 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>91A714F90739CCE4418DDB9C</key>
+		<key>B9EBF8C78BD0E529E1A2B559</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -142,7 +147,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FD4DAE40455DB39A74D00D49</key>
+		<key>DC310F4DBE3027E5B3ABC5A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,3 +7,4 @@ pod 'MJRefresh', :git => 'https://github.com/CoderMJLee/MJRefresh.git'
 pod 'Masonry'
 pod 'IQKeyboardManager'
 pod "RJImageLoader"
+pod 'SVProgressHUD'

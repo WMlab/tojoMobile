@@ -13,6 +13,7 @@
 
 @interface TJUserAttendProjectsViewController ()
 @property (nonatomic,strong) TJUserAttendProjectListViewModel *viewModel;
+
 @end
 
 @implementation TJUserAttendProjectsViewController {
@@ -29,8 +30,13 @@
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    [self setExtraCellLineHidden:self.tableView];
     
-    [self loadProjectList];
+    if (!_viewModel) {
+        _viewModel = [[TJUserAttendProjectListViewModel alloc] init];
+    }
+    
+    [self loadProjectListWithUserId:self.userId];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,9 +45,9 @@
 }
 
 #pragma mark --------- 发服务 -----------
--(void) loadProjectList
+-(void) loadProjectListWithUserId:(int)userId
 {
-    [[TJProjectSender getInstance] sendGetUserProjectListWithViewModel:_viewModel withUserId:1 completeBlock:^(BOOL success, NSString *message) {
+    [[TJProjectSender getInstance] sendGetUserProjectListWithViewModel:_viewModel withUserId:userId completeBlock:^(BOOL success, NSString *message) {
         if (success) {
             NSLog(@"success");
             [self.tableView reloadData];
@@ -78,6 +84,14 @@
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 130.0;
+}
+
+//消除多余分割线
+- (void)setExtraCellLineHidden: (UITableView *)tableView
+{
+    UIView *view =[ [UIView alloc]init];
+    view.backgroundColor = [UIColor clearColor];
+    [tableView setTableFooterView:view];
 }
 
 /*
