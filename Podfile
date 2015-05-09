@@ -6,4 +6,5 @@ pod 'ALToastView', '~> 0.0.1'
 pod 'MJRefresh', :git => 'https://github.com/CoderMJLee/MJRefresh.git'
 pod 'Masonry'
 pod 'IQKeyboardManager'
-pod 'SVProgressHUD'pod "RJImageLoader"
+pod 'SVProgressHUD'
+pod 'KINWebBrowser'

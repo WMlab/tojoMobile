@@ -54,6 +54,12 @@
 #define COCOAPODS_VERSION_MINOR_ALToastView 0
 #define COCOAPODS_VERSION_PATCH_ALToastView 1
 
+// ARChromeActivity
+#define COCOAPODS_POD_AVAILABLE_ARChromeActivity
+#define COCOAPODS_VERSION_MAJOR_ARChromeActivity 1
+#define COCOAPODS_VERSION_MINOR_ARChromeActivity 0
+#define COCOAPODS_VERSION_PATCH_ARChromeActivity 2
+
 // IQKeyboardManager
 #define COCOAPODS_POD_AVAILABLE_IQKeyboardManager
 #define COCOAPODS_VERSION_MAJOR_IQKeyboardManager 3
@@ -66,6 +72,12 @@
 #define COCOAPODS_VERSION_MINOR_JSONModel 0
 #define COCOAPODS_VERSION_PATCH_JSONModel 2
 
+// KINWebBrowser
+#define COCOAPODS_POD_AVAILABLE_KINWebBrowser
+#define COCOAPODS_VERSION_MAJOR_KINWebBrowser 1
+#define COCOAPODS_VERSION_MINOR_KINWebBrowser 1
+#define COCOAPODS_VERSION_PATCH_KINWebBrowser 0
+
 // MJRefresh
 #define COCOAPODS_POD_AVAILABLE_MJRefresh
 #define COCOAPODS_VERSION_MAJOR_MJRefresh 1
@@ -77,12 +89,6 @@
 #define COCOAPODS_VERSION_MAJOR_Masonry 0
 #define COCOAPODS_VERSION_MINOR_Masonry 6
 #define COCOAPODS_VERSION_PATCH_Masonry 1
-
-// RJImageLoader
-#define COCOAPODS_POD_AVAILABLE_RJImageLoader
-#define COCOAPODS_VERSION_MAJOR_RJImageLoader 0
-#define COCOAPODS_VERSION_MINOR_RJImageLoader 3
-#define COCOAPODS_VERSION_PATCH_RJImageLoader 0
 
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage
@@ -101,4 +107,10 @@
 #define COCOAPODS_VERSION_MAJOR_SVProgressHUD 1
 #define COCOAPODS_VERSION_MINOR_SVProgressHUD 1
 #define COCOAPODS_VERSION_PATCH_SVProgressHUD 3
+
+// TUSafariActivity
+#define COCOAPODS_POD_AVAILABLE_TUSafariActivity
+#define COCOAPODS_VERSION_MAJOR_TUSafariActivity 1
+#define COCOAPODS_VERSION_MINOR_TUSafariActivity 0
+#define COCOAPODS_VERSION_PATCH_TUSafariActivity 2
 
