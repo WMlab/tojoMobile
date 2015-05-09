@@ -10,6 +10,6 @@
 
 @interface TJCommentListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 
-- (void)setProjectId:(int)projectId;
+- (void)setProjectId:(NSString *)projectId;
 
 @end

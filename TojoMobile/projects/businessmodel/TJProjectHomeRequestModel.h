@@ -10,7 +10,7 @@
 
 @interface TJProjectHomeRequestModel : JSONModel
 
-@property (nonatomic, assign) int userId;
+@property (nonatomic, copy) NSString * userId;
 
 @property (nonatomic, assign) int categoryId;//项目按标签分类, 0表示不分类
 

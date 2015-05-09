@@ -14,7 +14,7 @@
 
 @interface TJCommentModel : JSONModel
 
-@property (nonatomic,assign)int commentUserId;
+@property (nonatomic,copy)NSString *commentUserId;
 @property (nonatomic,copy)NSString *commentUserName;
 @property (nonatomic,copy)NSString *commentUserImage;
 @property (nonatomic,copy)NSString *commentText;

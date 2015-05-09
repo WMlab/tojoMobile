@@ -11,6 +11,6 @@
 
 @interface TJCommentViewController : UIViewController<UITextViewDelegate>
 
-@property (nonatomic) int projectId;
+@property (nonatomic) NSString * projectId;
 
 @end

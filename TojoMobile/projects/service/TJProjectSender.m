@@ -37,7 +37,7 @@ static TJProjectSender * _sender = nil;
     TJProjectHomeRequestModel *requestModel = [[TJProjectHomeRequestModel alloc] init];
     requestModel.categoryId = viewModel.categoryId;
     requestModel.customId = viewModel.customId;
-    requestModel.userId = 1;
+    requestModel.userId = @"1";
     NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_PROJECT_HOME];
     AFHTTPRequestOperation *reqOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
     reqOperation.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -116,7 +116,7 @@ static TJProjectSender * _sender = nil;
 }
 
 #pragma mark --------- 用户项目列表请求 ----------
--(void) sendGetUserProjectListWithViewModel:(TJUserAttendProjectListViewModel *)viewModel withUserId:(int)userId completeBlock:(ProjectCommonCallBack)callback{
+-(void) sendGetUserProjectListWithViewModel:(TJUserAttendProjectListViewModel *)viewModel withUserId:(NSString *)userId completeBlock:(ProjectCommonCallBack)callback{
     TJUserAttendProjectListRequestModel *requestModel = [[TJUserAttendProjectListRequestModel alloc] init];
     requestModel.userId = userId;
     NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_USER_PROJECT_LIST];
@@ -154,7 +154,7 @@ static TJProjectSender * _sender = nil;
 }
 
 #pragma mark --------- 项目详情请求 -----------
--(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback{
+-(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel projectId:(NSString *)projectId completeBlock:(ProjectCommonCallBack)callback{
     TJProjectDetailRequestModel *requestModel = [[TJProjectDetailRequestModel alloc] init];
     requestModel.projectId = projectId;
     NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_PROJECT_DETAIL];
@@ -187,7 +187,7 @@ static TJProjectSender * _sender = nil;
 }
 
 #pragma mark --------- 评论列表请求 -----------
--(void) sendGetCommentListWithViewModel:(TJCommentListViewModel *)viewModel projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback{
+-(void) sendGetCommentListWithViewModel:(TJCommentListViewModel *)viewModel projectId:(NSString *)projectId completeBlock:(ProjectCommonCallBack)callback{
     TJCommentListRequestModel *requestModel = [[TJCommentListRequestModel alloc] init];
     requestModel.projectId = projectId;
     NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_PROJECT_COMMENT_LIST];
@@ -225,7 +225,7 @@ static TJProjectSender * _sender = nil;
 }
 
 #pragma mark --------- 团队列表请求 -----------
--(void) sendGetTeamListWithViewModel:(TJTeamListViewModel *)viewModel  projectId:(int)projectId completeBlock:(ProjectCommonCallBack)callback{
+-(void) sendGetTeamListWithViewModel:(TJTeamListViewModel *)viewModel  projectId:(NSString *)projectId completeBlock:(ProjectCommonCallBack)callback{
     TJTeamListRequestModel *requestModel = [[TJTeamListRequestModel alloc] init];
     requestModel.projectId = projectId;
     NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_PROJECT_TEAM_LIST];
@@ -263,7 +263,7 @@ static TJProjectSender * _sender = nil;
 }
 
 #pragma mark --------- 用户团队列表 -----------
--(void) sendGetUserTeamListWithViewModel:(TJUserAttendTeamListViewModel *)viewModel withUserId:(int)userId completeBlock:(ProjectCommonCallBack)callback{
+-(void) sendGetUserTeamListWithViewModel:(TJUserAttendTeamListViewModel *)viewModel withUserId:(NSString *)userId completeBlock:(ProjectCommonCallBack)callback{
     TJUserAttendTeamListRequestModel *requestModel = [[TJUserAttendTeamListRequestModel alloc] init];
     requestModel.userId = userId;
     NSMutableURLRequest *urlRequest = [self createRequestWithMethod:REQUEST_METHOD_GET DataModel:requestModel url:REQUEST_URL_USER_TEAM_LIST];

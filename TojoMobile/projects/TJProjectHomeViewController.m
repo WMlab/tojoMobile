@@ -74,7 +74,7 @@
 
 - (void)refreshAfterAppear {
     //打开程序自动下拉刷新页面
-    [self.projectTableView headerBeginRefreshing];
+    [self.projectTableView.header beginRefreshing];
 }
 
 - (void)setupCatScrollView {
@@ -130,7 +130,7 @@
     [self loadLastRecordData];
     
     //切换分类后，自动下拉刷新更新数据
-    [self.projectTableView headerBeginRefreshing];
+    [self.projectTableView.header beginRefreshing];
 }
 #pragma mark - image scrollview delegate
 -(void) selectPageNumber:(NSInteger) index {
@@ -206,7 +206,7 @@
     [self goToDetailViewWithProjectId:infoModel.projectId];
 }
 
-- (void) goToDetailViewWithProjectId:(int) projectId {
+- (void) goToDetailViewWithProjectId:(NSString*) projectId {
     TJProjectDetailViewController *detailViewController = [[TJProjectDetailViewController alloc] init];
     [detailViewController setProjectId:projectId];
     detailViewController.hidesBottomBarWhenPushed = YES;
@@ -226,7 +226,7 @@
 -(void) getProjectHomeData
 {
     [[TJProjectSender getInstance] sendGetProjectHomeDataWithViewModel:_viewModel completeBlock:^(BOOL success, NSString *message) {
-        [self.projectTableView headerEndRefreshing];
+        [self.projectTableView.header endRefreshing];
         if (success) {
             NSLog(@"success");
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -265,7 +265,7 @@
     __block TJProjectHomeViewController *projectHomeVc = self;
     
     //下拉刷新
-    [self.projectTableView addHeaderWithCallback:^{
+    [self.projectTableView addLegendHeaderWithRefreshingBlock:^{
         [projectHomeVc getProjectHomeData];
     }];
 }

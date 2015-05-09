@@ -15,9 +15,9 @@
 
 @interface TJTeamModel : JSONModel
 
-@property (nonatomic,assign)int teamId;
-@property (nonatomic,assign)int projectId;
-@property (nonatomic,assign)int teamFounderId;
+@property (nonatomic,copy)NSString *teamId;
+@property (nonatomic,copy)NSString *projectId;
+@property (nonatomic,copy)NSString *teamFounderId;
 @property (nonatomic,copy)NSString *teamName;
 @property (nonatomic,copy)NSString *teamFounderName;
 @property (nonatomic,copy)NSString *teamFounderImage;

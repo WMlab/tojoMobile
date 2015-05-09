@@ -145,7 +145,7 @@
 */
 
 #pragma mark -------- 属性相关 --------
-- (void)setTeamId:(int)teamId {
+- (void)setTeamId:(NSString *)teamId {
     _viewModel.team.teamId = teamId;
 }
 @end

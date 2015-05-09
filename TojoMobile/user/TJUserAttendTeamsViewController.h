@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TJUserAttendTeamsViewController : UITableViewController
-@property int userId;
+@property (nonatomic, copy) NSString * userId;
 @end

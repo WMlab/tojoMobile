@@ -10,7 +10,7 @@
 
 @interface TJUserAttendRequestModel : JSONModel
 
-@property (nonatomic,assign)int userId;  //用户ID  user_id
-@property (nonatomic,assign)int projectId;  //参与项目ID  project_id
+@property (nonatomic, copy)NSString * userId;  //用户ID  user_id
+@property (nonatomic, copy)NSString * projectId;  //参与项目ID  project_id
 
 @end

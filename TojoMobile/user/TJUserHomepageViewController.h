@@ -10,6 +10,6 @@
 
 @interface TJUserHomepageViewController : UITableViewController
 
-- (void) setUserId:(int)userId;
+- (void) setUserId:(NSString *)userId;
 
 @end

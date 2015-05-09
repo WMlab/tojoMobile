@@ -13,6 +13,7 @@
 #import "TJCreateTeamViewController.h"
 #import "TJTeamDetailViewController.h"
 #import "TJUserAttendRequestModel.h"
+#import "TJSession.h"
 
 @interface TJTeamListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *teamTableView;
@@ -21,7 +22,7 @@
 @end
 
 @implementation TJTeamListViewController{
-    int projectId;
+    NSString * projectId;
     dispatch_once_t onceToken;
 }
 
@@ -61,7 +62,7 @@
 }
 
 #pragma mark --------- 设置id -----------
-- (void)setProjectId:(int)ID{
+- (void)setProjectId:(NSString *)ID{
     projectId = ID;
 }
 
@@ -116,7 +117,7 @@
 
 - (IBAction)attendByOneself:(UIButton *)sender {
     TJUserAttendRequestModel *requestModel = [[TJUserAttendRequestModel alloc] init];
-    requestModel.userId = 1;
+    requestModel.userId = [[TJSession getInstance] getUserId];
     requestModel.projectId = projectId;
     [[TJProjectSender getInstance] postUserAttendProjectRequestModel:requestModel completeBlock:^(BOOL success, NSString *message) {
         if (success) {

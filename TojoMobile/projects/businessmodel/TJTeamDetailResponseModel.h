@@ -13,10 +13,10 @@
 
 @interface TJTeamDetailResponseModel : JSONModel
 
-@property(nonatomic, strong) TJResultModel *result;
+@property (nonatomic, strong) TJResultModel *result;
 
-@property (nonatomic,copy)TJTeamModel *team;
-@property(nonatomic, strong) NSArray<TJUserBasicInfoModel> *teamMemberList;  // model - TJUserBasicInfoModel
+@property (nonatomic, strong) TJTeamModel *team;
+@property (nonatomic, strong) NSArray<TJUserBasicInfoModel> *teamMemberList;  // model - TJUserBasicInfoModel
 
 
 @end

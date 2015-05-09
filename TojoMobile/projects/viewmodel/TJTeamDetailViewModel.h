@@ -11,7 +11,7 @@
 
 @interface TJTeamDetailViewModel : NSObject
 
-@property (nonatomic,copy)TJTeamModel *team;
-@property(nonatomic, strong) NSMutableArray *teamMemberList;  // model - TJUserBasicInfoModel
+@property (nonatomic,strong) TJTeamModel *team;
+@property (nonatomic, strong) NSMutableArray *teamMemberList;  // model - TJUserBasicInfoModel
 
 @end

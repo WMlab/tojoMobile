@@ -11,6 +11,6 @@
 
 @interface TJProjectDetailRequestModel : JSONModel
 
-@property(nonatomic, assign) int projectId;
+@property(nonatomic, copy) NSString * projectId;
 
 @end

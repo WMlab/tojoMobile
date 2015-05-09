@@ -20,7 +20,7 @@
 @end
 
 @implementation TJCommentListViewController{
-    int projectId;
+    NSString * projectId;
     dispatch_once_t onceToken;
 }
 
@@ -109,7 +109,7 @@
 }
 
 #pragma mark --------- 设置id -----------
-- (void)setProjectId:(int)ID{
+- (void)setProjectId:(NSString *)ID{
     projectId = ID;
 }
 

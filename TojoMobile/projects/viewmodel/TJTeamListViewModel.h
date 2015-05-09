@@ -10,7 +10,7 @@
 
 @interface TJTeamListViewModel : NSObject
 
-@property(nonatomic, assign) int projectId;        //项目编号
+@property(nonatomic, copy) NSString * projectId;        //项目编号
 @property(nonatomic, strong) NSArray *teamList;  //model - TJTeamModel
 
 @end

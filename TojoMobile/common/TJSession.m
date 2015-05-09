@@ -26,11 +26,11 @@ static TJSession *_instance = nil;
     return _instance;
 }
 
--(void)setupUserId:(int)userId {
+-(void)setupUserId:(NSString *)userId {
     [self getUserInfoModel].userId = userId;
 }
 
--(int)getUserId {
+-(NSString *)getUserId {
     return [self getUserInfoModel].userId;
 }
 

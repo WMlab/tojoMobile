@@ -15,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 @property (weak, nonatomic) IBOutlet UIButton *attendButton;
 @property (nonatomic, strong) TJProjectDetailViewModel *viewModel;
-- (void)setProjectId:(int)projectId;
+- (void)setProjectId:(NSString *)projectId;
 
 @end

@@ -59,7 +59,7 @@
 
 - (void)refreshAfterAppear {
     //打开程序自动下拉刷新页面
-    [self.tableView headerBeginRefreshing];
+    [self.tableView.header beginRefreshing];
 }
 
 #pragma mark - Table view data source
