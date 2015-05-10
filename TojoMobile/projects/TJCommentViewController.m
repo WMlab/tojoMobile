@@ -62,6 +62,7 @@
             if (success) {
                 NSLog(@"success");
                 //评论成功
+                [self.navigationController popViewControllerAnimated:YES];
             }
             else {
                 NSLog(@"falied");
