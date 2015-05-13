@@ -54,6 +54,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-TUSafariActivity-TUSafariActivity.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TUSafariActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -64,75 +69,70 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>TUSafariActivity.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04DA5437E048F45061EE0208</key>
+		<key>13D1655CDE9825D38AECD752</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>39262DE0B8CCD11B95A4F5C4</key>
+		<key>28580D816AF85EF90317BC4C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4AFF5CD254CA5A130D88699D</key>
+		<key>38E30109CE367722570D7B9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5B603C9EF24C5A1A8FD5F502</key>
+		<key>41B1A13B347A6590074829DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>755BA6DFA7AEAB2C38BAE63D</key>
+		<key>44A51FA419514BDE62BA1DE3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8EE4CD3806AF285830E111A7</key>
+		<key>50C2A5104245FC37F38A288A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>96C32A318004698E4B2D157D</key>
+		<key>8893D83DFD36343FD0C312FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9EAB8A2DEEA1D729224ED429</key>
+		<key>9D979DBBE52476C22CE558B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BBA959E73C50A1A769A9B616</key>
+		<key>BBA81E557F5550C6BCCE97C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB6A6E6866C58170DCEA3026</key>
+		<key>BE251A7073DDBAC0C96290B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CC8F20A94CE12330903B9A33</key>
+		<key>CE176DE2E21B33D4F6961007</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E570B1D70CB5895786CF650F</key>
+		<key>D7EA4C310934681662BFE1F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F9E358685B25DE6896A1EBA7</key>
+		<key>DF3FD7CE7AFC0E3E79DBBBEB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

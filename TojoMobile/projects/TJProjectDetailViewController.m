@@ -250,7 +250,7 @@
         [self showLogin];
     } else {
         TJTeamListViewController *teamListViewController = [[TJTeamListViewController alloc] init];
-        
+        [teamListViewController setProjectId:projectId];
         [self.navigationController pushViewController:teamListViewController animated:YES];
     }
     

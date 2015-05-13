@@ -34,7 +34,7 @@
     self.navigationItem.title = @"我";
     
     self.userInfo = [[TJSession getInstance] getUserInfoModel];
-    if (self.userInfo.userId == 0) {
+    if (self.userInfo.userId == nil) {
         self.userName.text = @"您好！";
         self.userUniversity.text = @"请先登陆";
         [self.userAvatar setImage:[UIImage imageNamed:@"person"]];
@@ -49,7 +49,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
     self.userInfo = [[TJSession getInstance] getUserInfoModel];
-    if (self.userInfo.userId == 0) {
+    if (self.userInfo.userId == nil) {
         self.userName.text = @"您好！";
         self.userUniversity.text = @"请先登陆";
         [self.userAvatar setImage:[UIImage imageNamed:@"person"]];
