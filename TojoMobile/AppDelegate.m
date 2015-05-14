@@ -13,6 +13,7 @@
 #import <EaseMob.h>
 @interface AppDelegate ()
 
+@property (nonatomic, strong) UITabBarController *tabBarController;
 @end
 
 @implementation AppDelegate
@@ -20,7 +21,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    self.tabBarController = (UITabBarController *) self.window.rootViewController;
+
     [[UITabBar appearance] setTintColor:TJColorHex(0x1ec399)];
     
     //初始化缓存数据库
@@ -35,8 +37,6 @@
     //registerSDKWithAppKey:注册的appKey, apnsCertName:推送证书名(不需要加后缀)
     [[EaseMob sharedInstance] registerSDKWithAppKey:@"tongjo#tongjo" apnsCertName:@"tongjomobile"];
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-    return YES;
-    
     return YES;
 }
 

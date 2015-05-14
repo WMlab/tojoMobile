@@ -18,6 +18,8 @@
 #import "TJUserHomepageResponseModel.h"
 #import "TJRevisePasswordRequestModel.h"
 #import "TJRevisePasswordResponseModel.h"
+#import <EaseMob.h>
+#import "TJDefine.h"
 
 static TJUserSender* _sender = nil;
 @implementation TJUserSender
@@ -45,6 +47,51 @@ static TJUserSender* _sender = nil;
         TJUserLoginResponseModel *responseModel = [[TJUserLoginResponseModel alloc] initWithDictionary:responseDic error:&err];
         if (0 == responseModel.result.code && !err) {
             [[TJSession getInstance] setupUserInfoModel:responseModel.userInfo];
+            //登陆环信
+            NSString *hxUsername = [[TJSession getInstance] getUserInfoModel].hxUsername;
+            NSString *hxPassword = [[TJSession getInstance] getUserInfoModel].hxPassword;
+            hxUsername = @"test";
+            hxPassword = @"111111";
+            BOOL isAutoLogin = [[EaseMob sharedInstance].chatManager isAutoLoginEnabled];
+            if (hxUsername && hxPassword && hxUsername.length > 0 && hxPassword.length > 0 && !isAutoLogin) {
+                [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:hxUsername
+                                                                    password:hxPassword
+                                                                  completion:
+                 ^(NSDictionary *loginInfo, EMError *error) {
+                     if (loginInfo && !error) {
+                         //获取群组列表
+                         [[EaseMob sharedInstance].chatManager asyncFetchMyGroupsList];
+                         
+                         //设置是否自动登录
+//                         [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
+                         
+                         //将2.1.0版本旧版的coredata数据导入新的数据库
+                         EMError *error = [[EaseMob sharedInstance].chatManager importDataToNewDatabase];
+                         if (!error) {
+                             error = [[EaseMob sharedInstance].chatManager loadDataFromDatabase];
+                         }
+                         
+                         //发送自动登陆状态通知
+                         [[NSNotificationCenter defaultCenter] postNotificationName:kNotification_hx_LoginChanged object:@YES];
+                         
+                     }
+                     else
+                     {
+                         switch (error.errorCode)
+                         {
+                             case EMErrorServerNotReachable:
+                                 break;
+                             case EMErrorServerAuthenticationFailure:
+                                 break;
+                             case EMErrorServerTimeout:
+                                 break;
+                             default:
+                                 break;
+                         }
+                     }
+                 } onQueue:nil];
+            }
+            //登陆环信 end
             if (callBack) {
                 callBack(true, responseModel.result.message);
             }
