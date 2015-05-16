@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "TJUserHomepageViewModel.h"
 #import "TJSender.h"
+#import "TJUserAttendProjectListViewModel.h"
+#import "TJUserAttendProjectListRequestModel.h"
+#import "TJUserAttendProjectListResponseModel.h"
+#import "TJUserAttendTeamListViewModel.h"
+#import "TJUserAttendTeamListRequestModel.h"
+#import "TJUserAttendTeamListResponseModel.h"
 
 typedef void (^UserCommonCallBack)(BOOL success, NSString *message);
 
@@ -38,5 +44,15 @@ typedef void (^UserCommonCallBack)(BOOL success, NSString *message);
  *  修改账号密码
  */
 -(void) sendRevisePasswordWithUserId:(NSString *)userId oldPassword:(NSString *)oldPwd andNewPassword:(NSString *)neewPwd completeBlock:(UserCommonCallBack) callBack;
+
+/**
+ *  获取用户参与项目列表
+ */
+-(void) sendGetUserProjectListWithViewModel:(TJUserAttendProjectListViewModel *)viewModel withUserId:(NSString *)userId completeBlock:(UserCommonCallBack)callback;
+
+/**
+ *  获取用户参与团队列表
+ */
+-(void) sendGetUserTeamListWithViewModel:(TJUserAttendTeamListViewModel *)viewModel withUserId:(NSString *)userId completeBlock:(UserCommonCallBack)callback;
 
 @end

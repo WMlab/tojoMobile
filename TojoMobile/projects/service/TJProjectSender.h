@@ -20,12 +20,7 @@
 #import "TJTeamDetailViewModel.h"
 #import "TJCommentRequestModel.h"
 #import "TJCommentResponseModel.h"
-#import "TJUserAttendProjectListViewModel.h"
-#import "TJUserAttendProjectListRequestModel.h"
-#import "TJUserAttendProjectListResponseModel.h"
-#import "TJUserAttendTeamListViewModel.h"
-#import "TJUserAttendTeamListRequestModel.h"
-#import "TJUserAttendTeamListResponseModel.h"
+
 #import "TJUserAttendRequestModel.h"
 #import "TJUserAttendResponseModel.h"
 
@@ -40,18 +35,29 @@ typedef void (^ProjectCommonCallBack)(BOOL success, NSString *message);
  */
 -(void) sendGetProjectListWithViewModel:(TJProjectListViewModel *)viewModel completeBlock:(ProjectCommonCallBack)callback;
 
--(void) sendGetUserProjectListWithViewModel:(TJUserAttendProjectListViewModel *)viewModel withUserId:(NSString *)userId completeBlock:(ProjectCommonCallBack)callback;
-
+/*
+ *  获取项目详情
+ */
 -(void) sendGetProjectDetailWithViewModel:(TJProjectDetailViewModel *)viewModel projectId:(NSString *)projectId completeBlock:(ProjectCommonCallBack)callback;
 
+/*
+ *  获取项目评论列表
+ */
 -(void) sendGetCommentListWithViewModel:(TJCommentListViewModel *)viewModel projectId:(NSString *)projectId completeBlock:(ProjectCommonCallBack)callback;
 
+/*
+ *  获取项目团队列表
+ */
 -(void) sendGetTeamListWithViewModel:(TJTeamListViewModel *)viewModel projectId:(NSString *)projectId completeBlock:(ProjectCommonCallBack)callback;
 
--(void) sendGetUserTeamListWithViewModel:(TJUserAttendTeamListViewModel *)viewModel withUserId:(NSString *)userId completeBlock:(ProjectCommonCallBack)callback;
-
+/*
+ *  评论
+ */
 -(void) postCommentWithCommentRequestModel:(TJCommentRequestModel *)requestModel completeBlock:(ProjectCommonCallBack)callback;
-//个人参加
+
+/*
+ *  个人参加项目
+ */
 -(void) postUserAttendProjectRequestModel:(TJUserAttendRequestModel *)requestModel completeBlock: (ProjectCommonCallBack)callback;
 
 /*

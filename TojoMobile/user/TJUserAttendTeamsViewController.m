@@ -8,7 +8,7 @@
 
 #import "TJUserAttendTeamsViewController.h"
 #import "TJUserAttendTeamListViewModel.h"
-#import "TJProjectSender.h"
+#import "TJUserSender.h"
 #import "TJTeamListCell.h"
 #import "TJSession.h"
 
@@ -48,7 +48,7 @@
 #pragma mark --------- 发服务 -----------
 -(void) loadTeamList
 {
-    [[TJProjectSender getInstance] sendGetUserTeamListWithViewModel:_viewModel withUserId:[[TJSession getInstance] getUserId] completeBlock:^(BOOL success, NSString *message) {
+    [[TJUserSender getInstance] sendGetUserTeamListWithViewModel:_viewModel withUserId:[[TJSession getInstance] getUserId] completeBlock:^(BOOL success, NSString *message) {
         if (success) {
             NSLog(@"success");
             [self.tableView reloadData];

@@ -9,7 +9,7 @@
 #import "TJUserAttendProjectsViewController.h"
 #import "TJUserAttendProjectListViewModel.h"
 #import "TJProjectListCell.h"
-#import "TJProjectSender.h"
+#import "TJUserSender.h"
 
 @interface TJUserAttendProjectsViewController ()
 @property (nonatomic,strong) TJUserAttendProjectListViewModel *viewModel;
@@ -47,7 +47,7 @@
 #pragma mark --------- 发服务 -----------
 -(void) loadProjectListWithUserId:(NSString *)userId
 {
-    [[TJProjectSender getInstance] sendGetUserProjectListWithViewModel:_viewModel withUserId:userId completeBlock:^(BOOL success, NSString *message) {
+    [[TJUserSender getInstance] sendGetUserProjectListWithViewModel:_viewModel withUserId:userId completeBlock:^(BOOL success, NSString *message) {
         if (success) {
             NSLog(@"success");
             [self.tableView reloadData];
