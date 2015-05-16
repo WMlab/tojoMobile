@@ -21,6 +21,7 @@
     switch (method) {
         case REQUEST_METHOD_GET: {
             [request setHTTPMethod:@"GET"];
+            request.timeoutInterval = 15;
             unsigned int outCount;
             objc_property_t *properties = class_copyPropertyList(model.class, &outCount);
             NSMutableString *requsetParamStr = [[NSMutableString alloc] init];
